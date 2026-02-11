@@ -1,0 +1,364 @@
+{
+  "report": {
+    "title": "Ethiopian Postal Service Enterprise Independent Auditor’s Report and Financial Statements",
+    "reporting_period_end": "2021-07-07",
+    "reporting_period_label": "30 Sene 2013 (7 July 2021)",
+    "currency": "ETB",
+    "currency_name": "Ethiopian Birr",
+    "auditor": "Audit Services Corporation (Office of the Federal Auditor General)"
+  },
+  "management_summary": {
+    "results_comparison": [
+      {
+        "period": "2021-07-07",
+        "revenue_income": 651309259,
+        "profit_before_tax": 76089204,
+        "net_profit": 63779723,
+        "total_comprehensive_income": 63779723
+      },
+      {
+        "period": "2020-07-07",
+        "revenue_income": 447749194,
+        "profit_before_tax": -40861280,
+        "net_profit": -37938170,
+        "total_comprehensive_income": -37938170
+      }
+    ]
+  },
+  "audit_opinion": {
+    "opinion_type": "Qualified opinion",
+    "basis_for_qualification": [
+      {
+        "no": 1,
+        "standard": "IAS 36 / IFRS impairment assessment (PPE)",
+        "issue": "Insufficient documentation to support whether impairment assessment was performed for property, plant and equipment."
+      },
+      {
+        "no": 2,
+        "standard": "IAS 2 inventory valuation",
+        "issue": "Inventory not adjusted to net realizable value; may affect cost of sales, income tax, net income and equity."
+      },
+      {
+        "no": 3,
+        "standard": "Trade and other receivables",
+        "issue": "Debtors include long-outstanding balances; insufficient evidence of recoverability and legal rights. Confirmation responses not obtained for some balances.",
+        "amounts": {
+          "long_outstanding_local_debtors": 118019468,
+          "expected_credit_loss_provided": 47093422,
+          "confirmations_no_response_total": 199822223
+        }
+      },
+      {
+        "no": 4,
+        "standard": "Trade and other payables",
+        "issue": "Creditors include long-outstanding balances; insufficient evidence they remain valid liabilities. Confirmation responses not obtained for some balances.",
+        "amounts": {
+          "long_outstanding_local_creditors": 140404036,
+          "confirmations_no_response_total": 194100616
+        }
+      },
+      {
+        "no": 5,
+        "standard": "IFRS 16 leases",
+        "issue": "Lease accounting not properly applied (lease liability movement, interest recognition, disclosures)."
+      }
+    ]
+  },
+  "financial_statements": {
+    "statement_of_financial_position": {
+      "as_of": "2021-07-07",
+      "comparative_as_of": "2020-07-07",
+      "assets": {
+        "non_current": {
+          "property_plant_equipment": {
+            "2021": 535695769,
+            "2020": 562423961
+          },
+          "investment_property": {
+            "2021": 336681914,
+            "2020": 336556158
+          },
+          "intangible_assets": {
+            "2021": 20165979,
+            "2020": 7861678
+          },
+          "right_of_use_assets": {
+            "2021": 1388571,
+            "2020": 1641857
+          },
+          "deferred_tax_asset": {
+            "2021": 8335968,
+            "2020": null
+          },
+          "total_non_current_assets": {
+            "2021": 902268200,
+            "2020": 908483654
+          }
+        },
+        "current": {
+          "inventories": {
+            "2021": 60524154,
+            "2020": 59346225
+          },
+          "other_assets": {
+            "2021": 2545057,
+            "2020": 43826967
+          },
+          "trade_and_other_receivables": {
+            "2021": 382067413,
+            "2020": 343584973
+          },
+          "cash_and_cash_equivalents": {
+            "2021": 317993849,
+            "2020": 607086077
+          },
+          "total_current_assets": {
+            "2021": 763130473,
+            "2020": 1053844241
+          }
+        },
+        "total_assets": {
+          "2021": 1665398673,
+          "2020": 1962327896
+        }
+      },
+      "liabilities": {
+        "non_current": {
+          "defined_benefit_liability": {
+            "2021": 37388659,
+            "2020": 36396181
+          },
+          "lease_liability": {
+            "2021": 1087168,
+            "2020": 927923
+          },
+          "grants": {
+            "2021": 6087207,
+            "2020": 5053745
+          },
+          "deferred_tax_liability": {
+            "2021": 110290916,
+            "2020": 108575635
+          },
+          "retention_payable": {
+            "2021": 8777038,
+            "2020": 9883053
+          },
+          "total_non_current_liabilities": {
+            "2021": 163630987,
+            "2020": 160836537
+          }
+        },
+        "current": {
+          "trade_and_other_payables": {
+            "2021": 908545942,
+            "2020": 1207504903
+          },
+          "accrued_annual_leave": {
+            "2021": 4464939,
+            "2020": 19524453
+          },
+          "lease_liability": {
+            "2021": 108909,
+            "2020": 447129
+          },
+          "tax_and_other_payables": {
+            "2021": 66604038,
+            "2020": 151687071
+          },
+          "current_income_tax_liability": {
+            "2021": 18960089,
+            "2020": 0
+          },
+          "total_current_liabilities": {
+            "2021": 998683916,
+            "2020": 1379163556
+          }
+        },
+        "total_liabilities": {
+          "2021": 1162314904,
+          "2020": 1540000094
+        }
+      },
+      "equity": {
+        "paid_up_capital": {
+          "2021": 109097601,
+          "2020": 63274478
+        },
+        "legal_reserve": {
+          "2021": 11221173,
+          "2020": 8988882
+        },
+        "revaluation_reserve": {
+          "2021": 247947566,
+          "2020": 247947566
+        },
+        "retained_earnings": {
+          "2021": 134817430,
+          "2020": 102116876
+        },
+        "total_equity": {
+          "2021": 503083769,
+          "2020": 422327802
+        }
+      }
+    },
+    "cash_flow_statement": {
+      "note": "Numbers OCR’d from scanned statement; one or more figures may be inconsistent with management summary—verify against PDF before publishing.",
+      "period_end": "2021-07-07",
+      "comparative_period_end": "2020-07-07",
+      "operating": {
+        "net_profit": {
+          "2021": -163096076,
+          "2020": 303178630
+        },
+        "net_finance_cost": {
+          "2021": 13744692,
+          "2020": 9074593
+        },
+        "income_tax_paid": {
+          "2021": -104570309,
+          "2020": 0
+        },
+        "net_cash_from_operating_activities": {
+          "2021": -253921693,
+          "2020": 312253223
+        }
+      },
+      "investing": {
+        "purchase_ppe": {
+          "2021": -19764381,
+          "2020": -35261892
+        },
+        "purchase_intangibles": {
+          "2021": -16211587,
+          "2020": 0
+        },
+        "purchase_investment_property": {
+          "2021": -7527697,
+          "2020": 0
+        },
+        "proceeds_sale_ppe": {
+          "2021": 8333133,
+          "2020": 0
+        },
+        "proceeds_investment_securities_amortised_cost": {
+          "2021": 0,
+          "2020": 24963159
+        },
+        "net_cash_from_investing_activities": {
+          "2021": -35170531,
+          "2020": 10298733
+        }
+      },
+      "financing": {
+        "lease_liability_movement": {
+          "2021": 0,
+          "2020": -108909
+        },
+        "net_cash_from_financing_activities": {
+          "2021": 0,
+          "2020": -108909
+        }
+      },
+      "net_change_in_cash": {
+        "2021": -289092225,
+        "2020": 301845581
+      },
+      "cash_beginning": {
+        "2021": 607086074,
+        "2020": 305240493
+      },
+      "cash_ending": {
+        "2021": 317993850,
+        "2020": 607086074
+      }
+    }
+  },
+  "notes": {
+    "revenue_from_contracts_with_customers": {
+      "period_end": "2021-07-07",
+      "comparative_period_end": "2020-07-07",
+      "categories": [
+        {
+          "name": "Foreign mail service",
+          "2021": 30157305,
+          "2020": 28243894
+        },
+        {
+          "name": "Express mail service",
+          "2021": 260590992,
+          "2020": 155884586
+        },
+        {
+          "name": "Parcel service",
+          "2021": 64448823,
+          "2020": 48738272
+        },
+        {
+          "name": "Post box rental",
+          "2021": 7381983,
+          "2020": 6635126
+        },
+        {
+          "name": "Home to home delivery service",
+          "2021": 77952438,
+          "2020": 105792432
+        },
+        {
+          "name": "Letter & philately service",
+          "2021": 23458659,
+          "2020": 6155268
+        },
+        {
+          "name": "Transport & logistics income",
+          "2021": 36896136,
+          "2020": 11598260
+        },
+        {
+          "name": "House rental income",
+          "2021": 44147236,
+          "2020": 38676065
+        },
+        {
+          "name": "Commission income - telecom products",
+          "2021": 49587,
+          "2020": 4320405
+        }
+      ],
+      "total_revenue_from_services": {
+        "2021": 595812267,
+        "2020": 418909506
+      },
+      "point_in_time_revenue": {
+        "sales_of_telecom_products": {
+          "2021": 0,
+          "2020": 8875500
+        },
+        "sales_of_packaging_materials": {
+          "2021": 0,
+          "2020": 8372325
+        }
+      }
+    },
+    "direct_costs_excerpt": {
+      "mail_transportation": {
+        "2021": 248180553,
+        "2020": 35967056
+      },
+      "cost_of_telecom_products": {
+        "2021": 0,
+        "2020": 8436887
+      },
+      "commission_expense_telecom_products": {
+        "2021": 0,
+        "2020": 64727
+      }
+    }
+  },
+  "extraction_metadata": {
+    "source_pdf": "2013_Audit_Report.pdf",
+    "extraction_method": "OCR on selected pages (scanned PDF)",
+    "generated_at": "2026-02-11"
+  }
+}

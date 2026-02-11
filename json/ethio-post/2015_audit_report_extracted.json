@@ -1,0 +1,472 @@
+{
+  "source_pdf": "2015_Audit_Report.pdf",
+  "entity": "Ethiopian Postal Service Enterprise",
+  "reporting_framework": "IFRS",
+  "period": {
+    "ethiopian_period_end": "30 Sene 2015",
+    "gregorian_period_end": "2023-07-07",
+    "comparative_gregorian_period_end": "2022-07-07",
+    "currency": "ETB"
+  },
+  "audit_opinion": {
+    "type": "Qualified opinion",
+    "auditor": "Office of the Federal Auditor General - Audit Services Corporation",
+    "report_date": "2024-11-25",
+    "basis_for_qualified_opinion": [
+      {
+        "item": "Trade and other debtors / expected credit loss evidence",
+        "details": "Debtors included balances totalling Birr 147,271,215 outstanding >2 years; expected credit loss of Birr 68,943,540 provided, but auditors could not obtain sufficient appropriate evidence that the amount is receivable or that the enterprise has legal rights/claims; potential adjustments undetermined."
+      },
+      {
+        "item": "Creditors long outstanding balances / liability evidence",
+        "details": "Creditors included long outstanding balances totalling Birr 103,275,323 outstanding >2 years; insufficient evidence they still represent actual liabilities; auditors could not determine whether creditors account shown at Birr 895,070,209 is correctly stated."
+      }
+    ]
+  },
+  "management_summary": {
+    "kpis": {
+      "revenue_income": {
+        "2023": 1173562601,
+        "2022": 870127499
+      },
+      "profit_before_tax": {
+        "2023": 199675014,
+        "2022": 196212308
+      },
+      "total_comprehensive_income": {
+        "2023": 139735627,
+        "2022": 144460951
+      }
+    },
+    "note": "Management report includes a brief results summary table for 30 Sene 2015 vs 30 Sene 2014 (Ethiopian calendar); this JSON aligns the KPIs to the audited IFRS statements for July 7 2023 vs July 7 2022."
+  },
+  "statement_profit_or_loss": {
+    "period_end_gregorian": "2023-07-07",
+    "period_end_ethiopian": "30 Sene 2015",
+    "comparative_period_end_gregorian": "2022-07-07",
+    "currency": "ETB",
+    "rows": {
+      "revenue": {
+        "2023": 1173562601,
+        "2022": 870127499
+      },
+      "direct_costs": {
+        "2023": -438592325,
+        "2022": -333797209
+      },
+      "gross_profit": {
+        "2023": 734970276,
+        "2022": 536330290
+      },
+      "operating_expenses": {
+        "2023": -578870877,
+        "2022": -353556378
+      },
+      "other_operating_income_expense": {
+        "2023": 65732781,
+        "2022": 32704001
+      },
+      "ebitda": {
+        "2023": 221832179,
+        "2022": 215477912
+      },
+      "depreciation_amortization": {
+        "2023": -37253544,
+        "2022": -35610030
+      },
+      "ebit": {
+        "2023": 184578636,
+        "2022": 179867882
+      },
+      "finance_income_cost_net": {
+        "2023": 15096379,
+        "2022": 16344425
+      },
+      "profit_before_tax": {
+        "2023": 199675014,
+        "2022": 196212308
+      },
+      "income_tax": {
+        "2023": -59939388,
+        "2022": -51751356
+      },
+      "profit_after_tax": {
+        "2023": 139735627,
+        "2022": 144460951
+      },
+      "total_comprehensive_income": {
+        "2023": 139735627,
+        "2022": 144460951
+      }
+    }
+  },
+  "statement_financial_position": {
+    "period_end_gregorian": "2023-07-07",
+    "comparative_period_end_gregorian": "2022-07-07",
+    "currency": "ETB",
+    "assets": {
+      "non_current": {
+        "property_plant_equipment": {
+          "2023": 660360005,
+          "2022": 541414280
+        },
+        "investment_property": {
+          "2023": 335958183,
+          "2022": 329186425
+        },
+        "intangible_assets": {
+          "2023": 14202171,
+          "2022": 16851642
+        },
+        "right_of_use_assets": {
+          "2023": 1358675,
+          "2022": 1373642
+        },
+        "deferred_tax_asset": {
+          "2023": 21182415,
+          "2022": 13179291
+        }
+      },
+      "current": {
+        "inventories": {
+          "2023": 123395598,
+          "2022": 74311783
+        },
+        "other_assets": {
+          "2023": 27686273,
+          "2022": 20397443
+        },
+        "trade_other_receivables": {
+          "2023": 442440046,
+          "2022": 393087357
+        },
+        "cash_and_cash_equivalents": {
+          "2023": 294658859,
+          "2022": 385285140
+        }
+      },
+      "total_assets": {
+        "2023": 1921242227,
+        "2022": 1775087003
+      }
+    },
+    "liabilities": {
+      "non_current": {
+        "defined_benefit_liability": {
+          "2023": 45134977,
+          "2022": 39559679
+        },
+        "lease_liability": {
+          "2023": 1255075,
+          "2022": 1171218
+        },
+        "grants": {
+          "2023": 5516042,
+          "2022": 7709624
+        },
+        "deferred_tax_liability": {
+          "2023": 114721842,
+          "2022": 113080487
+        },
+        "retention_payable": {
+          "2023": 15631474,
+          "2022": 9275444
+        }
+      },
+      "current": {
+        "trade_other_payables": {
+          "2023": 800892958,
+          "2022": 825586581
+        },
+        "dividend_payable": {
+          "2023": 94219795,
+          "2022": null
+        },
+        "accrued_annual_leave": {
+          "2023": 15796246,
+          "2022": 10606595
+        },
+        "lease_liability": {
+          "2023": 108909,
+          "2022": 108909
+        },
+        "taxes_and_other_payables": {
+          "2023": 31275794,
+          "2022": 73540303
+        },
+        "current_income_tax_liability": {
+          "2023": 58466834,
+          "2022": 48858297
+        }
+      },
+      "total_liabilities": {
+        "2023": 1183019947,
+        "2022": 1129497138
+      }
+    },
+    "equity": {
+      "paid_up_capital": {
+        "2023": 109097601,
+        "2022": 109097601
+      },
+      "legal_reserve": {
+        "2023": 21639450,
+        "2022": 18013986
+      },
+      "revaluation_reserve": {
+        "2023": 247947566,
+        "2022": 247947566
+      },
+      "retained_earnings": {
+        "2023": 359537663,
+        "2022": 270530713
+      },
+      "total_equity": {
+        "2023": 738222280,
+        "2022": 645589866
+      }
+    },
+    "total_equity_and_liabilities": {
+      "2023": 1921242227,
+      "2022": 1775087003
+    }
+  },
+  "statement_cash_flow": {
+    "period_end_gregorian": "2023-07-07",
+    "comparative_period_end_gregorian": "2022-07-07",
+    "currency": "ETB",
+    "rows": {
+      "net_profit": {
+        "2023": 109419500,
+        "2022": 108856429
+      },
+      "net_finance_cost": {
+        "2023": -48042676,
+        "2022": -18960090
+      },
+      "income_tax_paid": {
+        "2023": null,
+        "2022": null
+      },
+      "net_cash_from_operating_activities": {
+        "2023": 61376824,
+        "2022": 89896340
+      },
+      "purchase_ppe": {
+        "2023": -153282889,
+        "2022": -29221715
+      },
+      "transfer": {
+        "2023": 5612143,
+        "2022": null
+      },
+      "disposal": {
+        "2023": 3797665,
+        "2022": null
+      },
+      "purchase_right_of_use_asset": {
+        "2023": -1097305,
+        "2022": -319600
+      },
+      "purchase_investment_property": {
+        "2023": -14378445,
+        "2022": null
+      },
+      "proceeds_sale_ppe": {
+        "2023": 10345725,
+        "2022": null
+      },
+      "net_cash_used_in_investing_activities": {
+        "2023": -149003106,
+        "2022": -29541315
+      },
+      "dividend_paid": {
+        "2023": -3000000,
+        "2022": null
+      },
+      "net_cash_used_in_financing_activities": {
+        "2023": -3000000,
+        "2022": null
+      },
+      "net_increase_decrease_in_cash": {
+        "2023": -90626282,
+        "2022": 67291291
+      },
+      "cash_and_cash_equivalents_beginning": {
+        "2023": 385285141,
+        "2022": 317993850
+      },
+      "cash_and_cash_equivalents_end": {
+        "2023": 294658859,
+        "2022": 385285141
+      }
+    },
+    "note": "Net profit shown in the cash flow statement (Birr 109,419,500 for 2023) does not match profit after tax in the statement of profit or loss (Birr 139,735,627). Verify Note 20 and reconciliation before publishing charts."
+  },
+  "notes": {
+    "revenue_from_contracts_with_customers": {
+      "total": {
+        "2023": 1173562601,
+        "2022": 870127499
+      },
+      "breakdown": {
+        "foreign_mail_service": {
+          "2023": 65585340,
+          "2022": 45684811
+        },
+        "express_mail_service": {
+          "2023": 613928616,
+          "2022": 436926093
+        },
+        "parcel_service": {
+          "2023": 133958885,
+          "2022": 93803068
+        },
+        "post_box_rental": {
+          "2023": 29824711,
+          "2022": 25576386
+        },
+        "home_to_home_delivery_service": {
+          "2023": 98042,
+          "2022": 5674630
+        },
+        "letter_philately_service": {
+          "2023": 16983199,
+          "2022": 29295535
+        },
+        "transport_logistics_income": {
+          "2023": 147846681,
+          "2022": 120476388
+        },
+        "house_rental_income": {
+          "2023": 61320851,
+          "2022": 61848813
+        },
+        "commission_income_telecom_products": {
+          "2023": 53667918,
+          "2022": 5775
+        },
+        "commission_income_other_services": {
+          "2023": 50348358,
+          "2022": 50836001
+        }
+      }
+    },
+    "direct_costs": {
+      "total": {
+        "2023": 438592325,
+        "2022": 333797209
+      },
+      "breakdown": {
+        "mail_transportation": {
+          "2023": 391631939,
+          "2022": 333797209
+        },
+        "commission_expense_telecom_products": {
+          "2023": 46960387,
+          "2022": 0
+        }
+      }
+    },
+    "operating_expenses": {
+      "total": {
+        "2023": 578870877,
+        "2022": 353556378
+      },
+      "breakdown": {
+        "employee_benefits_expense": {
+          "2023": 348356226,
+          "2022": 222184661
+        },
+        "transport_travelling": {
+          "2023": 50180514,
+          "2022": 22700876
+        },
+        "rent": {
+          "2023": 50001999,
+          "2022": 38062190
+        },
+        "utilities": {
+          "2023": 8352964,
+          "2022": 6611373
+        },
+        "repair_maintenance": {
+          "2023": 15998660,
+          "2022": 11703414
+        },
+        "printing_stationery": {
+          "2023": 24248641,
+          "2022": 8107711
+        },
+        "advertising_membership": {
+          "2023": 47135917,
+          "2022": 26315339
+        },
+        "other_operating_expenses": {
+          "2023": 34595956,
+          "2022": 17870815
+        }
+      },
+      "employee_benefits_components_2023": {
+        "salaries_and_wages": 184016742,
+        "allowances": 96018873,
+        "bonus": 8238330,
+        "annual_leave": 5876614,
+        "medical_life_insurance": 6636003,
+        "employee_defined_contribution_expense": 19752369,
+        "other_staff_benefits": 19769273
+      }
+    },
+    "other_operating_income_expense": {
+      "total": {
+        "2023": 65732781,
+        "2022": 32704001
+      },
+      "breakdown": {
+        "gain_loss_sale_ppe": {
+          "2023": 10869996,
+          "2022": 5871
+        },
+        "deferred_tax_income": {
+          "2023": 8003124,
+          "2022": 5762432
+        },
+        "fx_gain_loss": {
+          "2023": 25055358,
+          "2022": 15649
+        },
+        "inventory_valuation_gain": {
+          "2023": 0,
+          "2022": 12362268
+        },
+        "grant_income": {
+          "2023": 2190345,
+          "2022": 4229702
+        },
+        "sundry_income": {
+          "2023": 19613957,
+          "2022": 10328079
+        }
+      },
+      "note": "FY2022 FX gain/loss OCR captured as 15,649 (likely truncated). Verify against the PDF before charting this component."
+    },
+    "finance_income_cost_net": {
+      "total": {
+        "2023": 15096379,
+        "2022": 16344425
+      },
+      "finance_income": {
+        "total": {
+          "2023": 16260433,
+          "2022": 19533639
+        }
+      },
+      "finance_costs": {
+        "total": {
+          "2023": 1164054,
+          "2022": 3189214
+        }
+      }
+    }
+  }
+}
