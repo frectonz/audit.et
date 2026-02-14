@@ -1,0 +1,282 @@
+{
+  "source_file": "2021.pdf",
+  "entity": "Ethiopian Electric Power",
+  "report_date": "07 July 2021",
+  "currency": "ETB",
+  "unit": "Birr'000",
+  "statements": {
+    "profit_or_loss_and_oci": {
+      "years": [
+        "2021",
+        "2020"
+      ],
+      "data": {
+        "2021": {
+          "revenue_from_contracts_with_customers": 13028901,
+          "direct_costs": -4986103,
+          "operating_expenses": -169195,
+          "net_impairment_gain_loss_on_financial_assets": -1192231,
+          "other_income_expense": 254396,
+          "ebitda": 6935768,
+          "depreciation_ppe": -7588555,
+          "depreciation_right_of_use_asset": -68917,
+          "operating_profit_loss": -721704,
+          "finance_costs": -22072834,
+          "net_loss_for_year": -22794538,
+          "oci_remeasurement_defined_benefit_plans": 1021,
+          "total_comprehensive_loss": -22793517
+        },
+        "2020": {
+          "revenue_from_contracts_with_customers": 9013936,
+          "direct_costs": -2415922,
+          "operating_expenses": -154600,
+          "net_impairment_gain_loss_on_financial_assets": -352116,
+          "other_income_expense": 1032148,
+          "ebitda": 7124046,
+          "depreciation_ppe": -7499401,
+          "depreciation_right_of_use_asset": -74817,
+          "operating_profit_loss": -450172,
+          "finance_costs": -29201297,
+          "net_loss_for_year": -29651469,
+          "oci_remeasurement_defined_benefit_plans": -2278,
+          "total_comprehensive_loss": -29653747
+        }
+      }
+    },
+    "financial_position": {
+      "as_at_dates": [
+        "2021-07-07",
+        "2020-07-07"
+      ],
+      "data": {
+        "2021-07-07": {
+          "assets_non_current": {
+            "property_plant_equipment": 578083327,
+            "intangible_assets": 468508,
+            "right_of_use_assets": 92533,
+            "long_term_receivables": 115428,
+            "total_non_current_assets": 578759796
+          },
+          "assets_current": {
+            "inventories": 362794,
+            "trade_and_other_receivables": 37321496,
+            "cash_and_cash_equivalents": 5254040,
+            "assets_classified_as_held_for_sale": 4134,
+            "total_current_assets": 42942464
+          },
+          "total_assets": 621702260,
+          "liabilities_non_current": {
+            "borrowings": 215054516,
+            "lease_liabilities": 17916,
+            "employee_benefit_obligations": 29457,
+            "provisions": 7123,
+            "grants": 643026,
+            "total_non_current_liabilities": 215752038
+          },
+          "liabilities_current": {
+            "borrowings": 19843438,
+            "employee_benefit_obligations": 6643,
+            "trade_and_other_payables": 30516392,
+            "contract_liabilities": 44041,
+            "provisions": 350738,
+            "lease_liabilities": 72340,
+            "total_current_liabilities": 50833592
+          },
+          "total_liabilities": 266585630,
+          "equity": {
+            "capital": 314397842,
+            "legal_reserve": 2283,
+            "other_reserves": -7313,
+            "accumulated_losses": -122044021,
+            "non_distributable_reserve": 162767839,
+            "total_equity": 355116630
+          },
+          "total_equity_and_liabilities": 621702260
+        },
+        "2020-07-07": {
+          "assets_non_current": {
+            "property_plant_equipment": 541062200,
+            "intangible_assets": 392386,
+            "right_of_use_assets": 149596,
+            "long_term_receivables": 115428,
+            "total_non_current_assets": 541719610
+          },
+          "assets_current": {
+            "inventories": 351068,
+            "trade_and_other_receivables": 34186324,
+            "cash_and_cash_equivalents": 3731278,
+            "assets_classified_as_held_for_sale": 0,
+            "total_current_assets": 38268670
+          },
+          "total_assets": 579988280,
+          "liabilities_non_current": {
+            "borrowings": 253386783,
+            "lease_liabilities": 80673,
+            "employee_benefit_obligations": 17790,
+            "provisions": 6448,
+            "grants": 565416,
+            "total_non_current_liabilities": 254057110
+          },
+          "liabilities_current": {
+            "borrowings": 126149546,
+            "employee_benefit_obligations": 4075,
+            "trade_and_other_payables": 16710554,
+            "contract_liabilities": 308056,
+            "provisions": 363767,
+            "lease_liabilities": 59101,
+            "total_current_liabilities": 143595099
+          },
+          "total_liabilities": 397652209,
+          "equity": {
+            "capital": 118823766,
+            "legal_reserve": 2283,
+            "other_reserves": -8334,
+            "accumulated_losses": -99249483,
+            "non_distributable_reserve": 162767839,
+            "total_equity": 182336071
+          },
+          "total_equity_and_liabilities": 579988280
+        }
+      }
+    },
+    "cash_flows": {
+      "years": [
+        "2021",
+        "2020"
+      ],
+      "data": {
+        "2021": {
+          "operating": {
+            "cash_generated_used_in_operations": 20629029,
+            "interest_paid_on_borrowings": -2339464,
+            "interest_paid_on_leases": -11519,
+            "net_cash_from_operating_activities": 18278046
+          },
+          "investing": {
+            "purchase_ppe": -27716318,
+            "purchase_intangible_assets": -76122,
+            "payment_for_right_of_use_assets": -639,
+            "net_cash_from_investing_activities": -27793079
+          },
+          "financing": {
+            "proceeds_from_borrowings": 19947823,
+            "repayments_of_borrowings": -10304058,
+            "principal_elements_of_lease_payments": -60732,
+            "net_cash_from_financing_activities": 9583033
+          },
+          "net_change_in_cash_and_cash_equivalents": 68000,
+          "cash_and_cash_equivalents_beginning": 3731278,
+          "effects_of_exchange_rate_changes": 1454762,
+          "cash_and_cash_equivalents_end": 5254040
+        },
+        "2020": {
+          "operating": {
+            "cash_generated_used_in_operations": 352360,
+            "interest_paid_on_borrowings": -23283286,
+            "interest_paid_on_leases": -12707,
+            "net_cash_from_operating_activities": -22943632
+          },
+          "investing": {
+            "purchase_ppe": -15157047,
+            "purchase_intangible_assets": -34822,
+            "payment_for_right_of_use_assets": -79761,
+            "net_cash_from_investing_activities": -15271630
+          },
+          "financing": {
+            "proceeds_from_borrowings": 47716232,
+            "repayments_of_borrowings": -13407317,
+            "principal_elements_of_lease_payments": -5637,
+            "net_cash_from_financing_activities": 34303278
+          },
+          "net_change_in_cash_and_cash_equivalents": -3911985,
+          "cash_and_cash_equivalents_beginning": 5898950,
+          "effects_of_exchange_rate_changes": 1744313,
+          "cash_and_cash_equivalents_end": 3731278
+        }
+      }
+    },
+    "changes_in_equity": {
+      "events": [
+        {
+          "date": "2019-07-08",
+          "type": "opening_balance",
+          "capital": 114353857,
+          "legal_reserve": 2283,
+          "other_reserves": -6056,
+          "accumulated_losses": -69598014,
+          "non_distributable_reserve": 162767839,
+          "total_equity": 207519909
+        },
+        {
+          "period_end": "2020-07-07",
+          "type": "loss_for_period",
+          "total_equity_change": -29651469,
+          "accumulated_losses_change": -29651469
+        },
+        {
+          "period_end": "2020-07-07",
+          "type": "oci_remeasurement_defined_benefit_plans",
+          "other_reserves_change": -2278,
+          "total_equity_change": -2278
+        },
+        {
+          "period_end": "2020-07-07",
+          "type": "capital_contribution",
+          "capital_change": 4469909,
+          "total_equity_change": 4469909
+        },
+        {
+          "date": "2020-07-07",
+          "type": "closing_balance",
+          "capital": 118823766,
+          "legal_reserve": 2283,
+          "other_reserves": -8334,
+          "accumulated_losses": -99249483,
+          "non_distributable_reserve": 162767839,
+          "total_equity": 182336071
+        },
+        {
+          "date": "2020-07-08",
+          "type": "opening_balance",
+          "capital": 118823766,
+          "legal_reserve": 2283,
+          "other_reserves": -8334,
+          "accumulated_losses": -99249483,
+          "non_distributable_reserve": 162767839,
+          "total_equity": 182336071
+        },
+        {
+          "period_end": "2021-07-07",
+          "type": "loss_for_period",
+          "total_equity_change": -22794538,
+          "accumulated_losses_change": -22794538
+        },
+        {
+          "period_end": "2021-07-07",
+          "type": "oci_remeasurement_defined_benefit_plans",
+          "other_reserves_change": 1021,
+          "total_equity_change": 1021
+        },
+        {
+          "period_end": "2021-07-07",
+          "type": "capital_contribution",
+          "capital_change": 195574076,
+          "total_equity_change": 195574076
+        },
+        {
+          "date": "2021-07-07",
+          "type": "closing_balance",
+          "capital": 314397842,
+          "legal_reserve": 2283,
+          "other_reserves": -7313,
+          "accumulated_losses": -122044021,
+          "non_distributable_reserve": 162767839,
+          "total_equity": 355116630
+        }
+      ]
+    }
+  },
+  "notes": {
+    "extraction_method": "OCR from scanned PDF pages (statements pages 11-14). Negative numbers shown in parentheses were converted to negative integers."
+  }
+}
