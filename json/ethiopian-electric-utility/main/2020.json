@@ -1,0 +1,232 @@
+{
+  "source_pdf": "2020.pdf",
+  "entity": "Ethiopian Electric Utility",
+  "report_type": "Independent Auditor's Report and Financial Statements",
+  "period_end": "2020-07-07",
+  "currency": "ETB",
+  "audit_report": {
+    "auditor": "Audit Service Corporation (Office of the Federal Auditor General)",
+    "audit_report_date": "26 January 2022",
+    "opinion_text": "We have audited the financial statements of Ethiopian Electric Utility (the Entity), which\ncomprise the statement of financial position as at 7 July 2020, and the statement of profit or loss\nand other comprehensive income, statement of cash flow, and statement of changes in equity for\nthe year then ended, and notes to the financial statements, including a summary of significant\naccounting policies.\nIn our opinion, the accompanying financial statements present fairly, in all material respects, the\nfinancial position of the Entity as at 7 July 2020 and its financial performance and its cash flows\nfor the year then ended in accordance with International Financial Reporting Standards (IFRSs).",
+    "basis_for_opinion_text": "We conducted our audit in accordance with International Standards on Auditing (ISAs). Our\nresponsibilities under those standards are further described in the Auditor's Responsibilities for\nthe Audit of the Financial Siatements section of our report. We are independent of the Entity in\naccordance with the International [thics Standards Board for Accountants’ Code of Ethics for\nProfessional Accountants (IESBA Code) together with the ethical requirements that are relevant\nto our audit of the financial statements in Ethiopia, and we have fulfilled our other ethical\nresponsibilities in accordance with those requirements and the IESBA Code. We believe that the\naudit evidence we have obtained is sufficient and appropriate to provide a basis for our opinion.\nHy oe EY,\nlr LN\nLey Hea \\ 4\nU te ( 2S] 8)\n\n\nINDEPENDENT AUDITOR’S REPORT\nTO THE SUPERVISING AUTHORITY OF\nETHIOPIAN ELECTRIC UTILITY (continued)\nReport on the Audit of the Financial Statements (continued)",
+    "key_audit_matters_text": "Key audit matters are those matters that, in our professional judgment, were of most significance\nin our audit of the financial statements of the current period. These matters were addressed in\nthe context of our audit of the financial statements as a whole, and in forming our opinion\nthereon, and we do not provide a separate opinion on these matters.",
+    "extracted_from_pages": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "notes": "Text extracted via OCR from scanned PDF; verify wording before publishing."
+  },
+  "financial_statements": {
+    "statement_of_profit_or_loss_and_other_comprehensive_income": {
+      "period_end": "2020-07-07",
+      "comparative_period_end": "2019-07-07",
+      "items": {
+        "Revenue": {
+          "2020_etb": 15143020670,
+          "2019_etb": 11315603383
+        },
+        "Cost of sales ( Power, Distribution , Substation": {
+          "2020_etb": -12810262276,
+          "2019_etb": -10382961317
+        },
+        "Gross profit": {
+          "2020_etb": 2332758394,
+          "2019_etb": 932642066
+        },
+        "Other operating income": {
+          "2020_etb": 2118768932,
+          "2019_etb": 1375663130
+        },
+        "Administration expense": {
+          "2020_etb": -1917853342,
+          "2019_etb": -1029424706
+        },
+        "Other operating expense": {
+          "2020_etb": 17971731,
+          "2019_etb": -12503297
+        },
+        "Impairment allowance": {
+          "2020_etb": -138160569,
+          "2019_etb": -34916718
+        },
+        "Operating profit": {
+          "2020_etb": 2413485145,
+          "2019_etb": 1231460474
+        },
+        "Finance costs/charges": {
+          "2020_etb": -907834775,
+          "2019_etb": -445810362
+        },
+        "Profit before tax": {
+          "2020_etb": 1505650370,
+          "2019_etb": 785650113
+        },
+        "Profit for the year": {
+          "2020_etb": 1505650370,
+          "2019_etb": 785650113
+        },
+        "Total comprehensive income for the year": {
+          "2020_etb": 1505650370,
+          "2019_etb": 752888393
+        },
+        "The Notes on pages": {
+          "2020_etb": 42,
+          "2019_etb": null
+        }
+      }
+    },
+    "statement_of_financial_position": {
+      "as_at": "2020-07-07",
+      "comparative_as_at": "2019-07-07",
+      "items": {
+        "Property. plant and equipment": {
+          "2020_etb": 42990594532,
+          "2019_etb": 44285381672
+        },
+        "Forest assets": {
+          "2020_etb": 246523367,
+          "2019_etb": 161084000
+        },
+        "Intangible Asset": {
+          "2020_etb": 1095929391,
+          "2019_etb": 894767016
+        },
+        "Right use of asset - Office": {
+          "2020_etb": 37383020,
+          "2019_etb": 28629909
+        },
+        "Advance and Prepayments": {
+          "2020_etb": 4671312782,
+          "2019_etb": 4537688209
+        },
+        "Investment in associate": {
+          "2020_etb": 21202986,
+          "2019_etb": 31202573
+        },
+        "Cash and cash equivalents": {
+          "2020_etb": 10822184076,
+          "2019_etb": 8773589595
+        },
+        "Trade receivables": {
+          "2020_etb": 4493852864,
+          "2019_etb": 2203801752
+        },
+        "Other receivable": {
+          "2020_etb": 411904421,
+          "2019_etb": 49811810
+        },
+        "Inventories": {
+          "2020_etb": 8187124011,
+          "2019_etb": 4596198951
+        },
+        "Total assets": {
+          "2020_etb": 72978011451,
+          "2019_etb": 65562155487
+        },
+        "paid up capital": {
+          "2020_etb": 44763102402,
+          "2019_etb": 36246642700
+        },
+        "legal reserve": {
+          "2020_etb": 118527857,
+          "2019_etb": 43245339
+        },
+        "Grant & Contribution": {
+          "2020_etb": 1582370754,
+          "2019_etb": 11845385
+        },
+        "Other Reserve": {
+          "2020_etb": -50342720,
+          "2019_etb": -50342720
+        },
+        "Reserve for excess of deemed cost over book": {
+          "2020_etb": 11123966881,
+          "2019_etb": 11123966881
+        },
+        "Total equity": {
+          "2020_etb": 57537625175,
+          "2019_etb": 54459962468
+        },
+        "Total liabilities": {
+          "2020_etb": 15440386276,
+          "2019_etb": 11102193019
+        },
+        "Total equity and liabilities": {
+          "2020_etb": 72978011451,
+          "2019_etb": 65562155487
+        }
+      }
+    },
+    "statement_of_cash_flows_summary": {
+      "period_end": "2020-07-07",
+      "comparative_period_end": "2019-07-07",
+      "net_cash_from_operating": {
+        "2020_etb": 1988742566,
+        "2019_etb": 4090421221
+      },
+      "net_cash_used_in_investing": {
+        "2020_etb": -2704562967,
+        "2019_etb": -2424270537
+      },
+      "net_cash_from_financing": {
+        "2020_etb": 2764414883,
+        "2019_etb": 2102478811
+      },
+      "net_change_in_cash": {
+        "2020_etb": 2048504482,
+        "2019_etb": -3768629495
+      },
+      "cash_beginning": {
+        "2020_etb": 8773589595,
+        "2019_etb": 5859330609
+      },
+      "cash_ending": {
+        "2020_etb": 10822184077,
+        "2019_etb": 9627960104
+      }
+    }
+  },
+  "charting_hints": {
+    "suggested_charts": [
+      {
+        "type": "bar",
+        "title": "Revenue vs Cost of Sales",
+        "series": [
+          "Revenue",
+          "Cost of sales ( Power, Distribution , Substation"
+        ]
+      },
+      {
+        "type": "bar",
+        "title": "Operating Profit and Profit for the Year",
+        "series": [
+          "Operating profit",
+          "Profit for the year"
+        ]
+      },
+      {
+        "type": "stacked_bar",
+        "title": "Assets Breakdown (2020 vs 2019)",
+        "series": [
+          "Property. plant and equipment",
+          "Cash and cash equivalents",
+          "Trade receivables",
+          "Inventories"
+        ]
+      },
+      {
+        "type": "waterfall",
+        "title": "Cash Flow Summary",
+        "series": [
+          "net_cash_from_operating",
+          "net_cash_used_in_investing",
+          "net_cash_from_financing",
+          "net_change_in_cash"
+        ]
+      }
+    ],
+    "units": "ETB (absolute values; negatives are outflows/expenses)"
+  }
+}
