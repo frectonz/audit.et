@@ -1,0 +1,23 @@
+{
+  "revenue": 273319489,
+  "costOfSales": -102962469,
+  "grossProfit": 170357020,
+  "operatingProfit": 115153977,
+  "netProfit": 81719702,
+  "totalAssets": 1169954047,
+  "totalLiabilities": 225813631,
+  "totalEquity": 944140416,
+  "auditOpinion": "Qualified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "Advance collections were treated as sales and undelivered sales were recorded against cost of sales; revenue was recognized without satisfying performance obligations.",
+      "amount": 18826742.5
+    },
+    {
+      "number": 2,
+      "summary": "Direct and indirect costs (materials, labor, overhead) were not absorbed into inventory cost at year end; inventory valued using opening standard costing.",
+      "amount": null
+    }
+  ]
+}

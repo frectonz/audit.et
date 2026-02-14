@@ -1,0 +1,28 @@
+{
+  "revenue": 172448635,
+  "costOfSales": -65709795,
+  "grossProfit": 106738839,
+  "operatingProfit": 76348526,
+  "netProfit": 53712450,
+  "totalAssets": 751568256,
+  "totalLiabilities": 96741953,
+  "totalEquity": 654826303,
+  "auditOpinion": "Qualified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "Advance collected amounting to ETB 10,940,227.32 was treated as sales and undelivered sales were recorded against cost of sales; the auditors were not satisfied revenue should be recognized without performance obligations being satisfied.",
+      "amount": 10940227.32
+    },
+    {
+      "number": 2,
+      "summary": "Direct and indirect costs (material, labor, overhead) were not absorbed into inventory cost at year end; vaccines inventory was valued at opening standard costing; auditors were not satisfied inventory and cost of sales were fairly stated.",
+      "amount": null
+    },
+    {
+      "number": 3,
+      "summary": "Total sales per monthly VAT declaration and annual sales register machine (Z report) differed by Birr 7,413,400; Z report balance was higher; auditors noted non-compliance could lead to penalties.",
+      "amount": null
+    }
+  ]
+}

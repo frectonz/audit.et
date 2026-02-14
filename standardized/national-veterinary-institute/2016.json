@@ -1,0 +1,23 @@
+{
+  "revenue": 364474383,
+  "costOfSales": -127202323,
+  "grossProfit": 237272060,
+  "operatingProfit": 157694107,
+  "netProfit": 109906402,
+  "totalAssets": 1256092281,
+  "totalLiabilities": 246946854,
+  "totalEquity": 1009145426,
+  "auditOpinion": "Qualified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "Advance collections were treated as sales and undelivered sales were recorded against cost of sales; revenue was recognized without satisfying performance obligations.",
+      "amount": 10241573.0
+    },
+    {
+      "number": 2,
+      "summary": "Direct and indirect costs (materials, labour and overhead) were not absorbed into inventory cost at year end; vaccines inventory was valued using opening standard costing.",
+      "amount": null
+    }
+  ]
+}

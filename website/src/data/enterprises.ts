@@ -109,6 +109,20 @@ const enterprises: Enterprise[] = [
     fiscalYearEnd: "Sene 30",
   },
   {
+    id: "national-veterinary-institute",
+    name: "National Veterinary Institute",
+    shortName: "NVI",
+    sector: "Agriculture",
+    sectorIcon: "syringe",
+    description:
+      "Produces and distributes vaccines and veterinary drugs for livestock disease prevention across Ethiopia. A key institution for the country's agricultural sector and food security.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("national-veterinary-institute"),
+    auditFindings: loadFindings("national-veterinary-institute"),
+    fiscalYearEnd: "Sene 30",
+  },
+  {
     id: "eeu-eleap",
     name: "EEU - Ethiopia Electrification Program (ELEAP)",
     shortName: "ELEAP",

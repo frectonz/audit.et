@@ -1,0 +1,28 @@
+{
+  "revenue": 214056279,
+  "costOfSales": -89995245,
+  "grossProfit": 124061033,
+  "operatingProfit": 86461740,
+  "netProfit": 60652958,
+  "totalAssets": 1117651352,
+  "totalLiabilities": 118772921,
+  "totalEquity": 998878431,
+  "auditOpinion": "Qualified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "Advance collected was treated as sales and undelivered sales were recorded against cost of sales. Under IFRS 15, revenue should be recognized when performance obligations are satisfied; the auditor was not satisfied that reported sales and cost of sales were not overstated.",
+      "amount": 7771612.05
+    },
+    {
+      "number": 2,
+      "summary": "Direct and indirect costs (materials, labor, and overhead) were not absorbed into inventory cost; vaccines inventory was not valued using standard costing. Under IAS 2, production costs should be absorbed into inventory cost; the auditor was not satisfied that inventory and cost of sales balances were fairly stated.",
+      "amount": null
+    },
+    {
+      "number": 3,
+      "summary": "Total sales per monthly VAT declarations and annual sales register machine (Z report) differed; the Z report balance was higher. The report notes non-compliance with tax laws may lead to penalties.",
+      "amount": 5595543.38
+    }
+  ]
+}
