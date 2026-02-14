@@ -1,0 +1,415 @@
+{
+  "report": {
+    "title": "Independent Auditor's Report and Financial Statements",
+    "entity": "Ethiopian Electric Utility (EEU) – Ethiopia Electrification Program (ELEAP)",
+    "auditor": "Office of the Federal Auditor General – Audit Services Corporation",
+    "credits": [
+      {
+        "funder": "IDA",
+        "credit_no": "61580-ET",
+        "description": "Regular Credit"
+      },
+      {
+        "funder": "IDA",
+        "credit_no": "61570-ET",
+        "description": "Scale up Facility Credit"
+      },
+      {
+        "funder": "IDA",
+        "credit_no": "72940-ET",
+        "description": "Additional financing (Credit/Financing)"
+      }
+    ],
+    "parts": [
+      "1",
+      "2",
+      "3(a)",
+      "3(c)",
+      "3(d)",
+      "3(f)",
+      "3(g)",
+      "3(h)"
+    ],
+    "financial_year_end": "2024-07-07",
+    "report_date_signed": "2024-10-28",
+    "date_of_authorization": "2024-10-28"
+  },
+  "audit_report": {
+    "audited_statements": [
+      "Balance sheet as at 7 July 2024",
+      "Statement of sources and uses of funds for the year ended 7 July 2024",
+      "Designated Account statement for the year ended 7 July 2024"
+    ],
+    "basis_of_accounting": "Modified cash basis of accounting (as described in note 2 to the financial statements)",
+    "opinion": {
+      "type": "Unmodified (true and fair view)",
+      "summary": "Financial statements give a true and fair view of the financial position as at 7 July 2024 and of sources and uses of funds for the year ended 7 July 2024 in accordance with the modified cash basis of accounting."
+    },
+    "other_requirements_conclusions": [
+      "IDA funds used in accordance with financing agreements and only for intended purposes.",
+      "Counterpart funds provided and used in accordance with the financing agreement and only for intended purposes.",
+      "Goods, works and services financed provided in accordance with financing agreements and disbursement letters.",
+      "Supporting documents, records and accounts maintained for program activities.",
+      "Disbursed funds covered eligible expenditures under IDA Credits 61580-ET, 61570-ET and 72940-ET (Parts 1,2,3(a),3(c),3(d),3(f),3(g),3(h)).",
+      "Financial performance of the program is satisfactory.",
+      "No weaknesses or irregularities noted in internal controls over financial expenditure.",
+      "Designated Account maintained per financing agreement; disbursements used only for intended purposes."
+    ]
+  },
+  "financial_statements": {
+    "statement_of_sources_and_uses_of_funds": {
+      "period": {
+        "end": "2024-07-07"
+      },
+      "cumulative_period_start": "2019-06-29",
+      "comparative_period_end": "2023-07-07",
+      "currencies": [
+        "USD",
+        "ETB"
+      ],
+      "sources": [
+        {
+          "line_item": "Credit from IDA - Additional deposit to Designated Account",
+          "current_year": {
+            "USD": 103658319.0,
+            "ETB": 5895524009.0
+          },
+          "cumulative": {
+            "USD": 381270906.0,
+            "ETB": 17811894757.0
+          },
+          "comparative": {
+            "USD": 60011796.0,
+            "ETB": 3252434583.0
+          }
+        },
+        {
+          "line_item": "Credit from IDA - Initial deposit to Designated Account",
+          "current_year": {
+            "USD": null,
+            "ETB": null
+          },
+          "cumulative": {
+            "USD": 59779225.0,
+            "ETB": 1630293048.0
+          },
+          "comparative": {
+            "USD": null,
+            "ETB": null
+          }
+        },
+        {
+          "line_item": "Customer Contribution",
+          "current_year": {
+            "USD": null,
+            "ETB": 3111848954.0
+          },
+          "cumulative": {
+            "USD": null,
+            "ETB": 14885825964.0
+          },
+          "comparative": {
+            "USD": null,
+            "ETB": 4051296261.0
+          }
+        },
+        {
+          "line_item": "EEU's contribution",
+          "current_year": {
+            "USD": null,
+            "ETB": 2146047098.0
+          },
+          "cumulative": {
+            "USD": null,
+            "ETB": 4361867421.0
+          },
+          "comparative": {
+            "USD": null,
+            "ETB": 1155230529.0
+          }
+        },
+        {
+          "line_item": "Gain on foreign exchange",
+          "current_year": {
+            "USD": null,
+            "ETB": 547594152.0
+          },
+          "cumulative": {
+            "USD": null,
+            "ETB": 3622472713.0
+          },
+          "comparative": {
+            "USD": null,
+            "ETB": 436126721.0
+          }
+        }
+      ],
+      "totals": {
+        "total_sources": {
+          "current_year": {
+            "USD": 103658319.0,
+            "ETB": 11701014213.0
+          },
+          "cumulative": {
+            "USD": 441050131.0,
+            "ETB": 42312353903.0
+          },
+          "comparative": {
+            "USD": 60011796.0,
+            "ETB": 8895088094.0
+          }
+        },
+        "uses": [
+          {
+            "line_item": "Supplies",
+            "current_year": {
+              "USD": 54365634.0,
+              "ETB": 7345595299.0
+            },
+            "cumulative": {
+              "USD": 170150732.0,
+              "ETB": 24323091021.0
+            },
+            "comparative": {
+              "USD": 22497767.0,
+              "ETB": 5748461352.0
+            }
+          },
+          {
+            "line_item": "Contractual services",
+            "current_year": {
+              "USD": 5982236.0,
+              "ETB": 1349316108.0
+            },
+            "cumulative": {
+              "USD": 26646273.0,
+              "ETB": 4102887653.0
+            },
+            "comparative": {
+              "USD": 7261612.0,
+              "ETB": 1055809034.0
+            }
+          },
+          {
+            "line_item": "Capacity Building",
+            "current_year": {
+              "USD": null,
+              "ETB": 18650502.0
+            },
+            "cumulative": {
+              "USD": 94672.0,
+              "ETB": 63758933.0
+            },
+            "comparative": {
+              "USD": null,
+              "ETB": 14583810.0
+            }
+          },
+          {
+            "line_item": "Operating cost",
+            "current_year": {
+              "USD": 114359.0,
+              "ETB": 6467922.0
+            },
+            "cumulative": {
+              "USD": 4791964.0,
+              "ETB": 201523795.0
+            },
+            "comparative": {
+              "USD": 234456.0,
+              "ETB": 14179606.0
+            }
+          }
+        ],
+        "total_uses": {
+          "current_year": {
+            "USD": 60462229.0,
+            "ETB": 8720029831.0
+          },
+          "cumulative": {
+            "USD": 201683641.0,
+            "ETB": 28691261402.0
+          },
+          "comparative": {
+            "USD": 29993835.0,
+            "ETB": 6833033802.0
+          }
+        },
+        "source_over_uses": {
+          "current_year": {
+            "USD": 43196090.0,
+            "ETB": 2980984382.0
+          },
+          "cumulative": {
+            "USD": 239366490.0,
+            "ETB": 13621092501.0
+          },
+          "comparative": {
+            "USD": 30017961.0,
+            "ETB": 2062054292.0
+          }
+        }
+      }
+    },
+    "balance_sheet": {
+      "as_at": "2024-07-07",
+      "currencies": [
+        "USD",
+        "ETB"
+      ],
+      "assets": {
+        "current_assets": [
+          {
+            "line_item": "Advance to suppliers",
+            "note": null,
+            "current_year": {
+              "USD": 22768414.0,
+              "ETB": 1194839239.0
+            },
+            "comparative": {
+              "USD": 3875414.0,
+              "ETB": 133706209.0
+            }
+          },
+          {
+            "line_item": "Cash at bank",
+            "note": 3,
+            "current_year": {
+              "USD": 216598076.0,
+              "ETB": 12426253262.0
+            },
+            "comparative": {
+              "USD": 192294986.0,
+              "ETB": 10506401910.0
+            }
+          }
+        ],
+        "total_current_assets": {
+          "current_year": {
+            "USD": 239366490.0,
+            "ETB": 13621092501.0
+          },
+          "comparative": {
+            "USD": 196170400.0,
+            "ETB": 10640108119.0
+          }
+        }
+      },
+      "represented_by": {
+        "fund_balance": {
+          "note": 4,
+          "current_year": {
+            "USD": 239366490.0,
+            "ETB": 13621092501.0
+          },
+          "comparative": {
+            "USD": 196170400.0,
+            "ETB": 10640108119.0
+          }
+        }
+      }
+    },
+    "designated_account_statement": {
+      "for_year_ended": "2024-07-07",
+      "account_number": "0101181300064",
+      "depository_bank": "National Bank of Ethiopia",
+      "address": "Addis Ababa, Ethiopia",
+      "related_credit": "IDA 61580-ET",
+      "currency": "USD",
+      "lines": [
+        {
+          "line_item": "Ending balance 7 July 2023",
+          "USD": 192294986.67,
+          "ETB": 10506401910.0
+        },
+        {
+          "line_item": "Add: Additional deposit",
+          "USD": 101068651.49,
+          "ETB": 5749512373.0
+        },
+        {
+          "line_item": "Add: Refund",
+          "USD": 2589668.16,
+          "ETB": 146011636.0
+        },
+        {
+          "line_item": "Subtotal",
+          "USD": 295953306.32,
+          "ETB": 16401925919.0
+        },
+        {
+          "line_item": "Less: Payment for goods and services",
+          "USD": -79355229.69,
+          "ETB": -4523266809.0
+        },
+        {
+          "line_item": "Balance before FX gain",
+          "USD": 216598076.63,
+          "ETB": 11878659110.0
+        },
+        {
+          "line_item": "Gain on foreign exchange",
+          "USD": null,
+          "ETB": 547594152.0
+        },
+        {
+          "line_item": "Ending balance 7 July 2024",
+          "USD": 216598076.63,
+          "ETB": 12426253262.0
+        }
+      ]
+    },
+    "notes_selected": {
+      "program_information": {
+        "financing_agreements_signed": "2018-03-09",
+        "project_effective_date": "2018-06-07",
+        "expected_close_date": "2026-07-07",
+        "financing_amounts": [
+          {
+            "credit_no": "61570-ET",
+            "amount_USD": 125000000,
+            "label": "Scale-up Facility Credit"
+          },
+          {
+            "credit_no": "61580-ET",
+            "amount_SDR": 176900000,
+            "label": "Regular Credit (SDR equivalent)"
+          },
+          {
+            "credit_no": "72940-ET",
+            "amount_SDR": 188200000,
+            "label": "Additional financing (SDR equivalent)"
+          }
+        ]
+      },
+      "bank_balances_note": {
+        "bank": "National Bank of Ethiopia",
+        "account_number": "0101181300064",
+        "as_at": "2024-07-07",
+        "balance": {
+          "USD": 216598076.63,
+          "ETB": 12426253262.0
+        },
+        "comparative_2023_balance": {
+          "USD": 192294986.67,
+          "ETB": 10070275190.0
+        }
+      },
+      "accumulated_fund_note": {
+        "opening_balance_2023_07_07": {
+          "USD": 196170400.0,
+          "ETB": 10640108119.0
+        },
+        "movement": {
+          "USD": 43196090.0,
+          "ETB": 2980984382.0,
+          "description": "Excess of sources over use for the year"
+        },
+        "closing_balance_2024_07_07": {
+          "USD": 239366490.0,
+          "ETB": 13621092501.0
+        }
+      }
+    }
+  }
+}
