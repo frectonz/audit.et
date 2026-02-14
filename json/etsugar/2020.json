@@ -1,0 +1,758 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "entity": "Ethiopian Sugar Corporation",
+    "audited_period_end": "30 June 2020",
+    "currency": "ETB",
+    "source": "2020.pdf"
+  },
+  "auditor_report": {
+    "auditor": "Audit Services Corporation (Office of the Federal Auditor General)",
+    "report_title": "Independent Auditor's Report",
+    "entity": "Ethiopian Sugar Corporation",
+    "as_of_date": "30 June 2020",
+    "opinion_type": "Qualified (except for matters in Basis for Qualified Opinion)",
+    "engagement_partner": "Woizero Banchiayehu Tamrat",
+    "report_signed_date": "26 September 2024"
+  },
+  "basis_for_qualified_opinion_findings": [
+    {
+      "number": 1,
+      "text": "1. The Sugar Corporation Import account (01-12500-6000) exhibits a material long-\nstanding outstanding balance of ETB 266,000,090 dating back to the 2014 fiscal\ni                    year, persisting without resolution in the subsequent financial statements of the\n                        SIDF. This balance is obscured in the import financial statement that indicates a\nlack of proper accounting treatment, raising concerns regarding the accuracy and\nhe                            completeness of the financial reporting.",
+      "amounts": [
+        {
+          "currency": "ETB",
+          "value": 266000090,
+          "raw": "ETB 266,000,090"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "text": "2. We have identified notable deficiencies within the inventory management system\nB                              of the Corporation, which demand immediate attention. Such as:\nj                              = The inventory cost flow assumptions as policy is not consistent throughout the\ncorporation. in consequence the value of inventory reported in the statement of\n«                                  financial position is the sum of inventory valued at weighted average method in\nKesem and inventory valued at first in first out method in Metehara, Wonji Shoa\nand Fincha Sugar Factories. Weak inventory system has result in full provision\nE                                    of inventories in Tendaho and Welkait Sugar Projects.\nj                       =\nie        ‘& 251-011-5515222         Fax 251-011-5513083         E-mail asc@ascethiopia.com\n251-011-5535012,                                              Website www.ascethiopia.                  or,\n251-011-5535015,                                                                          ‘A\n251-011-5535016                                                                                        /\nI    NS             *\n.\n                               ess Wy\na      — —  °» ».=                                         Ce Senses\na eee\na                               INDEPENDENT AUDITOR’S REPORT\n                          TO THE MANAGEMENT OF\nETHIOPIAN SUGAR INDUSTRY GROUP (continued)\ni                             Basis for Qualified Opinion(continued)\n                                         We observed the absence of financial stock cards. This resulted in discrepancies\nbetween the physical inventory count and the ledger balance. As evidenced,\nthere is difference of ETB 312,428,552 between the recorded inventory and the\na                       actual inventory count the latter is more in amount. This variance has been\n                                             accounted for under Cost of goods sold, plantation, and administrative expenses,\nnecessitating further investigation. The lack of financial stock cards not only\na                               hinders the company’s ability to effectively track inventory but also\ncompromises the reliability and completeness of portion allotted to Cost of\ngoods sold, plantation, and administrative expenses. Consequently, the\n?                              adjustment of ETB 312,428,552 in the prorated balance for these accounts has\nnot been verified for audit purposes.\n7                            \"= For an industry like the sugar sector, which typically encompasses a myriad of\n7                               inventory line items. We identified a concerning practice of consolidating\n                       various inventory items into aggregated sums, instead of providing detailed\nbreakdowns, at Arjo Sugar Factory, Kessem Sugar Factory, and Tana Beles\na                                 ‘sugar projects. This practice hinders accurate inventory tracking, cost analysis,\n2                                        and effective management.\n7                            * For an industry like the sugar sector, which typically encompasses a myriad of\n                                  inventory line items, for instance Arjo Sugar Factory has adopted a practice of\nconsolidating inventory items into aggregated sums. However, Arjo keeps\n                               inventory items on a lump sum basis. For example, a general store items worth\n4                            ETB 100,746,095 (ETB 85,210,605 in 2017) was amalgamated and accounted\nfor as a single line as general store item.\n                            = The Corporation has consumable inventories and goods in transit worth of ETB\n553,062,883 consisting long outstanding and slow-moving inventories, which\n                                   have been increasing from year to year but are not measured at lower cost or net\n                                  realizable value. Despite this fact, the provision for stock obsolescence showed\nno movement over the last three years, overstating the value of inventory with\n*                       an amount that should have been accounted as impairment on stock yearly.\n                                          Moreover, an inventory account consists of items with abnormal balances which\n=                                is caused by inappropriate accounting on which the management has not taken\n=                                     investigative action.\ni                              Consequently, we were unable to determine the completeness and accuracy of stock\n& goods in transit and cost of sales shown on the statement of financial position and\njj                      statement of profit or loss and other comprehensive income at ETB 5,790,184,061\n                          and ETB 9,929,563,760 respectively.\na",
+      "amounts": [
+        {
+          "currency": "ETB",
+          "value": 312428552,
+          "raw": "ETB 312,428,552"
+        },
+        {
+          "currency": "ETB",
+          "value": 312428552,
+          "raw": "ETB 312,428,552"
+        },
+        {
+          "currency": "ETB",
+          "value": 100746095,
+          "raw": "ETB 100,746,095"
+        },
+        {
+          "currency": "ETB",
+          "value": 85210605,
+          "raw": "ETB 85,210,605"
+        },
+        {
+          "currency": "ETB",
+          "value": 553062883,
+          "raw": "ETB\n553,062,883"
+        },
+        {
+          "currency": "ETB",
+          "value": 5790184061,
+          "raw": "ETB 5,790,184,061"
+        },
+        {
+          "currency": "ETB",
+          "value": 9929563760,
+          "raw": "ETB 9,929,563,760"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "text": "3. There was no system of internal control over the accounting of intercompany\n4                                accounts on which we could rely for the purposes of our audit. As a result, the Inter-\ncompany receivable and Inter-company payable accounts on the branches’ financial\nstatement did not match the Inter- company payable and Inter-company receivable\n                           of other factories or projects. -                                      a\nVAN\nQse              [jo »\ns                             HONS\n(22)\n\\ 2                        }\ni                                                                                         Ke          N  y)\n7                                                                                            Ce Sora\noe\nINDEPENDENT AUDITOR’S REPORT\n5                        TO THE MANAGEMENT OF\nat                         ETHIOPIAN SUGAR INDUSTRY GROUP (continued)\nBasis for Qualified Opinion(continued)\n=                          “In the process of elimination of the intercompany receivable and payable the\n                          residual figure worth of ETB 90,021,480 is debited to Sugar Industry Development\nFund account (Equity account) account without considering the economics of the\n=                       transactions. Moreover, lack of internal control over the accounting of funding the\n:                               Sugar Industry Development Fund account on the statement of financial position of\nya                    each branch do not agree with the balance at the Group level. In the process of\n                            eliminating this account net amount of ETB 2,049,282 is debited to the Head office\naccount (equity account).\n                       Therefore, the equity account entitled Head  office account balance of ETB\n17,879,927,787 is understated with the sum of the above stated figure.\nx                 4, The financial statements reflect advance payments to contractors as per Note 16,\namounting to ETB 14,872,745,556 with ETB 7,971,912,333 (54%) being impaired.\n—                            This indicates a deficiency in the internal control system governing the tracking and\nrecovery of advance payments. Given that these funds represent public money and\nq                                  remain unsettled, we would typically anticipate legal actions or appropriate measures\n—                            to address these outstanding advances.\na",
+      "amounts": [
+        {
+          "currency": "ETB",
+          "value": 90021480,
+          "raw": "ETB 90,021,480"
+        },
+        {
+          "currency": "ETB",
+          "value": 2049282,
+          "raw": "ETB 2,049,282"
+        },
+        {
+          "currency": "ETB",
+          "value": 17879927787,
+          "raw": "ETB\n17,879,927,787"
+        },
+        {
+          "currency": "ETB",
+          "value": 14872745556,
+          "raw": "ETB 14,872,745,556"
+        },
+        {
+          "currency": "ETB",
+          "value": 7971912333,
+          "raw": "ETB 7,971,912,333"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "text": "04.\nTherefore, due to the lack of a robust internal control framework, we do not have\n=                confidence in relying on the total Cost of sales figure, which amounts to ETB\nS                       8,573,028,777.\n=",
+      "amounts": []
+    },
+    {
+      "number": 5,
+      "text": "5. We have identified notable deficiencies within the cost accounting system of the\nx!                          corporation which demand immediate attention. Such as:\na                        = The absence of a cost accounting system resulted in the cost of sugarcane in in\n                               ‘Arjo Sugar factory, amounting to ETB 87,038,034 (1,110,462 tons), being\n                            calculated based on the proportion of harvested sugar to the total agricultural\n                         area, without accounting for depreciation, This approach lacked the necessary\ncontrols to ensure proper accounting for inventory consumption and other related\nE                              production costs. This lack of traceability hinders the company's ability to\n                              accurately track inventory usage and associated costs, potentially impacting the\nj                             reliability of production cost calculations.\na                            = It is difficult to determine the costs associated with producing 193,630 Quintals\nfor the year in Kessem sugar Corporation. Expenses, inclusive of the cost of sales,\nnu                       have been aggregated under the general and administrative expense category.\n4                                   For instance, other expenses consisting of various product costs amounting ETB\n                             175,732,596 that should have been classified and allotted as overhead cost and\nincorporated in cost of inventory, are accounted as expenses totally. Moreover,\nia                                 we were unable to adequately relate the amount of issued inventory to the sugar\n                                  cane field where it was used and to the associated production costs. This lack of\ntraceability hinders the company's ability to accurately track inventory usage and\nSi                              associated costs, potentially impacting the reliability of production cost\n y                              calculations.                                                    wee\ni      ase         LN\n5              (be);\nz\n  :\n   4\nINDEPENDENT AUDITOR’S REPORT\n=                        TO THE MANAGEMENT OF\nC4                            ETHIOPIAN SUGAR INDUSTRY GROUP (continued)\nBasis for Qualified Opinion(continued)\n—                     = The absence of a cost accounting system resulted in the cost of sugarcane in\nOMO II Sugar factory. For instance, we were unable to adequately relate the\n                                    amount of inventory issued to the sugar cane fields, where it was used and to the\na                     associated production costs. This lack of traceability hinders the company's\n:                     ability to accurately track inventory usage and associated costs, potentially\n                                 impacting the reliability of production cost calculations. Consequently, we were\n-                           unable to delineate the costs linked with the production of 62,155 Quintals for\nthe year and inhibit our confidence in relying on the total cost of goods sold\n                                     figure, amounting to ETB 318,683,980.\n= The absence of a cost accounting system resulted in the cost of sugarcane in\n=                           OMO III Sugar factory. For instance, we were unable to adequately relate the\namount of issued inventory to the sugar cane field where it was used and to the\na                            associated production costs. In addition, in the fair value determination process\n                        the factory utilizes a constant value per hectare amount ETB 35,296.81 since\n2019 fiscal year. This lack of traceability hinders the company's ability to\n7                               accurately track inventory usage and associated costs, potentially impacting the\n-—                    reliability of production cost calculations. Consequently, we were unable to\ndelineate the costs linked with the production of $2,530 Quintals for the year and\n7                 inhibits our confidence in relying on the total cost of goods sold. figure,\n=)                                amounting to ETB 237,694,8",
+      "amounts": [
+        {
+          "currency": "ETB",
+          "value": 87038034,
+          "raw": "ETB 87,038,034"
+        },
+        {
+          "currency": "ETB",
+          "value": 175732596,
+          "raw": "ETB\n                             175,732,596"
+        },
+        {
+          "currency": "ETB",
+          "value": 318683980,
+          "raw": "ETB 318,683,980"
+        },
+        {
+          "currency": "ETB",
+          "value": 35296,
+          "raw": "ETB 35,296"
+        },
+        {
+          "currency": "ETB",
+          "value": 2376948,
+          "raw": "ETB 237,694,8"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "text": "6. The property, plant and equipment consisting of CIP-tissue culture for an amount of\nETB 74,185,564 has exhibited no movement over a significant period and has not\nPe                      been capitalized. This indicates a potential lack of asset utilization by the\n=                                Corporation. As a result, we were unable to ascertain whether adjustments have been\nfound necessary in respect of property, plant and equipment shown on the statement\ni                               of financial position at ETB 142,831,696,435.",
+      "amounts": [
+        {
+          "currency": "ETB",
+          "value": 74185564,
+          "raw": "ETB 74,185,564"
+        },
+        {
+          "currency": "ETB",
+          "value": 142831696435,
+          "raw": "ETB 142,831,696,435"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "text": "7. Included in trade and other receivables is receivable from Commercial Bank of\nEthiopia amounting to ETB 71,464,864 (70,540,004 in 2019). We have obtained no\n&                     sufficient and appropriate audit evidence that this balance is recoverable. In\nconsequence we were unable to determine whether any adjustment might have been\nfound necessary in respect of Trade and other receivables shown on the statement of\nie                             financial position at ETB 1,754,168,000.",
+      "amounts": [
+        {
+          "currency": "ETB",
+          "value": 71464864,
+          "raw": "ETB 71,464,864"
+        },
+        {
+          "currency": "ETB",
+          "value": 1754168000,
+          "raw": "ETB 1,754,168,000"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "text": "8. Despite the fact that a provision of ETB 400,630,800 was held in advance and\nfe                   prepayment accounts of Wonji Sugar Factory for the out growers’, a substantial\nry                             portion of this provision was allocated for the sugar cane plantation damaged during\npolitical unrest in 2010 E.C. and for some farms that unilaterally terminated their\na                       contracts with the Corporation. Given that these funds represent public money and\n]                                  remain unsettled, we would typically anticipate legal actions or appropriate measures\nto address these outstanding advances.                               ——\na                                                                           VA Soa\ni     Ose          li7™»\\ +\na                                                                       (]                  *\\\n\\s    Hi)\nNG\n4                                                                           Neer Sent\n                                                                                              Row\nINDEPENDENT AUDITOR’S REPORT\n                           TO THE MANAGEMENT OF\nETHIOPIAN SUGAR INDUSTRY GROUP (continued)\n3          Basis for Qualified Opinion(continued)",
+      "amounts": [
+        {
+          "currency": "ETB",
+          "value": 400630800,
+          "raw": "ETB 400,630,800"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "text": "9. We identified significant deficiencies in the internal control over cash and cash\n                      equivalents in Arjo Sugar factory. These weaknesses limit our ability to form an\na                            opinion on the reliability of the reported cash and cash equivalents balance of ETB\n:                            21,805,757 in the factory.\ns",
+      "amounts": []
+    },
+    {
+      "number": 10,
+      "text": "10. The revenue shown in the statement of profit or loss & other comprehensive income\nof ETB 9,929,563,760 is the cumulative total of the revenue recorded in the separate\n=)                            records of the head office and the sugar factories when the produce is put under the\ncontrol of the head office and is measured at transfer prices determined by the Board\n7                 of Directors of the Corporation. This constitutes a departure from IFRS which\n2                                 requires that a sale be recognized at the transaction price on delivery to the customer.\nIn consequence we were unable to satisfy ourselves that the revenue shown in the\n\"1                            statement of profit or loss and other comprehensive income is correctly stated.\nx",
+      "amounts": [
+        {
+          "currency": "ETB",
+          "value": 9929563760,
+          "raw": "ETB 9,929,563,760"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "text": "11. As discussed in Note 28.6 (Capital management) of the notes to the financial\n                             statements, gearing (Debt to Equity ratio) of the Corporation stood at 121% (115%\nin 2020) which imply the Corporation has larger proportion of debt than equity, so\na                        would not be able to pay down its debt unless serious measures are taken in this\ns                       respect.\na",
+      "amounts": []
+    },
+    {
+      "number": 12,
+      "text": "12. Paid up capital of the Corporation is summation of the carrying amount of net asset\na                            of each of the existing factories amounting ETB 6,042,512,614 upon establishment\nuntil it is increased by ETB 8,040,511,876 through in kind contribution by the\nom                       government as discussed on Note 19 of the notes to the financial statements. This\ncontribution in kind is represented by Tendaho and Kessem sugar development\n75                  dams, However, these dams were transferred to Ethiopian Construction Works\n                              Corporation by Regulation no 366/2015 by the Corporation's mandate stated on the\nregulation (Article 5 Sub article 3).\na)                             We conducted our audit in accordance with International Standards on Auditing (ISAs).\nOur responsibilities under those standards are further described in the Auditor's\n=                         Responsibilities for the Audit of the Financial Statements section of our report. We are\n3                 independent of the Enterprise in accordance with the International Ethics Standards\nBoard for Accountants’ Code of Ethics for Professional Accountants (IESBA Code)\n=                  together with the ethical requirements that are relevant to our audit of the financial\nstatements in Ethiopia, and we have fulfilled our other ethical responsibilities in\nor                      accordance with those requirements and the IESBA Code. We believe that the audit\n7                evidence we have obtained is sufficient and appropriate to provide a basis for our\nopinion.                                              —=\nS                                                                    ff»\nAse                           f i\n                                                                   {         re\na                                                                  \\s                    }\n] *.         \\  4) /\nNese\na                                                                                                     5\n4\n \n7                            INDEPENDENT AUDITOR'S REPORT\n                              ‘TO THE MANAGEMENT OF\nq                          ETHIOPIAN SUGAR INDUSTRY GROUP (continued)\nBasis for Qualified Opinion(continued)\nEmphasis of Matter,\n«© We draw attention to Note 34 to the financial statements which describes the going\n“]                           concern uncertainties of Tendaho Sugar Factory Project Office indicating the civil\ni                war in the Northern region, the bad whether condition (EI Nino effect), the\nsubsequent transfer of movable properties to other factories and projects of the\n=]                       Corporation and termination of most of the staff have raised uncertainties on the\nb                     going concem of the Factory project office. Our opinion is not qualified in this\nrespect.\nBe                  #  Wealso draw attention to this note again (Note 34) tothe financial statements which\nalso describes the going concer uncertainties of Wolkait Sugar Development\n“                     Project indicating a need of significant financial investment for completing the\n                                   Factory and related infrastructure, including plantation. Our opinion is not qualified\nin this respect.\n7                 «We draw attention to the audit report on the financial statements of Arjo Sugar\n5                       Factory a component included in the Combined Financial Statements. The audit of\n“                       ‘Arjo Sugar Factory resulted in an adverse opinion due to material misstatements\nrelated to cash and: bank balance, deficiency in in the control environment in\n+                             inventory, cost of sales and non-financial assets. However, we have determined that\n                             this matter is not material to the Combined Financial Statements as a whole.\n\"1                            Responsibilities of the Factory's Management and the Corporation's Management\noa                                     ‘for the Financial Statements\n“                  ‘The Factory's and Project’s Management is responsible for the preparation and fair\nEB              presentation of the financial statements in accordance with International Financial\nReporting Standards, and for such intemal control as the Factory's Management\n\"1                    determines is necessary to enable the preparation of financial statements that are free\n                        from material misstatement, whether due to fraud or error.\n              The Corporation’s Management is responsible for overseeing the Factory's and\n4                  Project's financial reporting process. The Corporation's Management is also\nresponsible for assessing the Factory’s ability to continue as a going concern, ensuring\n                        that disclosures are made, as applicable, of matters related to going concem and using\ni                          the going concern basis of accounting unless the Corporation's Management knows of\n‘an intention either to liquidate the Factory or to cease operations, or knows that there is\n4                         no realistic alternative but to do so.\non\n=                                                                                or,\nQ5e                                        Uf    ]   *)\nLi                                                                 (i   BE  ‘ \n3                                                                 \\e                   ]\na        \\  y)         6\ni                                                                     Net sense",
+      "amounts": [
+        {
+          "currency": "ETB",
+          "value": 6042512614,
+          "raw": "ETB 6,042,512,614"
+        },
+        {
+          "currency": "ETB",
+          "value": 8040511876,
+          "raw": "ETB 8,040,511,876"
+        }
+      ]
+    }
+  ],
+  "emphasis_of_matter": {
+    "text": "Emphasis of Matter,\n«© We draw attention to Note 34 to the financial statements which describes the going\n“]                           concern uncertainties of Tendaho Sugar Factory Project Office indicating the civil\ni                war in the Northern region, the bad whether condition (EI Nino effect), the\nsubsequent transfer of movable properties to other factories and projects of the\n=]                       Corporation and termination of most of the staff have raised uncertainties on the\nb                     going concem of the Factory project office. Our opinion is not qualified in this\nrespect.\nBe                  #  Wealso draw attention to this note again (Note 34) tothe financial statements which\nalso describes the going concer uncertainties of Wolkait Sugar Development\n“                     Project indicating a need of significant financial investment for completing the\n                                   Factory and related infrastructure, including plantation. Our opinion is not qualified\nin this respect.\n7                 «We draw attention to the audit report on the financial statements of Arjo Sugar\n5                       Factory a component included in the Combined Financial Statements. The audit of\n“                       ‘Arjo Sugar Factory resulted in an adverse opinion due to material misstatements\nrelated to cash and: bank balance, deficiency in in the control environment in\n+                             inventory, cost of sales and non-financial assets. However, we have determined that\n                             this matter is not material to the Combined Financial Statements as a whole.\n\"1",
+    "notes_referenced": [
+      "Note 34"
+    ]
+  },
+  "financial_statements": {
+    "statement_of_profit_or_loss_and_other_comprehensive_income": {
+      "items": [
+        {
+          "key": "revenue",
+          "label": "Revenue",
+          "values": {
+            "2020": 9929563760,
+            "2019": 8872878586
+          }
+        },
+        {
+          "key": "cost_of_sales",
+          "label": "Cost of sales",
+          "values": {
+            "2020": -8573028777,
+            "2019": -8329720902
+          }
+        },
+        {
+          "key": "gross_profit",
+          "label": "Gross profit",
+          "values": {
+            "2020": 1356534984,
+            "2019": 543187683
+          }
+        },
+        {
+          "key": "other_operating_income",
+          "label": "Other operating income",
+          "values": {
+            "2020": 155274748,
+            "2019": 218943074
+          }
+        },
+        {
+          "key": "general_and_administrative",
+          "label": "General & administrative",
+          "values": {
+            "2020": -2003078765,
+            "2019": -2674940802
+          }
+        },
+        {
+          "key": "foreign_currency_exchange_loss",
+          "label": "Foreign currency exchange loss",
+          "values": {
+            "2020": -5306924328,
+            "2019": -3017540068
+          }
+        },
+        {
+          "key": "fair_value_gain_loss_cane_and_fruit",
+          "label": "Fair value gain (loss) cane and fruit",
+          "values": {
+            "2020": 251411629,
+            "2019": -1170691297
+          }
+        },
+        {
+          "key": "loss_on_cane_at_fair_value",
+          "label": "Loss on cane at fair value",
+          "values": {
+            "2020": -31983646,
+            "2019": -125367275
+          }
+        },
+        {
+          "key": "provision_for_bad_debt_expense",
+          "label": "Provision for bad debt expense",
+          "values": {
+            "2020": -700123581,
+            "2019": -87782488
+          }
+        },
+        {
+          "key": "provision_for_stock_obsolescence",
+          "label": "Provision for stock obsolescence",
+          "values": {
+            "2020": -52421697,
+            "2019": -43886058
+          }
+        },
+        {
+          "key": "provision_expense_standing_cane",
+          "label": "Provision expense - Standing Cane",
+          "values": {
+            "2020": -216384784,
+            "2019": -31707226
+          }
+        },
+        {
+          "key": "operating_profit",
+          "label": "Operating profit",
+          "values": {
+            "2020": -6547695441,
+            "2019": -10411861967
+          }
+        },
+        {
+          "key": "finance_costs_charges",
+          "label": "Finance costs/charges",
+          "values": {
+            "2020": -4554566917,
+            "2019": -4182972833
+          }
+        },
+        {
+          "key": "profit_before_tax",
+          "label": "Profit before tax",
+          "values": {
+            "2020": -11102262358,
+            "2019": -14594834801
+          }
+        },
+        {
+          "key": "income_tax_expense",
+          "label": "Income tax expense",
+          "values": {
+            "2020": 121888560,
+            "2019": 38032044
+          }
+        },
+        {
+          "key": "profit_for_the_year",
+          "label": "Profit for the year",
+          "values": {
+            "2020": -10980373798,
+            "2019": -14556802752
+          }
+        },
+        {
+          "key": "other_comprehensive_income_remeasurement",
+          "label": "Remeasurement gain/loss on retirement benefits obligations",
+          "values": {
+            "2020": 8179699,
+            "2019": 8721741
+          }
+        },
+        {
+          "key": "total_comprehensive_income",
+          "label": "Total comprehensive income for the year",
+          "values": {
+            "2020": -10972194099,
+            "2019": -14548081011
+          }
+        }
+      ]
+    },
+    "statement_of_financial_position": {
+      "items": [
+        {
+          "key": "property_plant_and_equipment",
+          "label": "Property, plant and equipment",
+          "values": {
+            "2020": 142831698760,
+            "2019": 122978559844
+          }
+        },
+        {
+          "key": "right_of_use_asset_land",
+          "label": "Right use of asset - Land",
+          "values": {
+            "2020": 364375325,
+            "2019": 364503135
+          }
+        },
+        {
+          "key": "right_of_use_asset_office",
+          "label": "Right use of asset - Office",
+          "values": {
+            "2020": null,
+            "2019": 300368
+          }
+        },
+        {
+          "key": "bearer_plant",
+          "label": "Bearer plant",
+          "values": {
+            "2020": 912117966,
+            "2019": 966252994
+          }
+        },
+        {
+          "key": "investment_in_esisc_and_msf",
+          "label": "Investment in ESISC and MSF",
+          "values": {
+            "2020": 3992000,
+            "2019": 3992000
+          }
+        },
+        {
+          "key": "trade_and_other_receivables",
+          "label": "Trade and other receivable",
+          "values": {
+            "2020": 1754168000,
+            "2019": 1206504342
+          }
+        },
+        {
+          "key": "stock_and_goods_in_transit",
+          "label": "Stock & goods in transit",
+          "values": {
+            "2020": 5790307459,
+            "2019": 6761563406
+          }
+        },
+        {
+          "key": "biological_asset_agricultural",
+          "label": "Biological Asset - Agricultural",
+          "values": {
+            "2020": 3841884967,
+            "2019": 3230210323
+          }
+        },
+        {
+          "key": "biological_asset_animal",
+          "label": "Biological Asset - Animal",
+          "values": {
+            "2020": 0,
+            "2019": 3299
+          }
+        },
+        {
+          "key": "tax_receivable",
+          "label": "Tax receivable",
+          "values": {
+            "2020": 3942789946,
+            "2019": 3647632716
+          }
+        },
+        {
+          "key": "advance_and_prepayments",
+          "label": "Advance and prepayments",
+          "values": {
+            "2020": 7505161375,
+            "2019": 8280004749
+          }
+        },
+        {
+          "key": "cash_and_cash_equivalents",
+          "label": "Cash and cash equivalents",
+          "values": {
+            "2020": 1696321460,
+            "2019": 3356382398
+          }
+        },
+        {
+          "key": "total_assets",
+          "label": "Total assets",
+          "values": {
+            "2020": 168642817262,
+            "2019": 150795909576
+          }
+        },
+        {
+          "key": "paid_up_capital",
+          "label": "Paid up - capital",
+          "values": {
+            "2020": 14083024490,
+            "2019": 14083024490
+          }
+        },
+        {
+          "key": "capital_contribution",
+          "label": "Capital contribution",
+          "values": {
+            "2020": 393286376,
+            "2019": 418273766
+          }
+        },
+        {
+          "key": "contribution_for_capital_expenditure",
+          "label": "Contribution for capital expenditure",
+          "values": {
+            "2020": 101054623,
+            "2019": 101054623
+          }
+        },
+        {
+          "key": "sugar_industry_development_fund",
+          "label": "Sugar Industry Development Fund",
+          "values": {
+            "2020": 17879927787,
+            "2019": 18666049921
+          }
+        },
+        {
+          "key": "reserve_for_sidf",
+          "label": "Reserve for SIDF",
+          "values": {
+            "2020": -9218250273,
+            "2019": -7290739206
+          }
+        },
+        {
+          "key": "asset_revaluation_reserve",
+          "label": "Asset revaluation reserve",
+          "values": {
+            "2020": 11977353299,
+            "2019": 11977353299
+          }
+        },
+        {
+          "key": "accumulated_loss",
+          "label": "Accumulated loss",
+          "values": {
+            "2020": -64002820014,
+            "2019": -55722648339
+          }
+        },
+        {
+          "key": "other_reserve",
+          "label": "Other reserve",
+          "values": {
+            "2020": 11975728,
+            "2019": 3796029
+          }
+        },
+        {
+          "key": "total_equity",
+          "label": "Total equity",
+          "values": {
+            "2020": -28774447984,
+            "2019": -17763835417
+          }
+        },
+        {
+          "key": "long_term_loan",
+          "label": "Long term loan",
+          "values": {
+            "2020": 161609606897,
+            "2019": 132505301565
+          }
+        },
+        {
+          "key": "employee_benefit_obligation",
+          "label": "Employee benefit obligation",
+          "values": {
+            "2020": 44375848,
+            "2019": 43827359
+          }
+        },
+        {
+          "key": "deferred_tax_liability",
+          "label": "Deferred tax liability",
+          "values": {
+            "2020": 3935086109,
+            "2019": 4056974669
+          }
+        },
+        {
+          "key": "total_non_current_liabilities",
+          "label": "Non-current liabilities total",
+          "values": {
+            "2020": 165589068854,
+            "2019": 136606103593
+          }
+        },
+        {
+          "key": "trade_and_other_payables",
+          "label": "Trade and other payable",
+          "values": {
+            "2020": 17251482720,
+            "2019": 15472216337
+          }
+        },
+        {
+          "key": "retention_payable",
+          "label": "Retention Payable",
+          "values": {
+            "2020": 2389420603,
+            "2019": 2190924265
+          }
+        },
+        {
+          "key": "interest_payable",
+          "label": "Interest payable",
+          "values": {
+            "2020": 3448651923,
+            "2019": 2726675328
+          }
+        },
+        {
+          "key": "long_term_loan_current_maturity",
+          "label": "Long term loan-current maturity",
+          "values": {
+            "2020": 6558796911,
+            "2019": 8823693834
+          }
+        },
+        {
+          "key": "sugar_development_fund_payable",
+          "label": "Sugar development fund payable",
+          "values": {
+            "2020": 200991991,
+            "2019": 167514534
+          }
+        },
+        {
+          "key": "tax_payable",
+          "label": "Tax payable",
+          "values": {
+            "2020": 1095872342,
+            "2019": 1215203864
+          }
+        },
+        {
+          "key": "contract_liability",
+          "label": "Contract liability",
+          "values": {
+            "2020": 207604194,
+            "2019": 128902226
+          }
+        },
+        {
+          "key": "accrual",
+          "label": "Accrual",
+          "values": {
+            "2020": 453790821,
+            "2019": 729351602
+          }
+        },
+        {
+          "key": "provision",
+          "label": "Provision",
+          "values": {
+            "2020": 221584888,
+            "2019": 499159410
+          }
+        },
+        {
+          "key": "total_current_liabilities",
+          "label": "Current liabilities total",
+          "values": {
+            "2020": 31828196392,
+            "2019": 31953641400
+          }
+        },
+        {
+          "key": "total_liabilities",
+          "label": "Total liabilities",
+          "values": {
+            "2020": 197417265246,
+            "2019": 168559744993
+          }
+        },
+        {
+          "key": "total_equity_and_liabilities",
+          "label": "Total equity and liabilities",
+          "values": {
+            "2020": 168642817262,
+            "2019": 150795909576
+          }
+        }
+      ]
+    },
+    "statement_of_cash_flows": {
+      "items": [
+        {
+          "key": "net_cash_from_operating_activities",
+          "label": "Net cash flows from operating activities",
+          "values": {
+            "2020": -8930253238,
+            "2019": 690338769
+          }
+        },
+        {
+          "key": "net_cash_used_in_investing_activities",
+          "label": "Net cash flows used in investing activities",
+          "values": {
+            "2020": -21795694565,
+            "2019": -16577295054
+          }
+        },
+        {
+          "key": "net_cash_from_financing_activities",
+          "label": "Net cash flows from/(used in) financing activities",
+          "values": {
+            "2020": 29065886865,
+            "2019": 17560379259
+          }
+        },
+        {
+          "key": "net_increase_decrease_in_cash",
+          "label": "Net increase/(decrease) in cash and cash equivalents",
+          "values": {
+            "2020": -1660060938,
+            "2019": 1673422975
+          }
+        },
+        {
+          "key": "cash_and_cash_equivalents_at_start",
+          "label": "Cash and cash equivalents at 1 July",
+          "values": {
+            "2020": 3356382398,
+            "2019": 1682959424
+          }
+        },
+        {
+          "key": "cash_and_cash_equivalents_at_end",
+          "label": "Cash and cash equivalents at 30 June",
+          "values": {
+            "2020": 1696321460,
+            "2019": 3356382398
+          }
+        }
+      ]
+    }
+  },
+  "chart_helpers": {
+    "periods": [
+      "2020",
+      "2019"
+    ],
+    "suggested_charts": [
+      {
+        "id": "income_statement",
+        "type": "grouped_bar",
+        "statement": "statement_of_profit_or_loss_and_other_comprehensive_income"
+      },
+      {
+        "id": "balance_sheet_assets_liabilities_equity",
+        "type": "stacked_bar",
+        "statement": "statement_of_financial_position"
+      },
+      {
+        "id": "cashflow_bridge",
+        "type": "waterfall",
+        "statement": "statement_of_cash_flows"
+      }
+    ]
+  }
+}

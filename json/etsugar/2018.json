@@ -1,0 +1,254 @@
+{
+  "schema_version": "1.0",
+  "currency": "ETB",
+  "entity": {
+    "name": "Ethiopian Sugar Corporation",
+    "group": "Ethiopian Sugar Industry Group",
+    "country": "Ethiopia"
+  },
+  "period": {
+    "fiscal_year_end": "2018-06-30",
+    "comparatives": [
+      "2017-06-30",
+      "2016-06-30"
+    ]
+  },
+  "auditor_report": {
+    "auditor": "Audit Services Corporation (Office of the Federal Auditor General)",
+    "opinion_type": "Qualified opinion",
+    "engagement_partner": "Woizero Banchiayehu Tamirat",
+    "report_date": "2024-09-04",
+    "scope": "Audit of the financial statements for the year ended 30 June 2018"
+  },
+  "basis_for_qualified_opinion_findings": [
+    {
+      "item_no": 1,
+      "title": "The Sugar Corporation Import account (01-12500-6000) exhibits a material long- standing outstanding",
+      "description": "The Sugar Corporation Import account (01-12500-6000) exhibits a material long- standing outstanding balance of ETB 266,000,090 dating back to the 2014 fiscal year, persisting without resolution in the subsequent financial statements of the SIDF. This balance is obscured in the import financial statement that indicates lack of proper accounting treatment, raising concerns regarding the accuracy and completeness of the financial reporting.",
+      "amounts_ETB": [
+        266000090
+      ]
+    },
+    {
+      "item_no": 2,
+      "title": "We have identified notable deficiencies within the inventory management system of Corporation,",
+      "description": "We have identified notable deficiencies within the inventory management system of Corporation, which demand immediate attention. Such as: \"The inventory cost flow assumptions as policy are not consistent throughout the Corporation. In consequence, the value of inventory reported in the statement of financial position is the sum of inventory valued at weighted average method in Kesem and inventory valued at First In First Out (FIFO) method in Metehara, Wonji Shoa and Fincha Sugar Factories. Weak inventory system has result in full provision of inventories in Tendaho and Welkait Sugar Projects. Gse & a ee 2 a ei Fax 251-011-5513083 E-mail ase@ascethiopia.com 35720 Fol Websit i i Sal etl eeinie ebsite www.ascethiopia.com 251-011-5535016 - INDEPENDENT AUDITOR’S REPORT TO THE MANAGEMENT OF ETHIOPIAN SUGAR INDUSTRY GROUP (continued) Basis for Qualified Opinion (continued) = We observed the absence of financial stock cards, due to that, discrepancies between the physical count and ledger balance have been accounted for in stock shortage/overage accounts, such discrepancies carry inherent risks to the integrity . and accuracy of the inventory management system. In effect, ETB 412,728,175 (ETB 361,140,621 in 2017) and ETB 810,975,183 (ETB 40,110,436 in 2017) are accounted as stock shortage and stock overage respectively, requiring further investigation. The absence of financial stock cards not only impairs the company's ability to monitor inventory effectively but also undermines the reliability and completeness of inventory records and expenses. = For an industry like the sugar sector, which typically encompasses a myriad of inventory line items, for instance Arjo Sugar Corporation has adopted a practice of consolidating inventory items into aggregated sums. However, Arjo keeps inventory items on a lump sum basis. For example, a general store items worth ETB 100,746,095 (ETB 85,210,605 in 2017) was amalgamated and accounted for as a single line as general store item. «The Corporation has consumable inventories and goods in transit worth of ETB 1,774,554,962 consisting long outstanding and slow-moving inventories, which have been increasing from year to year but are not measured at lower of cost or net realizable value. Despite this fact, the provision for stock obsolescence showed no movement over the last three years, overstating the value of inventory with an amount that should have been accounted as impairment on stock yearly. Moreover, inventory account consists of items with abnormal balances which is caused by inappropriate accounting on which the management has not taken investigative action. ° Consequently, we were unable to determine the completeness and accuracy of stock & goods in transit and cost of sales shown on the statement of financial position and statement of profit or loss and other comprehensive income at ETB 7,275,878,446 and ETB 6,850,090,673 respectively.",
+      "amounts_ETB": [
+        412728175,
+        361140621,
+        810975183,
+        40110436,
+        100746095,
+        85210605,
+        1774554962,
+        7275878446,
+        6850090673
+      ]
+    },
+    {
+      "item_no": 3,
+      "title": "There was no reliable system of internal control over the accounting of",
+      "description": "There was no reliable system of internal control over the accounting of intercompany account on which we could rely for the purposes of our audit. As a result, the Inter- company receivable and Inter-company payable accounts on the branches’ financial statements did not match the Inter- company payable and Inter-company receivable of other factories or projects. In the process of elimination of the intercompany receivable and payable the residual figure worth of ETB 131,333,525 is credited to Sugar Industry Development Fund (Equity account) account without considering the ‘economics of the transactions. Moreover, lack of internal control over the accounting of funding, the Head office account on the statement of financial position of each branch do not agree with the balance at the Group level. In the process of eliminating this account net amount of ETB 4,098,642 is debited to the Sugar Industry Development Fund (Equity account). Therefore, the equity account entitled Sugar Industry Development Fund of ETB 16,689,024,042 is overstated with the sum of the above stated figure. » MY Zig Rh se 2 ler (22S) aAy// WE Sori INDEPENDENT AUDITOR’S REPORT TO THE MANAGEMENT OF ETHIOPIAN SUGAR INDUSTRY GROUP (continued) Basis for Qualified Opinion (continued)",
+      "amounts_ETB": [
+        131333525,
+        4098642,
+        16689024042
+      ]
+    },
+    {
+      "item_no": 4,
+      "title": "The financial statements reflect advance payments to contractors as per Note 16,",
+      "description": "The financial statements reflect advance payments to contractors as per Note 16, amounting to ETB 15,311,564,066 with ETB 7,468,623,328 (49%) being impaired. ‘This indicates a deficiency in the internal control system governing the tracking and recovery of advance payments. Given that these funds represent public money and remain unsettled, we would typically anticipate legal actions or appropriate measures to address these outstanding advances.",
+      "amounts_ETB": [
+        15311564066,
+        7468623328
+      ]
+    },
+    {
+      "item_no": 5,
+      "title": "The revenue shown in the statement of profit or loss & other",
+      "description": "The revenue shown in the statement of profit or loss & other comprehensive income of ETB 7,093,393,859 is the cumulative total of the revenue recorded in the separate records of the head office and the sugar factories when the produce is put under the control of the head office and is measured at transfer prices determined by the Board of Directors of the Corporation. This constitutes a departure from IFRS which requires that a sale be recognized at the transaction price on delivery to the customer. In consequence we were unable to satisfy ourselves that the revenue shown in the statement of profit or loss and other comprehensive income is correctly stated. ~",
+      "amounts_ETB": [
+        7093393859
+      ]
+    },
+    {
+      "item_no": 6,
+      "title": "We have identified notable deficiencies within the cost accounting system of the",
+      "description": "We have identified notable deficiencies within the cost accounting system of the Corporation which demand immediate attention. Such as: \"= The absence of a cost accounting system resulted in the cost of sugarcane in Arjo Sugar Corporation, amounting to ETB 145,561,545 (66,009 tons), being calculated based on the proportion of harvested sugar to the total agricultural area. This approach lacked the necessary controls to ensure proper accounting for inventory consumption and other related production costs. Moreover, a variance of ETB 52,537,644 was identified between the excise tax recorded and paid and the amount calculated based on the cost of production, excluding depreciation, the latter is more by amount. = Itis difficult to determine the costs associated with producing 313,478 quintals for the year in Kessem sugar Corporation. Additionally, expenses, including the cost of sales, have been grouped together under the general and administrative expense category. For example, insurance costs totaling Birr 8,672,247 that should have been allocated as overhead costs, were accounted for as total expenses. Therefore, due to the lack of a robust internal control framework, we do not have confidence in relying on the total Cost of sales figure, which amounts to Birr 6,850,090,673.",
+      "amounts_ETB": [
+        145561545,
+        52537644
+      ]
+    },
+    {
+      "item_no": 7,
+      "title": "The property, plant and equipment consisting CIP-tissue culture for an amount of",
+      "description": "The property, plant and equipment consisting CIP-tissue culture for an amount of ETB 74,185,564 has exhibited no movement over a significant period and has not been capitalized. This indicates a potential lack of asset utilization by the Corporation. As a result, we were unable to ascertain whether adjustments have been found necessary in respect of property, ple and equipment shown on the statement of financial position at ETB 112,523,384,382. _ as i 2 ly Se { § } Q : N y Sor y, 2 SOME INDEPENDENT AUDITOR’S REPORT TO THE MANAGEMENT OF ETHIOPIAN SUGAR INDUSTRY GROUP (continued) Basis for Qualified Opinion (continued)",
+      "amounts_ETB": [
+        74185564,
+        112523384382
+      ]
+    },
+    {
+      "item_no": 8,
+      "title": "Included in trade and other receivables is receivable from Commercial Bank of",
+      "description": "Included in trade and other receivables is receivable from Commercial Bank of Ethiopia amounting to Birr 194,483,544 (185,937,260 in 2017). We have obtained no sufficient and appropriate audit evidence that this balance is recoverable. In addition, the provision of Birr 155,801,589 is not supported by appropriate documents. In consequence we were unable to determine whether any adjustment might have been found necessary in respect of Trade and other receivables shown on the statement of financial position at Birr 1,100,960,228.",
+      "amounts_ETB": []
+    },
+    {
+      "item_no": 9,
+      "title": "Despite the fact that a provision of Birr 238,421,302 was held in",
+      "description": "Despite the fact that a provision of Birr 238,421,302 was held in advance and prepayment accounts of Wonji Sugar Factory for the out growers’, a substantial portion of this provision was allocated for the sugar cane plantation damaged during political unrest in 2010 E.C. and for some farms that unilaterally terminated their contracts with the Corporation. Given that these funds represent public money and remain unsettled, we would typically anticipate legal actions or appropriate measures » to address these outstanding advances.",
+      "amounts_ETB": []
+    },
+    {
+      "item_no": 10,
+      "title": "As discussed in Note 28.6 (Capital management) of the notes to the",
+      "description": "As discussed in Note 28.6 (Capital management) of the notes to the financial statements, gearing (Debt to Equity ratio) of the Corporation stood at 114% (111% in 2017) which imply the Corporation has larger proportion of debt than equity, so would not be able to pay down its debt unless serious measures are taken in this respect.",
+      "amounts_ETB": []
+    },
+    {
+      "item_no": 11,
+      "title": "Paid up capital of the Corporation is summation of the carrying amount",
+      "description": "Paid up capital of the Corporation is summation of the carrying amount of net asset of each of the existing factories amounting ETB 6,042,512,614 upon establishment until it is increased by ETB 8,040,511,876 through in kind contribution by the government as discussed on Note 19 of the notes to the financial statements. This contribution in kind is represented by Tendaho and Kessem sugar development dams. However, these dams were transferred to Ethiopian Construction Works Corporation by Regulation no 366/2015 by the Corporation’s mandate stated on the regulation (Article 5 Sub article 3).",
+      "amounts_ETB": [
+        6042512614,
+        8040511876
+      ]
+    }
+  ],
+  "financial_statements": {
+    "income_statement": {
+      "2018": {
+        "revenue": 7093393859,
+        "cost_of_sales": -6850090673,
+        "gross_profit": 243303186,
+        "other_operating_income": 158592824,
+        "general_and_administrative": -3931768319,
+        "bad_debt_expense": -345383199,
+        "inventory_write_down_stock_obsolescence": -74800762,
+        "loss_of_cane_at_fair_value": -100181261,
+        "fair_value_gain_loss_on_standing_cane": -1069479483,
+        "impairment_of_bearer_plant": 0,
+        "reversal_provision_for_loss_of_plantation": 13602508,
+        "operating_profit_loss": -5106114507,
+        "finance_costs_charges": -2403705711,
+        "profit_loss_before_tax": -7509820217,
+        "income_tax_expense": 342364423,
+        "profit_loss_for_year": -7167455795,
+        "other_comprehensive_income_remeasurement_retirement_benefits": -3399837,
+        "total_comprehensive_income": -7164055958
+      },
+      "2017": {
+        "revenue": 8107264107,
+        "cost_of_sales": -7306041105,
+        "gross_profit": 801223002,
+        "other_operating_income": 206297735,
+        "general_and_administrative": -2596285191,
+        "bad_debt_expense": -466536728,
+        "inventory_write_down_stock_obsolescence": -121772905,
+        "loss_of_cane_at_fair_value": -74541286,
+        "fair_value_gain_loss_on_standing_cane": 389894807,
+        "impairment_of_bearer_plant": -155892048,
+        "reversal_provision_for_loss_of_plantation": -661210858,
+        "operating_profit_loss": -2678823470,
+        "finance_costs_charges": -2055322439,
+        "profit_loss_before_tax": -4734145909,
+        "income_tax_expense": -41638182,
+        "profit_loss_for_year": -4775784091,
+        "other_comprehensive_income_remeasurement_retirement_benefits": -1767540,
+        "total_comprehensive_income": -4774016551
+      }
+    },
+    "balance_sheet": {
+      "total_assets": {
+        "2018_ETB": 139429447692,
+        "2017_ETB": 119947477547,
+        "2016_ETB": 101663521327
+      },
+      "total_liabilities": {
+        "2018_ETB": 143317344490,
+        "2017_ETB": 116378354771,
+        "2016_ETB": 94199671204
+      },
+      "total_equity": {
+        "2018_ETB": -3887896798,
+        "2017_ETB": 3569122776,
+        "2016_ETB": 7463850123
+      },
+      "current_liabilities_total": {
+        "2018_ETB": 19701655682,
+        "2017_ETB": 16836889379,
+        "2016_ETB": 13602783261
+      },
+      "non_current_liabilities_total": {
+        "2018_ETB": 123615688808,
+        "2017_ETB": 99541465392,
+        "2016_ETB": 80596887943
+      },
+      "cash_and_cash_equivalents": {
+        "2018_ETB": 1682959424,
+        "2017_ETB": 1571418002,
+        "2016_ETB": 1211394756
+      },
+      "trade_and_other_payable": {
+        "2018_ETB": 12502220136,
+        "2017_ETB": 11220634904,
+        "2016_ETB": 8758487853
+      },
+      "long_term_loan": {
+        "2018_ETB": 119519426549,
+        "2017_ETB": 95109281045,
+        "2016_ETB": 76211254595
+      },
+      "property_plant_and_equipment": {},
+      "trade_and_other_receivable": {},
+      "stock_goods_in_transit": {},
+      "tax_receivable": {},
+      "advance_and_prepayments": {}
+    },
+    "cash_flow": {
+      "net_cash_from_operating": {
+        "2018_ETB": -3014990134,
+        "2017_ETB": 3505787520
+      },
+      "net_cash_used_in_investing": {
+        "2018_ETB": -21002449951,
+        "2017_ETB": -22926588389
+      },
+      "net_cash_from_financing": {
+        "2018_ETB": 24128981507,
+        "2017_ETB": 19780824115
+      },
+      "net_increase_decrease_cash": {
+        "2018_ETB": 111541422,
+        "2017_ETB": 360023246
+      },
+      "cash_end": {
+        "2018_ETB": 1682959424,
+        "2017_ETB": 1571418002
+      },
+      "cash_beginning": {
+        "2018_ETB": 1571418002,
+        "2017_ETB": 1211394756
+      }
+    }
+  },
+  "source": {
+    "file_name": "2018.pdf",
+    "extracted_from_pages": {
+      "auditor_report_pages_pdf_index": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "income_statement_pdf_index": 12,
+      "balance_sheet_pdf_index": 13,
+      "cash_flow_pdf_index": 15
+    }
+  }
+}
