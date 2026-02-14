@@ -1,0 +1,68 @@
+{
+  "revenue": 7093393859,
+  "costOfSales": -6850090673,
+  "grossProfit": 243303186,
+  "operatingProfit": -5106114507,
+  "netProfit": -7167455795,
+  "totalAssets": 139429447692,
+  "totalLiabilities": 143317344490,
+  "totalEquity": -3887896798,
+  "auditOpinion": "Qualified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "The Sugar Corporation Import account (01-12500-6000) exhibits a material long-standing outstanding balance of ETB 266,000,090 dating back to the 2014 fiscal year, persisting without resolution in the subsequent financial statements of the SIDF.",
+      "amount": 266000090
+    },
+    {
+      "number": 2,
+      "summary": "We have identified notable deficiencies within the inventory management system of Corporation, which demand immediate attention. The inventory cost flow assumptions as policy are not consistent throughout the Corporation. We were unable to determine the completeness and accuracy of stock and goods in transit and cost of sales.",
+      "amount": 412728175
+    },
+    {
+      "number": 3,
+      "summary": "There was no reliable system of internal control over the accounting of intercompany account on which we could rely for the purposes of our audit. The equity account entitled Sugar Industry Development Fund of ETB 16,689,024,042 is overstated.",
+      "amount": 131333525
+    },
+    {
+      "number": 4,
+      "summary": "The financial statements reflect advance payments to contractors as per Note 16, amounting to ETB 15,311,564,066 with ETB 7,468,623,328 (49%) being impaired.",
+      "amount": 15311564066
+    },
+    {
+      "number": 5,
+      "summary": "The revenue shown in the statement of profit or loss and other comprehensive income of ETB 7,093,393,859 is the cumulative total of the revenue recorded in the separate records of the head office and the sugar factories measured at transfer prices. This constitutes a departure from IFRS.",
+      "amount": 7093393859
+    },
+    {
+      "number": 6,
+      "summary": "We have identified notable deficiencies within the cost accounting system of the Corporation which demand immediate attention. The absence of a cost accounting system resulted in the cost of sugarcane in Arjo Sugar Corporation being calculated based on proportion of harvested sugar to total agricultural area.",
+      "amount": 145561545
+    },
+    {
+      "number": 7,
+      "summary": "The property, plant and equipment consisting CIP-tissue culture for an amount of ETB 74,185,564 has exhibited no movement over a significant period and has not been capitalized.",
+      "amount": 74185564
+    },
+    {
+      "number": 8,
+      "summary": "Included in trade and other receivables is receivable from Commercial Bank of Ethiopia amounting to Birr 194,483,544. We have obtained no sufficient and appropriate audit evidence that this balance is recoverable.",
+      "amount": null
+    },
+    {
+      "number": 9,
+      "summary": "Despite the fact that a provision of Birr 238,421,302 was held in advance and prepayment accounts of Wonji Sugar Factory for the out growers, a substantial portion of this provision was allocated for the sugar cane plantation damaged during political unrest in 2010 E.C.",
+      "amount": null
+    },
+    {
+      "number": 10,
+      "summary": "As discussed in Note 28.6 (Capital management) of the notes to the financial statements, gearing (Debt to Equity ratio) of the Corporation stood at 114% (111% in 2017) which imply the Corporation has larger proportion of debt than equity.",
+      "amount": null
+    },
+    {
+      "number": 11,
+      "summary": "Paid up capital of the Corporation is summation of the carrying amount of net asset of each of the existing factories amounting ETB 6,042,512,614 upon establishment until it is increased by ETB 8,040,511,876 through in kind contribution by the government. These dams were transferred to Ethiopian Construction Works Corporation.",
+      "amount": 6042512614
+    }
+  ]
+}

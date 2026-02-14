@@ -1,0 +1,73 @@
+{
+  "revenue": 9929563760,
+  "costOfSales": -8573028777,
+  "grossProfit": 1356534984,
+  "operatingProfit": -6547695441,
+  "netProfit": -10980373798,
+  "totalAssets": 168642817262,
+  "totalLiabilities": 197417265246,
+  "totalEquity": -28774447984,
+  "auditOpinion": "Qualified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "The Sugar Corporation Import account (01-12500-6000) exhibits a material long-standing outstanding balance of ETB 266,000,090 dating back to the 2014 fiscal year, persisting without resolution in the subsequent financial statements of the SIDF.",
+      "amount": 266000090
+    },
+    {
+      "number": 2,
+      "summary": "We have identified notable deficiencies within the inventory management system of the Corporation, which demand immediate attention. The inventory cost flow assumptions as policy is not consistent throughout the corporation. We were unable to determine the completeness and accuracy of stock and goods in transit and cost of sales.",
+      "amount": 312428552
+    },
+    {
+      "number": 3,
+      "summary": "There was no system of internal control over the accounting of intercompany accounts on which we could rely for the purposes of our audit. The financial statements reflect advance payments to contractors amounting to ETB 14,872,745,556 with ETB 7,971,912,333 (54%) being impaired.",
+      "amount": 90021480
+    },
+    {
+      "number": 4,
+      "summary": "Due to the lack of a robust internal control framework, we do not have confidence in relying on the total Cost of sales figure, which amounts to ETB 8,573,028,777.",
+      "amount": null
+    },
+    {
+      "number": 5,
+      "summary": "We have identified notable deficiencies within the cost accounting system of the corporation which demand immediate attention. The absence of a cost accounting system resulted in the cost of sugarcane in Arjo Sugar factory being calculated based on proportion of harvested sugar to total agricultural area.",
+      "amount": 87038034
+    },
+    {
+      "number": 6,
+      "summary": "The property, plant and equipment consisting of CIP-tissue culture for an amount of ETB 74,185,564 has exhibited no movement over a significant period and has not been capitalized.",
+      "amount": 74185564
+    },
+    {
+      "number": 7,
+      "summary": "Included in trade and other receivables is receivable from Commercial Bank of Ethiopia amounting to ETB 71,464,864. We have obtained no sufficient and appropriate audit evidence that this balance is recoverable.",
+      "amount": 71464864
+    },
+    {
+      "number": 8,
+      "summary": "Despite the fact that a provision of ETB 400,630,800 was held in advance and prepayment accounts of Wonji Sugar Factory for the out growers, a substantial portion of this provision was allocated for the sugar cane plantation damaged during political unrest in 2010 E.C.",
+      "amount": 400630800
+    },
+    {
+      "number": 9,
+      "summary": "We identified significant deficiencies in the internal control over cash and cash equivalents in Arjo Sugar factory. These weaknesses limit our ability to form an opinion on the reliability of the reported cash and cash equivalents balance.",
+      "amount": null
+    },
+    {
+      "number": 10,
+      "summary": "The revenue shown in the statement of profit or loss and other comprehensive income of ETB 9,929,563,760 is the cumulative total of the revenue recorded in the separate records of the head office and the sugar factories measured at transfer prices. This constitutes a departure from IFRS.",
+      "amount": 9929563760
+    },
+    {
+      "number": 11,
+      "summary": "As discussed in Note 28.6 (Capital management) of the notes to the financial statements, gearing (Debt to Equity ratio) of the Corporation stood at 121% (115% in 2020) which imply the Corporation has larger proportion of debt than equity.",
+      "amount": null
+    },
+    {
+      "number": 12,
+      "summary": "Paid up capital of the Corporation is summation of the carrying amount of net asset of each of the existing factories amounting ETB 6,042,512,614 upon establishment until it is increased by ETB 8,040,511,876 through in kind contribution by the government. These dams were transferred to Ethiopian Construction Works Corporation.",
+      "amount": 6042512614
+    }
+  ]
+}

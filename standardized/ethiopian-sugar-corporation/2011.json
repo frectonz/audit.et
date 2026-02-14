@@ -1,0 +1,73 @@
+{
+  "revenue": 8872878586,
+  "costOfSales": -8329720902,
+  "grossProfit": 543157683,
+  "operatingProfit": -10411861967,
+  "netProfit": -14556802757,
+  "totalAssets": 150795909576,
+  "totalLiabilities": 168559744993,
+  "totalEquity": -17763835417,
+  "auditOpinion": "Qualified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "The Sugar Corporation Import account (01-12500-6000) exhibits a material long-standing outstanding balance.",
+      "amount": null
+    },
+    {
+      "number": 2,
+      "summary": "We have identified notable deficiencies within the inventory management system.",
+      "amount": null
+    },
+    {
+      "number": 3,
+      "summary": "There was no system of internal control over the accounting of intercompany accounts.",
+      "amount": null
+    },
+    {
+      "number": 4,
+      "summary": "The financial statements reflect advance payments to contractors (Note 17) amounting to a significant balance.",
+      "amount": null
+    },
+    {
+      "number": 5,
+      "summary": "We have identified notable deficiencies within the cost accounting system of the Corporation.",
+      "amount": null
+    },
+    {
+      "number": 6,
+      "summary": "The property, plant and equipment consisting of CIP-tissue culture for an amount has exhibited no movement over a significant period and has not been capitalized.",
+      "amount": null
+    },
+    {
+      "number": 7,
+      "summary": "Included in trade and other receivables is receivable from Commercial Bank of Ethiopia.",
+      "amount": null
+    },
+    {
+      "number": 8,
+      "summary": "Despite the fact that a provision of ETB 265,468,615 was held in advance and prepayment accounts of Wonji Sugar Factory for the out growers.",
+      "amount": null
+    },
+    {
+      "number": 9,
+      "summary": "We identified significant deficiencies in the internal control over cash and cash equivalents.",
+      "amount": null
+    },
+    {
+      "number": 10,
+      "summary": "The revenue shown in the statement of profit or loss and other comprehensive income is the cumulative total of the revenue recorded in the separate records of the head office and the sugar factories measured at transfer prices. This constitutes a departure from IFRS.",
+      "amount": null
+    },
+    {
+      "number": 11,
+      "summary": "As discussed in Note 28.6 (Capital management) of the notes to the financial statements, gearing (Debt to Equity ratio) of the Corporation stood at 114% which imply the Corporation has larger proportion of debt than equity.",
+      "amount": null
+    },
+    {
+      "number": 12,
+      "summary": "Paid up capital of the Corporation is summation of the carrying amount of net asset of each of the existing factories upon establishment until it is increased through in kind contribution by the government.",
+      "amount": null
+    }
+  ]
+}

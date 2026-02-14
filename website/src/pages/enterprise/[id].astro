@@ -7,7 +7,7 @@ import {
   formatCurrency,
 } from "../../data/enterprises";
 import type { Enterprise } from "../../data/types";
-import { Home, ChevronRight, AlertTriangle } from "@lucide/astro";
+import { Home, ChevronRight, AlertTriangle, Circle } from "@lucide/astro";
 
 export function getStaticPaths() {
   const enterprises = getAllEnterprises();
@@ -92,7 +92,7 @@ const balanceChartData = JSON.stringify({
           <span class="text-eth-text-muted text-sm font-mono"
             >{enterprise.sector}</span
           >
-          <span class="text-eth-card-border">&middot;</span>
+          <Circle class="w-1.5 h-1.5 fill-eth-text-muted text-eth-text-muted" />
           <span class="text-eth-text-muted text-sm"
             >Fiscal year ends {enterprise.fiscalYearEnd}</span
           >
@@ -464,7 +464,7 @@ const balanceChartData = JSON.stringify({
       tooltip: {
         trigger: "axis",
         axisPointer: { type: "shadow" },
-        valueFormatter: (v: number) => `ETB ${formatCompact(v)}`,
+        valueFormatter: (v: number) => v == null ? "N/A" : `ETB ${formatCompact(v)}`,
       },
       legend: legendStyle,
       grid: {
@@ -540,7 +540,7 @@ const balanceChartData = JSON.stringify({
       tooltip: {
         trigger: "axis",
         axisPointer: { type: "shadow" },
-        valueFormatter: (v: number) => `ETB ${formatCompact(v)}`,
+        valueFormatter: (v: number) => v == null ? "N/A" : `ETB ${formatCompact(v)}`,
       },
       legend: legendStyle,
       grid: {

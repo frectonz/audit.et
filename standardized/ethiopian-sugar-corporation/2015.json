@@ -1,0 +1,53 @@
+{
+  "revenue": 7420738187,
+  "costOfSales": -4734872861,
+  "grossProfit": 2685865326,
+  "operatingProfit": -3896704859,
+  "netProfit": -9573838240,
+  "totalAssets": 178257192455,
+  "totalLiabilities": 79111800210,
+  "totalEquity": 99145392244,
+  "auditOpinion": "Qualified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "The Group holds long-outstanding construction in-progress (CIP) balances across its subsidiaries and projects. Wonji-Shoa Sugar Factory holds a long-outstanding construction-in-progress balance of ETB 2,188,109,185 related to land development and civil and irrigation works on out-growers' land. An impairment of ETB 433,991,000 was recorded for advances and prepayments to out-growers.",
+      "amount": 2188109185
+    },
+    {
+      "number": 2,
+      "summary": "We identified significant deficiencies in internal control of intercompany receivables and payables in the group, resulting in accumulated unreconciled inter-branch balances of ETB 1,511,604,528 in the prior years. The residual balance was charged to accumulated losses without appropriately reflecting the economic substance of the transactions.",
+      "amount": 1511604528
+    },
+    {
+      "number": 3,
+      "summary": "During our audit, we identified a receivable balance of ETB 1,477,009,125 recorded under the Sugar Industry Development Fund for which no supporting evidence was provided. The balance was accounted for the unaccounted capital deficits and subsequently reductions in the paid-up capital of Kessem and Tana Beles Sugar Factories.",
+      "amount": 1477009125
+    },
+    {
+      "number": 4,
+      "summary": "We have identified notable deficiencies within the inventory management system of Group, which demand immediate attention. The Group applied different accounting policy on similar inventories in different units and subsidiaries. A net discrepancy of ETB 98,030,912 was identified between the physical inventory count and the ledger balances.",
+      "amount": 98030912
+    },
+    {
+      "number": 5,
+      "summary": "We identified significant deficiencies in the cost accounting systems of the Group's factories, including Arjo, Omo Kuraz II, Omo Kuraz III, Kessem, and Tana Beles Sugar Factories. These factories lack adequate procedures for capturing and allocating direct costs and there is no effective mechanism for allocating overhead and production costs.",
+      "amount": null
+    },
+    {
+      "number": 7,
+      "summary": "The financial statements include advance payments to contractors totaling ETB 14,196,260,238, of which ETB 8,400,908,787 (59%) has been impaired. This includes ETB 278,050,125 related to private and share companies.",
+      "amount": 14196260238
+    },
+    {
+      "number": 8,
+      "summary": "The Group recorded an allowance for doubtful accounts totaling under Trade and Other Receivables and Tax receivables. This raises serious concerns regarding internal controls over the recognition, monitoring, and recovery of receivables.",
+      "amount": null
+    },
+    {
+      "number": 9,
+      "summary": "Due to the challenges faced by the Welqait sugar project as a result of the civil war, bank withdrawals amounting to ETB 49,516,465.52 and bank deposits totalling ETB 10,832,285.70 remain undetermined.",
+      "amount": 49516465.52
+    }
+  ]
+}
