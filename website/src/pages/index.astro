@@ -1,0 +1,557 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getAllEnterprises, formatETB } from "../data/enterprises";
+import { ArrowRight } from "@lucide/astro";
+
+const enterprises = getAllEnterprises();
+
+// Compute summary stats
+const totalEnterprises = enterprises.length;
+const allYears = enterprises.flatMap((e) => e.years.map((y) => y.year));
+const minYear = Math.min(...allYears);
+const maxYear = Math.max(...allYears);
+
+const combinedLatestRevenue = enterprises.reduce((sum, e) => {
+  const latest = e.years.filter((y) => y.revenue != null).at(-1);
+  return sum + (latest?.revenue ?? 0);
+}, 0);
+
+const combinedLatestAssets = enterprises.reduce((sum, e) => {
+  const latest = e.years.filter((y) => y.totalAssets != null).at(-1);
+  return sum + (latest?.totalAssets ?? 0);
+}, 0);
+
+// Combined revenue over time chart data
+const allUniqueYears = [...new Set(enterprises.flatMap((e) => e.years.map((y) => y.year)))].sort();
+const combinedRevenuePerYear = allUniqueYears.map((year) => {
+  let total = 0;
+  let hasAny = false;
+  for (const e of enterprises) {
+    const yd = e.years.find((y) => y.year === year);
+    if (yd?.revenue != null) {
+      total += yd.revenue;
+      hasAny = true;
+    }
+  }
+  return hasAny ? total : null;
+});
+const combinedRevenueChartData = JSON.stringify({
+  labels: allUniqueYears,
+  data: combinedRevenuePerYear,
+});
+
+// --- Profitability Overview: net profit/loss per enterprise (latest year) ---
+const profitabilityData = enterprises
+  .map((e) => {
+    const latest = e.years.filter((y) => y.netProfit != null).at(-1);
+    return {
+      name: e.shortName,
+      value: latest?.netProfit ?? 0,
+      year: latest?.year ?? 0,
+    };
+  })
+  .filter((d) => d.year > 0)
+  .sort((a, b) => a.value - b.value);
+
+const profitabilityChartData = JSON.stringify(profitabilityData);
+
+// --- Audit Health: opinion distribution across all enterprise-years ---
+const opinionCounts: Record<string, number> = {};
+for (const e of enterprises) {
+  for (const y of e.years) {
+    const opinion = y.auditOpinion;
+    opinionCounts[opinion] = (opinionCounts[opinion] ?? 0) + 1;
+  }
+}
+const totalAuditYears = Object.values(opinionCounts).reduce((a, b) => a + b, 0);
+const auditHealthData = JSON.stringify(
+  Object.entries(opinionCounts).map(([name, value]) => ({ name, value }))
+);
+
+// --- Key Financial Indicators ---
+const combinedDebt = enterprises.reduce((sum, e) => {
+  const latest = e.years.filter((y) => y.totalLiabilities != null).at(-1);
+  return sum + (latest?.totalLiabilities ?? 0);
+}, 0);
+
+const marginsWithData = enterprises
+  .map((e) => {
+    const latest = e.years.filter((y) => y.netProfit != null && y.revenue != null && y.revenue !== 0).at(-1);
+    if (!latest) return null;
+    return (latest.netProfit! / latest.revenue!) * 100;
+  })
+  .filter((m): m is number => m != null);
+const avgNetMargin = marginsWithData.length > 0
+  ? marginsWithData.reduce((a, b) => a + b, 0) / marginsWithData.length
+  : 0;
+
+const largestByRevenue = enterprises.reduce((best, e) => {
+  const latest = e.years.filter((y) => y.revenue != null).at(-1);
+  const rev = latest?.revenue ?? 0;
+  return rev > (best.rev ?? 0) ? { name: e.shortName, rev } : best;
+}, { name: "", rev: 0 });
+
+const lossMakingCount = enterprises.filter((e) => {
+  const latest = e.years.filter((y) => y.netProfit != null).at(-1);
+  return latest != null && latest.netProfit! < 0;
+}).length;
+
+// --- Revenue vs Liabilities Trend ---
+const revVsLiabData = JSON.stringify({
+  labels: allUniqueYears,
+  revenue: allUniqueYears.map((year) => {
+    let total = 0;
+    let hasAny = false;
+    for (const e of enterprises) {
+      const yd = e.years.find((y) => y.year === year);
+      if (yd?.revenue != null) { total += yd.revenue; hasAny = true; }
+    }
+    return hasAny ? total : null;
+  }),
+  liabilities: allUniqueYears.map((year) => {
+    let total = 0;
+    let hasAny = false;
+    for (const e of enterprises) {
+      const yd = e.years.find((y) => y.year === year);
+      if (yd?.totalLiabilities != null) { total += yd.totalLiabilities; hasAny = true; }
+    }
+    return hasAny ? total : null;
+  }),
+});
+---
+
+<Layout>
+  <!-- Hero Section with Chart -->
+  <section class="border-b border-eth-card-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <!-- Left: Hero text -->
+        <div>
+          <h1
+            class="font-display text-4xl sm:text-5xl lg:text-5xl leading-[1.1] mb-6 text-eth-text"
+          >
+            Transparency for Ethiopia&rsquo;s State-Owned Enterprises
+          </h1>
+
+          <p class="text-eth-text-dim text-lg leading-relaxed mb-4">
+            Visualizing public audit data from enterprises operating under
+            <span class="text-eth-gold font-semibold"
+              >Ethiopian Investment Holdings (EIH)</span
+            >.
+            Making financial accountability accessible to every citizen.
+          </p>
+
+          <p class="text-eth-text-muted text-sm leading-relaxed max-w-xl mb-8">
+            This is an open-source civic experiment, not an official government
+            service. The data is provided as-is for informational purposes.
+          </p>
+
+          <a
+            href="/enterprises"
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-eth-green text-white font-medium text-sm hover:bg-eth-green/90 transition-colors"
+          >
+            Browse Enterprises
+            <ArrowRight class="w-4 h-4" />
+          </a>
+        </div>
+
+        <!-- Right: Combined Revenue Chart (3D card) -->
+        <div class="min-w-0" style="perspective: 800px;">
+          <div
+            class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 relative"
+            style="transform: rotateY(-4deg) rotateX(2deg); transform-style: preserve-3d; box-shadow: 8px 12px 28px rgba(0,0,0,0.12), 2px 4px 8px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6);"
+          >
+            <h3 class="font-display text-lg text-eth-text mb-0.5">
+              Combined Revenue Over Time
+            </h3>
+            <p class="text-eth-text-muted text-xs mb-4">
+              Revenue from all tracked enterprises (ETB)
+            </p>
+            <div
+              id="combinedRevenueChart"
+              class="h-[280px] sm:h-[300px] w-full"
+              data-chart={combinedRevenueChartData}
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Summary Stats -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+      {
+        [
+          {
+            label: "Enterprises Tracked",
+            value: String(totalEnterprises),
+            sub: "state-owned",
+          },
+          {
+            label: "Years of Data",
+            value: `${minYear}–${maxYear}`,
+            sub: `${maxYear - minYear + 1} fiscal years`,
+          },
+          {
+            label: "Combined Revenue",
+            value: formatETB(combinedLatestRevenue, true),
+            sub: "latest year",
+          },
+          {
+            label: "Combined Assets",
+            value: formatETB(combinedLatestAssets, true),
+            sub: "latest year",
+          },
+        ].map((stat) => (
+          <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm">
+            <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">
+              {stat.label}
+            </p>
+            <p class="text-eth-text font-mono text-xl sm:text-2xl font-semibold">
+              {stat.value}
+            </p>
+            <p class="text-eth-text-muted text-xs mt-1">{stat.sub}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div class="h-px bg-eth-card-border"></div>
+  </div>
+
+  <!-- Profitability Overview + Audit Health -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div class="grid lg:grid-cols-2 gap-6">
+      <!-- Profitability Overview -->
+      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
+        <h3 class="font-display text-xl text-eth-text mb-1">Profitability Overview</h3>
+        <p class="text-eth-text-muted text-sm mb-4">Net profit/loss by enterprise (latest available year)</p>
+        <div id="profitabilityChart" class="h-[200px] lg:h-[280px] w-full" data-chart={profitabilityChartData}></div>
+      </div>
+
+      <!-- Audit Opinions -->
+      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
+        <h3 class="font-display text-xl text-eth-text mb-1">Audit Opinions</h3>
+        <p class="text-eth-text-muted text-sm mb-4">Auditor verdicts across {totalAuditYears} enterprise-years</p>
+        <div id="auditDonutChart" class="h-[200px] lg:h-[280px] w-full" data-chart={auditHealthData}></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Financial Indicators -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <h3 class="font-display text-2xl text-eth-text mb-6">Key Financial Indicators</h3>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm">
+        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">Combined Debt</p>
+        <p class="text-eth-text font-mono text-xl sm:text-2xl font-semibold">{formatETB(combinedDebt, true)}</p>
+        <p class="text-eth-text-muted text-xs mt-1">total liabilities</p>
+      </div>
+      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm">
+        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">Avg Net Margin</p>
+        <p class={`font-mono text-xl sm:text-2xl font-semibold ${avgNetMargin >= 0 ? "text-eth-green" : "text-eth-gold"}`}>
+          {avgNetMargin >= 0 ? "+" : ""}{avgNetMargin.toFixed(1)}%
+        </p>
+        <p class="text-eth-text-muted text-xs mt-1">across enterprises</p>
+      </div>
+      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm">
+        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">Largest by Revenue</p>
+        <p class="text-eth-text font-mono text-xl sm:text-2xl font-semibold">{largestByRevenue.name}</p>
+        <p class="text-eth-text-muted text-xs mt-1">{formatETB(largestByRevenue.rev, true)}</p>
+      </div>
+      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm">
+        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">Loss-Making</p>
+        <p class={`font-mono text-xl sm:text-2xl font-semibold ${lossMakingCount > 0 ? "text-eth-gold" : "text-eth-green"}`}>
+          {lossMakingCount} / {totalEnterprises}
+        </p>
+        <p class="text-eth-text-muted text-xs mt-1">enterprises in loss</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Revenue vs Liabilities Trend -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm">
+      <h3 class="font-display text-xl text-eth-text mb-1">Revenue vs Liabilities</h3>
+      <p class="text-eth-text-muted text-sm mb-4">Combined revenue and total liabilities over time</p>
+      <div id="revVsLiabChart" class="h-[260px] sm:h-[320px] w-full" data-chart={revVsLiabData}></div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  import * as echarts from "echarts";
+
+  const palette = {
+    green: "#1b3b34",
+    greenLight: "#2d5c52",
+    gold: "#af9e6e",
+    goldLight: "rgba(175, 158, 110, 0.15)",
+    accent: "#af9e6e",
+    text: "#4A4A4A",
+    grid: "rgba(0, 0, 0, 0.06)",
+  };
+
+  function formatCompact(value: number): string {
+    const abs = Math.abs(value);
+    const sign = value < 0 ? "-" : "";
+    if (abs >= 1e12) return `${sign}${(abs / 1e12).toFixed(1)}T`;
+    if (abs >= 1e9) return `${sign}${(abs / 1e9).toFixed(1)}B`;
+    if (abs >= 1e6) return `${sign}${(abs / 1e6).toFixed(1)}M`;
+    if (abs >= 1e3) return `${sign}${(abs / 1e3).toFixed(0)}K`;
+    return `${sign}${abs}`;
+  }
+
+  const isMobile = window.innerWidth < 640;
+
+  const axisLabelStyle = {
+    fontFamily: "JetBrains Mono, monospace",
+    fontSize: isMobile ? 9 : 11,
+    color: palette.text,
+  };
+
+  // Track all charts for ResizeObserver
+  const charts: { el: HTMLElement; chart: echarts.ECharts }[] = [];
+
+  function initChart(el: HTMLElement): echarts.ECharts {
+    const chart = echarts.init(el);
+    charts.push({ el, chart });
+    return chart;
+  }
+
+  // Use ResizeObserver so charts resize when their container changes
+  const ro = new ResizeObserver(() => {
+    for (const { chart } of charts) {
+      chart.resize();
+    }
+  });
+
+  // --- Combined Revenue Chart ---
+  const el = document.getElementById("combinedRevenueChart");
+  if (el) {
+    const data = JSON.parse(el.dataset.chart!);
+    const chart = initChart(el);
+    ro.observe(el);
+
+    chart.setOption({
+      tooltip: {
+        trigger: "axis",
+        axisPointer: { type: "shadow" },
+        valueFormatter: (v: number) => v == null ? "No data" : `ETB ${formatCompact(v)}`,
+      },
+      grid: { left: 0, right: 10, top: 16, bottom: 0, containLabel: true },
+      xAxis: {
+        type: "category",
+        data: data.labels,
+        axisLabel: axisLabelStyle,
+        axisLine: { lineStyle: { color: "#E0DDD5" } },
+        axisTick: { show: false },
+      },
+      yAxis: {
+        type: "value",
+        axisLabel: {
+          ...axisLabelStyle,
+          formatter: (v: number) => formatCompact(v),
+        },
+        splitLine: { lineStyle: { color: palette.grid } },
+      },
+      series: [
+        {
+          name: "Combined Revenue",
+          type: "bar",
+          data: data.data,
+          itemStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: palette.green },
+              { offset: 1, color: palette.greenLight },
+            ]),
+            borderRadius: [4, 4, 0, 0],
+            shadowBlur: 10,
+            shadowColor: "rgba(0, 0, 0, 0.12)",
+            shadowOffsetY: 4,
+          },
+          emphasis: {
+            itemStyle: { shadowBlur: 20, shadowColor: "rgba(0, 0, 0, 0.25)" },
+          },
+          barMaxWidth: 40,
+        },
+      ],
+    });
+  }
+
+  // --- Profitability Overview Chart (horizontal bar) ---
+  const profitEl = document.getElementById("profitabilityChart");
+  if (profitEl) {
+    const data = JSON.parse(profitEl.dataset.chart!) as { name: string; value: number; year: number }[];
+    const chart = initChart(profitEl);
+    ro.observe(profitEl);
+
+    chart.setOption({
+      tooltip: {
+        trigger: "axis",
+        axisPointer: { type: "shadow" },
+        formatter: (params: any) => {
+          const p = params[0];
+          const item = data[p.dataIndex];
+          return `${p.name} (${item.year})<br/>Net Profit: ETB ${formatCompact(p.value)}`;
+        },
+      },
+      grid: { left: 0, right: 10, top: 10, bottom: 0, containLabel: true },
+      xAxis: {
+        type: "value",
+        axisLabel: {
+          ...axisLabelStyle,
+          formatter: (v: number) => formatCompact(v),
+        },
+        splitLine: { lineStyle: { color: palette.grid } },
+      },
+      yAxis: {
+        type: "category",
+        data: data.map((d) => d.name),
+        axisLabel: { ...axisLabelStyle, fontSize: isMobile ? 10 : 12 },
+        axisLine: { lineStyle: { color: "#E0DDD5" } },
+        axisTick: { show: false },
+      },
+      series: [
+        {
+          type: "bar",
+          data: data.map((d) => ({
+            value: d.value,
+            itemStyle: {
+              color: d.value >= 0 ? palette.green : palette.accent,
+              borderRadius: d.value >= 0 ? [0, 4, 4, 0] : [4, 0, 0, 4],
+            },
+          })),
+          barMaxWidth: 28,
+          emphasis: {
+            itemStyle: { shadowBlur: 12, shadowColor: "rgba(0,0,0,0.2)" },
+          },
+        },
+      ],
+    });
+  }
+
+  // --- Audit Opinions Donut Chart ---
+  const donutEl = document.getElementById("auditDonutChart");
+  if (donutEl) {
+    const data = JSON.parse(donutEl.dataset.chart!) as { name: string; value: number }[];
+    const chart = initChart(donutEl);
+    ro.observe(donutEl);
+
+    const opinionColors: Record<string, string> = {
+      "Unmodified": palette.green,
+      "Qualified": palette.gold,
+      "Adverse": palette.accent,
+    };
+
+    chart.setOption({
+      tooltip: {
+        trigger: "item",
+        formatter: "{b}: {c} ({d}%)",
+      },
+      series: [
+        {
+          type: "pie",
+          radius: ["35%", "60%"],
+          center: ["50%", "50%"],
+          avoidLabelOverlap: true,
+          itemStyle: {
+            borderRadius: 6,
+            borderColor: "#fff",
+            borderWidth: 2,
+          },
+          label: {
+            show: true,
+            position: "outside",
+            formatter: "{b} {d}%",
+            fontFamily: "Lora, Georgia, serif",
+            fontSize: isMobile ? 10 : 11,
+            color: palette.text,
+          },
+          labelLine: {
+            length: 8,
+            length2: 6,
+          },
+          data: data.map((d) => ({
+            ...d,
+            itemStyle: { color: opinionColors[d.name] ?? "#8A8A85" },
+          })),
+        },
+      ],
+    });
+  }
+
+  // --- Revenue vs Liabilities Trend ---
+  const rvlEl = document.getElementById("revVsLiabChart");
+  if (rvlEl) {
+    const data = JSON.parse(rvlEl.dataset.chart!);
+    const chart = initChart(rvlEl);
+    ro.observe(rvlEl);
+
+    chart.setOption({
+      tooltip: {
+        trigger: "axis",
+        valueFormatter: (v: number) => v == null ? "No data" : `ETB ${formatCompact(v)}`,
+      },
+      legend: {
+        textStyle: { fontFamily: "Lora, Georgia, serif", color: palette.text, fontSize: isMobile ? 10 : 11 },
+        bottom: 0,
+        itemGap: isMobile ? 8 : 14,
+      },
+      grid: { left: 0, right: 10, top: 16, bottom: 50, containLabel: true },
+      xAxis: {
+        type: "category",
+        data: data.labels,
+        axisLabel: axisLabelStyle,
+        axisLine: { lineStyle: { color: "#E0DDD5" } },
+        axisTick: { show: false },
+      },
+      yAxis: {
+        type: "value",
+        axisLabel: {
+          ...axisLabelStyle,
+          formatter: (v: number) => formatCompact(v),
+        },
+        splitLine: { lineStyle: { color: palette.grid } },
+      },
+      series: [
+        {
+          name: "Combined Revenue",
+          type: "line",
+          data: data.revenue,
+          smooth: 0.3,
+          symbol: "circle",
+          symbolSize: isMobile ? 5 : 8,
+          lineStyle: { color: palette.green, width: 2.5 },
+          itemStyle: { color: palette.green },
+          areaStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: "rgba(27, 59, 52, 0.18)" },
+              { offset: 1, color: "rgba(27, 59, 52, 0.02)" },
+            ]),
+          },
+        },
+        {
+          name: "Combined Liabilities",
+          type: "line",
+          data: data.liabilities,
+          smooth: 0.3,
+          symbol: "circle",
+          symbolSize: isMobile ? 5 : 8,
+          lineStyle: { color: palette.accent, width: 2.5 },
+          itemStyle: { color: palette.accent },
+          areaStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: "rgba(175, 158, 110, 0.18)" },
+              { offset: 1, color: "rgba(175, 158, 110, 0.02)" },
+            ]),
+          },
+        },
+      ],
+    });
+  }
+</script>

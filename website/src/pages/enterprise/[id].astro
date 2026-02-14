@@ -1,0 +1,620 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {
+  getAllEnterprises,
+  getEnterprise,
+  formatETB,
+  formatCurrency,
+} from "../../data/enterprises";
+import type { Enterprise } from "../../data/types";
+import { Home, ChevronRight, AlertTriangle } from "@lucide/astro";
+
+export function getStaticPaths() {
+  const enterprises = getAllEnterprises();
+  return enterprises.map((e) => ({
+    params: { id: e.id },
+  }));
+}
+
+const { id } = Astro.params;
+const enterprise = getEnterprise(id!)!;
+
+const latest = enterprise.years.at(-1);
+const prev = enterprise.years.at(-2);
+
+function getOpinionColor(opinion: string): string {
+  if (opinion.toLowerCase().includes("unmodified")) return "text-eth-green";
+  if (opinion.toLowerCase().includes("qualified")) return "text-eth-gold";
+  if (opinion.toLowerCase().includes("adverse")) return "text-eth-gold";
+  return "text-eth-text-muted";
+}
+
+function getOpinionBg(opinion: string): string {
+  if (opinion.toLowerCase().includes("unmodified"))
+    return "bg-eth-green/10 border-eth-green/20";
+  if (opinion.toLowerCase().includes("qualified"))
+    return "bg-eth-gold-light border-eth-gold/20";
+  if (opinion.toLowerCase().includes("adverse"))
+    return "bg-eth-gold-light border-eth-gold/30";
+  return "bg-eth-surface border-eth-card-border";
+}
+
+// Prepare chart data
+const chartYears = enterprise.years.map((y) => y.year);
+const revenueData = enterprise.years.map((y) => y.revenue);
+const costData = enterprise.years.map((y) => y.costOfSales);
+const grossProfitData = enterprise.years.map((y) => y.grossProfit);
+const netProfitData = enterprise.years.map((y) => y.netProfit);
+const assetsData = enterprise.years.map((y) => y.totalAssets);
+const liabilitiesData = enterprise.years.map((y) => y.totalLiabilities);
+const equityData = enterprise.years.map((y) => y.totalEquity);
+
+const profitChartData = JSON.stringify({
+  labels: chartYears,
+  revenue: revenueData,
+  costOfSales: costData,
+  grossProfit: grossProfitData,
+  netProfit: netProfitData,
+});
+
+const balanceChartData = JSON.stringify({
+  labels: chartYears,
+  assets: assetsData,
+  liabilities: liabilitiesData,
+  equity: equityData,
+});
+---
+
+<Layout title={`${enterprise.shortName} — audit.et`}>
+  <!-- Breadcrumbs -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+    <nav class="flex items-center gap-1.5 text-sm">
+      <a href="/" class="inline-flex items-center gap-1 text-eth-text-muted hover:text-eth-green transition-colors">
+        <Home class="w-3.5 h-3.5" />
+        Home
+      </a>
+      <ChevronRight class="w-3.5 h-3.5 text-eth-text-muted/50" />
+      <a href="/enterprises" class="text-eth-text-muted hover:text-eth-green transition-colors">
+        Enterprises
+      </a>
+      <ChevronRight class="w-3.5 h-3.5 text-eth-text-muted/50" />
+      <span class="text-eth-text font-medium">{enterprise.shortName}</span>
+    </nav>
+  </div>
+
+  <!-- Header -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-8">
+    <div
+      class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4"
+    >
+      <div>
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-eth-text-muted text-sm font-mono"
+            >{enterprise.sector}</span
+          >
+          <span class="text-eth-card-border">&middot;</span>
+          <span class="text-eth-text-muted text-sm"
+            >Fiscal year ends {enterprise.fiscalYearEnd}</span
+          >
+        </div>
+        <h1
+          class="font-display text-3xl sm:text-4xl lg:text-5xl text-eth-text mb-3"
+        >
+          {enterprise.name}
+        </h1>
+        <p class="text-eth-text-dim max-w-2xl">{enterprise.description}</p>
+      </div>
+      {
+        latest && (
+          <span
+            class={`text-sm px-3 py-1 rounded-full border whitespace-nowrap ${getOpinionBg(latest.auditOpinion)} ${getOpinionColor(latest.auditOpinion)}`}
+          >
+            {latest.auditOpinion} ({latest.year})
+          </span>
+        )
+      }
+    </div>
+  </section>
+
+  <!-- Key Metrics -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+      {
+        [
+          {
+            label: "Revenue",
+            value:
+              latest?.revenue != null
+                ? formatETB(latest.revenue, true)
+                : "N/A",
+            sub: latest?.year ? `FY ${latest.year}` : "",
+            color: "text-eth-green",
+          },
+          {
+            label: "Net Profit/Loss",
+            value:
+              latest?.netProfit != null
+                ? formatETB(latest.netProfit, true)
+                : "N/A",
+            sub:
+              latest?.netProfit != null && latest.netProfit < 0
+                ? "Loss"
+                : "Profit",
+            color:
+              latest?.netProfit != null && latest.netProfit >= 0
+                ? "text-eth-green"
+                : "text-eth-gold",
+          },
+          {
+            label: "Total Assets",
+            value:
+              latest?.totalAssets != null
+                ? formatETB(latest.totalAssets, true)
+                : "N/A",
+            sub: latest?.year ? `FY ${latest.year}` : "",
+            color: "text-eth-green",
+          },
+          {
+            label: "Total Equity",
+            value:
+              latest?.totalEquity != null
+                ? formatETB(latest.totalEquity, true)
+                : "N/A",
+            sub:
+              latest?.totalEquity != null && latest.totalEquity < 0
+                ? "Negative equity"
+                : "",
+            color:
+              latest?.totalEquity != null && latest.totalEquity >= 0
+                ? "text-eth-gold"
+                : "text-eth-gold",
+          },
+        ].map((metric) => (
+          <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm">
+            <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">
+              {metric.label}
+            </p>
+            <p
+              class={`font-mono text-xl sm:text-2xl font-semibold ${metric.color}`}
+            >
+              {metric.value}
+            </p>
+            {metric.sub && (
+              <p class="text-eth-text-muted text-xs mt-1">{metric.sub}</p>
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Charts Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div class="grid lg:grid-cols-2 gap-6">
+      <!-- Revenue & Profitability Chart -->
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm"
+      >
+        <h3 class="font-display text-xl text-eth-text mb-1">
+          Revenue & Profitability
+        </h3>
+        <p class="text-eth-text-muted text-sm mb-4">
+          Revenue, cost of sales, and net profit over time
+        </p>
+        <div
+          id="profitChart"
+          class="h-[300px] w-full"
+          data-chart={profitChartData}
+        ></div>
+      </div>
+
+      <!-- Balance Sheet Chart -->
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm"
+      >
+        <h3 class="font-display text-xl text-eth-text mb-1">Balance Sheet</h3>
+        <p class="text-eth-text-muted text-sm mb-4">
+          Total assets, liabilities, and equity over time
+        </p>
+        <div
+          id="balanceChart"
+          class="h-[300px] w-full"
+          data-chart={balanceChartData}
+        ></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audit Opinion Timeline -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div
+      class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm"
+    >
+      <h3 class="font-display text-xl text-eth-text mb-4">
+        Audit Opinion Timeline
+      </h3>
+      <div class="flex items-center gap-2 overflow-x-auto pb-2">
+        {
+          enterprise.years.map((y, i) => (
+            <div class="flex items-center">
+              <div class="flex flex-col items-center min-w-[80px]">
+                <div
+                  class={`w-10 h-10 rounded-full border-2 flex items-center justify-center text-xs font-mono font-semibold ${getOpinionBg(y.auditOpinion)} ${getOpinionColor(y.auditOpinion)}`}
+                >
+                  {y.auditOpinion.charAt(0)}
+                </div>
+                <span class="text-eth-text-muted text-xs mt-2">{y.year}</span>
+                <span
+                  class={`text-[10px] mt-0.5 ${getOpinionColor(y.auditOpinion)}`}
+                >
+                  {y.auditOpinion}
+                </span>
+              </div>
+              {i < enterprise.years.length - 1 && (
+                <div class="w-8 h-0.5 bg-eth-card-border -mt-4" />
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Audit Findings -->
+  {
+    enterprise.auditFindings.length > 0 && (
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div class="bg-eth-card border border-eth-gold/30 rounded-xl p-6 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 rounded-full bg-eth-gold-light border border-eth-gold/20 flex items-center justify-center">
+              <AlertTriangle class="w-4 h-4 text-eth-gold" />
+            </div>
+            <div>
+              <h3 class="font-display text-xl text-eth-gold">
+                Key Audit Findings
+              </h3>
+              <p class="text-eth-text-muted text-sm">
+                Basis for qualified opinion from the latest audit report
+              </p>
+            </div>
+          </div>
+          <div class="space-y-3">
+            {enterprise.auditFindings.slice(0, 8).map((finding) => (
+              <details class="border border-eth-card-border rounded-lg bg-eth-surface/50 group">
+                <summary class="p-4 cursor-pointer select-none list-none flex items-start gap-3 [&::-webkit-details-marker]:hidden">
+                  <span class="text-eth-gold font-mono text-sm font-semibold shrink-0">
+                    #{finding.number}
+                  </span>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-eth-text-dim text-sm leading-relaxed line-clamp-2">
+                      {finding.summary}
+                    </p>
+                  </div>
+                  <svg
+                    class="w-4 h-4 text-eth-text-muted shrink-0 mt-0.5 transition-transform group-open:rotate-180"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  ><path d="m6 9 6 6 6-6" /></svg>
+                </summary>
+                <div class="px-4 pb-4 pt-0">
+                  <div class="pl-8">
+                    <p class="text-eth-text-dim text-sm leading-relaxed">
+                      {finding.summary}
+                    </p>
+                    {finding.amount != null && (
+                      <p class="text-eth-gold font-mono text-sm mt-2">
+                        Amount: {formatETB(finding.amount, true)}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <!-- Data Table -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div
+      class="bg-eth-card border border-eth-card-border rounded-xl overflow-hidden shadow-sm"
+    >
+      <div class="p-6 pb-3">
+        <h3 class="font-display text-xl text-eth-text mb-1">
+          Financial Summary
+        </h3>
+        <p class="text-eth-text-muted text-sm">
+          All figures in Ethiopian Birr (ETB). {
+            enterprise.id === "ethiopian-electric-power"
+              ? "Originally reported in Birr'000, shown here in full."
+              : ""
+          }
+        </p>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-t border-eth-card-border bg-eth-surface/50">
+              <th
+                class="text-left px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
+                >Year</th
+              >
+              <th
+                class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
+                >Revenue</th
+              >
+              <th
+                class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
+                >Net Profit</th
+              >
+              <th
+                class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
+                >Total Assets</th
+              >
+              <th
+                class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
+                >Total Liabilities</th
+              >
+              <th
+                class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
+                >Equity</th
+              >
+              <th
+                class="text-center px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
+                >Opinion</th
+              >
+            </tr>
+          </thead>
+          <tbody>
+            {
+              enterprise.years.map((y) => (
+                <tr class="border-t border-eth-card-border/50 hover:bg-eth-surface/30 transition-colors">
+                  <td class="px-6 py-3 font-mono text-eth-text font-medium">
+                    {y.year}
+                  </td>
+                  <td class="px-6 py-3 font-mono text-right text-eth-text-dim">
+                    {y.revenue != null ? formatETB(y.revenue, true) : "—"}
+                  </td>
+                  <td
+                    class={`px-6 py-3 font-mono text-right ${y.netProfit != null && y.netProfit < 0 ? "text-eth-gold" : "text-eth-green"}`}
+                  >
+                    {y.netProfit != null ? formatETB(y.netProfit, true) : "—"}
+                  </td>
+                  <td class="px-6 py-3 font-mono text-right text-eth-text-dim">
+                    {y.totalAssets != null
+                      ? formatETB(y.totalAssets, true)
+                      : "—"}
+                  </td>
+                  <td class="px-6 py-3 font-mono text-right text-eth-text-dim">
+                    {y.totalLiabilities != null
+                      ? formatETB(y.totalLiabilities, true)
+                      : "—"}
+                  </td>
+                  <td
+                    class={`px-6 py-3 font-mono text-right ${y.totalEquity != null && y.totalEquity < 0 ? "text-eth-gold" : "text-eth-text-dim"}`}
+                  >
+                    {y.totalEquity != null
+                      ? formatETB(y.totalEquity, true)
+                      : "—"}
+                  </td>
+                  <td class="px-6 py-3 text-center">
+                    <span class={`text-xs ${getOpinionColor(y.auditOpinion)}`}>
+                      {y.auditOpinion}
+                    </span>
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  import * as echarts from "echarts";
+
+  const colors = {
+    green: "#1b3b34",
+    greenLight: "#2d5c52",
+    gold: "#af9e6e",
+    goldLight: "#c4b88e",
+    text: "#4A4A4A",
+    grid: "rgba(0, 0, 0, 0.06)",
+  };
+
+  function formatCompact(value: number): string {
+    const abs = Math.abs(value);
+    const sign = value < 0 ? "-" : "";
+    if (abs >= 1e12) return `${sign}${(abs / 1e12).toFixed(1)}T`;
+    if (abs >= 1e9) return `${sign}${(abs / 1e9).toFixed(1)}B`;
+    if (abs >= 1e6) return `${sign}${(abs / 1e6).toFixed(1)}M`;
+    if (abs >= 1e3) return `${sign}${(abs / 1e3).toFixed(0)}K`;
+    return `${sign}${abs}`;
+  }
+
+  const axisLabelStyle = {
+    fontFamily: "JetBrains Mono, monospace",
+    fontSize: 11,
+    color: colors.text,
+  };
+
+  const legendStyle = {
+    textStyle: {
+      fontFamily: "Lora, Georgia, serif",
+      color: colors.text,
+      fontSize: 11,
+    },
+    bottom: 0,
+    itemGap: 14,
+  };
+
+  // Revenue & Profitability Chart
+  const profitEl = document.getElementById("profitChart");
+  if (profitEl) {
+    const data = JSON.parse(profitEl.dataset.chart!);
+    const chart = echarts.init(profitEl);
+
+    chart.setOption({
+      tooltip: {
+        trigger: "axis",
+        axisPointer: { type: "shadow" },
+        valueFormatter: (v: number) => `ETB ${formatCompact(v)}`,
+      },
+      legend: legendStyle,
+      grid: {
+        left: 10,
+        right: 16,
+        top: 16,
+        bottom: 50,
+        containLabel: true,
+      },
+      xAxis: {
+        type: "category",
+        data: data.labels,
+        axisLabel: axisLabelStyle,
+        axisLine: { lineStyle: { color: "#E0DDD5" } },
+        axisTick: { show: false },
+      },
+      yAxis: {
+        type: "value",
+        axisLabel: {
+          ...axisLabelStyle,
+          formatter: (v: number) => `ETB ${formatCompact(v)}`,
+        },
+        splitLine: { lineStyle: { color: colors.grid } },
+      },
+      series: [
+        {
+          name: "Revenue",
+          type: "bar",
+          data: data.revenue,
+          itemStyle: {
+            color: colors.green,
+            borderRadius: [3, 3, 0, 0],
+            shadowBlur: 8,
+            shadowColor: "rgba(0, 0, 0, 0.1)",
+            shadowOffsetY: 3,
+          },
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 16,
+              shadowColor: "rgba(0, 0, 0, 0.2)",
+            },
+          },
+        },
+        {
+          name: "Net Profit/Loss",
+          type: "line",
+          data: data.netProfit,
+          smooth: 0.3,
+          symbol: "circle",
+          symbolSize: 8,
+          lineStyle: { color: colors.gold, width: 2 },
+          itemStyle: { color: colors.gold },
+          areaStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: "rgba(175, 158, 110, 0.15)" },
+              { offset: 1, color: "rgba(175, 158, 110, 0.02)" },
+            ]),
+          },
+        },
+      ],
+    });
+
+    window.addEventListener("resize", () => chart.resize());
+  }
+
+  // Balance Sheet Chart
+  const balanceEl = document.getElementById("balanceChart");
+  if (balanceEl) {
+    const data = JSON.parse(balanceEl.dataset.chart!);
+    const chart = echarts.init(balanceEl);
+
+    chart.setOption({
+      tooltip: {
+        trigger: "axis",
+        axisPointer: { type: "shadow" },
+        valueFormatter: (v: number) => `ETB ${formatCompact(v)}`,
+      },
+      legend: legendStyle,
+      grid: {
+        left: 10,
+        right: 16,
+        top: 16,
+        bottom: 50,
+        containLabel: true,
+      },
+      xAxis: {
+        type: "category",
+        data: data.labels,
+        axisLabel: axisLabelStyle,
+        axisLine: { lineStyle: { color: "#E0DDD5" } },
+        axisTick: { show: false },
+      },
+      yAxis: {
+        type: "value",
+        axisLabel: {
+          ...axisLabelStyle,
+          formatter: (v: number) => `ETB ${formatCompact(v)}`,
+        },
+        splitLine: { lineStyle: { color: colors.grid } },
+      },
+      series: [
+        {
+          name: "Total Assets",
+          type: "bar",
+          data: data.assets,
+          itemStyle: {
+            color: colors.green,
+            borderRadius: [3, 3, 0, 0],
+            shadowBlur: 8,
+            shadowColor: "rgba(0, 0, 0, 0.1)",
+            shadowOffsetY: 3,
+          },
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 16,
+              shadowColor: "rgba(0, 0, 0, 0.2)",
+            },
+          },
+        },
+        {
+          name: "Total Liabilities",
+          type: "bar",
+          data: data.liabilities,
+          itemStyle: {
+            color: colors.goldLight,
+            borderRadius: [3, 3, 0, 0],
+            shadowBlur: 8,
+            shadowColor: "rgba(0, 0, 0, 0.1)",
+            shadowOffsetY: 3,
+          },
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 16,
+              shadowColor: "rgba(0, 0, 0, 0.2)",
+            },
+          },
+        },
+        {
+          name: "Equity",
+          type: "line",
+          data: data.equity,
+          smooth: 0.3,
+          symbol: "circle",
+          symbolSize: 8,
+          lineStyle: { color: colors.gold, width: 2 },
+          itemStyle: { color: colors.gold },
+        },
+      ],
+    });
+
+    window.addEventListener("resize", () => chart.resize());
+  }
+</script>

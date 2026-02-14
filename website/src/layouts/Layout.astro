@@ -1,0 +1,143 @@
+---
+import "../styles/global.css";
+import { Github, Home, Building2, Info } from "@lucide/astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Transparency for Ethiopia's State-Owned Enterprises",
+  description = "An independent civic project visualizing audit reports from Ethiopian state-owned enterprises under EIH (Ethiopian Investment Holdings).",
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const navLink = (href: string) => {
+  const isActive = href === "/" ? currentPath === "/" : currentPath.startsWith(href);
+  return isActive
+    ? "text-eth-gold flex items-center gap-1.5"
+    : "text-white/70 hover:text-eth-gold transition-colors flex items-center gap-1.5";
+};
+
+// Generate random Amharic background glyphs at build time
+const amharicLetters = ["ኦ", "ዲ", "ት"]; // ኦዲት = audit
+function seededRandom(seed: number) {
+  let s = seed;
+  return () => {
+    s = (s * 16807 + 0) % 2147483647;
+    return s / 2147483647;
+  };
+}
+const rand = seededRandom(42);
+const glyphs = Array.from({ length: 150 }, () => {
+  const r = rand();
+  // ~15% chance of being very large, rest are medium
+  const size = r < 0.15
+    ? (120 + rand() * 180)  // large: 120–300px
+    : (32 + rand() * 48);   // medium: 32–80px
+  return {
+    char: amharicLetters[Math.floor(rand() * amharicLetters.length)],
+    left: (rand() * 100).toFixed(1),
+    top: (rand() * 100).toFixed(1),
+    size: size.toFixed(0),
+    opacity: (0.025 + rand() * 0.04).toFixed(3),
+  };
+});
+---
+
+<!doctype html>
+<html lang="en" class="bg-eth-bg text-eth-text">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="font-body min-h-screen flex flex-col antialiased relative">
+    <!-- Amharic letter background -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none select-none z-0 h-full" aria-hidden="true">
+      {glyphs.map((g) => (
+        <span
+          class="absolute font-display text-eth-green"
+          style={`left:${g.left}%;top:${g.top}%;font-size:${g.size}px;opacity:${g.opacity};`}
+        >{g.char}</span>
+      ))}
+    </div>
+
+    <nav class="bg-eth-green text-white sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="/" class="flex flex-col leading-tight">
+          <span class="font-display text-2xl tracking-tight">audit.et</span>
+          <span class="text-white/70 text-[11px] -mt-1">ኦዲት</span>
+        </a>
+        <div class="flex items-center gap-3 sm:gap-5 text-sm">
+          <a href="/" class={navLink("/")}>
+            <Home class="w-4 h-4" />
+            <span class="hidden sm:inline">Home</span>
+          </a>
+          <a href="/enterprises" class={navLink("/enterprises")}>
+            <Building2 class="w-4 h-4" />
+            <span class="hidden sm:inline">Enterprises</span>
+          </a>
+          <a href="/about" class={navLink("/about")}>
+            <Info class="w-4 h-4" />
+            <span class="hidden sm:inline">About</span>
+          </a>
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-white/70 hover:text-eth-gold transition-colors flex items-center gap-1.5"
+          >
+            <Github class="w-4 h-4" />
+            <span class="hidden sm:inline">Source</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex-1 relative z-10">
+      <slot />
+    </main>
+
+    <footer class="bg-eth-green text-white mt-20 relative z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <div class="flex flex-col leading-tight mb-4">
+              <span class="font-display text-lg">audit.et</span>
+              <span class="text-white/60 text-[11px]">ኦዲት</span>
+            </div>
+            <p class="text-white/70 text-sm max-w-md leading-relaxed">
+              This is an independent, unofficial project. It is not affiliated with or endorsed by the
+              Ethiopian government, Ethiopian Investment Holdings (EIH), or any political party.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-white/90 text-sm font-semibold mb-3 uppercase tracking-wider">Disclaimer</h4>
+            <p class="text-white/70 text-sm leading-relaxed">
+              This is an open-source civic experiment, not an official government service.
+              The data is provided as-is for informational purposes. While we strive for accuracy,
+              we cannot guarantee that all information is complete or error-free.
+            </p>
+          </div>
+        </div>
+        <div class="mt-8 pt-6 border-t border-white/20 text-center space-y-2">
+          <p class="text-white/50 text-xs">
+            Data sourced from publicly available audit reports by the Office of the Federal Auditor General / Audit Service Corporation.
+          </p>
+          <p class="text-white/50 text-xs">
+            If you find any inaccuracies or want to contact the creators of this site, reach out to
+            <a href="https://t.me/frectonz" target="_blank" rel="noopener noreferrer" class="text-eth-gold hover:text-eth-gold/80 transition-colors">@frectonz</a> on Telegram.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
