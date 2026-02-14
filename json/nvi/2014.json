@@ -1,0 +1,2391 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "entity_name": "National Veterinary Institute",
+    "document_title": "Independent Auditors' Report and Financial Statements for the year ended 07 July 2022",
+    "period_end": "2022-07-07",
+    "comparative_period_end": "2021-07-07",
+    "currency": {
+      "code": "ETB",
+      "name": "Ethiopian Birr"
+    },
+    "auditor": {
+      "individual_name": "Elias Zeleke",
+      "firm_name": "Elias Zeleke Chartered Certified Accountants and Certified Audit Firm",
+      "location": "Addis Ababa, Ethiopia",
+      "report_date": "2022-11-02",
+      "report_type": "Independent auditors' report"
+    },
+    "source": {
+      "file_name": "2014.pdf",
+      "notes": "Source PDF appears to be scanned images; extracted values were transcribed from the rendered pages."
+    },
+    "source_pages": {
+      "cover": 1,
+      "table_of_contents": 2,
+      "management_responsibilities": 3,
+      "independent_auditors_report": [
+        4,
+        5
+      ],
+      "financial_statements": {
+        "profit_or_loss": 6,
+        "financial_position": 7,
+        "changes_in_equity": 8,
+        "cash_flow": 9
+      },
+      "selected_notes_extracts": {
+        "note_4_revenue": 27,
+        "note_5_cost_of_goods_sold": 28,
+        "note_6_other_income_and_fx_gain": 29,
+        "note_7_general_and_admin_expenses": 30
+      }
+    }
+  },
+  "audit_report": {
+    "opinion_type": "Qualified opinion",
+    "applicable_frameworks": [
+      "International Financial Reporting Standards (IFRSs)",
+      "Commercial Code of Ethiopia 1960"
+    ],
+    "auditing_standards": [
+      "International Standards on Auditing (ISAs)"
+    ],
+    "opinion_summary": "The auditor expressed a qualified opinion: except for the effects of the matters described in the Basis for Qualified Opinion, the financial statements present a true and fair view of the Institute's financial position as of 07 July 2022 and its financial performance and cash flows for the year then ended.",
+    "basis_for_qualified_opinion": [
+      {
+        "issue_id": "IFRS15-advance-sales",
+        "topic": "Revenue recognition of advances / undelivered sales",
+        "standard_references": [
+          "IFRS 15"
+        ],
+        "amounts_etb": [
+          {
+            "label": "Advance collected treated as sales",
+            "amount": 7771612.05
+          }
+        ],
+        "summary": "Advance collected was treated as sales and undelivered sales were recorded against cost of sales. Under IFRS 15, revenue should be recognized when performance obligations are satisfied; the auditor was not satisfied that reported sales and cost of sales were not overstated."
+      },
+      {
+        "issue_id": "IAS2-inventory-absorption",
+        "topic": "Inventory costing / absorption of production costs",
+        "standard_references": [
+          "IAS 2"
+        ],
+        "amounts_etb": [],
+        "summary": "Direct and indirect costs (materials, labor, and overhead) were not absorbed into inventory cost; vaccines inventory was not valued using standard costing. Under IAS 2, production costs should be absorbed into inventory cost; the auditor was not satisfied that inventory and cost of sales balances were fairly stated."
+      },
+      {
+        "issue_id": "tax-zreport-vat-difference",
+        "topic": "Sales variance between VAT declarations and Z-report register",
+        "standard_references": [
+          "Tax compliance (VAT / sales register)"
+        ],
+        "amounts_etb": [
+          {
+            "label": "Difference between VAT declaration and Z report (Z report higher)",
+            "amount": 5595543.38
+          }
+        ],
+        "summary": "Total sales per monthly VAT declarations and annual sales register machine (Z report) differed; the Z report balance was higher. The report notes non-compliance with tax laws may lead to penalties."
+      }
+    ]
+  },
+  "financial_statements": {
+    "profit_or_loss": {
+      "statement_name": "Statement of profit or loss and other comprehensive income",
+      "period_end": "2022-07-07",
+      "columns": [
+        {
+          "year": 2022,
+          "label": "2022"
+        },
+        {
+          "year": 2021,
+          "label": "2021"
+        }
+      ],
+      "line_items": [
+        {
+          "name": "Revenue",
+          "note": "4",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 214056279
+            },
+            {
+              "year": 2021,
+              "amount": 172448635
+            }
+          ]
+        },
+        {
+          "name": "Cost of sales",
+          "note": "5",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -89995245
+            },
+            {
+              "year": 2021,
+              "amount": -65709795
+            }
+          ]
+        },
+        {
+          "name": "Gross profit",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 124061033
+            },
+            {
+              "year": 2021,
+              "amount": 106738839
+            }
+          ]
+        },
+        {
+          "name": "Other operating income",
+          "note": "6",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 8369035
+            },
+            {
+              "year": 2021,
+              "amount": 6878693
+            }
+          ]
+        },
+        {
+          "name": "Gain for currency fluctuation",
+          "note": "6.1",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 3693004
+            },
+            {
+              "year": 2021,
+              "amount": 5434523
+            }
+          ]
+        },
+        {
+          "name": "Total income (gross profit + other operating income + FX gain)",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 136123072
+            },
+            {
+              "year": 2021,
+              "amount": 119052056
+            }
+          ]
+        },
+        {
+          "name": "General and administration expense",
+          "note": "7",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -49111987
+            },
+            {
+              "year": 2021,
+              "amount": -42374030
+            }
+          ]
+        },
+        {
+          "name": "Allowance for doubtful debts",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -91595
+            },
+            {
+              "year": 2021,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "name": "Audit fee",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -47750
+            },
+            {
+              "year": 2021,
+              "amount": -39500
+            }
+          ]
+        },
+        {
+          "name": "Board fee",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -410000
+            },
+            {
+              "year": 2021,
+              "amount": -290000
+            }
+          ]
+        },
+        {
+          "name": "Total expenses (admin + allowances + audit + board)",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -49661333
+            },
+            {
+              "year": 2021,
+              "amount": -42703530
+            }
+          ]
+        },
+        {
+          "name": "Operating profit",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 86461740
+            },
+            {
+              "year": 2021,
+              "amount": 76348526
+            }
+          ]
+        },
+        {
+          "name": "Finance costs",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 0
+            },
+            {
+              "year": 2021,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "name": "Profit before tax",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 86461740
+            },
+            {
+              "year": 2021,
+              "amount": 76348526
+            }
+          ]
+        },
+        {
+          "name": "Profit tax expense",
+          "note": "8",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -19678932
+            },
+            {
+              "year": 2021,
+              "amount": -19182576
+            }
+          ]
+        },
+        {
+          "name": "Profit after tax",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 66782808
+            },
+            {
+              "year": 2021,
+              "amount": 57165951
+            }
+          ]
+        },
+        {
+          "name": "Deferred tax asset/(liability)",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -6129850
+            },
+            {
+              "year": 2021,
+              "amount": -3453501
+            }
+          ]
+        },
+        {
+          "name": "Net profit for the year",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 60652958
+            },
+            {
+              "year": 2021,
+              "amount": 53712450
+            }
+          ]
+        }
+      ]
+    },
+    "financial_position": {
+      "statement_name": "Statement of financial position",
+      "as_at": "2022-07-07",
+      "columns": [
+        {
+          "year": 2022,
+          "label": "2022"
+        },
+        {
+          "year": 2021,
+          "label": "2021"
+        }
+      ],
+      "assets": {
+        "non_current_assets": [
+          {
+            "name": "Property, plant and equipment",
+            "note": "9",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 681832331
+              },
+              {
+                "year": 2021,
+                "amount": 376638891
+              }
+            ]
+          },
+          {
+            "name": "Intangible asset",
+            "note": "12",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 927839
+              },
+              {
+                "year": 2021,
+                "amount": 836269
+              }
+            ]
+          },
+          {
+            "name": "Investments in CBE & Government bond",
+            "note": "15",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 0
+              },
+              {
+                "year": 2021,
+                "amount": 28122329
+              }
+            ]
+          },
+          {
+            "name": "Right of use asset - land",
+            "note": "18",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 3441248
+              },
+              {
+                "year": 2021,
+                "amount": 3441248
+              }
+            ]
+          },
+          {
+            "name": "Non-current asset held for sale",
+            "note": "11",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 43708
+              },
+              {
+                "year": 2021,
+                "amount": 43708
+              }
+            ]
+          }
+        ],
+        "total_non_current_assets": [
+          {
+            "year": 2022,
+            "amount": 686245126
+          },
+          {
+            "year": 2021,
+            "amount": 409083445
+          }
+        ],
+        "current_assets": [
+          {
+            "name": "Inventories",
+            "note": "17",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 182730704
+              },
+              {
+                "year": 2021,
+                "amount": 166290687
+              }
+            ]
+          },
+          {
+            "name": "Trade and other receivables",
+            "note": "13",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 24422906
+              },
+              {
+                "year": 2021,
+                "amount": 13630455
+              }
+            ]
+          },
+          {
+            "name": "Advance and prepayments",
+            "note": "16",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 1881345
+              },
+              {
+                "year": 2021,
+                "amount": 8981778
+              }
+            ]
+          },
+          {
+            "name": "Cash and short-term deposits",
+            "note": "10",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 222371271
+              },
+              {
+                "year": 2021,
+                "amount": 153575522
+              }
+            ]
+          }
+        ],
+        "total_current_assets": [
+          {
+            "year": 2022,
+            "amount": 431406226
+          },
+          {
+            "year": 2021,
+            "amount": 342485811
+          }
+        ],
+        "total_assets": [
+          {
+            "year": 2022,
+            "amount": 1117651352
+          },
+          {
+            "year": 2021,
+            "amount": 751568256
+          }
+        ]
+      },
+      "equity_and_liabilities": {
+        "equity": [
+          {
+            "name": "Paid up capital",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 40189122
+              },
+              {
+                "year": 2021,
+                "amount": 40189122
+              }
+            ]
+          },
+          {
+            "name": "Donated capital",
+            "note": "19",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 106457420
+              },
+              {
+                "year": 2021,
+                "amount": 105502960
+              }
+            ]
+          },
+          {
+            "name": "Capital reserve",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 7543588
+              },
+              {
+                "year": 2021,
+                "amount": 7543588
+              }
+            ]
+          },
+          {
+            "name": "Legal reserve",
+            "note": "20",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 8037824
+              },
+              {
+                "year": 2021,
+                "amount": 8037824
+              }
+            ]
+          },
+          {
+            "name": "Retained earning",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 477776104
+              },
+              {
+                "year": 2021,
+                "amount": 417123146
+              }
+            ]
+          },
+          {
+            "name": "Revaluation reserve / First time IFRS adoption adjustment",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 358874373
+              },
+              {
+                "year": 2021,
+                "amount": 76429663
+              }
+            ]
+          }
+        ],
+        "total_equity": [
+          {
+            "year": 2022,
+            "amount": 998878431
+          },
+          {
+            "year": 2021,
+            "amount": 654826303
+          }
+        ],
+        "non_current_liabilities": [
+          {
+            "name": "Termination benefit liabilities",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 4172736
+              },
+              {
+                "year": 2021,
+                "amount": 3975589
+              }
+            ]
+          },
+          {
+            "name": "Deferred tax liabilities",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 18750349
+              },
+              {
+                "year": 2021,
+                "amount": 12620500
+              }
+            ]
+          }
+        ],
+        "total_non_current_liabilities": [
+          {
+            "year": 2022,
+            "amount": 22923085
+          },
+          {
+            "year": 2021,
+            "amount": 16596089
+          }
+        ],
+        "current_liabilities": [
+          {
+            "name": "Trade and other payables",
+            "note": "22",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 76440000
+              },
+              {
+                "year": 2021,
+                "amount": 60898166
+              }
+            ]
+          },
+          {
+            "name": "Other taxes and obligations",
+            "note": "23",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 2325720
+              },
+              {
+                "year": 2021,
+                "amount": 2543923
+              }
+            ]
+          },
+          {
+            "name": "Profit tax payables",
+            "note": "8",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 17084117
+              },
+              {
+                "year": 2021,
+                "amount": 16703775
+              }
+            ]
+          },
+          {
+            "name": "State dividend payable",
+            "values": [
+              {
+                "year": 2022,
+                "amount": 0
+              },
+              {
+                "year": 2021,
+                "amount": 0
+              }
+            ]
+          }
+        ],
+        "total_current_liabilities": [
+          {
+            "year": 2022,
+            "amount": 95849836
+          },
+          {
+            "year": 2021,
+            "amount": 80145864
+          }
+        ],
+        "total_liabilities": [
+          {
+            "year": 2022,
+            "amount": 118772921
+          },
+          {
+            "year": 2021,
+            "amount": 96741953
+          }
+        ],
+        "total_equity_and_liabilities": [
+          {
+            "year": 2022,
+            "amount": 1117651352
+          },
+          {
+            "year": 2021,
+            "amount": 751568256
+          }
+        ]
+      }
+    },
+    "changes_in_equity": {
+      "statement_name": "Statement of changes in equity",
+      "period_end": "2022-07-07",
+      "components": [
+        "Share capital",
+        "Donated capital",
+        "Retained earning",
+        "Capital reserve",
+        "Legal reserve",
+        "First time IFRS adoption ADJ.",
+        "Total"
+      ],
+      "rows": [
+        {
+          "date": "2020-07-07",
+          "type": "opening_balance",
+          "values": {
+            "Share capital": 40189122,
+            "Donated capital": 49489410,
+            "Retained earning": 363410696,
+            "Capital reserve": 7543588,
+            "Legal reserve": 8037824,
+            "First time IFRS adoption ADJ.": 76429663,
+            "Total": 545100307
+          }
+        },
+        {
+          "date": "2021-07-07",
+          "type": "closing_balance",
+          "values": {
+            "Share capital": 40189122,
+            "Donated capital": 105502960,
+            "Retained earning": 417123146,
+            "Capital reserve": 7543588,
+            "Legal reserve": 8037824,
+            "First time IFRS adoption ADJ.": 76429663,
+            "Total": 654826307
+          }
+        },
+        {
+          "date": "2022-07-07",
+          "type": "closing_balance",
+          "values": {
+            "Share capital": 40189122,
+            "Donated capital": 106457420,
+            "Retained earning": 477776104,
+            "Capital reserve": 7543588,
+            "Legal reserve": 8037824,
+            "First time IFRS adoption ADJ.": 358874373,
+            "Total": 998878431
+          }
+        }
+      ],
+      "movements_2021": [
+        {
+          "type": "Additional donated capital goods",
+          "component": "Donated capital",
+          "amount": 56013550
+        },
+        {
+          "type": "Profit for the year",
+          "component": "Retained earning",
+          "amount": 53712450
+        }
+      ],
+      "movements_2022": [
+        {
+          "type": "Additional donated capital goods",
+          "component": "Donated capital",
+          "amount": 954460
+        },
+        {
+          "type": "First time IFRS adoption adjustment movement",
+          "component": "First time IFRS adoption ADJ.",
+          "amount": 282444710
+        },
+        {
+          "type": "Profit for the year",
+          "component": "Retained earning",
+          "amount": 60652958
+        }
+      ]
+    },
+    "cash_flow": {
+      "statement_name": "Statement of cash flow",
+      "period_end": "2022-07-07",
+      "columns": [
+        {
+          "year": 2022,
+          "label": "2022"
+        },
+        {
+          "year": 2021,
+          "label": "2021"
+        }
+      ],
+      "operating_activities": [
+        {
+          "name": "Profit before tax",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 86461740
+            },
+            {
+              "year": 2021,
+              "amount": 76348526
+            }
+          ]
+        },
+        {
+          "name": "Depreciation",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 20080341
+            },
+            {
+              "year": 2021,
+              "amount": 16247853
+            }
+          ]
+        },
+        {
+          "name": "Amortization",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 208430
+            },
+            {
+              "year": 2021,
+              "amount": 180320
+            }
+          ]
+        },
+        {
+          "name": "Change in severance payable",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 197147
+            },
+            {
+              "year": 2021,
+              "amount": 561514
+            }
+          ]
+        },
+        {
+          "name": "(Gain)/Loss on disposal of property, plant and equipment",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 0
+            },
+            {
+              "year": 2021,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "name": "Decrease in trade and other receivables",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -1592018
+            },
+            {
+              "year": 2021,
+              "amount": -26261061
+            }
+          ]
+        },
+        {
+          "name": "Increase in inventories",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -18532649
+            },
+            {
+              "year": 2021,
+              "amount": 36743691
+            }
+          ]
+        },
+        {
+          "name": "Increase in trade and other payables",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 15323631
+            },
+            {
+              "year": 2021,
+              "amount": -374446
+            }
+          ]
+        },
+        {
+          "name": "Cash generated from operations (subtotal shown)",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 102146622
+            },
+            {
+              "year": 2021,
+              "amount": 121450397
+            }
+          ]
+        },
+        {
+          "name": "Withholding tax paid",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -2594816
+            },
+            {
+              "year": 2021,
+              "amount": -2478801
+            }
+          ]
+        },
+        {
+          "name": "Profit tax paid",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -16703775
+            },
+            {
+              "year": 2021,
+              "amount": -11548710
+            }
+          ]
+        },
+        {
+          "name": "Net cash flows from operating activities",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 82848032
+            },
+            {
+              "year": 2021,
+              "amount": 107422886
+            }
+          ]
+        }
+      ],
+      "investing_activities": [
+        {
+          "name": "Increase in time deposit",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 28122329
+            },
+            {
+              "year": 2021,
+              "amount": -1772429
+            }
+          ]
+        },
+        {
+          "name": "Purchase of property, plant and equipment",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -42829070
+            },
+            {
+              "year": 2021,
+              "amount": -139349420
+            }
+          ]
+        },
+        {
+          "name": "Purchase of intangible assets",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -300000
+            },
+            {
+              "year": 2021,
+              "amount": -287500
+            }
+          ]
+        },
+        {
+          "name": "Increase in assets held for sale",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 0
+            },
+            {
+              "year": 2021,
+              "amount": -41708
+            }
+          ]
+        },
+        {
+          "name": "Net cash flows used in investing activities",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -15006741
+            },
+            {
+              "year": 2021,
+              "amount": -141163557
+            }
+          ]
+        }
+      ],
+      "financing_activities": [
+        {
+          "name": "Donation received",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 954460
+            },
+            {
+              "year": 2021,
+              "amount": 56013550
+            }
+          ]
+        },
+        {
+          "name": "Net cash flows from/(used in) financing activities",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 954460
+            },
+            {
+              "year": 2021,
+              "amount": 56013550
+            }
+          ]
+        }
+      ],
+      "net_change_in_cash": [
+        {
+          "name": "Net increase/(decrease) in cash and cash equivalents",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 68795748
+            },
+            {
+              "year": 2021,
+              "amount": 22272878
+            }
+          ]
+        },
+        {
+          "name": "Cash and cash equivalents at beginning of year",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 153575521
+            },
+            {
+              "year": 2021,
+              "amount": 131302644
+            }
+          ]
+        },
+        {
+          "name": "Cash and cash equivalents at end of year",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 222371270
+            },
+            {
+              "year": 2021,
+              "amount": 153575521
+            }
+          ]
+        }
+      ],
+      "data_quality_notes": [
+        "The 2022 'Increase in inventories' figure was not clearly legible in the scan; it was derived from the displayed subtotal ('Cash generated from operations') and other visible lines in the working-capital section."
+      ]
+    }
+  },
+  "notes_extracts": {
+    "note_4_revenue": {
+      "components": [
+        {
+          "name": "Sales of vaccines and different veterinary drugs",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 214056279
+            },
+            {
+              "year": 2021,
+              "amount": 172448635
+            }
+          ]
+        },
+        {
+          "name": "Other income",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 8369035
+            },
+            {
+              "year": 2021,
+              "amount": 5106264
+            }
+          ]
+        },
+        {
+          "name": "Gain on Foreign Exchange",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 3693004
+            },
+            {
+              "year": 2021,
+              "amount": 5434523
+            }
+          ]
+        }
+      ],
+      "total": [
+        {
+          "year": 2022,
+          "amount": 226118318
+        },
+        {
+          "year": 2021,
+          "amount": 182989422
+        }
+      ],
+      "major_customers_volume_bands_etb": [
+        {
+          "type_of_institute": "Ministry of Agriculture",
+          "type_of_relation": "Direct purchase",
+          "volume_of_sales_per_annum": {
+            "max_etb": 75000000
+          }
+        },
+        {
+          "type_of_institute": "Oromia regional state agriculture and animal development",
+          "type_of_relation": "Direct purchase",
+          "volume_of_sales_per_annum": {
+            "max_etb": 25000000
+          }
+        },
+        {
+          "type_of_institute": "Amhara regional state agriculture and animal development",
+          "type_of_relation": "Direct purchase",
+          "volume_of_sales_per_annum": {
+            "max_etb": 25000000
+          }
+        },
+        {
+          "type_of_institute": "SNNPR regional state agriculture and animal development",
+          "type_of_relation": "Direct purchase",
+          "volume_of_sales_per_annum": {
+            "max_etb": 25000000
+          }
+        },
+        {
+          "type_of_institute": "Tigray regional state agriculture and animal development",
+          "type_of_relation": "Direct purchase",
+          "volume_of_sales_per_annum": {
+            "max_etb": 25000000
+          }
+        },
+        {
+          "type_of_institute": "Somali regional state agriculture and animal development",
+          "type_of_relation": "Direct purchase",
+          "volume_of_sales_per_annum": {
+            "max_etb": 15000000
+          }
+        },
+        {
+          "type_of_institute": "Ethio chicken Plc",
+          "type_of_relation": "Direct purchase",
+          "volume_of_sales_per_annum": {
+            "max_etb": 15000000
+          }
+        },
+        {
+          "type_of_institute": "Hawaa poltry",
+          "type_of_relation": "Direct purchase",
+          "volume_of_sales_per_annum": {
+            "max_etb": 5000000
+          }
+        }
+      ]
+    },
+    "note_5_cost_of_goods_sold": {
+      "schedule": [
+        {
+          "name": "Beginning raw materials",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 53928705
+            },
+            {
+              "year": 2021,
+              "amount": 39004583
+            }
+          ]
+        },
+        {
+          "name": "Purchase during the year",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 25040764
+            },
+            {
+              "year": 2021,
+              "amount": 42211097
+            }
+          ]
+        },
+        {
+          "name": "Inventory available for sale",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 78969469
+            },
+            {
+              "year": 2021,
+              "amount": 81115680
+            }
+          ]
+        },
+        {
+          "name": "Ending raw materials",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -44726411
+            },
+            {
+              "year": 2021,
+              "amount": -53928705
+            }
+          ]
+        },
+        {
+          "name": "Raw materials consumed during the year",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 34243058
+            },
+            {
+              "year": 2021,
+              "amount": 27186975
+            }
+          ]
+        },
+        {
+          "name": "Packing materials",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 9735839
+            },
+            {
+              "year": 2021,
+              "amount": 9356432
+            }
+          ]
+        },
+        {
+          "name": "Direct labor",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 20343489
+            },
+            {
+              "year": 2021,
+              "amount": 18634651
+            }
+          ]
+        },
+        {
+          "name": "Factory overhead",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 56442119
+            },
+            {
+              "year": 2021,
+              "amount": 46009126
+            }
+          ]
+        },
+        {
+          "name": "Total manufacturing cost",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 120764505
+            },
+            {
+              "year": 2021,
+              "amount": 101187184
+            }
+          ]
+        },
+        {
+          "name": "Beginning work in progress",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 16675994
+            },
+            {
+              "year": 2021,
+              "amount": 10389138
+            }
+          ]
+        },
+        {
+          "name": "Subtotal (manufacturing cost + beginning WIP)",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 137440499
+            },
+            {
+              "year": 2021,
+              "amount": 111576322
+            }
+          ]
+        },
+        {
+          "name": "Ending work in progress",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -19041582
+            },
+            {
+              "year": 2021,
+              "amount": -16675994
+            }
+          ]
+        },
+        {
+          "name": "Cost of goods produced",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 118398917
+            },
+            {
+              "year": 2021,
+              "amount": 94900328
+            }
+          ]
+        },
+        {
+          "name": "Beginning finished goods",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 35083173
+            },
+            {
+              "year": 2021,
+              "amount": 16078200
+            }
+          ]
+        },
+        {
+          "name": "Ending finished goods",
+          "values": [
+            {
+              "year": 2022,
+              "amount": -64235412
+            },
+            {
+              "year": 2021,
+              "amount": -35083173
+            }
+          ]
+        },
+        {
+          "name": "Sales without production",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 748567
+            },
+            {
+              "year": 2021,
+              "amount": -10185560
+            }
+          ]
+        },
+        {
+          "name": "Cost of goods sold (per schedule)",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 89995245
+            },
+            {
+              "year": 2021,
+              "amount": 65709795
+            }
+          ]
+        }
+      ],
+      "factory_overhead_breakdown": [
+        {
+          "name": "Indirect labour, medical, uniform, travelling and transport",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 18474375
+            },
+            {
+              "year": 2021,
+              "amount": 17986994
+            }
+          ]
+        },
+        {
+          "name": "Consumable supplies",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 5522362
+            },
+            {
+              "year": 2021,
+              "amount": 6252642
+            }
+          ]
+        },
+        {
+          "name": "Depreciation",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 17288473
+            },
+            {
+              "year": 2021,
+              "amount": 11463869
+            }
+          ]
+        },
+        {
+          "name": "Repair and maintenance",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 4690565
+            },
+            {
+              "year": 2021,
+              "amount": 3697608
+            }
+          ]
+        },
+        {
+          "name": "Laboratory animals",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 1453733
+            },
+            {
+              "year": 2021,
+              "amount": 1317681
+            }
+          ]
+        },
+        {
+          "name": "Detergent",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 545825
+            },
+            {
+              "year": 2021,
+              "amount": 242472
+            }
+          ]
+        },
+        {
+          "name": "Animal feed",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 3697649
+            },
+            {
+              "year": 2021,
+              "amount": 2452042
+            }
+          ]
+        },
+        {
+          "name": "Indicators",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 33390
+            },
+            {
+              "year": 2021,
+              "amount": 19918
+            }
+          ]
+        },
+        {
+          "name": "Fuel and lubricants",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 4207570
+            },
+            {
+              "year": 2021,
+              "amount": 2206407
+            }
+          ]
+        },
+        {
+          "name": "Printing and stationery",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 164240
+            },
+            {
+              "year": 2021,
+              "amount": 129577
+            }
+          ]
+        },
+        {
+          "name": "ISO 9001-2000 certification",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 155878
+            },
+            {
+              "year": 2021,
+              "amount": 108150
+            }
+          ]
+        },
+        {
+          "name": "Research fund",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 0
+            },
+            {
+              "year": 2021,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 207860
+            },
+            {
+              "year": 2021,
+              "amount": 131766
+            }
+          ]
+        }
+      ],
+      "factory_overhead_total": [
+        {
+          "year": 2022,
+          "amount": 56442119
+        },
+        {
+          "year": 2021,
+          "amount": 46009126
+        }
+      ]
+    },
+    "note_6_other_income": {
+      "items": [
+        {
+          "name": "Transport income",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 4148652
+            },
+            {
+              "year": 2021,
+              "amount": 2775716
+            }
+          ]
+        },
+        {
+          "name": "Diagnostic research",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 677049
+            },
+            {
+              "year": 2021,
+              "amount": 467144
+            }
+          ]
+        },
+        {
+          "name": "Packing materials",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 1051534
+            },
+            {
+              "year": 2021,
+              "amount": 748065
+            }
+          ]
+        },
+        {
+          "name": "Training fees",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 0
+            },
+            {
+              "year": 2021,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "name": "Bid sales",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 35350
+            },
+            {
+              "year": 2021,
+              "amount": 100307
+            }
+          ]
+        },
+        {
+          "name": "Rent income",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 0
+            },
+            {
+              "year": 2021,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "name": "Agricultural output",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 518
+            },
+            {
+              "year": 2021,
+              "amount": 630
+            }
+          ]
+        },
+        {
+          "name": "Animals",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 643655
+            },
+            {
+              "year": 2021,
+              "amount": 138849
+            }
+          ]
+        },
+        {
+          "name": "Sales of scrap material",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 0
+            },
+            {
+              "year": 2021,
+              "amount": 3525
+            }
+          ]
+        },
+        {
+          "name": "Nutrition & feeds analysis",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 40600
+            },
+            {
+              "year": 2021,
+              "amount": 27660
+            }
+          ]
+        },
+        {
+          "name": "Gain on fixed assets disposal",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 0
+            },
+            {
+              "year": 2021,
+              "amount": 667816
+            }
+          ]
+        },
+        {
+          "name": "Other income",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 96896
+            },
+            {
+              "year": 2021,
+              "amount": 137057
+            }
+          ]
+        },
+        {
+          "name": "Miscellaneous",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 59393
+            },
+            {
+              "year": 2021,
+              "amount": 39496
+            }
+          ]
+        },
+        {
+          "name": "Subtotal (before interest income)",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 6753645
+            },
+            {
+              "year": 2021,
+              "amount": 5106264
+            }
+          ]
+        },
+        {
+          "name": "Interest income",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 1615390
+            },
+            {
+              "year": 2021,
+              "amount": 1772429
+            }
+          ]
+        }
+      ],
+      "other_income_total": [
+        {
+          "year": 2022,
+          "amount": 8369035
+        },
+        {
+          "year": 2021,
+          "amount": 6878693
+        }
+      ],
+      "fx_gain": [
+        {
+          "year": 2022,
+          "amount": 3693004
+        },
+        {
+          "year": 2021,
+          "amount": 5434523
+        }
+      ]
+    },
+    "note_7_general_and_admin_expenses": {
+      "items": [
+        {
+          "name": "Salaries, wages and related benefits",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 19872967
+            },
+            {
+              "year": 2021,
+              "amount": 19321933
+            }
+          ]
+        },
+        {
+          "name": "Uniform",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 842080
+            },
+            {
+              "year": 2021,
+              "amount": 606831
+            }
+          ]
+        },
+        {
+          "name": "Repair and maintenance",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 2695800
+            },
+            {
+              "year": 2021,
+              "amount": 1935576
+            }
+          ]
+        },
+        {
+          "name": "Advertisements",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 1180581
+            },
+            {
+              "year": 2021,
+              "amount": 903837
+            }
+          ]
+        },
+        {
+          "name": "Vehicle running cost",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 2743541
+            },
+            {
+              "year": 2021,
+              "amount": 2376161
+            }
+          ]
+        },
+        {
+          "name": "Insurance",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 1042197
+            },
+            {
+              "year": 2021,
+              "amount": 954106
+            }
+          ]
+        },
+        {
+          "name": "Travel and per diem",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 1168676
+            },
+            {
+              "year": 2021,
+              "amount": 877628
+            }
+          ]
+        },
+        {
+          "name": "Communication",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 508318
+            },
+            {
+              "year": 2021,
+              "amount": 509099
+            }
+          ]
+        },
+        {
+          "name": "Entertainment",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 1088797
+            },
+            {
+              "year": 2021,
+              "amount": 849894
+            }
+          ]
+        },
+        {
+          "name": "Stationery and office supplies",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 466632
+            },
+            {
+              "year": 2021,
+              "amount": 836540
+            }
+          ]
+        },
+        {
+          "name": "Bank service charge",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 11883
+            },
+            {
+              "year": 2021,
+              "amount": 21549
+            }
+          ]
+        },
+        {
+          "name": "Professional fees",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 117300
+            },
+            {
+              "year": 2021,
+              "amount": 20212
+            }
+          ]
+        },
+        {
+          "name": "Utilities",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 435121
+            },
+            {
+              "year": 2021,
+              "amount": 1783558
+            }
+          ]
+        },
+        {
+          "name": "Training",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 607347
+            },
+            {
+              "year": 2021,
+              "amount": 688091
+            }
+          ]
+        },
+        {
+          "name": "Depreciation",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 3000298
+            },
+            {
+              "year": 2021,
+              "amount": 4964304
+            }
+          ]
+        },
+        {
+          "name": "Cleaning and sanitation",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 418301
+            },
+            {
+              "year": 2021,
+              "amount": 411200
+            }
+          ]
+        },
+        {
+          "name": "Membership fees",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 58786
+            },
+            {
+              "year": 2021,
+              "amount": 56101
+            }
+          ]
+        },
+        {
+          "name": "Registration and license fees",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 4445
+            },
+            {
+              "year": 2021,
+              "amount": 9854
+            }
+          ]
+        },
+        {
+          "name": "Rent expense",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 2000
+            },
+            {
+              "year": 2021,
+              "amount": 4094
+            }
+          ]
+        },
+        {
+          "name": "Building tax",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 781827
+            },
+            {
+              "year": 2021,
+              "amount": 880422
+            }
+          ]
+        },
+        {
+          "name": "Penalty",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 2531
+            },
+            {
+              "year": 2021,
+              "amount": 16014
+            }
+          ]
+        },
+        {
+          "name": "Agricultural input",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 140824
+            },
+            {
+              "year": 2021,
+              "amount": 0
+            }
+          ]
+        },
+        {
+          "name": "Loading unloading",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 14448
+            },
+            {
+              "year": 2021,
+              "amount": 72598
+            }
+          ]
+        },
+        {
+          "name": "Freight out",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 4005306
+            },
+            {
+              "year": 2021,
+              "amount": 1919526
+            }
+          ]
+        },
+        {
+          "name": "Miscellaneous",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 1532451
+            },
+            {
+              "year": 2021,
+              "amount": 1682096
+            }
+          ]
+        },
+        {
+          "name": "Social responsibility (Covid-19)",
+          "values": [
+            {
+              "year": 2022,
+              "amount": 6369531
+            },
+            {
+              "year": 2021,
+              "amount": 672805.23
+            }
+          ]
+        }
+      ],
+      "total": [
+        {
+          "year": 2022,
+          "amount": 49111987
+        },
+        {
+          "year": 2021,
+          "amount": 42374030
+        }
+      ]
+    }
+  },
+  "computed_metrics": {
+    "definitions": {
+      "margins": "margin = metric / revenue",
+      "ratios": "ratios are computed from statement of financial position line items as at year-end",
+      "returns": "ROA = net profit / total assets; ROE = net profit / total equity"
+    },
+    "values": [
+      {
+        "metric": "Revenue growth (YoY)",
+        "unit": "ratio",
+        "values": [
+          {
+            "year": 2022,
+            "value": 0.24127557750747056
+          }
+        ]
+      },
+      {
+        "metric": "Gross margin",
+        "unit": "ratio",
+        "values": [
+          {
+            "year": 2022,
+            "value": 0.5795720339509406
+          },
+          {
+            "year": 2021,
+            "value": 0.6189601848689611
+          }
+        ]
+      },
+      {
+        "metric": "Operating margin",
+        "unit": "ratio",
+        "values": [
+          {
+            "year": 2022,
+            "value": 0.40392059697534033
+          },
+          {
+            "year": 2021,
+            "value": 0.44273198219284254
+          }
+        ]
+      },
+      {
+        "metric": "Net margin",
+        "unit": "ratio",
+        "values": [
+          {
+            "year": 2022,
+            "value": 0.2833505201685768
+          },
+          {
+            "year": 2021,
+            "value": 0.3114692673560449
+          }
+        ]
+      },
+      {
+        "metric": "Current ratio",
+        "unit": "ratio",
+        "values": [
+          {
+            "year": 2022,
+            "value": 4.500855129266992
+          },
+          {
+            "year": 2021,
+            "value": 4.273281163953763
+          }
+        ]
+      },
+      {
+        "metric": "Quick ratio",
+        "unit": "ratio",
+        "values": [
+          {
+            "year": 2022,
+            "value": 2.59442824711771
+          },
+          {
+            "year": 2021,
+            "value": 2.1984306513933145
+          }
+        ]
+      },
+      {
+        "metric": "Cash ratio",
+        "unit": "ratio",
+        "values": [
+          {
+            "year": 2022,
+            "value": 2.319996363895709
+          },
+          {
+            "year": 2021,
+            "value": 1.9162002171440813
+          }
+        ]
+      },
+      {
+        "metric": "Debt-to-equity",
+        "unit": "ratio",
+        "values": [
+          {
+            "year": 2022,
+            "value": 0.11890628260046993
+          },
+          {
+            "year": 2021,
+            "value": 0.1477368159415551
+          }
+        ]
+      },
+      {
+        "metric": "Debt ratio",
+        "unit": "ratio",
+        "values": [
+          {
+            "year": 2022,
+            "value": 0.10627010005173779
+          },
+          {
+            "year": 2021,
+            "value": 0.12872011587461193
+          }
+        ]
+      },
+      {
+        "metric": "Return on assets (ROA)",
+        "unit": "ratio",
+        "values": [
+          {
+            "year": 2022,
+            "value": 0.05426822764671965
+          },
+          {
+            "year": 2021,
+            "value": 0.07146716159337096
+          }
+        ]
+      },
+      {
+        "metric": "Return on equity (ROE)",
+        "unit": "ratio",
+        "values": [
+          {
+            "year": 2022,
+            "value": 0.06072106085950714
+          },
+          {
+            "year": 2021,
+            "value": 0.08202549249155619
+          }
+        ]
+      }
+    ]
+  }
+}

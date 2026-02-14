@@ -1,0 +1,797 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "entity_name": "National Veterinary Institute",
+    "report_title": "Independent Auditor's Report and Accounts",
+    "period_end_date": "2023-07-07",
+    "period_type": "year_ended",
+    "comparative_period_end_date": "2022-07-07",
+    "currency": {
+      "code": "ETB",
+      "name": "Ethiopian Birr"
+    },
+    "report_date": "2023-11-08",
+    "auditor": {
+      "firm_name": "Getenet Worku Chartered Accountants-UK and Certified Audit Firm",
+      "signatory_name_as_shown": "Getenet Worku Beyene"
+    },
+    "source_document": {
+      "filename": "2015.pdf",
+      "provided_by_user": true
+    },
+    "page_references": {
+      "cover": 1,
+      "auditor_report_opinion_and_basis": 3,
+      "auditor_report_responsibilities_and_signature": 4,
+      "statement_of_financial_position": 5,
+      "statement_of_profit_or_loss_and_oci": 6,
+      "statement_of_changes_in_equity": 7,
+      "statement_of_cash_flow": 8,
+      "note_4_revenue": 24,
+      "note_5_cost_of_goods_sold": 25,
+      "note_6_other_income_and_fx": 26,
+      "note_7_general_and_admin_expenses": 27
+    },
+    "extraction": {
+      "extracted_at_utc": "2026-02-14T19:31:28.157041+00:00",
+      "method": "manual transcription + targeted OCR from scanned PDF pages"
+    }
+  },
+  "audit_report": {
+    "opinion": {
+      "opinion_type": "qualified",
+      "opinion_summary": "Qualified opinion due to revenue recognition and inventory costing issues described in the Basis for Qualified Opinion.",
+      "audited_statements": [
+        "Statement of financial position as at 07 July 2023",
+        "Statement of profit or loss",
+        "Statement of changes in equity",
+        "Statement of cash flows",
+        "Summary of significant accounting policies and other explanatory information"
+      ],
+      "financial_reporting_framework": "International Financial Reporting Standards (IFRSs)",
+      "template_heading_note": "The auditor report heading references 'WASHINGTON HEALTH CARE PRIVATE LIMITED COMPANY' although the report body refers to National Veterinary Institute."
+    },
+    "basis_for_qualified_opinion": [
+      {
+        "issue": "Revenue recognition of advances and undelivered sales",
+        "amount_etb": 18826742.5,
+        "description": "Advance collections were treated as sales and undelivered sales were recorded against cost of sales; revenue was recognized without satisfying performance obligations.",
+        "standard_referenced": "IFRS 15",
+        "reported_effect": "Sales and cost of sales may be overstated; non-compliance with IFRS 15."
+      },
+      {
+        "issue": "Inventory costing (absorption of direct and indirect production costs)",
+        "description": "Direct and indirect costs (materials, labor, overhead) were not absorbed into inventory cost at year end; inventory valued using opening standard costing.",
+        "standard_referenced": "IAS 2",
+        "reported_effect": "Inventory and cost of sales may not be fairly stated; non-compliance with IAS 2."
+      }
+    ]
+  },
+  "financial_statements": {
+    "statement_of_financial_position": {
+      "as_of": "2023-07-07",
+      "comparative_as_of": "2022-07-07",
+      "assets": {
+        "non_current_assets": {
+          "property_plant_equipment": 696778679,
+          "intangible_assets": 991529,
+          "right_of_use_asset_land": 3441248,
+          "non_current_asset_held_for_sale": 43708,
+          "total_non_current_assets_reported": 701255264
+        },
+        "current_assets": {
+          "inventories": 223415531,
+          "trade_and_other_receivables": 61657188.95,
+          "advances_and_prepayments": 3816567.99,
+          "cash_and_short_term_deposits": 179789095,
+          "total_current_assets_reported": 468698783
+        },
+        "total_assets_reported": 1169954047
+      },
+      "equity_and_liabilities": {
+        "equity": {
+          "paid_up_capital": 40189122,
+          "donated_capital": 106851801,
+          "capital_reserve": 7543588,
+          "legal_reserve": 12123309,
+          "retained_earnings": 418557920,
+          "revaluation_reserve": 358874376,
+          "total_equity_reported": 944140416
+        },
+        "non_current_liabilities": {
+          "termination_benefit_liabilities": 4978634,
+          "deferred_tax_liabilities": 25199507,
+          "total_non_current_liabilities_reported": 30178141
+        },
+        "current_liabilities": {
+          "trade_and_other_payables": 169100951,
+          "other_taxes_and_obligations": 2268140,
+          "profit_tax_payables": 24266399,
+          "total_current_liabilities_reported": 195635490
+        },
+        "total_liabilities_reported": 225813631,
+        "total_equity_and_liabilities_reported": 1169954047
+      },
+      "comparative_year": {
+        "assets": {
+          "non_current_assets": {
+            "property_plant_equipment": 681832333,
+            "intangible_assets": 927839,
+            "right_of_use_asset_land": 3441248,
+            "non_current_asset_held_for_sale": 43708,
+            "total_non_current_assets_reported": 686245129
+          },
+          "current_assets": {
+            "inventories": 182720704,
+            "trade_and_other_receivables": 24422906,
+            "advances_and_prepayments": 1881345,
+            "cash_and_short_term_deposits": 222371271,
+            "total_current_assets_reported": 431406216
+          },
+          "total_assets_reported": 1117651345
+        },
+        "equity_and_liabilities": {
+          "equity": {
+            "paid_up_capital": 40189122,
+            "donated_capital": 106457200,
+            "capital_reserve": 7543588,
+            "legal_reserve": 8037824,
+            "retained_earnings": 477776104,
+            "revaluation_reserve": 358874376,
+            "total_equity_reported": 998878434
+          },
+          "non_current_liabilities": {
+            "termination_benefit_liabilities": 4172736,
+            "deferred_tax_liabilities": 18750349,
+            "total_non_current_liabilities_reported": 22923085
+          },
+          "current_liabilities": {
+            "trade_and_other_payables": 76440000,
+            "other_taxes_and_obligations": 2325720,
+            "profit_tax_payables": 17084177,
+            "total_current_liabilities_reported": 95849836
+          },
+          "total_liabilities_reported": 118772921,
+          "total_equity_and_liabilities_reported": 1117651345
+        }
+      }
+    },
+    "statement_of_profit_or_loss": {
+      "period_end": "2023-07-07",
+      "comparative_period_end": "2022-07-07",
+      "fy2023": {
+        "revenue": 273319489,
+        "cost_of_sales": -102962469,
+        "gross_profit": 170357020,
+        "other_operating_income": 15596506,
+        "fx_gain": 823252,
+        "total_income_before_expenses": 186776778,
+        "general_and_admin_expense": -70679848,
+        "allowance_stock_loss_and_doubtful_debts": -494064,
+        "audit_fee": -54390,
+        "board_fee": -394500,
+        "total_operating_expenses": -71622801,
+        "operating_profit": 115153977,
+        "finance_costs": 0,
+        "profit_before_tax": 115153977,
+        "current_income_tax_expense": -26985117,
+        "profit_after_tax": 88168860,
+        "deferred_tax_asset_liability": -6449158,
+        "net_profit": 81719702
+      },
+      "fy2022": {
+        "revenue": 214056279,
+        "cost_of_sales": -89995245,
+        "gross_profit": 124061033,
+        "other_operating_income": 8369035,
+        "fx_gain": 3693004,
+        "total_income_before_expenses": 136123072,
+        "general_and_admin_expense": -49111987,
+        "allowance_stock_loss_and_doubtful_debts": -91595,
+        "audit_fee": -47750,
+        "board_fee": -410000,
+        "total_operating_expenses": -49661333,
+        "operating_profit": 86461740,
+        "finance_costs": 0,
+        "profit_before_tax": 86461740,
+        "current_income_tax_expense": -19678932,
+        "profit_after_tax": 66782808,
+        "deferred_tax_asset_liability": -6129850,
+        "net_profit": 60652958
+      }
+    },
+    "statement_of_changes_in_equity": {
+      "currency": "ETB",
+      "components": [
+        "share_capital",
+        "donated_capital",
+        "retained_earnings",
+        "capital_reserve",
+        "legal_reserve",
+        "revaluation_reserve"
+      ],
+      "balances": [
+        {
+          "as_of": "2021-07-07",
+          "share_capital": 40189122,
+          "donated_capital": 105502960,
+          "retained_earnings": 417123146,
+          "capital_reserve": 7543588,
+          "legal_reserve": 8037824,
+          "revaluation_reserve": 76429663,
+          "total": 654826307
+        },
+        {
+          "as_of": "2022-07-07",
+          "share_capital": 40189122,
+          "donated_capital": 106457200,
+          "retained_earnings": 477776104,
+          "capital_reserve": 7543588,
+          "legal_reserve": 8037824,
+          "revaluation_reserve": 358874376,
+          "total": 998878434
+        },
+        {
+          "as_of": "2023-07-07",
+          "share_capital": 40189122,
+          "donated_capital": 106851801,
+          "retained_earnings": 418557920,
+          "capital_reserve": 7543588,
+          "legal_reserve": 12123309,
+          "revaluation_reserve": 358874376,
+          "total": 944140416
+        }
+      ],
+      "movements": [
+        {
+          "period": "FY2022",
+          "from": "2021-07-07",
+          "to": "2022-07-07",
+          "items": [
+            {
+              "label": "Additional donated capital goods",
+              "component": "donated_capital",
+              "amount": 954460
+            },
+            {
+              "label": "Revaluation reserve (as at 7 July 2022)",
+              "component": "revaluation_reserve",
+              "amount": 282444713
+            },
+            {
+              "label": "Profit for the year",
+              "component": "retained_earnings",
+              "amount": 60652958
+            }
+          ]
+        },
+        {
+          "period": "FY2023",
+          "from": "2022-07-07",
+          "to": "2023-07-07",
+          "items": [
+            {
+              "label": "Additional donated capital goods",
+              "component": "donated_capital",
+              "amount": 394182
+            },
+            {
+              "label": "Prior period adjustment",
+              "component": "retained_earnings",
+              "amount": -12162
+            },
+            {
+              "label": "Tax paid on assessment 2017-2021",
+              "component": "retained_earnings",
+              "amount": -19862905
+            },
+            {
+              "label": "State dividend paid in 2023",
+              "component": "retained_earnings",
+              "amount": -39667443
+            },
+            {
+              "label": "State dividend payable",
+              "component": "retained_earnings",
+              "amount": -77631717
+            },
+            {
+              "label": "Transfer to legal reserve",
+              "component": "retained_earnings",
+              "amount": -4085985
+            },
+            {
+              "label": "Transfer to legal reserve",
+              "component": "legal_reserve",
+              "amount": 4085985
+            },
+            {
+              "label": "Profit for the year",
+              "component": "retained_earnings",
+              "amount": 81719702
+            }
+          ]
+        }
+      ],
+      "data_quality_notes": [
+        "The donated capital balance shown in the Statement of Changes in Equity appears slightly different from the Statement of Financial Position; the JSON aligns donated capital balances to the Statement of Financial Position for consistency.",
+        "Some movement amounts may not perfectly reconcile to closing balances due to scan quality and/or rounding; reported closing balances match the Statement of Financial Position."
+      ]
+    },
+    "statement_of_cash_flow": {
+      "period_end": "2023-07-07",
+      "comparative_period_end": "2022-07-07",
+      "fy2023": {
+        "profit_before_tax": 115153977,
+        "adjustments": {
+          "depreciation": 22946778,
+          "amortization": 212210,
+          "change_in_severance_payable": 805898,
+          "prior_period_adjustment": 112162
+        },
+        "working_capital_changes": {
+          "decrease_in_trade_and_other_receivables": -39189996,
+          "increase_in_inventories": -40684827,
+          "increase_in_trade_and_other_payables": 14909654,
+          "net_working_capital_change_reported": -4995169
+        },
+        "taxes_paid": {
+          "withholding_tax_paid_2021": -2718718,
+          "profit_tax_paid": -17084177
+        },
+        "net_cash_from_operating_activities_reported": -4507230,
+        "investing_activities": {
+          "purchase_of_property_plant_and_equipment": -37893124,
+          "purchase_of_intangible_assets": -276000,
+          "net_cash_used_in_investing_activities_reported": -38169124
+        },
+        "financing_activities": {
+          "donation_received": 394182,
+          "net_cash_from_financing_activities_reported": 394182
+        },
+        "net_increase_decrease_in_cash_reported": -42581175,
+        "cash_beginning_of_year": 222371270,
+        "cash_end_of_year": 179789095
+      },
+      "fy2022": {
+        "profit_before_tax": 86461740,
+        "adjustments": {
+          "depreciation": 20808341,
+          "amortization": 208430,
+          "change_in_severance_payable": 197147
+        },
+        "working_capital_changes": {
+          "decrease_in_trade_and_other_receivables": -3592018,
+          "increase_in_inventories": -16432447,
+          "increase_in_trade_and_other_payables": 15323611,
+          "net_working_capital_change_reported": 102146622
+        },
+        "taxes_paid": {
+          "withholding_tax_paid_2021": -3594810,
+          "profit_tax_paid": -16703775
+        },
+        "net_cash_from_operating_activities_reported": 82848832,
+        "investing_activities": {
+          "time_deposit_change_reported": 28123329,
+          "purchase_of_property_plant_and_equipment": -42891070,
+          "purchase_of_intangible_assets": -360900,
+          "net_cash_used_in_investing_activities_reported": -15006741
+        },
+        "financing_activities": {
+          "donation_received": 954460,
+          "net_cash_from_financing_activities_reported": 954460
+        },
+        "net_increase_decrease_in_cash_reported": 68795748,
+        "cash_beginning_of_year": 153575521,
+        "cash_end_of_year": 222371270
+      }
+    }
+  },
+  "notes_selected": {
+    "note_4_revenue": {
+      "analysis_of_revenue": {
+        "sales_of_vaccines_and_veterinary_drugs": {
+          "2023": 273319489,
+          "2022": 214056279
+        },
+        "other_income": {
+          "2023": 15596506,
+          "2022": 8369035
+        },
+        "gain_on_foreign_exchange": {
+          "2023": 823252,
+          "2022": 3693004
+        },
+        "total": {
+          "2023": 289739247,
+          "2022": 226118318
+        }
+      },
+      "major_customers": {
+        "government_institutions": [
+          {
+            "name": "Ministry of Agriculture",
+            "relation": "Direct purchase",
+            "annual_sales_volume_cap_etb": 75000000
+          },
+          {
+            "name": "Oromia regional state agriculture and animal development",
+            "relation": "Direct purchase",
+            "annual_sales_volume_cap_etb": 25000000
+          },
+          {
+            "name": "Amhara regional state agriculture and animal development",
+            "relation": "Direct purchase",
+            "annual_sales_volume_cap_etb": 25000000
+          },
+          {
+            "name": "SNNP regional state agriculture and animal development",
+            "relation": "Direct purchase",
+            "annual_sales_volume_cap_etb": 25000000
+          },
+          {
+            "name": "Tigray regional state agriculture and animal development",
+            "relation": "Direct purchase",
+            "annual_sales_volume_cap_etb": 25000000
+          },
+          {
+            "name": "Somali regional state agriculture and animal development",
+            "relation": "Direct purchase",
+            "annual_sales_volume_cap_etb": 15000000
+          }
+        ],
+        "non_government_institutions": [
+          {
+            "name": "Ethio chicken Plc",
+            "relation": "Direct purchase",
+            "annual_sales_volume_cap_etb": 15000000
+          },
+          {
+            "name": "Hawassa poultry",
+            "relation": "Direct purchase",
+            "annual_sales_volume_cap_etb": 5000000
+          }
+        ]
+      }
+    },
+    "note_5_cost_of_goods_sold": {
+      "cost_of_goods_sold": {
+        "beginning_raw_materials": {
+          "2023": 44726411,
+          "2022": 53928705
+        },
+        "purchases_during_the_year": {
+          "2023": 31931398,
+          "2022": 25040764
+        },
+        "inventory_available_for_sale": {
+          "2023": 76657809,
+          "2022": 78969469
+        },
+        "ending_raw_materials": {
+          "2023": -42314948,
+          "2022": -44726411
+        },
+        "raw_materials_consumed": {
+          "2023": 34342861,
+          "2022": 34243058
+        },
+        "packing_materials": {
+          "2023": 13926297,
+          "2022": 9735899
+        },
+        "direct_labor": {
+          "2023": 22108805,
+          "2022": 20134489
+        },
+        "factory_overhead": {
+          "2023": 64271377,
+          "2022": 56442119
+        },
+        "total_production_costs": {
+          "2023": 134649340,
+          "2022": 120764305
+        },
+        "beginning_work_in_progress": {
+          "2023": 19641582,
+          "2022": 16675994
+        },
+        "total_costs_including_beginning_wip": {
+          "2023": 153290922,
+          "2022": 137440499
+        },
+        "ending_work_in_progress": {
+          "2023": -31835438,
+          "2022": -19041582
+        },
+        "cost_of_goods_produced": {
+          "2023": 121855484,
+          "2022": 118398917
+        },
+        "beginning_finished_goods": {
+          "2023": 64235412,
+          "2022": 35083173
+        },
+        "ending_finished_goods": {
+          "2023": -94457305,
+          "2022": -64235412
+        },
+        "sales_without_production": {
+          "2023": 11331877,
+          "2022": 748567
+        },
+        "cost_of_sales_total": {
+          "2023": 102962469,
+          "2022": 89995245
+        }
+      },
+      "factory_overhead_breakdown": {
+        "indirect_labour_medical_uniform_travelling_transport": {
+          "2023": 21650708,
+          "2022": 18474575
+        },
+        "consumable_supplies": {
+          "2023": 7951638,
+          "2022": 5522362
+        },
+        "depreciation": {
+          "2023": 17004073,
+          "2022": 17288425
+        },
+        "repair_and_maintenance": {
+          "2023": 6114884,
+          "2022": 4690665
+        },
+        "laboratory_animals": {
+          "2023": 924050,
+          "2022": 1453733
+        },
+        "detergent": {
+          "2023": 858724,
+          "2022": 345825
+        },
+        "animal_feed": {
+          "2023": 3397173,
+          "2022": 3697649
+        },
+        "indicators": {
+          "2023": 4798,
+          "2022": 33398
+        },
+        "fuel_and_lubricants": {
+          "2023": 5737521,
+          "2022": 4207970
+        },
+        "printing_and_stationery": {
+          "2023": 179803,
+          "2022": 164240
+        },
+        "iso_9001_2000_certification": {
+          "2023": 235402,
+          "2022": 155878
+        },
+        "others": {
+          "2023": 212604,
+          "2022": 207860
+        },
+        "total_factory_overhead": {
+          "2023": 64271377,
+          "2022": 56442119
+        }
+      }
+    },
+    "note_6_other_income_and_fx": {
+      "other_income_breakdown": {
+        "transport_income": {
+          "2023": 6636371,
+          "2022": 4148652
+        },
+        "diagnostic_research": {
+          "2023": 718571,
+          "2022": 677049
+        },
+        "packing_materials": {
+          "2023": 1600141,
+          "2022": 1071534
+        },
+        "training_fees": {
+          "2023": 226114,
+          "2022": 0
+        },
+        "bid_sale": {
+          "2023": 86950,
+          "2022": 35350
+        },
+        "agricultural_output": {
+          "2023": 2261,
+          "2022": 518
+        },
+        "animals": {
+          "2023": 463900,
+          "2022": 643655
+        },
+        "nutrition_and_feeds_analysis": {
+          "2023": 34900,
+          "2022": 40600
+        },
+        "other_income": {
+          "2023": 114983,
+          "2022": 96896
+        },
+        "miscellaneous": {
+          "2023": 385683,
+          "2022": 59393
+        },
+        "subtotal": {
+          "2023": 10269065,
+          "2022": 6753645
+        },
+        "interest_income": {
+          "2023": 5327440,
+          "2022": 1615390
+        },
+        "total_other_income": {
+          "2023": 15596506,
+          "2022": 8369035
+        }
+      },
+      "gain_on_foreign_exchange": {
+        "2023": 823252,
+        "2022": 3693004
+      }
+    },
+    "note_7_general_and_admin_expenses": {
+      "general_and_administrative_expenses": {
+        "salaries_wages_related_benefits": {
+          "2023": 26616286,
+          "2022": 19872967
+        },
+        "uniform": {
+          "2023": 865893,
+          "2022": 842080
+        },
+        "repair_and_maintenance": {
+          "2023": 6618297,
+          "2022": 2695800
+        },
+        "advertisements": {
+          "2023": 1874983,
+          "2022": 1180581
+        },
+        "vehicle_running_cost": {
+          "2023": 3423259,
+          "2022": 2743541
+        },
+        "insurance": {
+          "2023": 709366,
+          "2022": 1042197
+        },
+        "travel_and_per_diem": {
+          "2023": 1783005,
+          "2022": 1168676
+        },
+        "communication": {
+          "2023": 470686,
+          "2022": 508318
+        },
+        "entertainment": {
+          "2023": 1303775,
+          "2022": 1088797
+        },
+        "stationery_and_office_supplies": {
+          "2023": 581954,
+          "2022": 466632
+        },
+        "bank_service_charge": {
+          "2023": 17701,
+          "2022": 11883
+        },
+        "professional_fees": {
+          "2023": 63999,
+          "2022": 17300
+        },
+        "utilities": {
+          "2023": 4782609,
+          "2022": 435121
+        },
+        "training": {
+          "2023": 764798,
+          "2022": 607347
+        },
+        "depreciation": {
+          "2023": 6154916,
+          "2022": 3090298
+        },
+        "cleaning_and_sanitation": {
+          "2023": 889535,
+          "2022": 413301
+        },
+        "membership_fees": {
+          "2023": 64000,
+          "2022": 58786
+        },
+        "registration_and_license_fees": {
+          "2023": 100222,
+          "2022": 4445
+        },
+        "rent_expense": {
+          "2023": 16998,
+          "2022": 2000
+        },
+        "building_tax": {
+          "2023": 3824770,
+          "2022": 781827
+        },
+        "penalty": {
+          "2023": 123210,
+          "2022": 2531
+        },
+        "agricultural_input": {
+          "2023": 62558,
+          "2022": 140824
+        },
+        "loading_unloading": {
+          "2023": 183820,
+          "2022": 14448
+        },
+        "freight_out": {
+          "2023": 3601375,
+          "2022": 4025306
+        },
+        "miscellaneous": {
+          "2023": 1266597,
+          "2022": 1532451
+        },
+        "social_responsibility_covid_19": {
+          "2023": 5616235.89,
+          "2022": 6369530.75
+        },
+        "total_general_and_administrative_expenses": {
+          "2023": 70679848,
+          "2022": 49111987
+        }
+      }
+    }
+  },
+  "computed_metrics": {
+    "revenue_growth_percent": 27.6858,
+    "gross_margin_percent": 62.3289,
+    "operating_margin_percent": 42.1316,
+    "net_margin_percent": 29.899,
+    "current_ratio": 2.3958,
+    "quick_ratio_ex_inventory": 1.2538,
+    "cash_ratio": 0.919,
+    "debt_to_equity": 0.2392,
+    "return_on_assets_percent": 6.9849,
+    "return_on_equity_percent": 8.6555
+  },
+  "data_quality": {
+    "reconciliation_checks": [
+      {
+        "statement": "Statement of financial position (2023) — current assets line-items vs total",
+        "reported_total": 468698783,
+        "sum_of_line_items": 468678382.94,
+        "difference": 20400.060000002384,
+        "note": "Small difference likely due to scan/rounding; totals are kept as reported in the statement."
+      },
+      {
+        "statement": "Statement of financial position (2023) — non-current assets line-items vs total",
+        "reported_total": 701255264,
+        "sum_of_line_items": 701255164,
+        "difference": 100,
+        "note": "Difference is very small (likely transcription rounding)."
+      },
+      {
+        "statement": "Statement of profit or loss (2023) — operating expenses line-items vs total",
+        "reported_total": -71622801,
+        "sum_of_line_items": -71622802,
+        "difference": 1,
+        "note": "Minor 1 ETB difference can be due to rounding in the scanned statement."
+      }
+    ],
+    "limitations": [
+      "The source PDF is scanned; some figures may have minor transcription uncertainty. Totals reported in the statements were preserved.",
+      "Only selected notes were structured (Notes 4–7) to support common charting use cases; additional notes can be extracted on request."
+    ]
+  }
+}
