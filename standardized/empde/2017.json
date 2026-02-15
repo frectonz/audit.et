@@ -1,0 +1,23 @@
+{
+  "revenue": 610924180,
+  "costOfSales": -374522229,
+  "grossProfit": 236401951,
+  "operatingProfit": 113272530,
+  "netProfit": 52082616,
+  "totalAssets": 1326656634,
+  "totalLiabilities": 1063298286,
+  "totalEquity": 263358348,
+  "auditOpinion": "Qualified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "Trade payable balance long outstanding",
+      "amount": 3798160
+    },
+    {
+      "number": 2,
+      "summary": "Direct debtor confirmation request not responded (related to sales in June 2024)",
+      "amount": 19776450
+    }
+  ]
+}

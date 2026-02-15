@@ -123,6 +123,20 @@ const enterprises: Enterprise[] = [
     fiscalYearEnd: "Sene 30",
   },
   {
+    id: "empde",
+    name: "Educational Materials Production and Distribution Enterprise",
+    shortName: "EMPDE",
+    sector: "Publishing",
+    sectorIcon: "book-open",
+    description:
+      "Produces and distributes educational materials including textbooks and teaching aids for schools across Ethiopia.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("empde"),
+    auditFindings: loadFindings("empde"),
+    fiscalYearEnd: "Sene 30",
+  },
+  {
     id: "eeu-eleap",
     name: "EEU - Ethiopia Electrification Program (ELEAP)",
     shortName: "ELEAP",
