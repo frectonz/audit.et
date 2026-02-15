@@ -17,6 +17,40 @@ export interface AuditFinding {
   amount: number | null;
 }
 
+export interface LineItem {
+  label: string;
+  amount: number | null;
+  isSubtotal?: boolean;
+  indent?: number;
+}
+
+export interface StatementSection {
+  title: string;
+  groups: { heading: string; items: LineItem[] }[];
+}
+
+export interface CashFlowStatement {
+  operating: LineItem[];
+  investing: LineItem[];
+  financing: LineItem[];
+  netChange: number | null;
+  closingCash: number | null;
+}
+
+export interface YearDetail {
+  enterpriseId: string;
+  year: number;
+  summary: YearData;
+  incomeStatement: StatementSection | null;
+  balanceSheet: StatementSection | null;
+  cashFlow: CashFlowStatement | null;
+  auditFindings: AuditFinding[];
+  currency: string;
+  unitLabel: string;
+  previousYear: number | null;
+  nextYear: number | null;
+}
+
 export interface Enterprise {
   id: string;
   name: string;

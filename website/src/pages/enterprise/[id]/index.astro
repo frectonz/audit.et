@@ -1,13 +1,13 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import Layout from "../../../layouts/Layout.astro";
 import {
   getAllEnterprises,
   getEnterprise,
   formatETB,
   formatCurrency,
-} from "../../data/enterprises";
-import type { Enterprise } from "../../data/types";
-import { Home, ChevronRight, AlertTriangle, Circle } from "@lucide/astro";
+} from "../../../data/enterprises";
+import type { Enterprise } from "../../../data/types";
+import { Home, ChevronRight, AlertTriangle, Circle, ExternalLink } from "@lucide/astro";
 
 export function getStaticPaths() {
   const enterprises = getAllEnterprises();
@@ -237,7 +237,7 @@ const balanceChartData = JSON.stringify({
         {
           enterprise.years.map((y, i) => (
             <div class="flex items-center">
-              <div class="flex flex-col items-center min-w-[80px]">
+              <a href={`/enterprise/${enterprise.id}/${y.year}`} class="flex flex-col items-center min-w-[80px] hover:opacity-80 transition-opacity">
                 <div
                   class={`w-10 h-10 rounded-full border-2 flex items-center justify-center text-xs font-mono font-semibold ${getOpinionBg(y.auditOpinion)} ${getOpinionColor(y.auditOpinion)}`}
                 >
@@ -249,7 +249,7 @@ const balanceChartData = JSON.stringify({
                 >
                   {y.auditOpinion}
                 </span>
-              </div>
+              </a>
               {i < enterprise.years.length - 1 && (
                 <div class="w-8 h-0.5 bg-eth-card-border -mt-4" />
               )}
@@ -367,6 +367,10 @@ const balanceChartData = JSON.stringify({
                 class="text-center px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
                 >Opinion</th
               >
+              <th
+                class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
+                ></th
+              >
             </tr>
           </thead>
           <tbody>
@@ -374,7 +378,9 @@ const balanceChartData = JSON.stringify({
               enterprise.years.map((y) => (
                 <tr class="border-t border-eth-card-border/50 hover:bg-eth-surface/30 transition-colors">
                   <td class="px-6 py-3 font-mono text-eth-text font-medium">
-                    {y.year}
+                    <a href={`/enterprise/${enterprise.id}/${y.year}`} class="hover:text-eth-green transition-colors">
+                      {y.year}
+                    </a>
                   </td>
                   <td class="px-6 py-3 font-mono text-right text-eth-text-dim">
                     {y.revenue != null ? formatETB(y.revenue, true) : "—"}
@@ -405,6 +411,15 @@ const balanceChartData = JSON.stringify({
                     <span class={`text-xs ${getOpinionColor(y.auditOpinion)}`}>
                       {y.auditOpinion}
                     </span>
+                  </td>
+                  <td class="px-6 py-3 text-right">
+                    <a
+                      href={`/enterprise/${enterprise.id}/${y.year}`}
+                      class="inline-flex items-center gap-1 text-xs text-eth-text-muted hover:text-eth-green transition-colors"
+                    >
+                      Details
+                      <ExternalLink class="w-3 h-3" />
+                    </a>
                   </td>
                 </tr>
               ))

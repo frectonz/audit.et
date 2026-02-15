@@ -8,5 +8,105 @@
   "totalLiabilities": 2744398659,
   "totalEquity": 759272346,
   "auditOpinion": "Unmodified",
-  "auditFindings": []
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue & Cost of Sales",
+        "items": [
+          { "label": "Revenue from contracts with customers", "amount": 2880204888, "indent": 0 },
+          { "label": "Direct costs", "amount": -1526149847, "indent": 0 },
+          { "label": "Gross profit", "amount": 1354055041, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Performance",
+        "items": [
+          { "label": "Operating expenses", "amount": -857778222, "indent": 0 },
+          { "label": "Other operating income (expense)", "amount": -308217756, "indent": 0 },
+          { "label": "EBITDA", "amount": 188059063, "indent": 0, "isSubtotal": true },
+          { "label": "Depreciation and amortization", "amount": -71289138, "indent": 0 },
+          { "label": "EBIT", "amount": 116769925, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Finance & Tax",
+        "items": [
+          { "label": "Finance income/(cost) - net", "amount": 7695976, "indent": 0 },
+          { "label": "Profit before income tax", "amount": 124465901, "indent": 0, "isSubtotal": true },
+          { "label": "Income tax expense", "amount": -52775828, "indent": 0 },
+          { "label": "Profit after tax", "amount": 71690073, "indent": 0, "isSubtotal": true },
+          { "label": "Total comprehensive income", "amount": 71690073, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, plant and equipment", "amount": 973138870, "indent": 0 },
+          { "label": "Investment property", "amount": 350103024, "indent": 0 },
+          { "label": "Intangible assets", "amount": 16435836, "indent": 0 },
+          { "label": "Right-of-use assets", "amount": 1328817, "indent": 0 },
+          { "label": "Trade and other receivables", "amount": 88244367, "indent": 0 },
+          { "label": "Deferred tax asset", "amount": 45576709, "indent": 0 }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Inventories", "amount": 119058685, "indent": 0 },
+          { "label": "Other receivable", "amount": 151198086, "indent": 0 },
+          { "label": "Prepayment and advance", "amount": 42708693, "indent": 0 },
+          { "label": "Cash and cash equivalents", "amount": 477884118, "indent": 0 }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total assets", "amount": 3503671004, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Defined benefit liability", "amount": 60745263, "indent": 0 },
+          { "label": "Deferred tax liability", "amount": 107575889, "indent": 0 },
+          { "label": "Trade and other payables", "amount": 900858110, "indent": 0 },
+          { "label": "Lease liability", "amount": 84555, "indent": 0 },
+          { "label": "Grants", "amount": 3693055, "indent": 0 },
+          { "label": "Retention payable", "amount": 21440759, "indent": 0 }
+        ]
+      },
+      {
+        "heading": "Total Liabilities",
+        "items": [
+          { "label": "Total liabilities", "amount": 2744398659, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Paid-up capital", "amount": 109097601, "indent": 0 },
+          { "label": "Legal reserve", "amount": 21819520, "indent": 0 },
+          { "label": "Revaluation reserve", "amount": 247947566, "indent": 0 },
+          { "label": "Retained earnings", "amount": 380407659, "indent": 0 },
+          { "label": "Total equity", "amount": 759272346, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [],
+    "investing": [],
+    "financing": [
+      { "label": "Net cash from financing activities (OCR)", "amount": -210110776, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 218021403,
+    "closingCash": 477884118
+  }
 }

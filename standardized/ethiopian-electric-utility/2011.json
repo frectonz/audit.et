@@ -8,5 +8,74 @@
   "totalLiabilities": null,
   "totalEquity": null,
   "auditOpinion": "Unmodified",
-  "auditFindings": []
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue & Cost of Sales",
+        "items": [
+          { "label": "Revenue", "amount": 11315603383, "indent": 0 },
+          { "label": "Cost of sales (Power, Distribution, Substation and Transmission)", "amount": -10382961317, "indent": 0 },
+          { "label": "Gross profit", "amount": 932642066, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Income & Expenses",
+        "items": [
+          { "label": "Other operating income", "amount": 1375663130, "indent": 0 },
+          { "label": "Administration expense", "amount": -1029424706, "indent": 0 },
+          { "label": "Other operating expense", "amount": -12503297, "indent": 0 },
+          { "label": "Impairment allowance", "amount": 34916718, "indent": 0 },
+          { "label": "Operating profit", "amount": 1231460474, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Finance & Tax",
+        "items": [
+          { "label": "Finance costs/charges", "amount": -445810362, "indent": 0 },
+          { "label": "Profit before tax", "amount": 785650113, "indent": 0, "isSubtotal": true },
+          { "label": "Profit for the year", "amount": 785650113, "indent": 0, "isSubtotal": true },
+          { "label": "Total comprehensive income for the year", "amount": 752888393, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": null,
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit before tax", "amount": 785650113, "indent": 0 },
+      { "label": "Depreciation and impairment of property, plant and equipment", "amount": 3686663565, "indent": 1 },
+      { "label": "Amortization of the right use of assets", "amount": 16139236, "indent": 1 },
+      { "label": "Amortization of intangible assets", "amount": 496437, "indent": 1 },
+      { "label": "Impairment of financial asset", "amount": 34916718, "indent": 1 },
+      { "label": "Severance expense (Current service cost and interest)", "amount": 79985000, "indent": 1 },
+      { "label": "Interest expense", "amount": 385482362, "indent": 1 },
+      { "label": "Foreign exchange loss", "amount": 84189600, "indent": 1 },
+      { "label": "Decrease in trade, other receivables, and receivable from EEP", "amount": -302207430, "indent": 1 },
+      { "label": "Increase in advance and prepayment", "amount": 275518744, "indent": 1 },
+      { "label": "Decrease in inventories", "amount": -197631418, "indent": 1 },
+      { "label": "Decrease in trade and other payables including payable to EEP", "amount": -642175511, "indent": 1 },
+      { "label": "Increase in contract liability", "amount": -856458139, "indent": 1 },
+      { "label": "Increase in customer deposit", "amount": 277811719, "indent": 1 },
+      { "label": "Decrease in contractors retention", "amount": -6847923, "indent": 1 },
+      { "label": "Interest paid", "amount": -385482362, "indent": 1 },
+      { "label": "Net cash flows from operating activities", "amount": 3236050712, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Purchase of property, plant and equipment", "amount": -2269217668, "indent": 0 },
+      { "label": "Purchase of intangible asset", "amount": -158966602, "indent": 0 },
+      { "label": "Income from investment in associate", "amount": 3913734, "indent": 0 },
+      { "label": "Net cash flows used in investing activities", "amount": -2424270537, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Capital and grant contribution", "amount": 275519242, "indent": 0 },
+      { "label": "Proceeds from borrowings (loan, Bond and supplier Credit)", "amount": 2250906456, "indent": 0 },
+      { "label": "Repayment of borrowings (loan, Bond and supplier Credit)", "amount": -408632684, "indent": 0 },
+      { "label": "Payment for additional leased asset", "amount": -15314203, "indent": 0 },
+      { "label": "Net cash flows from financing activities", "amount": 2102478811, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 2914258986,
+    "closingCash": 8773589595
+  }
 }

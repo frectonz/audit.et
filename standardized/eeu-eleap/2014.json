@@ -8,5 +8,121 @@
   "totalLiabilities": null,
   "totalEquity": 8578053827,
   "auditOpinion": "Unmodified",
-  "auditFindings": []
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Sources and Uses of Funds",
+    "groups": [
+      {
+        "heading": "Sources of Funds",
+        "items": [
+          {
+            "label": "Credit from IDA - Initial deposit to Designated Account",
+            "amount": null,
+            "indent": 0
+          },
+          {
+            "label": "Credit from IDA - Additional deposit to Designated Account",
+            "amount": 3905288232.0,
+            "indent": 0
+          },
+          {
+            "label": "Customer's Connection",
+            "amount": 2516134991.0,
+            "indent": 0
+          },
+          {
+            "label": "EEU's contribution",
+            "amount": 390242380.0,
+            "indent": 0
+          },
+          {
+            "label": "Gain on foreign exchange",
+            "amount": 1078007871.0,
+            "indent": 0
+          },
+          {
+            "label": "Total Sources of Funds",
+            "amount": 7883673474.0,
+            "indent": 0,
+            "isSubtotal": true
+          }
+        ]
+      },
+      {
+        "heading": "Uses of Funds",
+        "items": [
+          {
+            "label": "Supplies",
+            "amount": 4166517095.0,
+            "indent": 0
+          },
+          {
+            "label": "Contractual services",
+            "amount": 656243058.0,
+            "indent": 0
+          },
+          {
+            "label": "Capacity building",
+            "amount": 9562613.0,
+            "indent": 0
+          },
+          {
+            "label": "Operating cost",
+            "amount": 68995872.0,
+            "indent": 0
+          },
+          {
+            "label": "Total Uses of Funds",
+            "amount": 4901318638.0,
+            "indent": 0,
+            "isSubtotal": true
+          },
+          {
+            "label": "Excess of Sources over Uses",
+            "amount": 2982354836.0,
+            "indent": 0,
+            "isSubtotal": true
+          }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Balance Sheet",
+    "groups": [
+      {
+        "heading": "Current Assets",
+        "items": [
+          {
+            "label": "Advance to suppliers",
+            "amount": 44154273.0,
+            "indent": 0
+          },
+          {
+            "label": "Cash at bank",
+            "amount": 8533899554.0,
+            "indent": 0
+          },
+          {
+            "label": "Total Current Assets",
+            "amount": 8578053827.0,
+            "indent": 0,
+            "isSubtotal": true
+          }
+        ]
+      },
+      {
+        "heading": "Represented By",
+        "items": [
+          {
+            "label": "Fund Balance",
+            "amount": 8578053827.0,
+            "indent": 0,
+            "isSubtotal": true
+          }
+        ]
+      }
+    ]
+  },
+  "cashFlow": null
 }

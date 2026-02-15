@@ -8,6 +8,90 @@
   "totalLiabilities": 143317344490,
   "totalEquity": -3887896798,
   "auditOpinion": "Qualified",
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          { "label": "Revenue", "amount": 7093393859, "indent": 0 },
+          { "label": "Cost of sales", "amount": -6850090673, "indent": 0 },
+          { "label": "Gross profit", "amount": 243303186, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Items",
+        "items": [
+          { "label": "Other operating income", "amount": 158592824, "indent": 0 },
+          { "label": "General and administrative", "amount": -3931768319, "indent": 0 },
+          { "label": "Bad debt expense", "amount": -345383199, "indent": 0 },
+          { "label": "Inventory write-down / stock obsolescence", "amount": -74800762, "indent": 0 },
+          { "label": "Loss of cane at fair value", "amount": -100181261, "indent": 0 },
+          { "label": "Fair value gain/(loss) on standing cane", "amount": -1069479483, "indent": 0 },
+          { "label": "Impairment of bearer plant", "amount": 0, "indent": 0 },
+          { "label": "Reversal / provision for loss of plantation", "amount": 13602508, "indent": 0 },
+          { "label": "Operating profit/(loss)", "amount": -5106114507, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Finance and Tax",
+        "items": [
+          { "label": "Finance costs/charges", "amount": -2403705711, "indent": 0 },
+          { "label": "Profit/(loss) before tax", "amount": -7509820217, "indent": 0, "isSubtotal": true },
+          { "label": "Income tax expense", "amount": 342364423, "indent": 0 },
+          { "label": "Profit/(loss) for the year", "amount": -7167455795, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Comprehensive Income",
+        "items": [
+          { "label": "Remeasurement gain/(loss) on retirement benefits obligations", "amount": -3399837, "indent": 0 },
+          { "label": "Total comprehensive income for the year", "amount": -7164055958, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Assets",
+        "items": [
+          { "label": "Cash and cash equivalents", "amount": 1682959424, "indent": 0 },
+          { "label": "Total assets", "amount": 139429447692, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Total equity", "amount": -3887896798, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Liabilities",
+        "items": [
+          { "label": "Long term loan", "amount": 119519426549, "indent": 0 },
+          { "label": "Trade and other payable", "amount": 12502220136, "indent": 0 },
+          { "label": "Non-current liabilities total", "amount": 123615688808, "indent": 0, "isSubtotal": true },
+          { "label": "Current liabilities total", "amount": 19701655682, "indent": 0, "isSubtotal": true },
+          { "label": "Total liabilities", "amount": 143317344490, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Net cash from operating activities", "amount": -3014990134, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Net cash used in investing activities", "amount": -21002449951, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Net cash from financing activities", "amount": 24128981507, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 111541422,
+    "closingCash": 1682959424
+  },
   "auditFindings": [
     {
       "number": 1,

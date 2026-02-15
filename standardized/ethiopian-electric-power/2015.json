@@ -8,5 +8,324 @@
   "totalLiabilities": 367194877000,
   "totalEquity": 304992781000,
   "auditOpinion": "Unmodified",
-  "auditFindings": []
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          {
+            "label": "Revenue from contracts with customers",
+            "amount": 22484423000,
+            "indent": 0
+          }
+        ]
+      },
+      {
+        "heading": "Expenses",
+        "items": [
+          {
+            "label": "Direct costs",
+            "amount": -4076066000,
+            "indent": 0
+          },
+          {
+            "label": "Operating expenses",
+            "amount": -151321000,
+            "indent": 0
+          },
+          {
+            "label": "Net impairment gain/(loss) on financial assets",
+            "amount": -14176301000,
+            "indent": 0
+          },
+          {
+            "label": "Other income",
+            "amount": 3271919000,
+            "indent": 0
+          }
+        ]
+      },
+      {
+        "heading": "EBITDA & Operating",
+        "items": [
+          {
+            "label": "EBITDA",
+            "amount": 7352654000,
+            "indent": 0,
+            "isSubtotal": true
+          },
+          {
+            "label": "Depreciation of property, plant and equipment",
+            "amount": -8034343000,
+            "indent": 1
+          },
+          {
+            "label": "Depreciation charge of right of use asset",
+            "amount": -122979000,
+            "indent": 1
+          },
+          {
+            "label": "Total depreciation",
+            "amount": -8157322000,
+            "indent": 1,
+            "isSubtotal": true
+          },
+          {
+            "label": "Operating profit/(loss)",
+            "amount": -804668000,
+            "indent": 0,
+            "isSubtotal": true
+          }
+        ]
+      },
+      {
+        "heading": "Finance & Net Result",
+        "items": [
+          {
+            "label": "Finance costs",
+            "amount": -24034129000,
+            "indent": 0
+          },
+          {
+            "label": "Net loss for the year",
+            "amount": -24838797000,
+            "indent": 0,
+            "isSubtotal": true
+          },
+          {
+            "label": "Remeasurement gain/(loss) on post employment benefits obligations",
+            "amount": -34988000,
+            "indent": 0
+          },
+          {
+            "label": "Total comprehensive loss for the period",
+            "amount": -24873785000,
+            "indent": 0,
+            "isSubtotal": true
+          }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Non-current Assets",
+        "items": [
+          {
+            "label": "Intangible assets",
+            "amount": 368218000,
+            "indent": 0
+          },
+          {
+            "label": "Right of use assets",
+            "amount": 37030000,
+            "indent": 0
+          },
+          {
+            "label": "Long term receivables",
+            "amount": 115428000,
+            "indent": 0
+          },
+          {
+            "label": "Total non-current assets",
+            "amount": 636048830000,
+            "indent": 0,
+            "isSubtotal": true
+          }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          {
+            "label": "Inventories",
+            "amount": 490214000,
+            "indent": 0
+          },
+          {
+            "label": "Trade and other receivables",
+            "amount": 27708229000,
+            "indent": 0
+          },
+          {
+            "label": "Total current assets",
+            "amount": 36138828000,
+            "indent": 0,
+            "isSubtotal": true
+          }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          {
+            "label": "Total assets",
+            "amount": 672187658000,
+            "indent": 0,
+            "isSubtotal": true
+          }
+        ]
+      },
+      {
+        "heading": "Non-current Liabilities",
+        "items": [
+          {
+            "label": "Borrowings",
+            "amount": 305302467000,
+            "indent": 0
+          },
+          {
+            "label": "Lease liabilities",
+            "amount": 8390000,
+            "indent": 0
+          },
+          {
+            "label": "Employee benefit obligations",
+            "amount": 64483000,
+            "indent": 0
+          },
+          {
+            "label": "Provisions",
+            "amount": 9666000,
+            "indent": 0
+          },
+          {
+            "label": "Grants",
+            "amount": 3454812000,
+            "indent": 0
+          }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          {
+            "label": "Borrowings",
+            "amount": 29072754000,
+            "indent": 0
+          },
+          {
+            "label": "Employee benefit obligations",
+            "amount": 14432000,
+            "indent": 0
+          },
+          {
+            "label": "Trade and other payables",
+            "amount": 28549315000,
+            "indent": 0
+          },
+          {
+            "label": "Contract liabilities",
+            "amount": 453482000,
+            "indent": 0
+          },
+          {
+            "label": "Provisions",
+            "amount": 238898000,
+            "indent": 0
+          },
+          {
+            "label": "Lease liabilities",
+            "amount": 26178000,
+            "indent": 0
+          },
+          {
+            "label": "Total current liabilities",
+            "amount": 58355059000,
+            "indent": 0,
+            "isSubtotal": true
+          }
+        ]
+      },
+      {
+        "heading": "Total Liabilities",
+        "items": [
+          {
+            "label": "Total liabilities",
+            "amount": 367194877000,
+            "indent": 0,
+            "isSubtotal": true
+          }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          {
+            "label": "Capital",
+            "amount": 319246063000,
+            "indent": 0
+          },
+          {
+            "label": "Legal reserve",
+            "amount": 2283000,
+            "indent": 0
+          },
+          {
+            "label": "Other reserves",
+            "amount": -38648000,
+            "indent": 0
+          },
+          {
+            "label": "Accumulated losses",
+            "amount": -176984756000,
+            "indent": 0
+          },
+          {
+            "label": "Non-distributable reserve",
+            "amount": 162767839000,
+            "indent": 0
+          },
+          {
+            "label": "Total equity",
+            "amount": 304992781000,
+            "indent": 0,
+            "isSubtotal": true
+          }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      {
+        "label": "Cash generated from (used in) operations",
+        "amount": 17500764000
+      },
+      {
+        "label": "Interest paid on borrowings",
+        "amount": -1284027000
+      },
+      {
+        "label": "Interest paid on leases",
+        "amount": -7283000
+      }
+    ],
+    "investing": [
+      {
+        "label": "Purchase of property, plant and equipment",
+        "amount": -25168595000
+      },
+      {
+        "label": "Payment for right of use assets",
+        "amount": -510000
+      }
+    ],
+    "financing": [
+      {
+        "label": "Proceeds from borrowings",
+        "amount": 13535739000
+      },
+      {
+        "label": "Principal elements of lease payments",
+        "amount": -64969000
+      }
+    ],
+    "netChange": null,
+    "closingCash": null
+  }
 }

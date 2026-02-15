@@ -1,4 +1,4 @@
-import type { Enterprise, YearData } from "./types";
+import type { Enterprise, YearData, YearDetail } from "./types";
 // @ts-expect-error - Node built-ins available at build time in Astro
 import fs from "node:fs";
 // @ts-expect-error - Node built-ins available at build time in Astro
@@ -159,6 +159,49 @@ export function getAllEnterprises(): Enterprise[] {
 
 export function getEnterprise(id: string): Enterprise | undefined {
   return enterprises.find((e) => e.id === id);
+}
+
+export function getYearDetail(
+  enterpriseId: string,
+  ecYear: number
+): YearDetail | null {
+  const enterprise = getEnterprise(enterpriseId);
+  if (!enterprise) return null;
+
+  const yearData = enterprise.years.find((y) => y.year === ecYear);
+  if (!yearData) return null;
+
+  const filePath = path.join(
+    STANDARDIZED_DIR,
+    enterpriseId,
+    `${ecYear}.json`
+  );
+  if (!fs.existsSync(filePath)) return null;
+
+  const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+
+  const years = enterprise.years.map((y) => y.year).sort((a, b) => a - b);
+  const idx = years.indexOf(ecYear);
+
+  return {
+    enterpriseId,
+    year: ecYear,
+    summary: yearData,
+    incomeStatement: data.incomeStatement ?? null,
+    balanceSheet: data.balanceSheet ?? null,
+    cashFlow: data.cashFlow ?? null,
+    auditFindings: data.auditFindings ?? [],
+    currency: enterprise.unit,
+    unitLabel: enterprise.unitLabel,
+    previousYear: idx > 0 ? years[idx - 1] : null,
+    nextYear: idx < years.length - 1 ? years[idx + 1] : null,
+  } satisfies YearDetail;
+}
+
+export function getAllYearPaths(): { id: string; year: string }[] {
+  return enterprises.flatMap((e) =>
+    e.years.map((y) => ({ id: e.id, year: String(y.year) }))
+  );
 }
 
 export function formatCurrency(value: number, compact = false): string {

@@ -8,5 +8,137 @@
   "totalLiabilities": 1150589239,
   "totalEquity": 293988366,
   "auditOpinion": "Unmodified",
-  "auditFindings": []
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          { "label": "Revenue", "amount": 1158786173, "indent": 0 },
+          { "label": "Cost of Sales", "amount": -633182783, "indent": 0 },
+          { "label": "Gross Profit", "amount": 525603390, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Expenses",
+        "items": [
+          { "label": "Other Income", "amount": 29870259, "indent": 0 },
+          { "label": "Selling and Distribution Expenses", "amount": -20022397, "indent": 0 },
+          { "label": "General and Administrative Expense", "amount": -115865745, "indent": 0 },
+          { "label": "Operating Profit", "amount": 419585507, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Finance and Other",
+        "items": [
+          { "label": "Finance Cost", "amount": -1717019, "indent": 0 },
+          { "label": "Profit Before Other Expense", "amount": 417868488, "indent": 0, "isSubtotal": true },
+          { "label": "Other Expense", "amount": 0, "indent": 0 },
+          { "label": "Profit Before Tax", "amount": 417868488, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Taxation",
+        "items": [
+          { "label": "Income Tax Expense", "amount": -131500870, "indent": 0 },
+          { "label": "Profit After Tax", "amount": 286367619, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, Plant and Equipment", "amount": 326882449, "indent": 1 },
+          { "label": "Investment", "amount": 37152207, "indent": 1 },
+          { "label": "Total Non-Current Assets", "amount": 364034656, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Inventories", "amount": 540754300, "indent": 1 },
+          { "label": "Trade and Other Receivables", "amount": 315623440, "indent": 1 },
+          { "label": "Cash and Cash Equivalents", "amount": 224165209, "indent": 1 },
+          { "label": "Asset Held for Sale", "amount": 0, "indent": 1 },
+          { "label": "Total Current Assets", "amount": 1080542949, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total Assets", "amount": 1444577605, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "State Paid-up Capital", "amount": 114948683, "indent": 1 },
+          { "label": "Retained Earnings", "amount": 133755804, "indent": 1 },
+          { "label": "Legal Reserve", "amount": 25977036, "indent": 1 },
+          { "label": "Other Components of Equity", "amount": 19306841, "indent": 1 },
+          { "label": "Total Equity", "amount": 293988366, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Deferred Tax Liabilities", "amount": 44194121, "indent": 1 },
+          { "label": "Total Non-Current Liabilities", "amount": 44194121, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Current Tax Payable", "amount": 107916892, "indent": 1 },
+          { "label": "Trade and Other Payables", "amount": 127786825, "indent": 1 },
+          { "label": "State Dividend Payable (Current Portion)", "amount": 200457331, "indent": 1 },
+          { "label": "Industrial Development Fund Payable", "amount": 402890100, "indent": 1 },
+          { "label": "Total Current Liabilities", "amount": 839051148, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Long-term Liabilities",
+        "items": [
+          { "label": "State Dividend Payable (Long-term)", "amount": 267343970, "indent": 1 }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities", "amount": 1150589239, "indent": 0, "isSubtotal": true },
+          { "label": "Total Equity and Liabilities", "amount": 1444577605, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit Before Taxation", "amount": 417868488, "indent": 0 },
+      { "label": "Depreciation for Tangible Assets", "amount": 11231493, "indent": 1 },
+      { "label": "(Increase)/Decrease in Receivables", "amount": -38510180, "indent": 1 },
+      { "label": "Withholding Receivable", "amount": -23583978, "indent": 1 },
+      { "label": "(Increase)/Decrease in Inventories", "amount": -43455917, "indent": 1 },
+      { "label": "Increase/(Decrease) in Payables", "amount": 11110754, "indent": 1 },
+      { "label": "Cash Generated from Operations", "amount": 334660660, "indent": 0, "isSubtotal": true },
+      { "label": "Income Taxes Paid", "amount": -101399933, "indent": 1 },
+      { "label": "Prior Year Tax Paid", "amount": -10042441, "indent": 1 },
+      { "label": "Net Cash from Operating Activities", "amount": 223218286, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Investment", "amount": -35553207, "indent": 1 },
+      { "label": "Purchase of Property, Plant, Equipment and Investment", "amount": -49183562, "indent": 1 },
+      { "label": "Net Cash Used in Investing Activities", "amount": -84736768, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Dividends Paid/Drawings", "amount": -181396152, "indent": 1 },
+      { "label": "Net Cash Used in Financing Activities", "amount": -181396152, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": -42914634,
+    "closingCash": 224165209
+  }
 }

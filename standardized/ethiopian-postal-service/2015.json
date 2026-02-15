@@ -8,5 +8,138 @@
   "totalLiabilities": 1183019947,
   "totalEquity": 738222280,
   "auditOpinion": "Qualified",
-  "auditFindings": []
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "Trade and other debtors included long-outstanding balances of Birr 147,271,215 with expected credit loss of Birr 68,943,540; insufficient evidence that amounts are receivable or that the enterprise has legal rights/claims.",
+      "amount": 147271215
+    },
+    {
+      "number": 2,
+      "summary": "Creditors included long-outstanding balances of Birr 103,275,323 outstanding more than two years; insufficient evidence they still represent actual liabilities. Creditors account shown at Birr 895,070,209.",
+      "amount": 103275323
+    }
+  ],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue & Cost of Sales",
+        "items": [
+          { "label": "Revenue from contracts with customers", "amount": 1173562601, "indent": 0 },
+          { "label": "Direct costs", "amount": -438592325, "indent": 0 },
+          { "label": "Gross profit", "amount": 734970276, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Performance",
+        "items": [
+          { "label": "Operating expenses", "amount": -578870877, "indent": 0 },
+          { "label": "Other operating income (expense)", "amount": 65732781, "indent": 0 },
+          { "label": "EBITDA", "amount": 221832179, "indent": 0, "isSubtotal": true },
+          { "label": "Depreciation and amortization", "amount": -37253544, "indent": 0 },
+          { "label": "EBIT", "amount": 184578636, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Finance & Tax",
+        "items": [
+          { "label": "Finance income/(cost) - net", "amount": 15096379, "indent": 0 },
+          { "label": "Profit before income tax", "amount": 199675014, "indent": 0, "isSubtotal": true },
+          { "label": "Income tax expense", "amount": -59939388, "indent": 0 },
+          { "label": "Profit after tax", "amount": 139735627, "indent": 0, "isSubtotal": true },
+          { "label": "Total comprehensive income", "amount": 139735627, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, plant and equipment", "amount": 660360005, "indent": 0 },
+          { "label": "Investment property", "amount": 335958183, "indent": 0 },
+          { "label": "Intangible assets", "amount": 14202171, "indent": 0 },
+          { "label": "Right-of-use assets", "amount": 1358675, "indent": 0 },
+          { "label": "Deferred tax asset", "amount": 21182415, "indent": 0 }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Inventories", "amount": 123395598, "indent": 0 },
+          { "label": "Other assets", "amount": 27686273, "indent": 0 },
+          { "label": "Trade and other receivables", "amount": 442440046, "indent": 0 },
+          { "label": "Cash and cash equivalents", "amount": 294658859, "indent": 0 }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total assets", "amount": 1921242227, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Defined benefit liability", "amount": 45134977, "indent": 0 },
+          { "label": "Lease liability", "amount": 1255075, "indent": 0 },
+          { "label": "Grants", "amount": 5516042, "indent": 0 },
+          { "label": "Deferred tax liability", "amount": 114721842, "indent": 0 },
+          { "label": "Retention payable", "amount": 15631474, "indent": 0 }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Trade and other payables", "amount": 800892958, "indent": 0 },
+          { "label": "Dividend payable", "amount": 94219795, "indent": 0 },
+          { "label": "Accrued annual leave", "amount": 15796246, "indent": 0 },
+          { "label": "Lease liability", "amount": 108909, "indent": 0 },
+          { "label": "Taxes and other payables", "amount": 31275794, "indent": 0 },
+          { "label": "Current income tax liability", "amount": 58466834, "indent": 0 }
+        ]
+      },
+      {
+        "heading": "Total Liabilities",
+        "items": [
+          { "label": "Total liabilities", "amount": 1183019947, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Paid-up capital", "amount": 109097601, "indent": 0 },
+          { "label": "Legal reserve", "amount": 21639450, "indent": 0 },
+          { "label": "Revaluation reserve", "amount": 247947566, "indent": 0 },
+          { "label": "Retained earnings", "amount": 359537663, "indent": 0 },
+          { "label": "Total equity", "amount": 738222280, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Net profit", "amount": 109419500, "indent": 0 },
+      { "label": "Net finance cost", "amount": -48042676, "indent": 1 },
+      { "label": "Net cash from operating activities", "amount": 61376824, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Purchase of property, plant and equipment", "amount": -153282889, "indent": 0 },
+      { "label": "Transfer", "amount": 5612143, "indent": 0 },
+      { "label": "Disposal", "amount": 3797665, "indent": 0 },
+      { "label": "Purchase of right-of-use asset", "amount": -1097305, "indent": 0 },
+      { "label": "Purchase of investment property", "amount": -14378445, "indent": 0 },
+      { "label": "Proceeds from sale of PPE", "amount": 10345725, "indent": 0 },
+      { "label": "Net cash used in investing activities", "amount": -149003106, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Dividend paid", "amount": -3000000, "indent": 0 },
+      { "label": "Net cash used in financing activities", "amount": -3000000, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": -90626282,
+    "closingCash": 294658859
+  }
 }

@@ -8,6 +8,144 @@
   "totalLiabilities": 155621026435,
   "totalEquity": 41898475427,
   "auditOpinion": "Qualified",
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          { "label": "Revenue", "amount": 8572841728, "indent": 0 },
+          { "label": "Cost of sales", "amount": -7127255689, "indent": 0 },
+          { "label": "Gross profit", "amount": 1445586039, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Items",
+        "items": [
+          { "label": "Other operating income", "amount": 116130748, "indent": 0 },
+          { "label": "General & administrative", "amount": -3114457220, "indent": 0 },
+          { "label": "Foreign currency exchange loss", "amount": -10453141844, "indent": 0 },
+          { "label": "Fair value gain/(loss) cane and fruit", "amount": -783430846, "indent": 0 },
+          { "label": "Loss on cane at fair value", "amount": -410937133, "indent": 0 },
+          { "label": "Provision for bad debt expense", "amount": 32465237, "indent": 0 },
+          { "label": "Provision for stock obsolescence", "amount": -12037959, "indent": 0 },
+          { "label": "Provision expense - Standing Cane", "amount": -971263600, "indent": 0 },
+          { "label": "Operating profit/(loss)", "amount": -14151086578, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Finance and Tax",
+        "items": [
+          { "label": "Finance costs/charges", "amount": -4481322563, "indent": 0 },
+          { "label": "Profit/(loss) before tax", "amount": -18632409141, "indent": 0, "isSubtotal": true },
+          { "label": "Income tax expense", "amount": -497321130, "indent": 0 },
+          { "label": "Profit/(loss) for the year", "amount": -19129730271, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Comprehensive Income",
+        "items": [
+          { "label": "Total comprehensive income for the year", "amount": -19127596646, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, plant and equipment", "amount": 169575126695, "indent": 0 },
+          { "label": "Right use of asset - Land", "amount": 364119705, "indent": 0 },
+          { "label": "Bearer plant", "amount": 721744049, "indent": 0 }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Trade and other receivable", "amount": 1988416454, "indent": 0 },
+          { "label": "Stock & goods in transit", "amount": 7290068370, "indent": 0 },
+          { "label": "Biological Asset - Agricultural", "amount": 3833210823, "indent": 0 },
+          { "label": "Tax receivable", "amount": 4530542177, "indent": 0 },
+          { "label": "Advance and prepayments", "amount": 5084625340, "indent": 0 },
+          { "label": "Cash and cash equivalents", "amount": 4131648247, "indent": 0 },
+          { "label": "Total assets", "amount": 197519501862, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Paid up capital", "amount": 14083024490, "indent": 0 },
+          { "label": "Capital contribution", "amount": 866084983, "indent": 1 },
+          { "label": "Contribution for capital expenditure", "amount": 101054623, "indent": 1 },
+          { "label": "Sugar Industry Development Fund", "amount": 19546786512, "indent": 1 },
+          { "label": "Asset revaluation reserve", "amount": 11977353299, "indent": 1 },
+          { "label": "Accumulated loss", "amount": -91722235345, "indent": 1 },
+          { "label": "Other reserve", "amount": 15993913, "indent": 1 },
+          { "label": "Total equity", "amount": 41898475427, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Long term loan", "amount": 130900475501, "indent": 0 },
+          { "label": "Employee benefit obligation", "amount": 44901859, "indent": 0 },
+          { "label": "Deferred tax liability", "amount": 4630320331, "indent": 0 }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Trade and other payable", "amount": 10365607496, "indent": 0 },
+          { "label": "Retention payable", "amount": 2926580422, "indent": 0 },
+          { "label": "Interest payable", "amount": 1710284517, "indent": 0 },
+          { "label": "Long term loan - current maturity", "amount": 364063442, "indent": 0 },
+          { "label": "Sugar development fund payable", "amount": 260136419, "indent": 0 },
+          { "label": "Tax payable", "amount": 856409269, "indent": 0 },
+          { "label": "Contract liability", "amount": 293201628, "indent": 0 },
+          { "label": "Accrual", "amount": 1380065161, "indent": 0 },
+          { "label": "Provision", "amount": 1857226074, "indent": 0 },
+          { "label": "Total liabilities", "amount": 155621026435, "indent": 0, "isSubtotal": true },
+          { "label": "Total equity and liabilities", "amount": 197519501862, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit before tax", "amount": -18632409141, "indent": 0 },
+      { "label": "Depreciation of property, plant and equipment and bearer plant", "amount": 3630665020, "indent": 1 },
+      { "label": "Provision/(reversal) for loss of plantation", "amount": 971263600, "indent": 1 },
+      { "label": "Fair value change on biological asset", "amount": 127532444, "indent": 1 },
+      { "label": "Stock obsolescence", "amount": 12037959, "indent": 1 },
+      { "label": "Bad debt expense", "amount": -62465237, "indent": 1 },
+      { "label": "Amortization of right use of assets", "amount": 127810, "indent": 1 },
+      { "label": "Severance expense (current service and interest)", "amount": -63535, "indent": 1 },
+      { "label": "Decrease/(increase) in trade and other receivables", "amount": -73391496, "indent": 1 },
+      { "label": "Decrease/(increase) in advance and prepayment", "amount": 397846417, "indent": 1 },
+      { "label": "Decrease/(increase) in inventories", "amount": -882953911, "indent": 1 },
+      { "label": "Decrease/(increase) in biological asset", "amount": -814983543, "indent": 1 },
+      { "label": "Increase/(decrease) in trade and other payables", "amount": -15039155397, "indent": 1 },
+      { "label": "Net cash flows from operating activities", "amount": -31065949010, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Investment in property, plant and equipment and sugar development", "amount": -10317355722, "indent": 0 },
+      { "label": "Expenditure on bearer plant", "amount": 233283025, "indent": 0 },
+      { "label": "Net cash flows used in investing activities", "amount": -10080080697, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Proceeds from borrowings", "amount": 36775072890, "indent": 0 },
+      { "label": "Repayment of borrowings", "amount": -7810729655, "indent": 0 },
+      { "label": "Net cash transfer", "amount": 6566157517, "indent": 0 },
+      { "label": "Additional fund from SIDF for project expansion", "amount": 1003775763, "indent": 0 },
+      { "label": "Contribution to SIDF", "amount": -2788992197, "indent": 0 },
+      { "label": "Capital contribution", "amount": 101684530396, "indent": 0 },
+      { "label": "Net cash flows from/(used in) financing activities", "amount": 33715049482, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": -7430225,
+    "closingCash": 4131648247
+  },
   "auditFindings": [
     {
       "number": 1,

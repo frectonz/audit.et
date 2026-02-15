@@ -8,5 +8,123 @@
   "totalLiabilities": 1162314904,
   "totalEquity": 503083769,
   "auditOpinion": "Qualified",
-  "auditFindings": []
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "No sufficient documentation as to whether impairment assessment was performed for property, plant and equipment (IAS 36 / IFRS).",
+      "amount": null
+    },
+    {
+      "number": 2,
+      "summary": "Inventory not adjusted to net realizable value (IAS 2); may affect cost of sales, income tax, net income and equity.",
+      "amount": null
+    },
+    {
+      "number": 3,
+      "summary": "Trade and other receivables include long-outstanding balances of Birr 118,019,468 with expected credit loss of Birr 47,093,422; confirmation responses not obtained for Birr 199,822,223.",
+      "amount": 118019468
+    },
+    {
+      "number": 4,
+      "summary": "Trade and other payables include long-outstanding balances of Birr 140,404,036; confirmation responses not obtained for Birr 194,100,616.",
+      "amount": 140404036
+    },
+    {
+      "number": 5,
+      "summary": "Lease accounting not properly applied under IFRS 16 (lease liability movement, interest recognition, disclosures).",
+      "amount": null
+    }
+  ],
+  "incomeStatement": null,
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, plant and equipment", "amount": 535695769, "indent": 0 },
+          { "label": "Investment property", "amount": 336681914, "indent": 0 },
+          { "label": "Intangible assets", "amount": 20165979, "indent": 0 },
+          { "label": "Right-of-use assets", "amount": 1388571, "indent": 0 },
+          { "label": "Deferred tax asset", "amount": 8335968, "indent": 0 },
+          { "label": "Total non-current assets", "amount": 902268200, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Inventories", "amount": 60524154, "indent": 0 },
+          { "label": "Other assets", "amount": 2545057, "indent": 0 },
+          { "label": "Trade and other receivables", "amount": 382067413, "indent": 0 },
+          { "label": "Cash and cash equivalents", "amount": 317993849, "indent": 0 },
+          { "label": "Total current assets", "amount": 763130473, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total assets", "amount": 1665398673, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Defined benefit liability", "amount": 37388659, "indent": 0 },
+          { "label": "Lease liability", "amount": 1087168, "indent": 0 },
+          { "label": "Grants", "amount": 6087207, "indent": 0 },
+          { "label": "Deferred tax liability", "amount": 110290916, "indent": 0 },
+          { "label": "Retention payable", "amount": 8777038, "indent": 0 },
+          { "label": "Total non-current liabilities", "amount": 163630987, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Trade and other payables", "amount": 908545942, "indent": 0 },
+          { "label": "Accrued annual leave", "amount": 4464939, "indent": 0 },
+          { "label": "Lease liability", "amount": 108909, "indent": 0 },
+          { "label": "Tax and other payables", "amount": 66604038, "indent": 0 },
+          { "label": "Current income tax liability", "amount": 18960089, "indent": 0 },
+          { "label": "Total current liabilities", "amount": 998683916, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities",
+        "items": [
+          { "label": "Total liabilities", "amount": 1162314904, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Paid-up capital", "amount": 109097601, "indent": 0 },
+          { "label": "Legal reserve", "amount": 11221173, "indent": 0 },
+          { "label": "Revaluation reserve", "amount": 247947566, "indent": 0 },
+          { "label": "Retained earnings", "amount": 134817430, "indent": 0 },
+          { "label": "Total equity", "amount": 503083769, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Net profit", "amount": -163096076, "indent": 0 },
+      { "label": "Net finance cost", "amount": 13744692, "indent": 1 },
+      { "label": "Income tax paid", "amount": -104570309, "indent": 1 },
+      { "label": "Net cash from operating activities", "amount": -253921693, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Purchase of property, plant and equipment", "amount": -19764381, "indent": 0 },
+      { "label": "Purchase of intangible assets", "amount": -16211587, "indent": 0 },
+      { "label": "Purchase of investment property", "amount": -7527697, "indent": 0 },
+      { "label": "Proceeds from sale of PPE", "amount": 8333133, "indent": 0 },
+      { "label": "Net cash from investing activities", "amount": -35170531, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Lease liability movement", "amount": 0, "indent": 0 },
+      { "label": "Net cash from financing activities", "amount": 0, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": -289092225,
+    "closingCash": 317993850
+  }
 }

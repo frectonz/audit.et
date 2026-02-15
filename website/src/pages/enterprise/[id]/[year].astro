@@ -1,0 +1,720 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import {
+  getAllYearPaths,
+  getYearDetail,
+  getEnterprise,
+  formatETB,
+  formatCurrency,
+} from "../../../data/enterprises";
+import type { LineItem, StatementSection, CashFlowStatement } from "../../../data/types";
+import { Home, ChevronRight, ArrowLeft, ArrowRight, List, ChevronDown, AlertTriangle } from "@lucide/astro";
+
+export function getStaticPaths() {
+  return getAllYearPaths().map((p) => ({
+    params: { id: p.id, year: p.year },
+  }));
+}
+
+const { id, year } = Astro.params;
+const detail = getYearDetail(id!, parseInt(year!))!;
+const enterprise = getEnterprise(id!)!;
+
+function getOpinionColor(opinion: string): string {
+  if (opinion.toLowerCase().includes("unmodified")) return "text-eth-green";
+  if (opinion.toLowerCase().includes("qualified")) return "text-eth-gold";
+  if (opinion.toLowerCase().includes("adverse")) return "text-eth-gold";
+  return "text-eth-text-muted";
+}
+
+function getOpinionBg(opinion: string): string {
+  if (opinion.toLowerCase().includes("unmodified"))
+    return "bg-eth-green/10 border-eth-green/20";
+  if (opinion.toLowerCase().includes("qualified"))
+    return "bg-eth-gold-light border-eth-gold/20";
+  if (opinion.toLowerCase().includes("adverse"))
+    return "bg-eth-gold-light border-eth-gold/30";
+  return "bg-eth-surface border-eth-card-border";
+}
+
+// --- Chart data ---
+// Income waterfall: extract key P&L line items for waterfall chart
+function buildWaterfallData(detail: typeof import("../../../data/types").YearDetail) {
+  if (!detail.incomeStatement) return null;
+  const items: { label: string; value: number }[] = [];
+  const allItems = detail.incomeStatement.groups.flatMap(g => g.items);
+
+  const findItem = (keywords: string[]) =>
+    allItems.find(i => keywords.some(k => i.label.toLowerCase().includes(k)));
+
+  const revenue = findItem(["revenue", "sales income", "total income"]);
+  const costOfSales = findItem(["cost of sales", "cost of goods"]);
+  const grossProfit = findItem(["gross profit"]);
+  const opex = allItems.filter(i =>
+    (i.label.toLowerCase().includes("expense") || i.label.toLowerCase().includes("cost")) &&
+    !i.label.toLowerCase().includes("cost of sales") &&
+    !i.label.toLowerCase().includes("cost of goods") &&
+    !i.label.toLowerCase().includes("tax") &&
+    !i.label.toLowerCase().includes("finance cost") &&
+    !i.isSubtotal &&
+    i.amount != null && i.amount < 0
+  );
+  const operatingProfit = findItem(["operating profit", "operating surplus"]);
+  const financeCost = findItem(["finance cost", "interest expense"]);
+  const taxExpense = findItem(["income tax", "tax expense"]);
+  const netProfit = findItem(["profit after tax", "net profit", "net income", "net surplus", "comprehensive income"]);
+
+  if (revenue?.amount != null) items.push({ label: "Revenue", value: revenue.amount });
+  if (costOfSales?.amount != null) items.push({ label: "Cost of Sales", value: costOfSales.amount });
+  if (grossProfit?.amount != null) items.push({ label: "Gross Profit", value: grossProfit.amount });
+  const totalOpex = opex.reduce((sum, i) => sum + (i.amount ?? 0), 0);
+  if (totalOpex !== 0) items.push({ label: "Operating Expenses", value: totalOpex });
+  if (operatingProfit?.amount != null) items.push({ label: "Operating Profit", value: operatingProfit.amount });
+  if (financeCost?.amount != null) items.push({ label: "Finance Cost", value: financeCost.amount });
+  if (taxExpense?.amount != null) items.push({ label: "Tax", value: taxExpense.amount });
+  if (netProfit?.amount != null) items.push({ label: "Net Profit", value: netProfit.amount });
+
+  return items.length >= 3 ? items : null;
+}
+
+// Balance sheet donut: assets breakdown + liabilities vs equity
+function buildBalanceData(detail: typeof import("../../../data/types").YearDetail) {
+  if (!detail.balanceSheet) return null;
+  const groups = detail.balanceSheet.groups;
+
+  // Get non-subtotal items from asset groups
+  const assetItems: { label: string; value: number }[] = [];
+  const liabEquity: { label: string; value: number }[] = [];
+
+  for (const group of groups) {
+    const heading = group.heading.toLowerCase();
+    if (heading.includes("asset")) {
+      for (const item of group.items) {
+        if (!item.isSubtotal && item.amount != null && item.amount > 0) {
+          assetItems.push({ label: item.label, value: item.amount });
+        }
+      }
+    }
+    if (heading.includes("equity") && !heading.includes("liabilit")) {
+      const subtotal = group.items.find(i => i.isSubtotal && i.label.toLowerCase().includes("equity"));
+      if (subtotal?.amount != null) {
+        liabEquity.push({ label: "Equity", value: Math.abs(subtotal.amount) });
+      }
+    }
+    if (heading.includes("liabilit") && !heading.includes("equity")) {
+      const subtotal = group.items.find(i => i.isSubtotal && i.label.toLowerCase().includes("total"));
+      if (subtotal?.amount != null) {
+        liabEquity.push({ label: group.heading, value: Math.abs(subtotal.amount) });
+      }
+    }
+  }
+
+  return (assetItems.length > 0 || liabEquity.length > 0) ? { assetItems, liabEquity } : null;
+}
+
+// Cash flow bar data
+function buildCashFlowData(detail: typeof import("../../../data/types").YearDetail) {
+  if (!detail.cashFlow) return null;
+  const getSubtotal = (items: LineItem[]) => {
+    const sub = items.find(i => i.isSubtotal && i.label.toLowerCase().includes("net"));
+    return sub?.amount ?? items.reduce((s, i) => s + (i.amount ?? 0), 0);
+  };
+
+  const operating = getSubtotal(detail.cashFlow.operating);
+  const investing = getSubtotal(detail.cashFlow.investing);
+  const financing = getSubtotal(detail.cashFlow.financing);
+
+  return { operating, investing, financing, netChange: detail.cashFlow.netChange };
+}
+
+const waterfallData = buildWaterfallData(detail as any);
+const balanceData = buildBalanceData(detail as any);
+const cashFlowChartData = buildCashFlowData(detail as any);
+
+const waterfallJson = JSON.stringify(waterfallData);
+const balanceJson = JSON.stringify(balanceData);
+const cashFlowBarJson = JSON.stringify(cashFlowChartData);
+---
+
+<Layout title={`${enterprise.shortName} FY ${detail.year} — audit.et`}>
+  <!-- Breadcrumbs -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+    <nav class="flex items-center gap-1.5 text-sm">
+      <a href="/" class="inline-flex items-center gap-1 text-eth-text-muted hover:text-eth-green transition-colors">
+        <Home class="w-3.5 h-3.5" />
+        Home
+      </a>
+      <ChevronRight class="w-3.5 h-3.5 text-eth-text-muted/50" />
+      <a href="/enterprises" class="text-eth-text-muted hover:text-eth-green transition-colors">
+        Enterprises
+      </a>
+      <ChevronRight class="w-3.5 h-3.5 text-eth-text-muted/50" />
+      <a href={`/enterprise/${enterprise.id}`} class="text-eth-text-muted hover:text-eth-green transition-colors">
+        {enterprise.shortName}
+      </a>
+      <ChevronRight class="w-3.5 h-3.5 text-eth-text-muted/50" />
+      <span class="text-eth-text font-medium">FY {detail.year}</span>
+    </nav>
+  </div>
+
+  <!-- Header -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
+    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+      <div>
+        <h1 class="font-display text-3xl sm:text-4xl text-eth-text mb-2">
+          {enterprise.name}
+        </h1>
+        <p class="text-eth-text-dim">
+          Fiscal Year {detail.year} EC ({detail.year + 8}/{detail.year + 9} GC)
+        </p>
+      </div>
+      <span
+        class={`text-sm px-3 py-1 rounded-full border whitespace-nowrap ${getOpinionBg(detail.summary.auditOpinion)} ${getOpinionColor(detail.summary.auditOpinion)}`}
+      >
+        {detail.summary.auditOpinion}
+      </span>
+    </div>
+  </section>
+
+  <!-- Year Navigation -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+    <div class="flex items-center justify-between">
+      <a
+        href={`/enterprise/${enterprise.id}`}
+        class="inline-flex items-center gap-1.5 text-sm text-eth-text-muted hover:text-eth-green transition-colors"
+      >
+        <List class="w-4 h-4" />
+        All Years
+      </a>
+      <div class="flex items-center gap-4">
+        {detail.previousYear ? (
+          <a
+            href={`/enterprise/${enterprise.id}/${detail.previousYear}`}
+            class="inline-flex items-center gap-1.5 text-sm text-eth-text-muted hover:text-eth-green transition-colors"
+          >
+            <ArrowLeft class="w-4 h-4" />
+            FY {detail.previousYear}
+          </a>
+        ) : (
+          <span />
+        )}
+        {detail.nextYear ? (
+          <a
+            href={`/enterprise/${enterprise.id}/${detail.nextYear}`}
+            class="inline-flex items-center gap-1.5 text-sm text-eth-text-muted hover:text-eth-green transition-colors"
+          >
+            FY {detail.nextYear}
+            <ArrowRight class="w-4 h-4" />
+          </a>
+        ) : (
+          <span />
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Summary Metrics -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+      {[
+        {
+          label: "Revenue",
+          value: detail.summary.revenue != null ? formatETB(detail.summary.revenue, true) : "N/A",
+          color: "text-eth-green",
+        },
+        {
+          label: "Net Profit/Loss",
+          value: detail.summary.netProfit != null ? formatETB(detail.summary.netProfit, true) : "N/A",
+          color: detail.summary.netProfit != null && detail.summary.netProfit >= 0 ? "text-eth-green" : "text-eth-gold",
+        },
+        {
+          label: "Total Assets",
+          value: detail.summary.totalAssets != null ? formatETB(detail.summary.totalAssets, true) : "N/A",
+          color: "text-eth-green",
+        },
+        {
+          label: "Total Equity",
+          value: detail.summary.totalEquity != null ? formatETB(detail.summary.totalEquity, true) : "N/A",
+          color: detail.summary.totalEquity != null && detail.summary.totalEquity >= 0 ? "text-eth-gold" : "text-eth-gold",
+        },
+      ].map((metric) => (
+        <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm">
+          <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">{metric.label}</p>
+          <p class={`font-mono text-xl sm:text-2xl font-semibold ${metric.color}`}>{metric.value}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Charts Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div class="grid lg:grid-cols-2 gap-6">
+      {waterfallData && (
+        <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
+          <h3 class="font-display text-xl text-eth-text mb-1">Profit Breakdown</h3>
+          <p class="text-eth-text-muted text-sm mb-4">Key income statement items</p>
+          <div id="profitBreakdown" class="h-[400px] w-full" data-chart={waterfallJson}></div>
+        </div>
+      )}
+
+      {cashFlowChartData && (
+        <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
+          <h3 class="font-display text-xl text-eth-text mb-1">Cash Flow Activities</h3>
+          <p class="text-eth-text-muted text-sm mb-4">Net cash from each activity</p>
+          <div id="cashFlowBar" class="h-[400px] w-full" data-chart={cashFlowBarJson}></div>
+        </div>
+      )}
+
+      {balanceData && (
+        <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm lg:col-span-2">
+          <h3 class="font-display text-xl text-eth-text mb-1">Asset Composition</h3>
+          <p class="text-eth-text-muted text-sm mb-4">Breakdown of total assets</p>
+          <div id="assetDonut" class="h-[320px] w-full" data-chart={balanceJson}></div>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Income Statement -->
+  {detail.incomeStatement ? (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div class="bg-eth-card border border-eth-card-border rounded-xl overflow-hidden shadow-sm">
+        <div class="p-6 pb-3">
+          <h3 class="font-display text-xl text-eth-text mb-1">{detail.incomeStatement.title}</h3>
+          <p class="text-eth-text-muted text-sm">FY {detail.year} EC</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-t border-eth-card-border bg-eth-surface/50">
+                <th class="text-left px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider">Item</th>
+                <th class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider">Amount (ETB)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {detail.incomeStatement.groups.map((group) => (
+                <>
+                  <tr class="border-t border-eth-card-border bg-eth-surface/30">
+                    <td colspan="2" class="px-6 py-2 text-eth-text font-semibold text-xs uppercase tracking-wider">{group.heading}</td>
+                  </tr>
+                  {group.items.map((item: LineItem) => (
+                    <tr class={`border-t border-eth-card-border/50 ${item.isSubtotal ? "bg-eth-surface/20" : ""}`}>
+                      <td class={`px-6 py-2.5 text-eth-text-dim ${item.indent ? "pl-12" : "pl-6"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}>
+                        {item.label}
+                      </td>
+                      <td class={`px-6 py-2.5 font-mono text-right ${item.amount != null && item.amount < 0 ? "text-eth-gold" : "text-eth-text-dim"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}>
+                        {item.amount != null ? formatCurrency(item.amount) : "—"}
+                      </td>
+                    </tr>
+                  ))}
+                </>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  ) : (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
+        <h3 class="font-display text-xl text-eth-text mb-2">Income Statement</h3>
+        <p class="text-eth-text-muted text-sm">Not available for this year.</p>
+      </div>
+    </section>
+  )}
+
+  <!-- Balance Sheet -->
+  {detail.balanceSheet ? (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div class="bg-eth-card border border-eth-card-border rounded-xl overflow-hidden shadow-sm">
+        <div class="p-6 pb-3">
+          <h3 class="font-display text-xl text-eth-text mb-1">{detail.balanceSheet.title}</h3>
+          <p class="text-eth-text-muted text-sm">As at end of FY {detail.year} EC</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-t border-eth-card-border bg-eth-surface/50">
+                <th class="text-left px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider">Item</th>
+                <th class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider">Amount (ETB)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {detail.balanceSheet.groups.map((group) => (
+                <>
+                  <tr class="border-t border-eth-card-border bg-eth-surface/30">
+                    <td colspan="2" class="px-6 py-2 text-eth-text font-semibold text-xs uppercase tracking-wider">{group.heading}</td>
+                  </tr>
+                  {group.items.map((item: LineItem) => (
+                    <tr class={`border-t border-eth-card-border/50 ${item.isSubtotal ? "bg-eth-surface/20" : ""}`}>
+                      <td class={`px-6 py-2.5 text-eth-text-dim ${item.indent ? "pl-12" : "pl-6"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}>
+                        {item.label}
+                      </td>
+                      <td class={`px-6 py-2.5 font-mono text-right ${item.amount != null && item.amount < 0 ? "text-eth-gold" : "text-eth-text-dim"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}>
+                        {item.amount != null ? formatCurrency(item.amount) : "—"}
+                      </td>
+                    </tr>
+                  ))}
+                </>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  ) : (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
+        <h3 class="font-display text-xl text-eth-text mb-2">Balance Sheet</h3>
+        <p class="text-eth-text-muted text-sm">Not available for this year.</p>
+      </div>
+    </section>
+  )}
+
+  <!-- Cash Flow Statement -->
+  {detail.cashFlow ? (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div class="bg-eth-card border border-eth-card-border rounded-xl overflow-hidden shadow-sm">
+        <div class="p-6 pb-3">
+          <h3 class="font-display text-xl text-eth-text mb-1">Cash Flow Statement</h3>
+          <p class="text-eth-text-muted text-sm">FY {detail.year} EC</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-t border-eth-card-border bg-eth-surface/50">
+                <th class="text-left px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider">Item</th>
+                <th class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider">Amount (ETB)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {detail.cashFlow.operating.length > 0 && (
+                <>
+                  <tr class="border-t border-eth-card-border bg-eth-surface/30">
+                    <td colspan="2" class="px-6 py-2 text-eth-text font-semibold text-xs uppercase tracking-wider">Operating Activities</td>
+                  </tr>
+                  {detail.cashFlow.operating.map((item: LineItem) => (
+                    <tr class={`border-t border-eth-card-border/50 ${item.isSubtotal ? "bg-eth-surface/20" : ""}`}>
+                      <td class={`px-6 py-2.5 text-eth-text-dim ${item.indent ? "pl-12" : "pl-6"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}>
+                        {item.label}
+                      </td>
+                      <td class={`px-6 py-2.5 font-mono text-right ${item.amount != null && item.amount < 0 ? "text-eth-gold" : "text-eth-text-dim"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}>
+                        {item.amount != null ? formatCurrency(item.amount) : "—"}
+                      </td>
+                    </tr>
+                  ))}
+                </>
+              )}
+              {detail.cashFlow.investing.length > 0 && (
+                <>
+                  <tr class="border-t border-eth-card-border bg-eth-surface/30">
+                    <td colspan="2" class="px-6 py-2 text-eth-text font-semibold text-xs uppercase tracking-wider">Investing Activities</td>
+                  </tr>
+                  {detail.cashFlow.investing.map((item: LineItem) => (
+                    <tr class={`border-t border-eth-card-border/50 ${item.isSubtotal ? "bg-eth-surface/20" : ""}`}>
+                      <td class={`px-6 py-2.5 text-eth-text-dim ${item.indent ? "pl-12" : "pl-6"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}>
+                        {item.label}
+                      </td>
+                      <td class={`px-6 py-2.5 font-mono text-right ${item.amount != null && item.amount < 0 ? "text-eth-gold" : "text-eth-text-dim"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}>
+                        {item.amount != null ? formatCurrency(item.amount) : "—"}
+                      </td>
+                    </tr>
+                  ))}
+                </>
+              )}
+              {detail.cashFlow.financing.length > 0 && (
+                <>
+                  <tr class="border-t border-eth-card-border bg-eth-surface/30">
+                    <td colspan="2" class="px-6 py-2 text-eth-text font-semibold text-xs uppercase tracking-wider">Financing Activities</td>
+                  </tr>
+                  {detail.cashFlow.financing.map((item: LineItem) => (
+                    <tr class={`border-t border-eth-card-border/50 ${item.isSubtotal ? "bg-eth-surface/20" : ""}`}>
+                      <td class={`px-6 py-2.5 text-eth-text-dim ${item.indent ? "pl-12" : "pl-6"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}>
+                        {item.label}
+                      </td>
+                      <td class={`px-6 py-2.5 font-mono text-right ${item.amount != null && item.amount < 0 ? "text-eth-gold" : "text-eth-text-dim"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}>
+                        {item.amount != null ? formatCurrency(item.amount) : "—"}
+                      </td>
+                    </tr>
+                  ))}
+                </>
+              )}
+              {(detail.cashFlow.netChange != null || detail.cashFlow.closingCash != null) && (
+                <>
+                  <tr class="border-t-2 border-eth-card-border bg-eth-surface/20">
+                    <td class="px-6 py-2.5 text-eth-text font-semibold">Net Change in Cash</td>
+                    <td class={`px-6 py-2.5 font-mono text-right font-semibold ${detail.cashFlow.netChange != null && detail.cashFlow.netChange < 0 ? "text-eth-gold" : "text-eth-text"}`}>
+                      {detail.cashFlow.netChange != null ? formatCurrency(detail.cashFlow.netChange) : "—"}
+                    </td>
+                  </tr>
+                  {detail.cashFlow.closingCash != null && (
+                    <tr class="border-t border-eth-card-border/50 bg-eth-surface/20">
+                      <td class="px-6 py-2.5 text-eth-text font-semibold">Closing Cash & Equivalents</td>
+                      <td class="px-6 py-2.5 font-mono text-right font-semibold text-eth-text">
+                        {formatCurrency(detail.cashFlow.closingCash)}
+                      </td>
+                    </tr>
+                  )}
+                </>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  ) : (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
+        <h3 class="font-display text-xl text-eth-text mb-2">Cash Flow Statement</h3>
+        <p class="text-eth-text-muted text-sm">Not available for this year.</p>
+      </div>
+    </section>
+  )}
+
+  <!-- Audit Findings -->
+  {detail.auditFindings.length > 0 && (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div class="bg-eth-card border border-eth-gold/30 rounded-xl p-6 shadow-sm">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 rounded-full bg-eth-gold-light border border-eth-gold/20 flex items-center justify-center">
+            <AlertTriangle class="w-4 h-4 text-eth-gold" />
+          </div>
+          <h3 class="font-display text-xl text-eth-gold">Audit Findings</h3>
+        </div>
+        <div class="space-y-3">
+          {detail.auditFindings.map((finding) => (
+            <details class="border border-eth-card-border rounded-lg bg-eth-surface/50 group">
+              <summary class="p-4 cursor-pointer select-none list-none flex items-start gap-3 [&::-webkit-details-marker]:hidden">
+                <span class="text-eth-gold font-mono text-sm font-semibold shrink-0">
+                  #{finding.number}
+                </span>
+                <div class="flex-1 min-w-0">
+                  <p class="text-eth-text-dim text-sm leading-relaxed line-clamp-2">
+                    {finding.summary}
+                  </p>
+                </div>
+                <ChevronDown class="w-4 h-4 text-eth-text-muted shrink-0 mt-0.5 transition-transform group-open:rotate-180" />
+              </summary>
+              <div class="px-4 pb-4 pt-0">
+                <div class="pl-8">
+                  <p class="text-eth-text-dim text-sm leading-relaxed">
+                    {finding.summary}
+                  </p>
+                  {finding.amount != null && (
+                    <p class="text-eth-gold font-mono text-sm mt-2">
+                      Amount: {formatETB(finding.amount, true)}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Data Note -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <p class="text-eth-text-muted text-xs text-center">
+      Extracted from audited financial statements via OCR. Figures in {detail.unitLabel}.
+    </p>
+  </section>
+</Layout>
+
+<script>
+  import * as echarts from "echarts";
+
+  const colors = {
+    green: "#1b3b34",
+    gold: "#af9e6e",
+    text: "#4A4A4A",
+    grid: "rgba(0, 0, 0, 0.06)",
+  };
+
+  function formatCompact(value: number): string {
+    const abs = Math.abs(value);
+    const sign = value < 0 ? "-" : "";
+    if (abs >= 1e12) return `${sign}${(abs / 1e12).toFixed(1)}T`;
+    if (abs >= 1e9) return `${sign}${(abs / 1e9).toFixed(1)}B`;
+    if (abs >= 1e6) return `${sign}${(abs / 1e6).toFixed(1)}M`;
+    if (abs >= 1e3) return `${sign}${(abs / 1e3).toFixed(0)}K`;
+    return `${sign}${abs}`;
+  }
+
+  const axisLabelStyle = {
+    fontFamily: "JetBrains Mono, monospace",
+    fontSize: 11,
+    color: colors.text,
+  };
+
+  // --- Profit Breakdown Chart ---
+  const profitEl = document.getElementById("profitBreakdown");
+  if (profitEl) {
+    const items: { label: string; value: number }[] = JSON.parse(profitEl.dataset.chart!);
+    const chart = echarts.init(profitEl);
+    const labels = items.map((i) => i.label);
+    const values = items.map((i) => i.value);
+
+    chart.setOption({
+      tooltip: {
+        trigger: "axis",
+        axisPointer: { type: "shadow" },
+        formatter: (params: any) => {
+          const p = params[0];
+          return `${p.name}<br/>ETB ${formatCompact(p.value)}`;
+        },
+      },
+      grid: { left: 0, right: 0, top: 30, bottom: 30, containLabel: false },
+      xAxis: {
+        type: "category",
+        data: labels,
+        axisLabel: { ...axisLabelStyle, fontSize: 9 },
+        axisLine: { lineStyle: { color: "#E0DDD5" } },
+        axisTick: { show: false },
+        boundaryGap: ["2%", "2%"],
+      },
+      yAxis: {
+        type: "value",
+        show: false,
+      },
+      series: [
+        {
+          type: "bar",
+          data: values.map((v: number) => ({
+            value: v,
+            itemStyle: {
+              color: v >= 0 ? colors.green : colors.gold,
+              borderRadius: v >= 0 ? [3, 3, 0, 0] : [0, 0, 3, 3],
+            },
+          })),
+          label: {
+            show: true,
+            position: "top",
+            formatter: (p: any) => formatCompact(p.value),
+            fontFamily: "JetBrains Mono, monospace",
+            fontSize: 10,
+            color: colors.text,
+          },
+          barWidth: "50%",
+        },
+      ],
+    });
+    window.addEventListener("resize", () => chart.resize());
+  }
+
+  // --- Asset Donut Chart ---
+  const assetEl = document.getElementById("assetDonut");
+  if (assetEl) {
+    const data = JSON.parse(assetEl.dataset.chart!);
+    const chart = echarts.init(assetEl);
+
+    const donutColors = [
+      colors.green,
+      colors.green,
+      "#3d7a6e",
+      "#4a9488",
+      colors.gold,
+      colors.gold,
+      "#8b7d5a",
+      "#6b5e3e",
+    ];
+
+    chart.setOption({
+      tooltip: {
+        trigger: "item",
+        formatter: (p: any) =>
+          `${p.name}<br/>ETB ${formatCompact(p.value)} (${p.percent}%)`,
+      },
+      legend: {
+        orient: "vertical",
+        right: 10,
+        top: "center",
+        textStyle: {
+          fontFamily: "DM Sans, sans-serif",
+          color: colors.text,
+          fontSize: 11,
+        },
+      },
+      series: [
+        {
+          type: "pie",
+          radius: ["40%", "70%"],
+          center: ["35%", "50%"],
+          avoidLabelOverlap: false,
+          label: { show: false },
+          emphasis: {
+            label: {
+              show: true,
+              fontFamily: "JetBrains Mono, monospace",
+              fontSize: 12,
+              formatter: (p: any) => `ETB ${formatCompact(p.value)}`,
+            },
+          },
+          data: data.assetItems.map((item: any, i: number) => ({
+            name: item.label,
+            value: item.value,
+            itemStyle: { color: donutColors[i % donutColors.length] },
+          })),
+        },
+      ],
+    });
+    window.addEventListener("resize", () => chart.resize());
+  }
+
+  // --- Cash Flow Bar Chart ---
+  const cashFlowEl = document.getElementById("cashFlowBar");
+  if (cashFlowEl) {
+    const data = JSON.parse(cashFlowEl.dataset.chart!);
+    const chart = echarts.init(cashFlowEl);
+    const categories = ["Operating", "Investing", "Financing", "Net Change"];
+    const vals = [data.operating, data.investing, data.financing, data.netChange];
+
+    chart.setOption({
+      tooltip: {
+        trigger: "axis",
+        axisPointer: { type: "shadow" },
+        formatter: (params: any) => {
+          const p = params[0];
+          return `${p.name}<br/>ETB ${formatCompact(p.value)}`;
+        },
+      },
+      grid: { left: 0, right: 0, top: 30, bottom: 30, containLabel: false },
+      xAxis: {
+        type: "category",
+        data: categories,
+        axisLabel: axisLabelStyle,
+        axisLine: { lineStyle: { color: "#E0DDD5" } },
+        axisTick: { show: false },
+        boundaryGap: ["2%", "2%"],
+      },
+      yAxis: {
+        type: "value",
+        show: false,
+      },
+      series: [
+        {
+          type: "bar",
+          data: vals.map((v: number) => ({
+            value: v,
+            itemStyle: {
+              color: v >= 0 ? colors.green : colors.gold,
+              borderRadius: v >= 0 ? [3, 3, 0, 0] : [0, 0, 3, 3],
+            },
+          })),
+          label: {
+            show: true,
+            position: "top",
+            formatter: (p: any) => formatCompact(p.value),
+            fontFamily: "JetBrains Mono, monospace",
+            fontSize: 11,
+            color: colors.text,
+          },
+          barWidth: "50%",
+        },
+      ],
+    });
+    window.addEventListener("resize", () => chart.resize());
+  }
+</script>
+

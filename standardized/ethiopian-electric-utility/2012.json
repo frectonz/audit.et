@@ -8,5 +8,99 @@
   "totalLiabilities": 15440386276,
   "totalEquity": 57537625175,
   "auditOpinion": "Unmodified",
-  "auditFindings": []
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue & Cost of Sales",
+        "items": [
+          { "label": "Revenue", "amount": 15143020670, "indent": 0 },
+          { "label": "Cost of sales (Power, Distribution, Substation)", "amount": -12810262276, "indent": 0 },
+          { "label": "Gross profit", "amount": 2332758394, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Income & Expenses",
+        "items": [
+          { "label": "Other operating income", "amount": 2118768932, "indent": 0 },
+          { "label": "Administration expense", "amount": -1917853342, "indent": 0 },
+          { "label": "Other operating expense", "amount": 17971731, "indent": 0 },
+          { "label": "Impairment allowance", "amount": -138160569, "indent": 0 },
+          { "label": "Operating profit", "amount": 2413485145, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Finance & Tax",
+        "items": [
+          { "label": "Finance costs/charges", "amount": -907834775, "indent": 0 },
+          { "label": "Profit before tax", "amount": 1505650370, "indent": 0, "isSubtotal": true },
+          { "label": "Profit for the year", "amount": 1505650370, "indent": 0, "isSubtotal": true },
+          { "label": "Total comprehensive income for the year", "amount": 1505650370, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, plant and equipment", "amount": 42990594532, "indent": 0 },
+          { "label": "Forest assets", "amount": 246523367, "indent": 0 },
+          { "label": "Intangible Asset", "amount": 1095929391, "indent": 0 },
+          { "label": "Right use of asset - Office", "amount": 37383020, "indent": 0 },
+          { "label": "Advance and Prepayments", "amount": 4671312782, "indent": 0 },
+          { "label": "Investment in associate", "amount": 21202986, "indent": 0 }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Cash and cash equivalents", "amount": 10822184076, "indent": 0 },
+          { "label": "Trade receivables", "amount": 4493852864, "indent": 0 },
+          { "label": "Other receivable", "amount": 411904421, "indent": 0 },
+          { "label": "Inventories", "amount": 8187124011, "indent": 0 }
+        ]
+      },
+      {
+        "heading": "Total",
+        "items": [
+          { "label": "Total assets", "amount": 72978011451, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Paid up capital", "amount": 44763102402, "indent": 0 },
+          { "label": "Legal reserve", "amount": 118527857, "indent": 0 },
+          { "label": "Grant & Contribution", "amount": 1582370754, "indent": 0 },
+          { "label": "Other Reserve", "amount": -50342720, "indent": 0 },
+          { "label": "Reserve for excess of deemed cost over book value", "amount": 11123966881, "indent": 0 },
+          { "label": "Total equity", "amount": 57537625175, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Liabilities",
+        "items": [
+          { "label": "Total liabilities", "amount": 15440386276, "indent": 0, "isSubtotal": true },
+          { "label": "Total equity and liabilities", "amount": 72978011451, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Net cash flows from operating activities", "amount": 1988742566, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Net cash flows used in investing activities", "amount": -2704562967, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Net cash flows from financing activities", "amount": 2764414883, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 2048504482,
+    "closingCash": 10822184077
+  }
 }
