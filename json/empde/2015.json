@@ -1,0 +1,1922 @@
+{
+  "entity": {
+    "name": "Educational Materials Production and Distribution Enterprise (EMPDE)",
+    "type": "Enterprise",
+    "location": "Addis Ababa, Ethiopia"
+  },
+  "reporting": {
+    "periodEndDate": "2023-07-07",
+    "comparativePeriodEndDate": "2022-07-07",
+    "currency": "ETB",
+    "framework": "IFRS",
+    "ethiopianFiscalYearLabel": "Sene 30, 2015 (Ethiopian Fiscal Year) / Year ended July 07, 2023"
+  },
+  "auditor": {
+    "firmName": "TAY Authorized Accountants & Auditors",
+    "reportType": "Independent Auditor's Report",
+    "auditStandards": "International Standards on Auditing (ISAs)",
+    "ethics": [
+      "IESBA Code",
+      "Ethical requirements relevant to the audit of the financial statements in Ethiopia"
+    ],
+    "opinion": {
+      "type": "Unmodified",
+      "summary": "Financial statements present fairly, in all material respects, the financial position as at 07 July 2023 and financial performance and cash flows for the year then ended in accordance with IFRS."
+    },
+    "engagementPartner": "Tesfa Tadesse, MSc, FCCA",
+    "signedAt": {
+      "city": "Addis Ababa",
+      "date": "2023-09-06"
+    }
+  },
+  "financialStatements": {
+    "statementOfFinancialPosition": {
+      "asOf": "2023-07-07",
+      "comparativeAsOf": "2022-07-07",
+      "assets": {
+        "nonCurrentAssets": [
+          {
+            "name": "Property, Plant and Equipment",
+            "note": "12",
+            "amounts": {
+              "2023": 294397008,
+              "2022": 290408150
+            }
+          },
+          {
+            "name": "Investment",
+            "note": "11",
+            "amounts": {
+              "2023": 1599000,
+              "2022": 0
+            }
+          }
+        ],
+        "totalNonCurrentAssets": {
+          "2023": 295996008,
+          "2022": 290408150
+        },
+        "currentAssets": [
+          {
+            "name": "Inventories",
+            "note": "13",
+            "amounts": {
+              "2023": 497298383,
+              "2022": 451961618
+            }
+          },
+          {
+            "name": "Trade and other Receivables",
+            "note": "14",
+            "amounts": {
+              "2023": 277113260,
+              "2022": 186571550
+            }
+          },
+          {
+            "name": "Cash and Cash Equivalents",
+            "note": "15",
+            "amounts": {
+              "2023": 267079843,
+              "2022": 185103806
+            }
+          },
+          {
+            "name": "Asset Held for Sale",
+            "note": null,
+            "amounts": {
+              "2023": 2574663,
+              "2022": 2574663
+            }
+          }
+        ],
+        "totalCurrentAssets": {
+          "2023": 1044066149,
+          "2022": 826211637
+        },
+        "totalAssets": {
+          "2023": 1340062157,
+          "2022": 1116619787
+        }
+      },
+      "equityAndLiabilities": {
+        "equity": [
+          {
+            "name": "State Paid up Capital",
+            "note": "16",
+            "amounts": {
+              "2023": 114948683,
+              "2022": 114948683
+            }
+          },
+          {
+            "name": "Retained Earnings",
+            "note": "16",
+            "amounts": {
+              "2023": 153092602,
+              "2022": 151940984
+            }
+          },
+          {
+            "name": "Legal Reserve",
+            "note": "16",
+            "amounts": {
+              "2023": 33898522,
+              "2022": 33898522
+            }
+          },
+          {
+            "name": "Other Component of Equity",
+            "note": "16",
+            "amounts": {
+              "2023": 19306841,
+              "2022": 19306841
+            }
+          }
+        ],
+        "totalEquity": {
+          "2023": 321246649,
+          "2022": 320095031
+        },
+        "nonCurrentLiabilities": [
+          {
+            "name": "Deferred Tax Liabilities",
+            "note": "21",
+            "amounts": {
+              "2023": 32898615,
+              "2022": 32947586
+            }
+          }
+        ],
+        "totalNonCurrentLiabilities": {
+          "2023": 32898615,
+          "2022": 32947586
+        },
+        "currentLiabilities": [
+          {
+            "name": "Current Tax Payable",
+            "note": "20(B)",
+            "amounts": {
+              "2023": 101399933,
+              "2022": 54979704
+            }
+          },
+          {
+            "name": "Trade and Other Payables",
+            "note": "17",
+            "amounts": {
+              "2023": 116676071,
+              "2022": 112281600
+            }
+          },
+          {
+            "name": "State Dividend Payable",
+            "note": "18",
+            "amounts": {
+              "2023": 424441948,
+              "2022": 357648909
+            }
+          },
+          {
+            "name": "Industrial Development Fund",
+            "note": "19",
+            "amounts": {
+              "2023": 343398942,
+              "2022": 238666957
+            }
+          }
+        ],
+        "totalCurrentLiabilities": {
+          "2023": 985916894,
+          "2022": 763577170
+        },
+        "totalLiabilities": {
+          "2023": 1018815508,
+          "2022": 796524756
+        },
+        "totalEquityAndLiabilities": {
+          "2023": 1340062157,
+          "2022": 1116619787
+        }
+      }
+    },
+    "statementOfProfitOrLossAndOtherComprehensiveIncome": {
+      "periodEnd": "2023-07-07",
+      "comparativePeriodEnd": "2022-07-07",
+      "lineItems": [
+        {
+          "name": "Revenue",
+          "note": "23",
+          "amounts": {
+            "2023": 979723945,
+            "2022": 692817131
+          }
+        },
+        {
+          "name": "Cost of sales",
+          "note": "24",
+          "amounts": {
+            "2023": -520940739,
+            "2022": -397975554
+          }
+        },
+        {
+          "name": "Gross Profit",
+          "note": null,
+          "amounts": {
+            "2023": 458783206,
+            "2022": 294841577
+          }
+        },
+        {
+          "name": "Other Income",
+          "note": "25",
+          "amounts": {
+            "2023": 37875838,
+            "2022": 20223570
+          }
+        },
+        {
+          "name": "Selling and Distribution Expenses",
+          "note": "26",
+          "amounts": {
+            "2023": -20422376,
+            "2022": -19465598
+          }
+        },
+        {
+          "name": "General and Administrative Expense",
+          "note": "27",
+          "amounts": {
+            "2023": -85767304,
+            "2022": -65462885
+          }
+        },
+        {
+          "name": "Operating Profit/(Loss)",
+          "note": null,
+          "amounts": {
+            "2023": 390469364,
+            "2022": 230136664
+          }
+        },
+        {
+          "name": "Finance Cost",
+          "note": "28",
+          "amounts": {
+            "2023": -1098283,
+            "2022": -2704066
+          }
+        },
+        {
+          "name": "Profit/(Loss) before other expense",
+          "note": null,
+          "amounts": {
+            "2023": 389371081,
+            "2022": 227432598
+          }
+        },
+        {
+          "name": "Other Expense",
+          "note": "29",
+          "amounts": {
+            "2023": -10400000,
+            "2022": 0
+          }
+        },
+        {
+          "name": "Profit/(Loss) Before Tax",
+          "note": null,
+          "amounts": {
+            "2023": 378971081.22,
+            "2022": 227432598
+          }
+        },
+        {
+          "name": "Taxation (PROFIT TAX)",
+          "note": "20(A)",
+          "amounts": {
+            "2023": -117141119,
+            "2022": -69002881
+          }
+        },
+        {
+          "name": "Profit After Tax",
+          "note": null,
+          "amounts": {
+            "2023": 261829963,
+            "2022": 158429717
+          }
+        },
+        {
+          "name": "Legal reserve (transfer)",
+          "note": null,
+          "amounts": {
+            "2023": 0,
+            "2022": -7921486
+          }
+        },
+        {
+          "name": "Total Comprehensive income/(loss) for the year",
+          "note": null,
+          "amounts": {
+            "2023": 261829963,
+            "2022": 150508231
+          }
+        }
+      ]
+    },
+    "statementOfCashFlows": {
+      "periodEnd": "2023-07-07",
+      "comparativePeriodEnd": "2022-07-07",
+      "operatingActivities": [
+        {
+          "name": "Profit before taxation",
+          "amounts": {
+            "2023": 378971081,
+            "2022": 227432598
+          }
+        },
+        {
+          "name": "Depreciation for tangible assets",
+          "amounts": {
+            "2023": 11572652,
+            "2022": 11320597
+          }
+        },
+        {
+          "name": "(Increase)/Decrease in receivables",
+          "amounts": {
+            "2023": -90246167,
+            "2022": 35829511
+          }
+        },
+        {
+          "name": "Withholding receivable",
+          "amounts": {
+            "2023": -15741186,
+            "2022": -14023177
+          }
+        },
+        {
+          "name": "(Increase)/Decrease in inventories",
+          "amounts": {
+            "2023": -45336764,
+            "2022": -189845774
+          }
+        },
+        {
+          "name": "Increase/(Decrease) in payables",
+          "amounts": {
+            "2023": 4394472,
+            "2022": 29808026
+          }
+        },
+        {
+          "name": "Cash generated from operations",
+          "amounts": {
+            "2023": 243614088,
+            "2022": 100521781
+          }
+        },
+        {
+          "name": "Interest paid",
+          "amounts": {
+            "2023": 0,
+            "2022": -4160662
+          }
+        },
+        {
+          "name": "Income taxes paid",
+          "amounts": {
+            "2023": -54979704,
+            "2022": -62368244
+          }
+        },
+        {
+          "name": "Prior year tax paid",
+          "amounts": {
+            "2023": 0,
+            "2022": -79979221
+          }
+        },
+        {
+          "name": "Net cash from operating activities",
+          "amounts": {
+            "2023": 188634384,
+            "2022": -45986346
+          }
+        }
+      ],
+      "investingActivities": [
+        {
+          "name": "Investment",
+          "amounts": {
+            "2023": -1599000,
+            "2022": 0
+          }
+        },
+        {
+          "name": "Purchase of property, plant, equipment and investment",
+          "amounts": {
+            "2023": -14754407,
+            "2022": -8988646
+          }
+        },
+        {
+          "name": "Net cash used in investing activities",
+          "amounts": {
+            "2023": -16353407,
+            "2022": -8988646
+          }
+        }
+      ],
+      "financingActivities": [
+        {
+          "name": "Proceeds from long-term borrowings",
+          "amounts": {
+            "2023": 0,
+            "2022": 0
+          }
+        },
+        {
+          "name": "Payment of short-term borrowings",
+          "amounts": {
+            "2023": 0,
+            "2022": 0
+          }
+        },
+        {
+          "name": "Dividends paid/drawings",
+          "amounts": {
+            "2023": -90304939,
+            "2022": 0
+          }
+        },
+        {
+          "name": "Net cash used in financing activities",
+          "amounts": {
+            "2023": -90304939,
+            "2022": 0
+          }
+        }
+      ],
+      "summary": {
+        "netIncreaseInCashAndCashEquivalents": {
+          "2023": 81976038,
+          "2022": -54974993
+        },
+        "cashAndCashEquivalentsAtBeginningOfYear": {
+          "2023": 185103806,
+          "2022": 240078798
+        },
+        "cashAndCashEquivalentsAtEndOfYear": {
+          "2023": 267079843,
+          "2022": 185103806
+        }
+      }
+    },
+    "statementOfChangesInEquity": {
+      "periodEnd": "2023-07-07",
+      "comparativePeriodEnd": "2022-07-07",
+      "components": [
+        "State Capital",
+        "Legal Reserve",
+        "Other Component of Equity",
+        "Retained Earnings",
+        "Total"
+      ],
+      "openingBalance": {
+        "asOf": "2022-07-08",
+        "amounts": {
+          "State Capital": 114948683,
+          "Legal Reserve": 29473767,
+          "Other Component of Equity": 19306841,
+          "Retained Earnings": 230765691,
+          "Total": 394494982
+        }
+      },
+      "movementsComparativeYear_2022": [
+        {
+          "name": "Profit for the year",
+          "amounts": {
+            "Retained Earnings": 158429717,
+            "Total": 158429717
+          }
+        },
+        {
+          "name": "Transfer to Legal Reserve",
+          "amounts": {
+            "Legal Reserve": 7921486,
+            "Retained Earnings": -7921486,
+            "Total": 0
+          }
+        },
+        {
+          "name": "Prior year adjustment",
+          "amounts": {
+            "Legal Reserve": -3496730,
+            "Retained Earnings": -76736195,
+            "Total": -80232925
+          }
+        },
+        {
+          "name": "Prior year adjustment",
+          "amounts": {
+            "Retained Earnings": 253704,
+            "Total": 253704
+          }
+        },
+        {
+          "name": "State Dividend",
+          "amounts": {
+            "Retained Earnings": -90304939,
+            "Total": -90304939
+          }
+        },
+        {
+          "name": "Industrial Development Fund",
+          "amounts": {
+            "Retained Earnings": -60203292,
+            "Total": -60203292
+          }
+        },
+        {
+          "name": "Movement in deferred tax",
+          "amounts": {
+            "Retained Earnings": -2342216,
+            "Total": -2342216
+          }
+        }
+      ],
+      "closingBalanceComparativeYear_2022": {
+        "asOf": "2022-07-07",
+        "amounts": {
+          "State Capital": 114948683,
+          "Legal Reserve": 33898522,
+          "Other Component of Equity": 19306841,
+          "Retained Earnings": 151940984,
+          "Total": 320095031
+        }
+      },
+      "movementsCurrentYear_2023": [
+        {
+          "name": "Profit for the year",
+          "amounts": {
+            "Retained Earnings": 261829963,
+            "Total": 261829963
+          }
+        },
+        {
+          "name": "Prior year adjustment",
+          "amounts": {
+            "Retained Earnings": 1104546,
+            "Total": 1104546
+          }
+        },
+        {
+          "name": "Prior year adjustment",
+          "amounts": {
+            "Retained Earnings": -1900,
+            "Total": -1900
+          }
+        },
+        {
+          "name": "State Dividend",
+          "amounts": {
+            "Retained Earnings": -157097978,
+            "Total": -157097978
+          }
+        },
+        {
+          "name": "Industrial Development Fund",
+          "amounts": {
+            "Retained Earnings": -104731985,
+            "Total": -104731985
+          }
+        },
+        {
+          "name": "Movement in deferred tax",
+          "amounts": {
+            "Retained Earnings": 48972,
+            "Total": 48972
+          }
+        }
+      ],
+      "closingBalanceCurrentYear_2023": {
+        "asOf": "2023-07-07",
+        "amounts": {
+          "State Capital": 114948683,
+          "Legal Reserve": 33898522,
+          "Other Component of Equity": 19306841,
+          "Retained Earnings": 153092602,
+          "Total": 321246649
+        }
+      }
+    }
+  },
+  "notes": {
+    "11_investment": {
+      "total": {
+        "2023": 1599000,
+        "2022": 0
+      }
+    },
+    "12_propertyPlantAndEquipment": {
+      "currency": "ETB",
+      "classes": [
+        "ROU Land",
+        "Land Improvement",
+        "Building",
+        "Machinery",
+        "Office Furniture",
+        "Workshop Equipment",
+        "Vehicles",
+        "Computer and Accessories",
+        "Other",
+        "Construction in Progress"
+      ],
+      "cost": {
+        "openingBalance_2022_07_08": {
+          "ROU Land": 46676889,
+          "Land Improvement": 5660548,
+          "Building": 109744319,
+          "Machinery": 130590823,
+          "Office Furniture": 597465,
+          "Workshop Equipment": 3663093,
+          "Vehicles": 42882583,
+          "Computer and Accessories": 4851332,
+          "Other": 1941288,
+          "Construction in Progress": 5048395,
+          "Total": 351656735
+        },
+        "additions_2023": {
+          "ROU Land": 0,
+          "Land Improvement": 0,
+          "Building": 2611875,
+          "Machinery": 799014,
+          "Office Furniture": 318696,
+          "Workshop Equipment": 0,
+          "Vehicles": 0,
+          "Computer and Accessories": 3354696,
+          "Other": 0,
+          "Construction in Progress": 8477228,
+          "Total": 15561509
+        },
+        "closingBalance_2023_07_07": {
+          "ROU Land": 46676889,
+          "Land Improvement": 5660548,
+          "Building": 112356194,
+          "Machinery": 131389837,
+          "Office Furniture": 916161,
+          "Workshop Equipment": 3663093,
+          "Vehicles": 42882583,
+          "Computer and Accessories": 8206028,
+          "Other": 1941288,
+          "Construction in Progress": 13525623,
+          "Total": 367218244
+        }
+      },
+      "accumulatedDepreciation": {
+        "openingBalance_2022_07_08": {
+          "ROU Land": 0,
+          "Land Improvement": 1344946,
+          "Building": 11214341,
+          "Machinery": 31142551,
+          "Office Furniture": 299158,
+          "Workshop Equipment": 1624325,
+          "Vehicles": 13461703,
+          "Computer and Accessories": 1458956,
+          "Other": 702601,
+          "Construction in Progress": 0,
+          "Total": 61248583
+        },
+        "depreciation_2023": {
+          "ROU Land": 0,
+          "Land Improvement": 224158,
+          "Building": 2051147,
+          "Machinery": 5778070,
+          "Office Furniture": 48488,
+          "Workshop Equipment": 415436,
+          "Vehicles": 2483058,
+          "Computer and Accessories": 523562,
+          "Other": 48734,
+          "Construction in Progress": 0,
+          "Total": 11572652
+        },
+        "closingBalance_2023_07_07": {
+          "ROU Land": 0,
+          "Land Improvement": 1569104,
+          "Building": 13265488,
+          "Machinery": 36920621,
+          "Office Furniture": 347647,
+          "Workshop Equipment": 2039761,
+          "Vehicles": 15944761,
+          "Computer and Accessories": 1982518,
+          "Other": 751335,
+          "Construction in Progress": 0,
+          "Total": 72821235
+        }
+      },
+      "netBookValue": {
+        "2023_07_07": {
+          "ROU Land": 46676889,
+          "Land Improvement": 4091444,
+          "Building": 99090706,
+          "Machinery": 94469216,
+          "Office Furniture": 568514,
+          "Workshop Equipment": 1623332,
+          "Vehicles": 26937822,
+          "Computer and Accessories": 6223510,
+          "Other": 1189953,
+          "Construction in Progress": 13525623,
+          "Total": 294397008
+        },
+        "2022_07_07": {
+          "ROU Land": 46676889,
+          "Land Improvement": 4315602,
+          "Building": 98529977,
+          "Machinery": 99448272,
+          "Office Furniture": 298307,
+          "Workshop Equipment": 2038768,
+          "Vehicles": 29420880,
+          "Computer and Accessories": 3392376,
+          "Other": 1238687,
+          "Construction in Progress": 5048395,
+          "Total": 290408151
+        }
+      }
+    },
+    "13_inventories": {
+      "breakdown": [
+        {
+          "name": "Finished Goods",
+          "amounts": {
+            "2023": 14022231,
+            "2022": 13906451
+          }
+        },
+        {
+          "name": "Work in Process",
+          "amounts": {
+            "2023": 63588015,
+            "2022": 30340617
+          }
+        },
+        {
+          "name": "Raw Materials",
+          "amounts": {
+            "2023": 273860833,
+            "2022": 308612118
+          }
+        },
+        {
+          "name": "Spare Parts and Others",
+          "amounts": {
+            "2023": 153870004,
+            "2022": 107145133
+          }
+        },
+        {
+          "name": "Allowance for Write-down of Inventories",
+          "amounts": {
+            "2023": -8042701,
+            "2022": -8042701
+          }
+        }
+      ],
+      "total": {
+        "2023": 497298382.6,
+        "2022": 451961618.35
+      }
+    },
+    "14_tradeAndOtherReceivables": {
+      "breakdown": [
+        {
+          "name": "Trade Debtors",
+          "amounts": {
+            "2023": 235305082,
+            "2022": 153209629
+          }
+        },
+        {
+          "name": "Advances and Claims",
+          "amounts": {
+            "2023": 3428619,
+            "2022": 3279507
+          }
+        },
+        {
+          "name": "Staff Debtor",
+          "amounts": {
+            "2023": 5453476,
+            "2022": 3569733
+          }
+        },
+        {
+          "name": "Sundry Debtors",
+          "amounts": {
+            "2023": 33691,
+            "2022": 124680
+          }
+        },
+        {
+          "name": "VAT Receivable",
+          "amounts": {
+            "2023": 36773858,
+            "2022": 30565011
+          }
+        },
+        {
+          "name": "Allowance for Expected Credit Loss",
+          "amounts": {
+            "2023": -3881467,
+            "2022": -4177010
+          }
+        }
+      ],
+      "total": {
+        "2023": 277113260,
+        "2022": 186571550
+      }
+    },
+    "15_cashAndCashEquivalents": {
+      "breakdown": [
+        {
+          "name": "Cash on Hand",
+          "amounts": {
+            "2023": 0,
+            "2022": 0
+          }
+        },
+        {
+          "name": "Cash at Bank",
+          "amounts": {
+            "2023": 267079843,
+            "2022": 185103806
+          }
+        }
+      ],
+      "total": {
+        "2023": 267079843,
+        "2022": 185103806
+      }
+    },
+    "16_capitalAndReserves": {
+      "summary": [
+        {
+          "name": "Paid up Capital",
+          "amounts": {
+            "2023": 114948683,
+            "2022": 114948683
+          }
+        },
+        {
+          "name": "Legal Reserve",
+          "amounts": {
+            "2023": 33898522,
+            "2022": 33898522
+          }
+        },
+        {
+          "name": "Retained Earnings",
+          "amounts": {
+            "2023": 153092602,
+            "2022": 151940984
+          }
+        },
+        {
+          "name": "Other Components of Equity",
+          "amounts": {
+            "2023": 19306841,
+            "2022": 19306841
+          }
+        }
+      ],
+      "total": {
+        "2023": 321246649,
+        "2022": 320095031
+      },
+      "16_1_otherComponentsOfEquity": [
+        {
+          "name": "Aid Capital",
+          "amounts": {
+            "2023": 18083087,
+            "2022": 18083087
+          }
+        },
+        {
+          "name": "Reserve for Business Expansion",
+          "amounts": {
+            "2023": 1223754,
+            "2022": 1223754
+          }
+        }
+      ],
+      "16_1_total": {
+        "2023": 19306841,
+        "2022": 19306841
+      }
+    },
+    "17_tradeAndOtherPayables": {
+      "breakdown": [
+        {
+          "name": "Trade Creditors",
+          "amounts": {
+            "2023": 44999017,
+            "2022": 42090233
+          }
+        },
+        {
+          "name": "Sundry Creditors",
+          "amounts": {
+            "2023": 2330624,
+            "2022": 2104763
+          }
+        },
+        {
+          "name": "Accrued Liabilities",
+          "amounts": {
+            "2023": 64813067,
+            "2022": 47060251
+          }
+        },
+        {
+          "name": "ERCA Penalty",
+          "amounts": {
+            "2023": 0,
+            "2022": 16817688
+          }
+        },
+        {
+          "name": "Income Tax",
+          "amounts": {
+            "2023": 1939812,
+            "2022": 2239359
+          }
+        },
+        {
+          "name": "Pension Payable",
+          "amounts": {
+            "2023": 975223,
+            "2022": 961509
+          }
+        },
+        {
+          "name": "Withholding Taxes Payable",
+          "amounts": {
+            "2023": 1618328,
+            "2022": 1007798
+          }
+        }
+      ],
+      "total": {
+        "2023": 116676071,
+        "2022": 112281600
+      },
+      "17a_severancePayable": {
+        "2023": 5345099.23,
+        "2022": 4952855.13
+      }
+    },
+    "18_stateDividendPayable": {
+      "components": [
+        {
+          "name": "Opening state dividend payable",
+          "amounts": {
+            "2023": 357648909,
+            "2022": 267343970
+          }
+        },
+        {
+          "name": "State dividend paid",
+          "amounts": {
+            "2023": -90304939,
+            "2022": 0
+          }
+        },
+        {
+          "name": "Current year portion",
+          "amounts": {
+            "2023": 157097978,
+            "2022": 90304939
+          }
+        }
+      ],
+      "closingBalance": {
+        "2023": 424441948,
+        "2022": 357648909
+      },
+      "policyNote": "Represents 60% of net profit after tax and other expense payable to the government (Proclamation No 25/1984 and Directive No.02/2012)."
+    },
+    "19_industrialDevelopmentFundPayable": {
+      "components": [
+        {
+          "name": "Opening industrial development fund payable",
+          "amounts": {
+            "2023": 238666957,
+            "2022": 178463664
+          }
+        },
+        {
+          "name": "Current year portion",
+          "amounts": {
+            "2023": 104731985,
+            "2022": 60203292
+          }
+        }
+      ],
+      "closingBalance": {
+        "2023": 343398942,
+        "2022": 238666957
+      },
+      "policyNote": "Represents 40% of net profit after tax and other expense."
+    },
+    "20_incomeTaxes": {
+      "20A_taxReconciliation": {
+        "accountingProfitBeforeTax": {
+          "2023": 389371081,
+          "2022": 227432598
+        },
+        "unallowableExpensesForTaxPurpose": [
+          {
+            "name": "Penalty",
+            "amounts": {
+              "2023": 434093,
+              "2022": 694145
+            }
+          },
+          {
+            "name": "Entertainment",
+            "amounts": {
+              "2023": 1237373,
+              "2022": 784397
+            }
+          },
+          {
+            "name": "Expected Credit Loss",
+            "amounts": {
+              "2023": 464175,
+              "2022": 0
+            }
+          },
+          {
+            "name": "Accrued Annual Leave",
+            "amounts": {
+              "2023": 757794,
+              "2022": 4380300
+            }
+          },
+          {
+            "name": "Accrued Severance Pay",
+            "amounts": {
+              "2023": 300000,
+              "2022": 200000
+            }
+          },
+          {
+            "name": "Depreciation per enterprise policy (Note 12B)",
+            "amounts": {
+              "2023": 11572652,
+              "2022": 11320597
+            }
+          }
+        ],
+        "totalUnallowedExpenses": {
+          "2023": 14766087,
+          "2022": 17379439
+        },
+        "less_taxDepreciationCapitalAllowance": {
+          "2023": -13666773,
+          "2022": -14802433
+        },
+        "adjustedTaxableProfit": {
+          "2023": 390470395,
+          "2022": 230009604
+        },
+        "currentTaxExpenseAt30pct": {
+          "2023": 117141119,
+          "2022": 69002881
+        }
+      },
+      "20B_currentIncomeTaxPayable": {
+        "openingBalance": {
+          "2023": 54979704,
+          "2022": 62368244
+        },
+        "settlementDuringTheYear": {
+          "2023": -54979704,
+          "2022": -62368244
+        },
+        "currentIncomeTaxExpense": {
+          "2023": 117141119,
+          "2022": 69002881
+        },
+        "withholdingTaxReceivable": {
+          "2023": -15741186,
+          "2022": -14023177
+        },
+        "closingBalance": {
+          "2023": 101399933,
+          "2022": 54979704
+        }
+      },
+      "20d_taxDepreciationCapitalAllowanceDetail": {
+        "diminishingMethod": {
+          "rates": {
+            "Building": 0.05,
+            "Computers & Accessories": 0.2,
+            "Other PPE": 0.15
+          },
+          "depreciationBaseBeginning": {
+            "Computers & Accessories": 272734,
+            "Other PPE": 7426423,
+            "Total": 7699157
+          },
+          "currentYearCapitalAllowance": {
+            "Computers & Accessories": -54547,
+            "Other PPE": -1113963,
+            "Total": -1168510
+          },
+          "depreciationBaseCarriedForward": {
+            "Computers & Accessories": 218187,
+            "Other PPE": 6312459,
+            "Total": 6530647
+          }
+        },
+        "straightLineMethod": {
+          "rates": {
+            "Building": 0.05,
+            "Computers & Accessories & Motor V.": 0.2,
+            "Other PPE": 0.15
+          },
+          "depreciationBaseBeginning": {
+            "Building": 43463008,
+            "Computers & Accessories & Motor V.": 11479064,
+            "Other PPE": 52518315,
+            "Total": 107460387
+          },
+          "currentYearCapitalAllowance": {
+            "Building": -2173150,
+            "Computers & Accessories & Motor V.": -2295813,
+            "Other PPE": -7877747,
+            "Total": -12346710
+          },
+          "additions": {
+            "Building": 2611875,
+            "Computers & Accessories & Motor V.": 1104261,
+            "Other PPE": 885764,
+            "Total": 4601900
+          },
+          "additionalCapitalAllowance": {
+            "Building": -18795,
+            "Computers & Accessories & Motor V.": -64443,
+            "Other PPE": -68315,
+            "Total": -151553
+          },
+          "depreciationBaseCarriedForward": {
+            "Building": 43882937,
+            "Computers & Accessories & Motor V.": 10223069,
+            "Other PPE": 45458018,
+            "Total": 99564024
+          }
+        },
+        "totalCapitalAllowanceForTheYear": -13666773
+      }
+    },
+    "21_deferredTax": {
+      "assessmentSchedule": [
+        {
+          "element": "PPE excluding land",
+          "ifrs": 234194497,
+          "tax": 107263181,
+          "difference": 126931316
+        },
+        {
+          "element": "Inventory",
+          "ifrs": 497298383,
+          "tax": 505341083,
+          "difference": -8042701
+        },
+        {
+          "element": "Trade and other receivable",
+          "ifrs": 277113260,
+          "tax": 280994727,
+          "difference": -3881467
+        },
+        {
+          "element": "Cash",
+          "ifrs": 267079843,
+          "tax": 267079843,
+          "difference": 0
+        },
+        {
+          "element": "Asset held for sale",
+          "ifrs": 2574663,
+          "tax": 2574663,
+          "difference": 0
+        },
+        {
+          "element": "Trade and other payable",
+          "ifrs": 116676071,
+          "tax": 111330972,
+          "difference": -5345099
+        }
+      ],
+      "netTemporaryDifference": 109662049,
+      "deferredTaxLiabilityAt30pct": 32898615,
+      "ledgerBalanceBeginning": -32947586,
+      "difference": -48972
+    },
+    "22_relatedPartyTransactions": {
+      "keyManagementPersonnelLoans": {
+        "description": "Unsecured interest-free loans advanced to key management personnel; fixed monthly payment deducted from monthly salary; maximum five-year loan term.",
+        "outstandingBalance": 2457733
+      },
+      "keyManagementCompensation": [
+        {
+          "name": "Board Allowance",
+          "amounts": {
+            "2023": 242000,
+            "2022": 242000
+          }
+        }
+      ]
+    },
+    "23_revenue": {
+      "breakdown": [
+        {
+          "name": "Sales Income - Printing Material",
+          "amounts": {
+            "2023": 455553878,
+            "2022": 196200424
+          }
+        },
+        {
+          "name": "Sales Income - Furniture Products",
+          "amounts": {
+            "2023": 418274872,
+            "2022": 413221207
+          }
+        },
+        {
+          "name": "Sales Income - Chalk and Gypsum Products",
+          "amounts": {
+            "2023": 4772748,
+            "2022": 4363424
+          }
+        },
+        {
+          "name": "Sales Income - Chemicals and Related",
+          "amounts": {
+            "2023": 50716616,
+            "2022": 3871579
+          }
+        },
+        {
+          "name": "Sales Income - Science Kits",
+          "amounts": {
+            "2023": 4514609,
+            "2022": 75160497
+          }
+        },
+        {
+          "name": "Matters and Billose",
+          "amounts": {
+            "2023": 7516320,
+            "2022": 0
+          }
+        },
+        {
+          "name": "Chipwood",
+          "amounts": {
+            "2023": 2344850,
+            "2022": 0
+          }
+        },
+        {
+          "name": "Merchandize Resale",
+          "amounts": {
+            "2023": 27613817,
+            "2022": 0
+          }
+        },
+        {
+          "name": "Old Used Material",
+          "amounts": {
+            "2023": 8416236,
+            "2022": 0
+          }
+        }
+      ],
+      "total": {
+        "2023": 979723945,
+        "2022": 692817131
+      }
+    },
+    "24_costOfGoodsSold": {
+      "manufacturingCostBreakdown": [
+        {
+          "name": "Work in Process - Beginning",
+          "amounts": {
+            "2023": 30340617,
+            "2022": 13988466
+          }
+        },
+        {
+          "name": "Direct and Indirect Materials",
+          "amounts": {
+            "2023": 379484504,
+            "2022": 286050330
+          }
+        },
+        {
+          "name": "Salary and Benefits",
+          "amounts": {
+            "2023": 69244710,
+            "2022": 55525652
+          }
+        },
+        {
+          "name": "Outsource",
+          "amounts": {
+            "2023": 24723362,
+            "2022": 33855918
+          }
+        },
+        {
+          "name": "Other Production Overhead",
+          "amounts": {
+            "2023": 9510992,
+            "2022": 7976697
+          }
+        },
+        {
+          "name": "Penalty",
+          "amounts": {
+            "2023": 434093,
+            "2022": 0
+          }
+        },
+        {
+          "name": "Depreciation",
+          "amounts": {
+            "2023": 7070438,
+            "2022": 7046439
+          }
+        },
+        {
+          "name": "Less: Work in Process - Ending",
+          "amounts": {
+            "2023": -63588015,
+            "2022": -30340617
+          }
+        }
+      ],
+      "costOfGoodsManufactured": {
+        "2023": 457220702,
+        "2022": 374102885
+      },
+      "finishedGoods": {
+        "beginning": {
+          "2023": 13906451,
+          "2022": 14402406
+        },
+        "ending": {
+          "2023": 14022231,
+          "2022": 13906451
+        }
+      },
+      "costOfGoodsSold": {
+        "fromManufacturing": {
+          "2023": 457104922,
+          "2022": 374598840
+        },
+        "fromMerchandise": {
+          "2023": 63835817,
+          "2022": 23376714
+        },
+        "total": {
+          "2023": 520940739,
+          "2022": 397975554
+        }
+      }
+    },
+    "25_otherIncome": {
+      "breakdown": [
+        {
+          "name": "Income from Transport Service",
+          "amounts": {
+            "2023": 19408330,
+            "2022": 13198321
+          }
+        },
+        {
+          "name": "Rent Income",
+          "amounts": {
+            "2023": 2426497,
+            "2022": 3280199
+          }
+        },
+        {
+          "name": "Income from Sales of Bid Documents",
+          "amounts": {
+            "2023": 56161,
+            "2022": 93521
+          }
+        },
+        {
+          "name": "Miscellaneous",
+          "amounts": {
+            "2023": 15984851,
+            "2022": 3651531
+          }
+        }
+      ],
+      "total": {
+        "2023": 37875838,
+        "2022": 20223572
+      }
+    },
+    "26_sellingAndDistributionExpense": {
+      "breakdown": [
+        {
+          "name": "Salaries and related benefits",
+          "amounts": {
+            "2023": 12201742,
+            "2022": 9640167
+          }
+        },
+        {
+          "name": "Rent",
+          "amounts": {
+            "2023": 234000,
+            "2022": 270583
+          }
+        },
+        {
+          "name": "Depreciation",
+          "amounts": {
+            "2023": 1660280,
+            "2022": 1656558
+          }
+        },
+        {
+          "name": "Printing and stationery",
+          "amounts": {
+            "2023": 129729,
+            "2022": 126717
+          }
+        },
+        {
+          "name": "Fuel and lubricants",
+          "amounts": {
+            "2023": 3494333,
+            "2022": 1047028
+          }
+        },
+        {
+          "name": "Bank Charge",
+          "amounts": {
+            "2023": 51180,
+            "2022": 990
+          }
+        },
+        {
+          "name": "Repair and maintenance",
+          "amounts": {
+            "2023": 144998,
+            "2022": 13909
+          }
+        },
+        {
+          "name": "Communication",
+          "amounts": {
+            "2023": 22327,
+            "2022": 31815
+          }
+        },
+        {
+          "name": "Travel and per-diem",
+          "amounts": {
+            "2023": 1228465,
+            "2022": 1003175
+          }
+        },
+        {
+          "name": "Transportation of Goods",
+          "amounts": {
+            "2023": 0,
+            "2022": 3965596
+          }
+        },
+        {
+          "name": "Utilities",
+          "amounts": {
+            "2023": 919,
+            "2022": 886
+          }
+        },
+        {
+          "name": "Loading and Unloading Fee",
+          "amounts": {
+            "2023": 869118,
+            "2022": 441683
+          }
+        },
+        {
+          "name": "Advertising and Promotion",
+          "amounts": {
+            "2023": 70350,
+            "2022": 26768
+          }
+        },
+        {
+          "name": "Entertainment",
+          "amounts": {
+            "2023": 147402,
+            "2022": 165738
+          }
+        },
+        {
+          "name": "Penalty",
+          "amounts": {
+            "2023": 0,
+            "2022": 694145
+          }
+        },
+        {
+          "name": "License and Legal Fee",
+          "amounts": {
+            "2023": 22937,
+            "2022": 0
+          }
+        },
+        {
+          "name": "Miscellaneous",
+          "amounts": {
+            "2023": 144595,
+            "2022": 121671
+          }
+        },
+        {
+          "name": "Medical",
+          "amounts": {
+            "2023": 0,
+            "2022": 187959
+          }
+        },
+        {
+          "name": "Uniform",
+          "amounts": {
+            "2023": 0,
+            "2022": 47523
+          }
+        },
+        {
+          "name": "Electric supplies",
+          "amounts": {
+            "2023": 0,
+            "2022": 22688
+          }
+        }
+      ],
+      "total": {
+        "2023": 20422376,
+        "2022": 19465598
+      }
+    },
+    "27_generalAndAdministrativeExpense": {
+      "breakdown": [
+        {
+          "name": "Salaries and related benefits",
+          "amounts": {
+            "2023": 58149298,
+            "2022": 47337801
+          }
+        },
+        {
+          "name": "Depreciation",
+          "amounts": {
+            "2023": 2841923,
+            "2022": 2617600
+          }
+        },
+        {
+          "name": "Fuel and lubricants",
+          "amounts": {
+            "2023": 7856942,
+            "2022": 3898169
+          }
+        },
+        {
+          "name": "Repair and maintenance",
+          "amounts": {
+            "2023": 778868,
+            "2022": 503130
+          }
+        },
+        {
+          "name": "Printing and stationary",
+          "amounts": {
+            "2023": 1415024,
+            "2022": 750329
+          }
+        },
+        {
+          "name": "Entertainments",
+          "amounts": {
+            "2023": 1037199,
+            "2022": 607395
+          }
+        },
+        {
+          "name": "License and Legal Fee",
+          "amounts": {
+            "2023": 99892,
+            "2022": 79189
+          }
+        },
+        {
+          "name": "Insurance",
+          "amounts": {
+            "2023": 149901,
+            "2022": 1221578
+          }
+        },
+        {
+          "name": "Communication",
+          "amounts": {
+            "2023": 787810,
+            "2022": 439907
+          }
+        },
+        {
+          "name": "Utilities",
+          "amounts": {
+            "2023": 758766,
+            "2022": 626060
+          }
+        },
+        {
+          "name": "Advertising and promotion",
+          "amounts": {
+            "2023": 158721,
+            "2022": 377924
+          }
+        },
+        {
+          "name": "Outsource",
+          "amounts": {
+            "2023": 1693027,
+            "2022": 1983959
+          }
+        },
+        {
+          "name": "Travel and per-diem",
+          "amounts": {
+            "2023": 383275,
+            "2022": 297768
+          }
+        },
+        {
+          "name": "Loading and unloading fee",
+          "amounts": {
+            "2023": 29287,
+            "2022": 60832
+          }
+        },
+        {
+          "name": "Other overhead",
+          "amounts": {
+            "2023": 3932815,
+            "2022": 3286700
+          }
+        },
+        {
+          "name": "Miscellaneous",
+          "amounts": {
+            "2023": 115767,
+            "2022": 389384
+          }
+        },
+        {
+          "name": "Audit fee",
+          "amounts": {
+            "2023": 113014,
+            "2022": 64179
+          }
+        },
+        {
+          "name": "Board member allowance",
+          "amounts": {
+            "2023": 242000,
+            "2022": 249000
+          }
+        },
+        {
+          "name": "Donation",
+          "amounts": {
+            "2023": 4322099,
+            "2022": 0
+          }
+        },
+        {
+          "name": "Accrued annual leave expense",
+          "amounts": {
+            "2023": 0,
+            "2022": 0
+          }
+        },
+        {
+          "name": "Accrued severance expense",
+          "amounts": {
+            "2023": 0,
+            "2022": 200000
+          }
+        },
+        {
+          "name": "Bad debts expense",
+          "amounts": {
+            "2023": 464175,
+            "2022": 0
+          }
+        },
+        {
+          "name": "Training & consultancy fee",
+          "amounts": {
+            "2023": 437500,
+            "2022": 471980
+          }
+        }
+      ],
+      "total": {
+        "2023": 85767304,
+        "2022": 65462885
+      }
+    },
+    "28_financeCost": {
+      "breakdown": [
+        {
+          "name": "Overdraft Expense",
+          "amounts": {
+            "2023": 455846,
+            "2022": 2681596
+          }
+        },
+        {
+          "name": "Interest Expense on Bank Loan",
+          "amounts": {
+            "2023": 0,
+            "2022": 0
+          }
+        },
+        {
+          "name": "Bank Charge",
+          "amounts": {
+            "2023": 642438,
+            "2022": 22469
+          }
+        }
+      ],
+      "total": {
+        "2023": 1098283,
+        "2022": 2704066
+      }
+    },
+    "29_otherExpense": {
+      "breakdown": [
+        {
+          "name": "Gebeta Itiwuld",
+          "amounts": {
+            "2023": 10400000,
+            "2022": 0
+          }
+        }
+      ],
+      "total": {
+        "2023": 10400000,
+        "2022": 0
+      }
+    }
+  },
+  "derivedMetrics": {
+    "incomeStatement": {
+      "revenueGrowthYoY": 0.41411622369366613,
+      "grossProfitMargin": {
+        "2023": 0.46827803723833655,
+        "2022": 0.42556912034555333
+      },
+      "operatingProfitMargin": {
+        "2023": 0.39855039370299356,
+        "2022": 0.3321751927060822
+      },
+      "profitBeforeTaxMargin": {
+        "2023": 0.38681414612153836,
+        "2022": 0.32827219164128896
+      },
+      "profitAfterTaxMargin": {
+        "2023": 0.2672487125952607,
+        "2022": 0.22867465296553124
+      }
+    },
+    "balanceSheet": {
+      "totalAssetsGrowthYoY": 0.200106045586312,
+      "currentRatio": {
+        "2023": 1.0589798748290846,
+        "2022": 1.0820276842483387
+      },
+      "debtToEquity": {
+        "2023": 3.171443223365732,
+        "2022": 2.488400877425679
+      },
+      "equityRatio": {
+        "2023": 0.23972518537436768,
+        "2022": 0.28666430124795916
+      },
+      "cashGrowthYoY": 0.4428652158562315
+    },
+    "cashFlow": {
+      "netCashFromOperationsYoYChange": -5.101965048495047,
+      "freeCashFlow": {
+        "2023": 172280977,
+        "2022": -54974992
+      },
+      "netChangeInCash": {
+        "2023": 81976038,
+        "2022": -54974993
+      }
+    }
+  },
+  "source": {
+    "file": {
+      "name": "2015.pdf"
+    },
+    "pdfPageMap_1based": {
+      "cover": [
+        1
+      ],
+      "independentAuditorsReport": [
+        2,
+        3
+      ],
+      "statementOfFinancialPosition": [
+        4
+      ],
+      "statementOfProfitOrLossAndOCI": [
+        5
+      ],
+      "statementOfCashFlows": [
+        6
+      ],
+      "statementOfChangesInEquity": [
+        7
+      ],
+      "notesNarrativeAccountingPolicies": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "note12_PPE_Schedule": [
+        18
+      ],
+      "notesTables_Investment_Inventory_Receivables_Cash": [
+        19
+      ],
+      "notesTables_Capital_Payables_Severance": [
+        20
+      ],
+      "notesTables_StateDividend_IDF": [
+        21
+      ],
+      "notesTables_IncomeTax": [
+        22
+      ],
+      "notesTables_CapitalAllowance": [
+        23
+      ],
+      "notesTables_DeferredTax": [
+        24
+      ],
+      "notesTables_RelatedParty_Revenue_COGS": [
+        25
+      ],
+      "notesTables_OtherIncome_SellingDistribution": [
+        26
+      ],
+      "notesTables_GA_FinanceCost_OtherExpense": [
+        27
+      ]
+    },
+    "extractionNotes": [
+      "Document is a scanned PDF; values were transcribed from the rendered pages."
+    ]
+  }
+}

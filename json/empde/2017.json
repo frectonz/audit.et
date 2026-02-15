@@ -1,0 +1,1464 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAtUtc": "2026-02-15T06:28:45.706595+00:00",
+  "source": {
+    "inputFile": "2017.pdf",
+    "entityName": "Educational Materials Production and Distribution Enterprise (EMPDE)",
+    "currency": "ETB",
+    "reportingPeriod": {
+      "yearEndGregorian": "2025-07-07",
+      "yearEndEthiopian": "Sene 30, 2017",
+      "comparativeYearEndGregorian": "2024-07-07",
+      "comparativeYearEndEthiopian": "Sene 30, 2016"
+    },
+    "auditor": {
+      "firm": "TAY Audit Service LLP (TAY Audit Service Limited Liability Partnership)",
+      "engagementPartner": "Tesfa Tadesse, MSc, FCCA",
+      "signedAt": {
+        "city": "Addis Ababa",
+        "date": "2025-10-22"
+      }
+    },
+    "auditOpinion": {
+      "type": "Qualified opinion",
+      "basis": [
+        {
+          "matter": "Trade payable balance long outstanding",
+          "amountETB": 3798160.14
+        },
+        {
+          "matter": "Direct debtor confirmation request not responded (related to sales in June 2024)",
+          "amountETB": 19776449.89
+        }
+      ],
+      "framework": "IFRS",
+      "auditingStandards": "International Standards on Auditing (ISAs)"
+    },
+    "pdfPageMap_1based": {
+      "auditReport": [
+        1,
+        2
+      ],
+      "statementFinancialPosition": 3,
+      "statementProfitOrLossOCI": 4,
+      "statementCashFlows": 5,
+      "statementChangesInEquity": 6,
+      "notesPPE_Investment": 16,
+      "notesInventories_Receivables_Cash_Equity": 17,
+      "notesEquityPayables_StateDividend": 18,
+      "notesIndustrialDevFund_StateDividendLongTerm": 19,
+      "notesTax": 20,
+      "notesTaxDepreciation": 21,
+      "notesDeferredTax": 22,
+      "notesRevenue_COGS_RelatedParty": 23,
+      "notesOtherIncome_SellingDistribution": 24,
+      "notesGeneralAdmin_FinanceCost_VAT": 25
+    }
+  },
+  "statements": {
+    "financialPosition": {
+      "asOf": "2025-07-07",
+      "columns": {
+        "currentYear": "2025",
+        "priorYear": "2024"
+      },
+      "assets": {
+        "nonCurrentAssets": {
+          "propertyPlantEquipment": {
+            "currentYear": 563326674,
+            "priorYear": 326882449
+          },
+          "investment": {
+            "currentYear": 115843973,
+            "priorYear": 37152207
+          },
+          "total": {
+            "currentYear": 679170647,
+            "priorYear": 364034656
+          }
+        },
+        "currentAssets": {
+          "inventories": {
+            "currentYear": 460887313,
+            "priorYear": 540754300
+          },
+          "tradeAndOtherReceivables": {
+            "currentYear": 168932143,
+            "priorYear": 315623440
+          },
+          "cashAndCashEquivalents": {
+            "currentYear": 17666531,
+            "priorYear": 224165209
+          },
+          "total": {
+            "currentYear": 647485988,
+            "priorYear": 1080542949
+          }
+        },
+        "totalAssets": {
+          "currentYear": 1326656634,
+          "priorYear": 1444577605
+        }
+      },
+      "equity": {
+        "statePaidUpCapital": {
+          "currentYear": 114948683,
+          "priorYear": 114948683
+        },
+        "retainedEarnings": {
+          "currentYear": 103125787,
+          "priorYear": 133755804
+        },
+        "legalReserve": {
+          "currentYear": 25977036,
+          "priorYear": 25977036
+        },
+        "otherComponentsOfEquity": {
+          "currentYear": 19306841,
+          "priorYear": 19306841
+        },
+        "totalEquity": {
+          "currentYear": 263358348,
+          "priorYear": 293988366
+        }
+      },
+      "liabilities": {
+        "nonCurrentLiabilities": {
+          "loansAndBorrowings": {
+            "currentYear": 0,
+            "priorYear": 0
+          },
+          "nonCurrentPortionOfTradeCreditor": {
+            "currentYear": 0,
+            "priorYear": 0
+          },
+          "stateDividendPayableLongTerm": {
+            "currentYear": 267343970,
+            "priorYear": 267343970
+          },
+          "deferredTaxLiabilities": {
+            "currentYear": 38140874,
+            "priorYear": 44194121
+          },
+          "total": {
+            "currentYear": 305484844,
+            "priorYear": 311538091
+          }
+        },
+        "currentLiabilities": {
+          "currentTaxPayable": {
+            "currentYear": 16929902,
+            "priorYear": 107916892
+          },
+          "tradeAndOtherPayables": {
+            "currentYear": 172175151,
+            "priorYear": 127786825
+          },
+          "stateDividendPayable": {
+            "currentYear": 152155088,
+            "priorYear": 200457331
+          },
+          "industrialDevelopmentFund": {
+            "currentYear": 416553301,
+            "priorYear": 402890100
+          },
+          "total": {
+            "currentYear": 757813441,
+            "priorYear": 839051148
+          }
+        },
+        "totalLiabilities": {
+          "currentYear": 1063298286,
+          "priorYear": 1150589239
+        }
+      },
+      "totalEquityAndLiabilities": {
+        "currentYear": 1326656634,
+        "priorYear": 1444577605
+      }
+    },
+    "profitOrLoss": {
+      "period": {
+        "from": "2024-07-08",
+        "to": "2025-07-07"
+      },
+      "columns": {
+        "currentYear": "2025",
+        "priorYear": "2024"
+      },
+      "revenue": {
+        "currentYear": 610924180,
+        "priorYear": 1158786173
+      },
+      "costOfSales": {
+        "currentYear": -374522229,
+        "priorYear": -633182783
+      },
+      "grossProfit": {
+        "currentYear": 236401951,
+        "priorYear": 525603390
+      },
+      "otherIncome": {
+        "currentYear": 22765653,
+        "priorYear": 29870259
+      },
+      "sellingAndDistributionExpenses": {
+        "currentYear": -20138848,
+        "priorYear": -20022397
+      },
+      "generalAndAdministrativeExpenses": {
+        "currentYear": -125756226,
+        "priorYear": -115865745
+      },
+      "operatingProfit": {
+        "currentYear": 113272530,
+        "priorYear": 419585507
+      },
+      "financeCost": {
+        "currentYear": -4972063,
+        "priorYear": -1717019
+      },
+      "profitBeforeVat": {
+        "currentYear": 108300467,
+        "priorYear": 417868488
+      },
+      "vatExpense": {
+        "currentYear": -27511502,
+        "priorYear": 0
+      },
+      "profitBeforeTax": {
+        "currentYear": 80788965,
+        "priorYear": 417868488
+      },
+      "incomeTaxExpense": {
+        "currentYear": -28706348,
+        "priorYear": -131500870
+      },
+      "profitAfterTax": {
+        "currentYear": 52082616,
+        "priorYear": 286367618
+      },
+      "otherComprehensiveIncome": {
+        "currentYear": 0,
+        "priorYear": 0
+      },
+      "totalComprehensiveIncome": {
+        "currentYear": 52082616,
+        "priorYear": 286367618
+      }
+    },
+    "cashFlows": {
+      "period": {
+        "from": "2024-07-08",
+        "to": "2025-07-07"
+      },
+      "columns": {
+        "currentYear": "2025",
+        "priorYear": "2024"
+      },
+      "operatingActivities": {
+        "profitBeforeTaxation": {
+          "currentYear": 80788965,
+          "priorYear": 417868488
+        },
+        "depreciationTangibleAssets": {
+          "currentYear": 19053639,
+          "priorYear": 11231493
+        },
+        "changeInReceivables": {
+          "currentYear": 83641211,
+          "priorYear": -38510180
+        },
+        "withholdingReceivable": {
+          "currentYear": -11776446,
+          "priorYear": -23583978
+        },
+        "changeInInventories": {
+          "currentYear": 79866987,
+          "priorYear": -43455917
+        },
+        "changeInPayables": {
+          "currentYear": 44388326,
+          "priorYear": 11110754
+        },
+        "cashGeneratedFromOperations": {
+          "currentYear": 295962681,
+          "priorYear": 334660660
+        },
+        "interestPaid": {
+          "currentYear": -1144680,
+          "priorYear": 0
+        },
+        "incomeTaxesPaid": {
+          "currentYear": -114455503,
+          "priorYear": -101399933
+        },
+        "priorYearTaxPaid": {
+          "currentYear": 0,
+          "priorYear": -10042441
+        },
+        "netCashFromOperatingActivities": {
+          "currentYear": 180362497,
+          "priorYear": 223218286
+        }
+      },
+      "investingActivities": {
+        "investment": {
+          "currentYear": -54707215,
+          "priorYear": -35553207
+        },
+        "purchaseOfPPEAndInvestment": {
+          "currentYear": -187572918,
+          "priorYear": -49183562
+        },
+        "netCashUsedInInvestingActivities": {
+          "currentYear": -242280133,
+          "priorYear": -84736769
+        }
+      },
+      "financingActivities": {
+        "proceedsFromLongTermBorrowings": {
+          "currentYear": 0,
+          "priorYear": 0
+        },
+        "paymentOfShortTermBorrowings": {
+          "currentYear": -64397995,
+          "priorYear": 0
+        },
+        "dividendsPaidDrawings": {
+          "currentYear": -80183047,
+          "priorYear": -181396152
+        },
+        "netCashUsedInFinancingActivities": {
+          "currentYear": -144581042,
+          "priorYear": -181396152
+        }
+      },
+      "netIncreaseInCashAndCashEquivalents": {
+        "currentYear": -206498677,
+        "priorYear": -42914634
+      },
+      "cashAndCashEquivalentsAtBeginningOfYear": {
+        "currentYear": 224165208,
+        "priorYear": 267079843
+      },
+      "cashAndCashEquivalentsAtEndOfYear": {
+        "currentYear": 17666531,
+        "priorYear": 224165209
+      }
+    },
+    "changesInEquity": {
+      "columns": [
+        "stateCapital",
+        "legalReserve",
+        "otherComponentsOfEquity",
+        "retainedEarnings",
+        "total"
+      ],
+      "periods": [
+        {
+          "label": "Opening balance (01 Hamle 2015)",
+          "year": "opening",
+          "values": {
+            "stateCapital": 114948683,
+            "legalReserve": 33898522,
+            "otherComponentsOfEquity": 19306841,
+            "retainedEarnings": 153092602,
+            "total": 321246649
+          }
+        },
+        {
+          "label": "Profit for the year (FY2024 / Sene 30, 2016)",
+          "year": "2024",
+          "values": {
+            "stateCapital": 0,
+            "legalReserve": 0,
+            "otherComponentsOfEquity": 0,
+            "retainedEarnings": 286367619,
+            "total": 286367619
+          }
+        },
+        {
+          "label": "Prior year adjustment",
+          "year": "2024",
+          "values": {
+            "stateCapital": 0,
+            "legalReserve": 0,
+            "otherComponentsOfEquity": 0,
+            "retainedEarnings": -8041291,
+            "total": -8041291
+          }
+        },
+        {
+          "label": "Prior year adjustment",
+          "year": "2024",
+          "values": {
+            "stateCapital": 0,
+            "legalReserve": -7921486,
+            "otherComponentsOfEquity": 0,
+            "retainedEarnings": 0,
+            "total": -7921486
+          }
+        },
+        {
+          "label": "State dividend",
+          "year": "2024",
+          "values": {
+            "stateCapital": 0,
+            "legalReserve": 0,
+            "otherComponentsOfEquity": 0,
+            "retainedEarnings": -200457333,
+            "total": -200457333
+          }
+        },
+        {
+          "label": "Industrial development fund",
+          "year": "2024",
+          "values": {
+            "stateCapital": 0,
+            "legalReserve": 0,
+            "otherComponentsOfEquity": 0,
+            "retainedEarnings": -85910286,
+            "total": -85910286
+          }
+        },
+        {
+          "label": "Movement in deferred tax",
+          "year": "2024",
+          "values": {
+            "stateCapital": 0,
+            "legalReserve": 0,
+            "otherComponentsOfEquity": 0,
+            "retainedEarnings": -11295506,
+            "total": -11295506
+          }
+        },
+        {
+          "label": "Closing balance (30 Sene 2016 / 07 Jul 2024)",
+          "year": "2024_close",
+          "values": {
+            "stateCapital": 114948683,
+            "legalReserve": 25977036,
+            "otherComponentsOfEquity": 19306841,
+            "retainedEarnings": 133755804,
+            "total": 293988366
+          }
+        },
+        {
+          "label": "Profit for the year (FY2025 / Sene 30, 2017)",
+          "year": "2025",
+          "values": {
+            "stateCapital": 0,
+            "legalReserve": 0,
+            "otherComponentsOfEquity": 0,
+            "retainedEarnings": 52082616,
+            "total": 52082616
+          }
+        },
+        {
+          "label": "Prior year adjustment",
+          "year": "2025",
+          "values": {
+            "stateCapital": 0,
+            "legalReserve": 0,
+            "otherComponentsOfEquity": 0,
+            "retainedEarnings": -36683264,
+            "total": -36683264
+          }
+        },
+        {
+          "label": "State dividend",
+          "year": "2025",
+          "values": {
+            "stateCapital": 0,
+            "legalReserve": 0,
+            "otherComponentsOfEquity": 0,
+            "retainedEarnings": -36457831,
+            "total": -36457831
+          }
+        },
+        {
+          "label": "Industrial development fund",
+          "year": "2025",
+          "values": {
+            "stateCapital": 0,
+            "legalReserve": 0,
+            "otherComponentsOfEquity": 0,
+            "retainedEarnings": -15624785,
+            "total": -15624785
+          }
+        },
+        {
+          "label": "Movement in deferred tax",
+          "year": "2025",
+          "values": {
+            "stateCapital": 0,
+            "legalReserve": 0,
+            "otherComponentsOfEquity": 0,
+            "retainedEarnings": 6053247,
+            "total": 6053247
+          }
+        },
+        {
+          "label": "Closing balance (30 Sene 2017 / 07 Jul 2025)",
+          "year": "2025_close",
+          "values": {
+            "stateCapital": 114948683,
+            "legalReserve": 25977036,
+            "otherComponentsOfEquity": 19306841,
+            "retainedEarnings": 103125787,
+            "total": 263358348
+          }
+        }
+      ]
+    }
+  },
+  "notes": {
+    "investment": {
+      "noteNumber": 11,
+      "balance": {
+        "currentYear": 115843973,
+        "priorYear": 37152207
+      }
+    },
+    "propertyPlantEquipment": {
+      "noteNumber": 12,
+      "netBookValueByClass": {
+        "ROULand": 46676889,
+        "landImprovement": 37787893,
+        "building": 107601278,
+        "machinery": 262855248,
+        "officeFurniture": 562304,
+        "workshopEquipment": 1857049,
+        "vehicles": 21999837,
+        "computerAndAccessories": 9486503,
+        "other": 560986,
+        "constructionInProgress": 73938686,
+        "total": 563326674
+      },
+      "cost": {
+        "openingCost": {
+          "asOf": "2024-07-08",
+          "total": 410935177.52
+        },
+        "additions": 256404283.1,
+        "disposalsAdjustments": -1131125.94,
+        "closingCost": {
+          "asOf": "2025-07-07",
+          "total": 666208334.68
+        }
+      },
+      "accumulatedDepreciation": {
+        "opening": 84052728,
+        "depreciationChargeForYear": 19053639,
+        "disposals": -224706,
+        "closing": 102881661
+      }
+    },
+    "inventories": {
+      "noteNumber": 13,
+      "breakdown": {
+        "finishedGoods": {
+          "currentYear": 14816755,
+          "priorYear": 19200728
+        },
+        "workInProcess": {
+          "currentYear": 29326733,
+          "priorYear": 23666556
+        },
+        "rawMaterials": {
+          "currentYear": 299925890,
+          "priorYear": 372700885
+        },
+        "sparePartsAndOthers": {
+          "currentYear": 126182922,
+          "priorYear": 134551118
+        },
+        "allowanceForWriteDown": {
+          "currentYear": -9364986,
+          "priorYear": -9364986
+        }
+      },
+      "total": {
+        "currentYear": 460887313,
+        "priorYear": 540754300
+      }
+    },
+    "tradeAndOtherReceivables": {
+      "noteNumber": 14,
+      "breakdown": {
+        "tradeDebtors": {
+          "currentYear": 163281296,
+          "priorYear": 203080294
+        },
+        "advancesAndClaims": {
+          "currentYear": 2673080,
+          "priorYear": 52797152
+        },
+        "staffDebtor": {
+          "currentYear": 8806321,
+          "priorYear": 6974872
+        },
+        "sundryDebtors": {
+          "currentYear": 219375,
+          "priorYear": 57034
+        },
+        "vatReceivable": {
+          "currentYear": 0,
+          "priorYear": 60180224
+        },
+        "prepayments": {
+          "currentYear": 0,
+          "priorYear": 0
+        },
+        "allowanceForExpectedCreditLoss": {
+          "currentYear": -6047928,
+          "priorYear": -7466137
+        }
+      },
+      "total": {
+        "currentYear": 168932143,
+        "priorYear": 315623439
+      }
+    },
+    "cashAndCashEquivalents": {
+      "noteNumber": 15,
+      "cashOnHand": {
+        "currentYear": 0,
+        "priorYear": 0
+      },
+      "cashAtBank": {
+        "currentYear": 17666531.36,
+        "priorYear": 224165209.13
+      },
+      "total": {
+        "currentYear": 17666531,
+        "priorYear": 224165209
+      }
+    },
+    "equityComponents": {
+      "noteNumber": 16,
+      "paidUpCapital": {
+        "currentYear": 114948683,
+        "priorYear": 114948683
+      },
+      "legalReserve": {
+        "currentYear": 25977036,
+        "priorYear": 25977036
+      },
+      "retainedEarnings": {
+        "currentYear": 103125787,
+        "priorYear": 133755804
+      },
+      "otherComponentsOfEquity": {
+        "aidCapital": {
+          "currentYear": 18083087,
+          "priorYear": 18083087
+        },
+        "reserveForBusinessExpansion": {
+          "currentYear": 1223754,
+          "priorYear": 1223754
+        },
+        "total": {
+          "currentYear": 19306841,
+          "priorYear": 19306841
+        }
+      },
+      "totalEquity": {
+        "currentYear": 263358348,
+        "priorYear": 293988366
+      }
+    },
+    "tradeAndOtherPayables": {
+      "noteNumber": 17,
+      "breakdown": {
+        "tradeCreditors": {
+          "currentYear": 21033700,
+          "priorYear": 34660814
+        },
+        "sundryCreditors": {
+          "currentYear": 84982210,
+          "priorYear": 4709890
+        },
+        "accruedLiabilities": {
+          "currentYear": 35301436,
+          "priorYear": 81039202
+        },
+        "vatPayable": {
+          "currentYear": 24609814,
+          "priorYear": 0
+        },
+        "incomeTax": {
+          "currentYear": 3886059,
+          "priorYear": 3633852
+        },
+        "pensionPayable": {
+          "currentYear": 1918328,
+          "priorYear": 1765201
+        },
+        "withholdingTaxesPayable": {
+          "currentYear": 443602,
+          "priorYear": 1977867
+        }
+      },
+      "total": {
+        "currentYear": 172175151,
+        "priorYear": 127786825
+      }
+    },
+    "severancePayable": {
+      "noteNumber": "17(a)",
+      "balance": {
+        "currentYear": 5522637,
+        "priorYear": 5543456
+      }
+    },
+    "stateDividendPayable": {
+      "noteNumber": 18,
+      "movement": {
+        "openingBalance": {
+          "currentYear": 200457331,
+          "priorYear": 424441948
+        },
+        "adjustmentAddition": {
+          "currentYear": 0,
+          "priorYear": 28583925
+        },
+        "adjustmentDeduction": {
+          "currentYear": -4577028,
+          "priorYear": -4285753
+        },
+        "reclassificationToLongTerm": {
+          "currentYear": 0,
+          "priorYear": -267343970
+        },
+        "stateDividendPaid": {
+          "currentYear": -80183047,
+          "priorYear": -181396152
+        },
+        "currentYearPortion": {
+          "currentYear": 36457831,
+          "priorYear": 200457331
+        },
+        "closingBalance": {
+          "currentYear": 152155088,
+          "priorYear": 200457329
+        }
+      }
+    },
+    "stateDividendPayableLongTerm": {
+      "noteNumber": 20,
+      "balance": {
+        "currentYear": 267343970,
+        "priorYear": 267343970
+      }
+    },
+    "industrialDevelopmentFundPayable": {
+      "noteNumber": 19,
+      "movement": {
+        "openingBalance": {
+          "currentYear": 402890100,
+          "priorYear": 343398942
+        },
+        "adjustmentDeduction": {
+          "currentYear": -1961584,
+          "priorYear": -28019747
+        },
+        "adjustmentAddition": {
+          "currentYear": 0,
+          "priorYear": 1600620
+        },
+        "currentYearPortion": {
+          "currentYear": 15624785,
+          "priorYear": 85910286
+        },
+        "closingBalance": {
+          "currentYear": 416553301,
+          "priorYear": 402890100
+        }
+      }
+    },
+    "tax": {
+      "noteNumber": 20,
+      "currentTaxExpense": {
+        "currentYear": 28706348,
+        "priorYear": 131500870
+      },
+      "taxComputation": {
+        "accountingProfitBeforeTax": {
+          "currentYear": 80788965,
+          "priorYear": 417868488
+        },
+        "unallowableExpenses": {
+          "penalty": {
+            "currentYear": 55844,
+            "priorYear": 2563194
+          },
+          "entertainment": {
+            "currentYear": 3681255,
+            "priorYear": 2924983
+          },
+          "expectedCreditLoss": {
+            "currentYear": 10684,
+            "priorYear": 4164468
+          },
+          "provisionForStockObsolescence": {
+            "currentYear": 0,
+            "priorYear": 1322286
+          },
+          "accruedAnnualLeave": {
+            "currentYear": 2645980,
+            "priorYear": 9905389
+          },
+          "accruedSeverancePay": {
+            "currentYear": 489655,
+            "priorYear": 664000
+          },
+          "vatExpense": {
+            "currentYear": 27511502,
+            "priorYear": 0
+          },
+          "depreciationPerPolicy": {
+            "currentYear": 19053639,
+            "priorYear": 11231493
+          }
+        },
+        "totalUnallowedExpenses": {
+          "currentYear": 53448560,
+          "priorYear": 32775813
+        },
+        "lessDepreciationAsPerTaxProclamation": {
+          "currentYear": -38549697,
+          "priorYear": -12308068
+        },
+        "adjustedTaxableProfit": {
+          "currentYear": 95687827,
+          "priorYear": 438336232
+        },
+        "currentTaxAt30Percent": {
+          "currentYear": 28706348,
+          "priorYear": 131500870
+        }
+      },
+      "currentIncomeTaxPayableReconciliation": {
+        "openingBalance": {
+          "currentYear": 107916892,
+          "priorYear": 101399933
+        },
+        "settlementDuringYear": {
+          "currentYear": -107916892,
+          "priorYear": -101399933
+        },
+        "currentTaxExpense": {
+          "currentYear": 28706348,
+          "priorYear": 131500870
+        },
+        "withholdingTaxReceivable": {
+          "currentYear": -11776446,
+          "priorYear": -23583978
+        },
+        "closingBalance": {
+          "currentYear": 16929902,
+          "priorYear": 107916892
+        }
+      }
+    },
+    "taxDepreciation": {
+      "noteNumber": "20(d)",
+      "capitalAllowanceForYear": 38549697,
+      "tables": {
+        "diminishingMethod": {
+          "computersAndAccessoriesBaseBeginning": 174550,
+          "otherPPEBaseBeginning": 5365590,
+          "totalBaseBeginning": 5540140,
+          "currentYearCapitalAllowance": -839748,
+          "depreciationBaseCarriedForward": 4700391
+        },
+        "straightLineMethod": {
+          "depreciationBaseBeginning": {
+            "building": 87955743,
+            "computersAndAccessoriesAndMotor": 12534412,
+            "otherPPE": 39585783,
+            "total": 140075938
+          },
+          "additions": {
+            "building": 1911502,
+            "computersAndAccessoriesAndMotor": 957161,
+            "otherPPE": 184704255,
+            "total": 187572919
+          },
+          "capitalAllowance": {
+            "building": -4557079,
+            "computersAndAccessoriesAndMotor": -2589341,
+            "otherPPE": -30563528,
+            "total": -38099848
+          },
+          "depreciationBaseCarriedForward": {
+            "building": 85310167,
+            "computersAndAccessoriesAndMotor": 10902231,
+            "otherPPE": 193726509,
+            "total": 289938908
+          }
+        }
+      }
+    },
+    "deferredTax": {
+      "noteNumber": 21,
+      "schedule": [
+        {
+          "item": "PPE excluding land",
+          "ifrs": 442711098,
+          "tax": 294639299,
+          "difference": 148071799
+        },
+        {
+          "item": "Inventory",
+          "ifrs": 460887313,
+          "tax": 470252299,
+          "difference": -9364986
+        },
+        {
+          "item": "Trade and other receivable",
+          "ifrs": 168932143,
+          "tax": 174980071,
+          "difference": -6047928
+        },
+        {
+          "item": "Cash",
+          "ifrs": 17666531,
+          "tax": 17666531,
+          "difference": 0
+        },
+        {
+          "item": "Trade and other payable",
+          "ifrs": 172175151,
+          "tax": 166652513,
+          "difference": -5522637
+        }
+      ],
+      "netTemporaryDifference": 127136248,
+      "deferredTaxLiabilityAt30Percent": 38140874,
+      "ledgerOpeningBalance": -44194121,
+      "movement": -6053247
+    },
+    "relatedPartyTransactions": {
+      "noteNumber": 23,
+      "loansToKeyManagementOutstandingBalance": 5561065.76,
+      "keyManagementPersonnelCompensation": {
+        "boardAllowance": {
+          "currentYear": 496000,
+          "priorYear": 505000
+        }
+      }
+    },
+    "revenueBreakdown": {
+      "noteNumber": 24,
+      "categories": [
+        {
+          "category": "Printing material",
+          "currentYear": 274644706,
+          "priorYear": 463875455
+        },
+        {
+          "category": "Furniture products",
+          "currentYear": 184027588,
+          "priorYear": 612439748
+        },
+        {
+          "category": "Chalk and gypsum products",
+          "currentYear": 4810735,
+          "priorYear": 4295091
+        },
+        {
+          "category": "Chemicals and related",
+          "currentYear": 523281,
+          "priorYear": 92739
+        },
+        {
+          "category": "Science kits",
+          "currentYear": 1160672,
+          "priorYear": 522347
+        },
+        {
+          "category": "Merchandize resale",
+          "currentYear": 116715088,
+          "priorYear": 69006473
+        },
+        {
+          "category": "Old used material",
+          "currentYear": 29042110,
+          "priorYear": 4358700
+        },
+        {
+          "category": "Asset held for sale",
+          "currentYear": 0,
+          "priorYear": 4195620
+        }
+      ],
+      "total": {
+        "currentYear": 610924180,
+        "priorYear": 1158786173
+      }
+    },
+    "costOfGoodsSoldBreakdown": {
+      "noteNumber": 25,
+      "components": [
+        {
+          "item": "Work in process - beginning",
+          "currentYear": 23666556,
+          "priorYear": 63588014
+        },
+        {
+          "item": "Direct and indirect materials",
+          "currentYear": 189700325,
+          "priorYear": 419759550
+        },
+        {
+          "item": "Salary and benefits",
+          "currentYear": 82754728,
+          "priorYear": 85316581
+        },
+        {
+          "item": "Outsource",
+          "currentYear": 4747382,
+          "priorYear": 20326452
+        },
+        {
+          "item": "Other production overhead",
+          "currentYear": 13891842,
+          "priorYear": 15185615
+        },
+        {
+          "item": "Penalty",
+          "currentYear": 47081,
+          "priorYear": 352511
+        },
+        {
+          "item": "Depreciation",
+          "currentYear": 12555955,
+          "priorYear": 6905219
+        },
+        {
+          "item": "Less: work in process - ending",
+          "currentYear": -29326733,
+          "priorYear": -23666555
+        },
+        {
+          "item": "Cost of goods manufactured",
+          "currentYear": 298037136,
+          "priorYear": 587767385
+        },
+        {
+          "item": "Add: finished goods - beginning",
+          "currentYear": 19200728,
+          "priorYear": 14022231
+        },
+        {
+          "item": "Cost of goods available for sale",
+          "currentYear": 317237863,
+          "priorYear": 601789617
+        },
+        {
+          "item": "Less: finished goods - ending",
+          "currentYear": -14816755,
+          "priorYear": -19200728
+        },
+        {
+          "item": "COGS - from manufacturing",
+          "currentYear": 302421109,
+          "priorYear": 582588889
+        },
+        {
+          "item": "COGS - from merchandizing",
+          "currentYear": 72101121,
+          "priorYear": 50593894
+        }
+      ],
+      "totalCostOfSales": {
+        "currentYear": 374522229,
+        "priorYear": 633182783
+      }
+    },
+    "otherIncomeBreakdown": {
+      "noteNumber": 26,
+      "items": [
+        {
+          "item": "Income from transport service",
+          "currentYear": 6518501,
+          "priorYear": 676468
+        },
+        {
+          "item": "Rent income",
+          "currentYear": 2807837,
+          "priorYear": 2590034
+        },
+        {
+          "item": "Income from sales of bid documents",
+          "currentYear": 175553,
+          "priorYear": 136526
+        },
+        {
+          "item": "Miscellaneous",
+          "currentYear": 13263761,
+          "priorYear": 26467231
+        }
+      ],
+      "total": {
+        "currentYear": 22765653,
+        "priorYear": 29870259
+      }
+    },
+    "sellingAndDistributionExpenseBreakdown": {
+      "noteNumber": 27,
+      "items": [
+        {
+          "item": "Salaries and related benefits",
+          "currentYear": 17445676,
+          "priorYear": 15227091
+        },
+        {
+          "item": "Rent",
+          "currentYear": 257558,
+          "priorYear": 256899
+        },
+        {
+          "item": "Depreciation",
+          "currentYear": 1718134,
+          "priorYear": 1526211
+        },
+        {
+          "item": "Printing and stationery",
+          "currentYear": 193619,
+          "priorYear": 859958
+        },
+        {
+          "item": "Fuel and lubricants",
+          "currentYear": 18959,
+          "priorYear": 754025
+        },
+        {
+          "item": "Bank charge",
+          "currentYear": 195,
+          "priorYear": 870
+        },
+        {
+          "item": "Repair and maintenance",
+          "currentYear": 16310,
+          "priorYear": 11559
+        },
+        {
+          "item": "Communication",
+          "currentYear": 30619,
+          "priorYear": 46623
+        },
+        {
+          "item": "Travel and per-diem",
+          "currentYear": 120316,
+          "priorYear": 282303
+        },
+        {
+          "item": "Utilities",
+          "currentYear": 702,
+          "priorYear": 92093
+        },
+        {
+          "item": "Loading and unloading fee",
+          "currentYear": 13747,
+          "priorYear": 128671
+        },
+        {
+          "item": "Advertising and promotion",
+          "currentYear": 14548,
+          "priorYear": 131327
+        },
+        {
+          "item": "Entertainment",
+          "currentYear": 288890,
+          "priorYear": 460923
+        },
+        {
+          "item": "Insurance (property)",
+          "currentYear": 0,
+          "priorYear": 210575
+        },
+        {
+          "item": "License and legal fee",
+          "currentYear": 0,
+          "priorYear": 6804
+        },
+        {
+          "item": "Miscellaneous",
+          "currentYear": 19577,
+          "priorYear": 26387
+        }
+      ],
+      "total": {
+        "currentYear": 20138848,
+        "priorYear": 20022397
+      }
+    },
+    "generalAndAdministrativeExpenseBreakdown": {
+      "noteNumber": 28,
+      "items": [
+        {
+          "item": "Salaries and related benefits",
+          "currentYear": 81567666,
+          "priorYear": 74372577
+        },
+        {
+          "item": "Depreciation",
+          "currentYear": 4779550,
+          "priorYear": 3172628
+        },
+        {
+          "item": "Fuel and lubricants",
+          "currentYear": 8572384,
+          "priorYear": 6150902
+        },
+        {
+          "item": "Repair and maintenance",
+          "currentYear": 1238736,
+          "priorYear": 1027079
+        },
+        {
+          "item": "Printing and stationary",
+          "currentYear": 1379303,
+          "priorYear": 1905721
+        },
+        {
+          "item": "Entertainments",
+          "currentYear": 3204526,
+          "priorYear": 2392210
+        },
+        {
+          "item": "License and legal fee",
+          "currentYear": 11355805,
+          "priorYear": 4855777
+        },
+        {
+          "item": "Insurance",
+          "currentYear": 391424,
+          "priorYear": 0
+        },
+        {
+          "item": "Communication",
+          "currentYear": 795749,
+          "priorYear": 706061
+        },
+        {
+          "item": "Utilities",
+          "currentYear": 1435802,
+          "priorYear": 1388760
+        },
+        {
+          "item": "Advertising and promotion",
+          "currentYear": 421136,
+          "priorYear": 82167
+        },
+        {
+          "item": "Outsource",
+          "currentYear": 2935860,
+          "priorYear": 2346207
+        },
+        {
+          "item": "Travel and per-diem",
+          "currentYear": 553399,
+          "priorYear": 643351
+        },
+        {
+          "item": "Loading and unloading fee",
+          "currentYear": 36090,
+          "priorYear": 46101
+        },
+        {
+          "item": "Other overhead",
+          "currentYear": 5452466,
+          "priorYear": 4771494
+        },
+        {
+          "item": "Miscellaneous",
+          "currentYear": 321020,
+          "priorYear": 463071
+        },
+        {
+          "item": "Audit fee",
+          "currentYear": 170000,
+          "priorYear": 80000
+        },
+        {
+          "item": "Board member allowance",
+          "currentYear": 496000,
+          "priorYear": 505000
+        },
+        {
+          "item": "Donation",
+          "currentYear": 409900,
+          "priorYear": 2765733
+        },
+        {
+          "item": "Quality assurance",
+          "currentYear": 184561,
+          "priorYear": 0
+        },
+        {
+          "item": "Training & consultancy fee",
+          "currentYear": 35400,
+          "priorYear": 0
+        },
+        {
+          "item": "Bad debts expense",
+          "currentYear": 10684,
+          "priorYear": 4164468
+        },
+        {
+          "item": "Provision for stock obsolescence",
+          "currentYear": 0,
+          "priorYear": 1322286
+        },
+        {
+          "item": "Training & consultancy fee (duplicate line)",
+          "currentYear": 0,
+          "priorYear": 493460
+        },
+        {
+          "item": "Penalty",
+          "currentYear": 8764,
+          "priorYear": 2210683
+        }
+      ],
+      "total": {
+        "currentYear": 125756226,
+        "priorYear": 115865745
+      }
+    },
+    "financeCostBreakdown": {
+      "noteNumber": 29,
+      "items": [
+        {
+          "item": "Overdraft expense",
+          "currentYear": 4134935,
+          "priorYear": 392083
+        },
+        {
+          "item": "Bank charge",
+          "currentYear": 837128,
+          "priorYear": 1324936
+        }
+      ],
+      "total": {
+        "currentYear": 4972063,
+        "priorYear": 1717019
+      }
+    },
+    "vatExpense": {
+      "noteNumber": 30,
+      "vatExpense": {
+        "currentYear": 27511502.22,
+        "priorYear": 0
+      }
+    }
+  },
+  "derivedMetrics": {
+    "growth": {
+      "revenueYoY": -0.47278954975932386,
+      "totalAssetsYoY": -0.08163006998852096,
+      "equityYoY": -0.10418785755624083
+    },
+    "margins": {
+      "grossMargin": 0.38695792168514265,
+      "operatingMargin": 0.18541176418978866,
+      "netMargin": 0.0852521764648438
+    },
+    "liquidity": {
+      "currentRatio": 0.8544134386763932,
+      "quickRatioApprox": 0.24623299601781543,
+      "workingCapital": -110327453
+    },
+    "leverage": {
+      "debtToEquity": 4.037458064553169,
+      "liabilitiesToAssets": 0.8014871811962763
+    },
+    "returns": {
+      "returnOnAssetsApprox": 0.037588028660322854,
+      "returnOnEquityApprox": 0.18689485267154549
+    },
+    "cashFlow": {
+      "operatingCashFlow": 180362497,
+      "freeCashFlowApprox": -61917636,
+      "operatingCashFlowToNetIncome": 3.4630076377115926
+    }
+  },
+  "chartHints": {
+    "recommendedCharts": [
+      {
+        "id": "rev_cogs_gross",
+        "type": "stackedBar",
+        "dataset": "statements.profitOrLoss",
+        "series": [
+          "revenue",
+          "costOfSales",
+          "grossProfit"
+        ],
+        "x": [
+          "priorYear",
+          "currentYear"
+        ]
+      },
+      {
+        "id": "expense_breakdown",
+        "type": "waterfall",
+        "dataset": "statements.profitOrLoss",
+        "series": [
+          "grossProfit",
+          "otherIncome",
+          "sellingAndDistributionExpenses",
+          "generalAndAdministrativeExpenses",
+          "financeCost",
+          "vatExpense",
+          "incomeTaxExpense",
+          "profitAfterTax"
+        ]
+      },
+      {
+        "id": "assets_mix",
+        "type": "pie",
+        "dataset": "statements.financialPosition.assets",
+        "series": [
+          "nonCurrentAssets.total",
+          "currentAssets.total"
+        ],
+        "year": "currentYear"
+      },
+      {
+        "id": "ppe_by_class",
+        "type": "bar",
+        "dataset": "notes.propertyPlantEquipment.netBookValueByClass"
+      },
+      {
+        "id": "revenue_by_category",
+        "type": "bar",
+        "dataset": "notes.revenueBreakdown.categories",
+        "x": "category",
+        "y": "currentYear"
+      },
+      {
+        "id": "cogs_components",
+        "type": "bar",
+        "dataset": "notes.costOfGoodsSoldBreakdown.components",
+        "x": "item",
+        "y": "currentYear"
+      },
+      {
+        "id": "cashflow_summary",
+        "type": "waterfall",
+        "dataset": "statements.cashFlows",
+        "series": [
+          "operatingActivities.netCashFromOperatingActivities",
+          "investingActivities.netCashUsedInInvestingActivities",
+          "financingActivities.netCashUsedInFinancingActivities"
+        ],
+        "year": "currentYear"
+      }
+    ]
+  }
+}
