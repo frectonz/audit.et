@@ -1,0 +1,156 @@
+{
+  "revenue": 2348145478,
+  "costOfSales": -1937082520,
+  "grossProfit": 411062957,
+  "operatingProfit": 146218318,
+  "netProfit": 54667574,
+  "totalAssets": 5641185277,
+  "totalLiabilities": 3251328764,
+  "totalEquity": 2389856511,
+  "auditOpinion": "Qualified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "Inter branch account showing a balance of Birr 316,546,258 not eliminated on consolidation",
+      "amount": 316546258
+    },
+    {
+      "number": 2,
+      "summary": "Trade debtors and other receivables and creditors with debit balances amounting to 57,324,029 are long outstanding for more than a year",
+      "amount": 57324029
+    },
+    {
+      "number": 3,
+      "summary": "Trade and other payables and debtors with credit balances of Birr 43,093,400 are long outstanding for more than a year",
+      "amount": 43093400
+    },
+    {
+      "number": 4,
+      "summary": "Trade debtors and other receivables balance includes Birr 1,592,000,819 with abnormal balances (credit balances)",
+      "amount": 1592000819
+    },
+    {
+      "number": 5,
+      "summary": "Trade and other payables balance includes abnormal balance (debit balances) amounting to Birr 957,415,384",
+      "amount": 957415384
+    },
+    {
+      "number": 6,
+      "summary": "Cash on hand and cash at bank accounts showing abnormal (credit balances) amounting to Birr 3,820,057.62 and Birr 9,324,877.96 respectively",
+      "amount": 13144936
+    }
+  ],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          { "label": "Operating Revenues", "amount": 2348145478, "indent": 0 },
+          { "label": "Cost of Sales", "amount": -1937082520, "indent": 0 },
+          { "label": "Gross Operating Profit", "amount": 411062957, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Expenses",
+        "items": [
+          { "label": "Other Income", "amount": 92036832, "indent": 0 },
+          { "label": "Selling and Distribution Expense", "amount": -87161986, "indent": 0 },
+          { "label": "General Administration Expenses", "amount": -269719486, "indent": 0 },
+          { "label": "Total Expenses", "amount": -356881472, "indent": 0, "isSubtotal": true },
+          { "label": "Operating Profit", "amount": 146218318, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Finance and Tax",
+        "items": [
+          { "label": "Finance Cost-net", "amount": -26242396, "indent": 0 },
+          { "label": "Profit Before Tax", "amount": 119975922, "indent": 0, "isSubtotal": true },
+          { "label": "Provision for Tax", "amount": -65308348, "indent": 0 },
+          { "label": "Profit for the Year", "amount": 54667574, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Comprehensive Income",
+        "items": [
+          { "label": "Profit for the Year", "amount": 54667574, "indent": 0 },
+          { "label": "Revaluation of Property, Plant and Equipment", "amount": 0, "indent": 1 },
+          { "label": "Remeasurement Gain/(Loss) on Retirement Benefits", "amount": -96178, "indent": 1 },
+          { "label": "Deferred Tax (Liability)/Asset on Remeasurement Gain or Loss", "amount": 28853, "indent": 1 },
+          { "label": "Other Comprehensive Income, Net of Tax", "amount": -67324, "indent": 0, "isSubtotal": true },
+          { "label": "Total Comprehensive Income", "amount": 54600250, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, Plant and Equipment", "amount": 945571110, "indent": 1 },
+          { "label": "Intangible Assets", "amount": 4948043, "indent": 1 },
+          { "label": "Long Term Investment", "amount": 60000, "indent": 1 },
+          { "label": "Deferred Tax Asset", "amount": 11715651, "indent": 1 },
+          { "label": "Total Non-Current Assets", "amount": 962294805, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Non-Current Assets Held For Sell", "amount": 26800180, "indent": 1 },
+          { "label": "Stock and GIT", "amount": 2217994533, "indent": 1 },
+          { "label": "Future Crops", "amount": 4738314, "indent": 1 },
+          { "label": "Trade and Other Receivables", "amount": 1951397018, "indent": 1 },
+          { "label": "Cash and Cash Equivalents", "amount": 477960427, "indent": 1 },
+          { "label": "Total Current Assets", "amount": 4678890472, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total Assets", "amount": 5641185277, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Paid up Capital", "amount": 610000000, "indent": 1 },
+          { "label": "Legal Reserve", "amount": 9577857, "indent": 1 },
+          { "label": "Retained Earnings", "amount": 1770278655, "indent": 1 },
+          { "label": "Total Equity", "amount": 2389856511, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Long Term Loan", "amount": 262871655, "indent": 1 },
+          { "label": "Employee Benefit Obligations", "amount": 5118464, "indent": 1 },
+          { "label": "Deferred Tax Liability", "amount": 0, "indent": 1 },
+          { "label": "Total Non-Current Liabilities", "amount": 267990119, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Trade and Other Payables", "amount": 3115207519, "indent": 1 },
+          { "label": "Inter Branch and Head Office Accounts", "amount": -316546258, "indent": 1 },
+          { "label": "Employee Benefit Obligations", "amount": 37485547, "indent": 1 },
+          { "label": "Provisions for Contingent Liability", "amount": 34780451, "indent": 1 },
+          { "label": "Deferred Income", "amount": 0, "indent": 1 },
+          { "label": "Provision for Tax", "amount": 112411386, "indent": 1 },
+          { "label": "Total Current Liabilities", "amount": 2983338645, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities", "amount": 3251328764, "indent": 0, "isSubtotal": true },
+          { "label": "Total Equity and Liabilities", "amount": 5641185277, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": null
+}

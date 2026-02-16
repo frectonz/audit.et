@@ -137,6 +137,20 @@ const enterprises: Enterprise[] = [
     fiscalYearEnd: "Sene 30",
   },
   {
+    id: "ethioagri",
+    name: "Ethiopian Agricultural Businesses Corporation",
+    shortName: "EABC",
+    sector: "Agriculture",
+    sectorIcon: "wheat",
+    description:
+      "Handles the import, export, and domestic distribution of agricultural products including coffee, oilseeds, pulses, and other commodities on behalf of the Ethiopian government.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("ethioagri"),
+    auditFindings: loadFindings("ethioagri"),
+    fiscalYearEnd: "Hamle 7",
+  },
+  {
     id: "eeu-eleap",
     name: "EEU - Ethiopia Electrification Program (ELEAP)",
     shortName: "ELEAP",
