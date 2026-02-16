@@ -151,6 +151,20 @@ const enterprises: Enterprise[] = [
     fiscalYearEnd: "Hamle 7",
   },
   {
+    id: "nalf",
+    name: "National Alcohol and Liquor Factory",
+    shortName: "NALF",
+    sector: "Manufacturing",
+    sectorIcon: "factory",
+    description:
+      "A state-owned enterprise that produces extra neutral alcohol and liquor products for domestic and international markets. Operates distilleries at Mekanissa and Sebeta with over a century of manufacturing history.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("nalf"),
+    auditFindings: [],
+    fiscalYearEnd: "Sene 30",
+  },
+  {
     id: "eeu-eleap",
     name: "EEU - Ethiopia Electrification Program (ELEAP)",
     shortName: "ELEAP",
