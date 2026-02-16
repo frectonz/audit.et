@@ -1,0 +1,166 @@
+{
+  "revenue": 138977725,
+  "costOfSales": -109552329,
+  "grossProfit": 29425396,
+  "operatingProfit": 2176063,
+  "netProfit": -2713405,
+  "totalAssets": 488320762,
+  "totalLiabilities": 241169762,
+  "totalEquity": 247151000,
+  "auditOpinion": "Qualified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "Long outstanding balances of trade debtors and bid bond deposits accounts totaling Birr 14,840,121, but the provision maintained is Birr 5,724,219, which is not satisfactory.",
+      "amount": 14840121
+    },
+    {
+      "number": 2,
+      "summary": "VAT reconciliation statement not obtained for the difference of Birr 1,021,480 between the VAT payable balance and the VAT declaration report.",
+      "amount": 1021480
+    },
+    {
+      "number": 3,
+      "summary": "Company was assessed for profit tax for years 2008 to 2011 with additional profit tax of Birr 3,987,619 claimed by the tax authority via off-set, and Birr 6,623,929 prepaid profit tax collected as overwithholding tax receivable.",
+      "amount": 3987619
+    }
+  ],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          { "label": "Sales", "amount": 138977725, "indent": 0 },
+          { "label": "Cost of goods sold", "amount": -109552329, "indent": 0 },
+          { "label": "Gross operating profit", "amount": 29425396, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Income",
+        "items": [
+          { "label": "Other income", "amount": 1123165, "indent": 0 }
+        ]
+      },
+      {
+        "heading": "Expenses",
+        "items": [
+          { "label": "Administration", "amount": -20808413, "indent": 1 },
+          { "label": "Selling and distribution", "amount": -6812585, "indent": 1 },
+          { "label": "Financial charges", "amount": -4889468, "indent": 1 },
+          { "label": "Board & auditors' fee", "amount": -751500, "indent": 1 }
+        ]
+      },
+      {
+        "heading": "Profit",
+        "items": [
+          { "label": "Profit/(Loss) before taxation", "amount": -2713405, "indent": 0, "isSubtotal": true },
+          { "label": "Net profit/(loss) after taxation", "amount": -2713405, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Comprehensive Income",
+        "items": [
+          { "label": "Creditors provided", "amount": 772, "indent": 1 },
+          { "label": "Amortized interest on government debenture", "amount": 51627, "indent": 1 },
+          { "label": "Gain on revaluation of property net of tax", "amount": 1575055, "indent": 1 },
+          { "label": "Total comprehensive income for the year net of tax", "amount": -1085951, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, plant & equipment", "amount": 283319249, "indent": 1 },
+          { "label": "Government bond (investment)", "amount": 218329, "indent": 1 },
+          { "label": "Total non-current assets", "amount": 283537578, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Stock", "amount": 153599619, "indent": 1 },
+          { "label": "Trade and other receivable", "amount": 35368128, "indent": 1 },
+          { "label": "Withhold tax in excess of profit tax", "amount": 10893359, "indent": 1 },
+          { "label": "Cash and bank balances", "amount": 4922078, "indent": 1 },
+          { "label": "Total current assets", "amount": 204783184, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total assets", "amount": 488320762, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Authorized and paid up capital", "amount": 10000000, "indent": 1 },
+          { "label": "First time IFRS adoption revaluation reserve", "amount": 192906436, "indent": 1 },
+          { "label": "Legal reserve", "amount": 2000000, "indent": 1 },
+          { "label": "Retained earnings", "amount": 42244564, "indent": 1 },
+          { "label": "Shareholders' funds", "amount": 247151000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Trades and other payables", "amount": 28115592, "indent": 1 },
+          { "label": "Current maturity of long term loans", "amount": 5685243, "indent": 1 },
+          { "label": "Bank overdraft", "amount": 18838402, "indent": 1 },
+          { "label": "Annual leave pay accrued", "amount": 3169207, "indent": 1 },
+          { "label": "Total current liabilities", "amount": 55808444, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Deferred tax liabilities", "amount": 73876283, "indent": 1 },
+          { "label": "Severance payable", "amount": 2399689, "indent": 1 },
+          { "label": "Long term loan", "amount": 3626498, "indent": 1 },
+          { "label": "Long term loan - PESSA", "amount": 105458848, "indent": 1 },
+          { "label": "Total non-current liabilities", "amount": 185361318, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities & Equity",
+        "items": [
+          { "label": "Total liabilities", "amount": 241169762, "indent": 0, "isSubtotal": true },
+          { "label": "Total equity and liabilities", "amount": 488320762, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Net profit/(loss) for the year", "amount": -2713405 },
+      { "label": "Amortization of deferred expenditures", "amount": 10500, "indent": 1 },
+      { "label": "Depreciation", "amount": 12093030, "indent": 1 },
+      { "label": "Finance cost recognized in profit or loss", "amount": 4889468, "indent": 1 },
+      { "label": "Creditor's written back in profit or loss", "amount": 772, "indent": 1 },
+      { "label": "Decrease/(increase) in stock", "amount": 10501155, "indent": 1 },
+      { "label": "Decrease/(increase) in debtors", "amount": -4772936, "indent": 1 },
+      { "label": "Increase/(decrease) in creditors", "amount": -7108545, "indent": 1 },
+      { "label": "Increase/(decrease) in employee benefits", "amount": 81843, "indent": 1 },
+      { "label": "Cash generated from operations", "amount": 12981882, "isSubtotal": true },
+      { "label": "Interest paid", "amount": -4889468, "indent": 1 },
+      { "label": "Income tax paid", "amount": -1944238, "indent": 1 },
+      { "label": "Net cash from operating activities", "amount": 6148176, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Payment for purchase of property, plant & equipment", "amount": -5472647, "indent": 1 },
+      { "label": "Net cash from investing activities", "amount": -5472647, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Medium term loan repaid", "amount": -6112677, "indent": 1 },
+      { "label": "Government bond redeemed", "amount": 255000, "indent": 1 },
+      { "label": "Net cash from financing activities", "amount": -5857677, "isSubtotal": true }
+    ],
+    "netChange": -5182148,
+    "closingCash": -13916324
+  }
+}

@@ -165,6 +165,20 @@ const enterprises: Enterprise[] = [
     fiscalYearEnd: "Sene 30",
   },
   {
+    id: "eppsc",
+    name: "Ethiopian Pulp & Paper Share Company",
+    shortName: "EPPSC",
+    sector: "Manufacturing",
+    sectorIcon: "factory",
+    description:
+      "A leader in quality paper production since 1963, specializing in recycling paper to produce premium products. Implements Quality Management Systems (QMS) and Integrated Pest Management Systems (IPMS), with expanding operations in agriculture and community development.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("eppsc"),
+    auditFindings: loadFindings("eppsc"),
+    fiscalYearEnd: "Sene 30",
+  },
+  {
     id: "eeu-eleap",
     name: "EEU - Ethiopia Electrification Program (ELEAP)",
     shortName: "ELEAP",
