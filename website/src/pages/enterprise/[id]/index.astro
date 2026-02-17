@@ -121,18 +121,6 @@ const balanceChartData = JSON.stringify({
     </div>
   </section>
 
-  <!-- Data Note -->
-  {
-    enterprise.dataNote && (
-      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
-        <div class="flex items-start gap-3 bg-eth-surface border border-eth-card-border rounded-xl p-4">
-          <Info class="w-4 h-4 text-eth-text-muted shrink-0 mt-0.5" />
-          <p class="text-eth-text-muted text-sm">{enterprise.dataNote}</p>
-        </div>
-      </section>
-    )
-  }
-
   <!-- Key Metrics -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
@@ -258,12 +246,12 @@ const balanceChartData = JSON.stringify({
             enterprise.years.map((y) => (
               <a href={`/enterprise/${enterprise.id}/${y.year}`} class="relative flex flex-col items-center min-w-[80px] group">
                 <div
-                  class={`relative z-10 w-10 h-10 rounded-full flex items-center justify-center text-sm font-mono font-bold shadow-sm transition-shadow ${
+                  class={`relative z-10 w-10 h-10 rounded-full flex items-center justify-center text-sm font-mono font-bold shadow-sm group-hover:brightness-110 group-hover:shadow-md transition-all ${
                     y.auditOpinion.toLowerCase().includes("unmodified")
-                      ? "bg-eth-green text-white group-hover:ring-2 group-hover:ring-eth-green/40 group-hover:ring-offset-2 group-hover:ring-offset-eth-card"
+                      ? "bg-eth-green text-white"
                       : y.auditOpinion.toLowerCase().includes("qualified") || y.auditOpinion.toLowerCase().includes("adverse")
-                        ? "bg-eth-gold text-eth-bg group-hover:ring-2 group-hover:ring-eth-gold/40 group-hover:ring-offset-2 group-hover:ring-offset-eth-card"
-                        : "bg-eth-card-border text-eth-text-muted group-hover:ring-2 group-hover:ring-eth-card-border/40 group-hover:ring-offset-2 group-hover:ring-offset-eth-card"
+                        ? "bg-eth-gold text-eth-bg"
+                        : "bg-eth-card-border text-eth-text-muted"
                   }`}
                 >
                   {y.auditOpinion.charAt(0)}
@@ -451,6 +439,18 @@ const balanceChartData = JSON.stringify({
       </div>
     </div>
   </section>
+
+  <!-- Data Note -->
+  {
+    enterprise.dataNote && (
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div class="flex items-start gap-3 bg-eth-surface border border-eth-card-border rounded-xl p-4">
+          <Info class="w-4 h-4 text-eth-text-muted shrink-0 mt-0.5" />
+          <p class="text-eth-text-muted text-sm">{enterprise.dataNote}</p>
+        </div>
+      </section>
+    )
+  }
 </Layout>
 
 <script>
