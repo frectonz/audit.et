@@ -211,6 +211,22 @@ const enterprises: Enterprise[] = [
       "Audit reports for EC 2013 were not available. IPDC has no traditional cost of sales — operating expenses represent direct costs of industrial park operations.",
   },
   {
+    id: "eec",
+    name: "Ethiopian Engineering Corporation",
+    shortName: "EEC",
+    sector: "Construction",
+    sectorIcon: "hard-hat",
+    description:
+      "Formerly Ethiopian Construction Design and Supervision Works Corporation (ECDSWC). One of the largest state-owned construction enterprises, providing design, supervision, and construction services for major infrastructure projects across Ethiopia.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("eec"),
+    auditFindings: loadFindings("eec"),
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "Audit report for EC 2014 was not available. The enterprise was renamed from Ethiopian Construction Design and Supervision Works Corporation to Ethiopian Engineering Corporation by Ethiopian Investment Holdings (EIH).",
+  },
+  {
     id: "eeu-eleap",
     name: "EEU - Ethiopia Electrification Program (ELEAP)",
     shortName: "ELEAP",

@@ -1,0 +1,148 @@
+{
+  "revenue": 4904185643,
+  "costOfSales": -3519136140,
+  "grossProfit": 1385049503,
+  "operatingProfit": 859325266,
+  "netProfit": 598632084,
+  "totalAssets": 5702396244,
+  "totalLiabilities": 4108814165,
+  "totalEquity": 1593582078,
+  "auditOpinion": "Unqualified",
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          { "label": "Revenue", "amount": 4904185643, "indent": 0 },
+          { "label": "Cost of sales", "amount": -3519136140, "indent": 0 },
+          { "label": "Gross profit", "amount": 1385049503, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Income and Expenses",
+        "items": [
+          { "label": "Other income", "amount": 32021343, "indent": 0 },
+          { "label": "Administration Expense", "amount": -519247508, "indent": 1 },
+          { "label": "Provision for Uncollectable receivable", "amount": -38498072, "indent": 1 },
+          { "label": "Total Expenses", "amount": -557745580, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Tax and Net Result",
+        "items": [
+          { "label": "Profit before tax", "amount": 859325266, "indent": 0, "isSubtotal": true },
+          { "label": "Tax expense", "amount": -260693182, "indent": 0 },
+          { "label": "Profit for the year", "amount": 598632084, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, plant and equipment", "amount": 909410397, "indent": 1 },
+          { "label": "Construction in Progress", "amount": 41827824, "indent": 1 },
+          { "label": "Right of Use Asset", "amount": 12477577, "indent": 1 },
+          { "label": "Intangible Asset", "amount": 13833199, "indent": 1 },
+          { "label": "Government securities", "amount": 468025, "indent": 1 },
+          { "label": "Deferred tax Assets", "amount": 64848472, "indent": 1 },
+          { "label": "Total Non-Current Assets", "amount": 1042865494, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Inventory", "amount": 457800180, "indent": 1 },
+          { "label": "Trade receivable", "amount": 2383468575, "indent": 1 },
+          { "label": "Contract asset", "amount": 340364532, "indent": 1 },
+          { "label": "Other Receivables", "amount": 504455941, "indent": 1 },
+          { "label": "Other Tax Recoverable", "amount": 56962014, "indent": 1 },
+          { "label": "Cash and cash equivalents", "amount": 916479508, "indent": 1 },
+          { "label": "Total Current Assets", "amount": 4659530750, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total Assets", "amount": 5702396244, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Contract Liabilities", "amount": 363481376, "indent": 1 },
+          { "label": "Other Payables", "amount": 2630055149, "indent": 1 },
+          { "label": "Value added tax Payable", "amount": 130318783, "indent": 1 },
+          { "label": "Income tax", "amount": 248773367, "indent": 1 },
+          { "label": "Dividend Payable", "amount": 562900081, "indent": 1 },
+          { "label": "Employee benefit payable", "amount": 64528335, "indent": 1 },
+          { "label": "Total Current Liabilities", "amount": 4000057090, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Long term employee benefit payable", "amount": 24706798, "indent": 1 },
+          { "label": "Lease Liability", "amount": 9437586, "indent": 1 },
+          { "label": "Deferred tax liability", "amount": 74612692, "indent": 1 },
+          { "label": "Total Non-Current Liabilities", "amount": 108757076, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities", "amount": 4108814165, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Paid-up Capital", "amount": 1114274782, "indent": 1 },
+          { "label": "Legal Reserve", "amount": 88590954, "indent": 1 },
+          { "label": "Retained Earnings", "amount": 385210489, "indent": 1 },
+          { "label": "Equity in Excess of Paid up capital", "amount": 5505853, "indent": 1 },
+          { "label": "Total Equity", "amount": 1593582078, "indent": 0, "isSubtotal": true },
+          { "label": "Total Liabilities and Equity", "amount": 5702396244, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit before tax", "amount": 859325266, "indent": 0 },
+      { "label": "Depreciation & Amortization", "amount": 55739379, "indent": 1 },
+      { "label": "Gain From Foreign Exchange rate change", "amount": -1531093, "indent": 1 },
+      { "label": "Annual Leave Provision", "amount": 14394616, "indent": 1 },
+      { "label": "Long term Employee Benefit", "amount": 2564095, "indent": 1 },
+      { "label": "Provision for obsolete stock", "amount": 154453, "indent": 1 },
+      { "label": "Provision for Expected Credit loss", "amount": 38498072, "indent": 1 },
+      { "label": "Operating profit before working capital changes", "amount": 969144787, "indent": 0, "isSubtotal": true },
+      { "label": "(Increase) Decrease in inventory", "amount": -144239993, "indent": 1 },
+      { "label": "(Increase) Decrease in Trade receivable & Other receivables", "amount": -1529274653, "indent": 1 },
+      { "label": "Increase (Decrease) in Lease liability", "amount": -362984, "indent": 1 },
+      { "label": "Increase (Decrease) in contract liability & Other payables", "amount": 1771708866, "indent": 1 },
+      { "label": "Cash generated from operation", "amount": 1066976022, "indent": 0, "isSubtotal": true },
+      { "label": "Income tax Paid", "amount": -96478709, "indent": 1 },
+      { "label": "Interest recognized in profit or loss", "amount": -4098957, "indent": 1 },
+      { "label": "Net Cash inflow/(out flow) from operating activities", "amount": 966398356, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Purchase of Plant Property & Equipment", "amount": -243566833, "indent": 1 },
+      { "label": "Purchase of Materials for construction", "amount": -9973687, "indent": 1 },
+      { "label": "Net cash outflow from investing activities", "amount": -253540520, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Dividend Paid", "amount": -70000000, "indent": 1 },
+      { "label": "Proceeds from Gain on Foreign Exchange rate change", "amount": 1531093, "indent": 1 },
+      { "label": "Interest received", "amount": 4098957, "indent": 1 },
+      { "label": "Net cash (outflow)/inflow from financing activities", "amount": -64369949, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 648487887,
+    "closingCash": 916479508
+  }
+}
