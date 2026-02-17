@@ -1,0 +1,120 @@
+{
+  "revenue": 616221609,
+  "costOfSales": -650017339,
+  "grossProfit": -33795730,
+  "operatingProfit": -363241961,
+  "netProfit": -363241961,
+  "totalAssets": 27528455369,
+  "totalLiabilities": 2418138688,
+  "totalEquity": 25110316681,
+  "auditOpinion": "Unmodified",
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          { "label": "Revenue", "amount": 616221609, "indent": 0 },
+          { "label": "Operating expenses", "amount": -650017339, "indent": 0 },
+          { "label": "Gross operating profit (loss)", "amount": -33795730, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Income & Expenses",
+        "items": [
+          { "label": "Other income", "amount": 26839853, "indent": 0 },
+          { "label": "Subtotal after other income", "amount": -6955877, "indent": 0, "isSubtotal": true },
+          { "label": "Administrative expenses", "amount": -356286084, "indent": 0 }
+        ]
+      },
+      {
+        "heading": "Net Result",
+        "items": [
+          { "label": "Net profit (loss) before income tax", "amount": -363241961, "indent": 0, "isSubtotal": true },
+          { "label": "Total comprehensive loss for the year", "amount": -363241961, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, plant and equipment", "amount": 6261184181, "indent": 1 },
+          { "label": "Investment property", "amount": 16635617957, "indent": 1 },
+          { "label": "Investment", "amount": 42166968, "indent": 1 },
+          { "label": "Time deposit", "amount": 30983307, "indent": 1 },
+          { "label": "Total Non-Current Assets", "amount": 22969952413, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Receivables", "amount": 2304927689, "indent": 1 },
+          { "label": "Cash and bank balances", "amount": 2253575267, "indent": 1 },
+          { "label": "Total Current Assets", "amount": 4558502956, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total Assets", "amount": 27528455369, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Paid up capital", "amount": 25900265678, "indent": 1 },
+          { "label": "Accumulated loss", "amount": -789948997, "indent": 1 },
+          { "label": "Total Equity", "amount": 25110316681, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Deferred revenue", "amount": 33672290, "indent": 1 },
+          { "label": "Severance payable", "amount": 5752005, "indent": 1 },
+          { "label": "Total Non-Current Liabilities", "amount": 39424295, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Payables", "amount": 2378714393, "indent": 1 },
+          { "label": "Total Current Liabilities", "amount": 2378714393, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities", "amount": 2418138688, "indent": 0, "isSubtotal": true },
+          { "label": "Total Equity and Liabilities", "amount": 27528455369, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Net loss for the year", "amount": -363241961, "indent": 0 },
+      { "label": "Depreciation", "amount": 540225571, "indent": 1 },
+      { "label": "Foreign exchange loss", "amount": 189251390, "indent": 1 },
+      { "label": "Property, plant and equipment adjustment", "amount": 1982838, "indent": 1 },
+      { "label": "Interest income", "amount": -1442853, "indent": 1 },
+      { "label": "Grant income", "amount": -12537856, "indent": 1 },
+      { "label": "Severance and bad debt expense", "amount": 60719118, "indent": 1 },
+      { "label": "Decrease in receivables", "amount": -28554368, "indent": 1 },
+      { "label": "Increase in payables", "amount": -1078223513, "indent": 1 },
+      { "label": "Net cash used in operating activities", "amount": -691821634, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Payment for property, plant and equipment", "amount": -879038893, "indent": 1 },
+      { "label": "Net cash used in investing activities", "amount": -879038893, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [],
+    "netChange": -1570860527,
+    "closingCash": 2253575267
+  }
+}

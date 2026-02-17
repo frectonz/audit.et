@@ -195,6 +195,22 @@ const enterprises: Enterprise[] = [
       "The audit reports for EC 2012 and 2013 only contained income statements — balance sheet and cash flow data were not included in the available documents.",
   },
   {
+    id: "ipdc",
+    name: "Industrial Parks Development Corporation",
+    shortName: "IPDC",
+    sector: "Real Estate",
+    sectorIcon: "building",
+    description:
+      "A Federal Government public enterprise established in 2007 EC to develop and operate industrial parks across Ethiopia. Manages flagship parks including Hawassa, Bole Lemi, and Kilinto, providing infrastructure for manufacturing and export-oriented industries.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("ipdc"),
+    auditFindings: [],
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "Audit reports for EC 2013 were not available. IPDC has no traditional cost of sales — operating expenses represent direct costs of industrial park operations.",
+  },
+  {
     id: "eeu-eleap",
     name: "EEU - Ethiopia Electrification Program (ELEAP)",
     shortName: "ELEAP",

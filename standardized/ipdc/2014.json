@@ -1,0 +1,135 @@
+{
+  "revenue": 1257337080,
+  "costOfSales": -974989100,
+  "grossProfit": 282347980,
+  "operatingProfit": 103339752,
+  "netProfit": 103339752,
+  "totalAssets": 29722462129,
+  "totalLiabilities": 3121693264,
+  "totalEquity": 26600768865,
+  "auditOpinion": "Unmodified",
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          { "label": "Revenue", "amount": 1257337080, "indent": 0 },
+          { "label": "Operating expenses", "amount": -974989100, "indent": 0 },
+          { "label": "Gross profit", "amount": 282347980, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Income & Expenses",
+        "items": [
+          { "label": "Other income", "amount": 127694029, "indent": 0 },
+          { "label": "Subtotal", "amount": 410042009, "indent": 0, "isSubtotal": true },
+          { "label": "Administrative expenses", "amount": -306702257, "indent": 0 }
+        ]
+      },
+      {
+        "heading": "Net Result",
+        "items": [
+          { "label": "Profit before income tax", "amount": 103339752, "indent": 0, "isSubtotal": true },
+          { "label": "Income tax expense", "amount": 0, "indent": 0 },
+          { "label": "Profit for the year", "amount": 103339752, "indent": 0, "isSubtotal": true },
+          { "label": "Total comprehensive income for the year", "amount": 103339752, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, plant and equipment", "amount": 6246375066, "indent": 1 },
+          { "label": "Investment property", "amount": 18583271628, "indent": 1 },
+          { "label": "Investment", "amount": 42166968, "indent": 1 },
+          { "label": "Time deposit", "amount": 133861130, "indent": 1 },
+          { "label": "Right of use asset", "amount": 1125000, "indent": 1 },
+          { "label": "Total Non-Current Assets", "amount": 25006799791, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Inventories", "amount": 42861688, "indent": 1 },
+          { "label": "Trade and other receivables", "amount": 1231239230, "indent": 1 },
+          { "label": "Cash and bank balances", "amount": 3441561420, "indent": 1 },
+          { "label": "Total Current Assets", "amount": 4715662338, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total Assets", "amount": 29722462129, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Capital and Reserves",
+        "items": [
+          { "label": "Paid up capital", "amount": 27476577745, "indent": 1 },
+          { "label": "Legal reserve", "amount": 1593261, "indent": 1 },
+          { "label": "Accumulated loss", "amount": -877402142, "indent": 1 },
+          { "label": "Total Equity", "amount": 26600768865, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Deferred revenue", "amount": 21124957, "indent": 1 },
+          { "label": "Deferred tax liability", "amount": 14766012, "indent": 1 },
+          { "label": "Industrial Development Fund", "amount": 16811591, "indent": 1 },
+          { "label": "Severance payable", "amount": 9689667, "indent": 1 },
+          { "label": "Total Non-Current Liabilities", "amount": 62392227, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Trade and other payables", "amount": 3056494116, "indent": 1 },
+          { "label": "Profit tax payable", "amount": 2806923, "indent": 1 },
+          { "label": "Total Current Liabilities", "amount": 3059301037, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities", "amount": 3121693264, "indent": 0, "isSubtotal": true },
+          { "label": "Total Equity and Liabilities", "amount": 29722462129, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit before tax", "amount": 103339752, "indent": 0 },
+      { "label": "Depreciation", "amount": 660872111, "indent": 1 },
+      { "label": "Gain on disposal of PPE", "amount": -2261970, "indent": 1 },
+      { "label": "Bad debt expense", "amount": 127312002, "indent": 1 },
+      { "label": "Decrease in deferred revenue", "amount": -8479952, "indent": 1 },
+      { "label": "Severance expense", "amount": 1899330, "indent": 1 },
+      { "label": "Movement in inventory", "amount": -25379084, "indent": 1 },
+      { "label": "Movement in receivables", "amount": 287742580, "indent": 1 },
+      { "label": "Movement in payables", "amount": -246848600, "indent": 1 },
+      { "label": "Net cash from operating activities", "amount": 898196169, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Purchase of property, plant and equipment", "amount": -644035478, "indent": 1 },
+      { "label": "Adjustment to PPE", "amount": 6433504, "indent": 1 },
+      { "label": "Investment", "amount": -101438911, "indent": 1 },
+      { "label": "Net cash used in investing activities", "amount": -739040885, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Prior year adjustment", "amount": 9700423, "indent": 1 },
+      { "label": "Industrial development fund", "amount": 16811591, "indent": 1 },
+      { "label": "Increase in capital", "amount": 1592671341, "indent": 1 },
+      { "label": "Net cash from financing activities", "amount": 1619183355, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 1778338638,
+    "closingCash": 3441561421
+  }
+}
