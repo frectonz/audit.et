@@ -272,6 +272,22 @@ const enterprises: Enterprise[] = [
     dataNote:
       "The audit reports for EC 2010–2012 are condensed financial statements — balance sheet data was not included. EC 2013–2014 reports follow IFRS. The EC 2013 balance sheet and cash flow are sourced from the EC 2014 report's comparative column.",
   },
+  {
+    id: "ethio-telecom",
+    name: "Ethio Telecom",
+    shortName: "ET",
+    sector: "Telecommunications",
+    sectorIcon: "phone",
+    description:
+      "Ethiopia's largest telecommunications operator, offering voice, data, internet, and mobile money (telebirr) services. One of the largest state-owned enterprises by revenue, serving tens of millions of subscribers nationwide.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr (originally reported in Birr'000)",
+    years: loadYears("ethio-telecom"),
+    auditFindings: loadFindings("ethio-telecom"),
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "All amounts were originally reported in Birr'000 and have been converted to full ETB. Ethio Telecom uses a non-traditional P&L format — direct costs serve as the cost of sales equivalent, and EBITDA is reported as an intermediate line. Some early years (EC 2010–2012) lack auditor opinion pages in the available reports.",
+  },
 ];
 
 // ─── Export all enterprises ──────────────────────────────────────────
