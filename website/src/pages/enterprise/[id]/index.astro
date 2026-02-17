@@ -7,7 +7,7 @@ import {
   formatCurrency,
 } from "../../../data/enterprises";
 import type { Enterprise } from "../../../data/types";
-import { Home, ChevronRight, AlertTriangle, Circle, ExternalLink } from "@lucide/astro";
+import { Home, ChevronRight, AlertTriangle, Circle, ExternalLink, Info } from "@lucide/astro";
 
 export function getStaticPaths() {
   const enterprises = getAllEnterprises();
@@ -115,6 +115,18 @@ const balanceChartData = JSON.stringify({
       }
     </div>
   </section>
+
+  <!-- Data Note -->
+  {
+    enterprise.dataNote && (
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
+        <div class="flex items-start gap-3 bg-eth-surface border border-eth-card-border rounded-xl p-4">
+          <Info class="w-4 h-4 text-eth-text-muted shrink-0 mt-0.5" />
+          <p class="text-eth-text-muted text-sm">{enterprise.dataNote}</p>
+        </div>
+      </section>
+    )
+  }
 
   <!-- Key Metrics -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">

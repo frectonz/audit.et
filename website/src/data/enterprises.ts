@@ -179,6 +179,22 @@ const enterprises: Enterprise[] = [
     fiscalYearEnd: "Sene 30",
   },
   {
+    id: "bspe",
+    name: "Berhanena Selam Printing Enterprise",
+    shortName: "BSPE",
+    sector: "Publishing",
+    sectorIcon: "printer",
+    description:
+      "One of the largest and oldest printing enterprises in Ethiopia, founded in 1921. Publishes Amharic-language books, newspapers, and periodicals. Operates branches in Lideta, Awassa, and Merhatibeb with a Printing Technology Academy established in 2016.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("bspe"),
+    auditFindings: [],
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "The audit reports for EC 2012 and 2013 only contained income statements — balance sheet and cash flow data were not included in the available documents.",
+  },
+  {
     id: "eeu-eleap",
     name: "EEU - Ethiopia Electrification Program (ELEAP)",
     shortName: "ELEAP",

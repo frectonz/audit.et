@@ -63,4 +63,5 @@ export interface Enterprise {
   years: YearData[];
   auditFindings: AuditFinding[];
   fiscalYearEnd: string;
+  dataNote?: string;
 }

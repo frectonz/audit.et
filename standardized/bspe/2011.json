@@ -1,0 +1,109 @@
+{
+  "revenue": 547062828,
+  "costOfSales": -267743818,
+  "grossProfit": 279319011,
+  "operatingProfit": 215020375,
+  "netProfit": 143904344,
+  "totalAssets": 1182174556,
+  "totalLiabilities": 234728263,
+  "totalEquity": 947446293,
+  "auditOpinion": "Unqualified",
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          { "label": "Revenue", "amount": 547062828, "indent": 0 },
+          { "label": "Cost of sales", "amount": -267743818, "indent": 0 },
+          { "label": "Gross profit", "amount": 279319011, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Expenses",
+        "items": [
+          { "label": "Other operating income", "amount": 8547827, "indent": 0 },
+          { "label": "General and administration expenses", "amount": -72351936, "indent": 0 },
+          { "label": "Allowance for doubtful debts", "amount": -494526, "indent": 0 },
+          { "label": "Operating profit", "amount": 215020375, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Finance and Tax",
+        "items": [
+          { "label": "Finance costs", "amount": -4553168, "indent": 0 },
+          { "label": "Profit before tax", "amount": 210467207, "indent": 0, "isSubtotal": true },
+          { "label": "Income tax expense", "amount": -66562863, "indent": 0 },
+          { "label": "Profit for the year", "amount": 143904344, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, plant and equipment", "amount": 312801025, "indent": 1 },
+          { "label": "Investments in Government bond", "amount": 646994, "indent": 1 },
+          { "label": "Deferred tax asset", "amount": 4847103, "indent": 1 },
+          { "label": "Total Non-Current Assets", "amount": 318295122, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Inventories", "amount": 292438229, "indent": 1 },
+          { "label": "Trade and other receivables", "amount": 180008675, "indent": 1 },
+          { "label": "Advance and prepayments", "amount": 13850327, "indent": 1 },
+          { "label": "VAT receivable", "amount": 40535939, "indent": 1 },
+          { "label": "Cash and short-term deposits", "amount": 337046263, "indent": 1 },
+          { "label": "Total Current Assets", "amount": 863879434, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total Assets", "amount": 1182174556, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Issued capital", "amount": 857917512, "indent": 1 },
+          { "label": "Legal reserve", "amount": 7195217, "indent": 1 },
+          { "label": "First time IFRS adoption revaluation reserve", "amount": 82333565, "indent": 1 },
+          { "label": "Total Equity", "amount": 947446293, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Termination benefit liabilities", "amount": 16157011, "indent": 1 },
+          { "label": "Deferred tax liabilities", "amount": 35710831, "indent": 1 },
+          { "label": "Total Non-Current Liabilities", "amount": 51867842, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Trade and other payables", "amount": 93580835, "indent": 1 },
+          { "label": "Current portion of long term loan", "amount": 6995264, "indent": 1 },
+          { "label": "Income tax payable", "amount": 55755895, "indent": 1 },
+          { "label": "Accruals", "amount": 26528426, "indent": 1 },
+          { "label": "Total Current Liabilities", "amount": 182860421, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities", "amount": 234728263, "indent": 0, "isSubtotal": true },
+          { "label": "Total Equity and Liabilities", "amount": 1182174556, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": null
+}
