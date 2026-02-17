@@ -240,6 +240,22 @@ const enterprises: Enterprise[] = [
     auditFindings: [],
     fiscalYearEnd: "Sene 30",
   },
+  {
+    id: "eide",
+    name: "Ethiopian Industrial Inputs Development Enterprise",
+    shortName: "EIDE",
+    sector: "Trading",
+    sectorIcon: "warehouse",
+    description:
+      "A state-owned enterprise responsible for importing and distributing essential industrial inputs including chemicals, construction materials, metals, and other raw materials for Ethiopia's manufacturing and construction sectors.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("eide"),
+    auditFindings: loadFindings("eide"),
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "The audit reports for EC 2010–2012 are condensed financial statements — balance sheet data was not included. EC 2013–2014 reports follow IFRS. The EC 2013 balance sheet and cash flow are sourced from the EC 2014 report's comparative column.",
+  },
 ];
 
 // ─── Export all enterprises ──────────────────────────────────────────

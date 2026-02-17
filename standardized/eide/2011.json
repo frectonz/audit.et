@@ -1,0 +1,65 @@
+{
+  "revenue": 1624833899,
+  "costOfSales": -1425604244,
+  "grossProfit": 199229655,
+  "operatingProfit": 72302243,
+  "netProfit": 99724921,
+  "totalAssets": null,
+  "totalLiabilities": null,
+  "totalEquity": null,
+  "auditOpinion": "Unmodified",
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          { "label": "Revenue", "amount": 1624833899, "indent": 0 },
+          { "label": "Cost of sales", "amount": -1425604244, "indent": 0 },
+          { "label": "Gross profit", "amount": 199229655, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Expenses",
+        "items": [
+          { "label": "Other income", "amount": 16459260, "indent": 0 },
+          { "label": "Selling and distribution expenses", "amount": -42246529, "indent": 0 },
+          { "label": "General and administration expenses", "amount": -101140142, "indent": 0 },
+          { "label": "Operating profit", "amount": 72302243, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Finance and Tax",
+        "items": [
+          { "label": "Bank interest income", "amount": 51892186, "indent": 0 },
+          { "label": "Profit before tax", "amount": 124194429, "indent": 0, "isSubtotal": true },
+          { "label": "Income tax expense", "amount": -24469508, "indent": 0 },
+          { "label": "Profit for the year", "amount": 99724921, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": null,
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit for the year", "amount": 99724921, "indent": 0 },
+      { "label": "Prior year adjustments", "amount": -27155156, "indent": 1 },
+      { "label": "Income tax expense", "amount": 24469508, "indent": 1 },
+      { "label": "Depreciation of non-current assets", "amount": 5896821, "indent": 1 },
+      { "label": "(Increase)/Decrease in stock", "amount": -444601024, "indent": 1 },
+      { "label": "(Increase)/Decrease in debtors", "amount": -354470894, "indent": 1 },
+      { "label": "Increase/(Decrease) in creditors", "amount": 539072109, "indent": 1 },
+      { "label": "Cash used in operations", "amount": -157063716, "indent": 0, "isSubtotal": true },
+      { "label": "Income taxes paid", "amount": -13918614, "indent": 1 },
+      { "label": "Net cash used in operating activities", "amount": -170982330, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Payments for property, plant and equipment", "amount": -1917547, "indent": 1 },
+      { "label": "Net cash used in investing activities", "amount": -1917547, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [],
+    "netChange": -172899877,
+    "closingCash": 2531297505
+  }
+}
