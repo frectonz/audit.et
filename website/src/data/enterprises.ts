@@ -241,6 +241,22 @@ const enterprises: Enterprise[] = [
     fiscalYearEnd: "Sene 30",
   },
   {
+    id: "enla",
+    name: "National Lottery Administration",
+    shortName: "ENLA",
+    sector: "Gaming",
+    sectorIcon: "ticket",
+    description:
+      "A federal agency established over 60 years ago and re-established in 2009 to undertake and supervise lottery activities in Ethiopia. Operates instant lottery tickets, regular draws, Tombola, Bingo, Enkutatash, and other lottery games through branches across the country.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("enla"),
+    auditFindings: loadFindings("enla"),
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "The National Lottery Administration has a unique P&L structure: revenue is ticket sales, cost of sales comprises sales commissions and prize payments. The Administration is not subject to income tax. Profit is due to the Ministry of Finance / Ethiopian Investment Holdings.",
+  },
+  {
     id: "eide",
     name: "Ethiopian Industrial Inputs Development Enterprise",
     shortName: "EIDE",

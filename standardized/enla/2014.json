@@ -1,0 +1,164 @@
+{
+  "revenue": 877995020,
+  "costOfSales": -543019474,
+  "grossProfit": 334975546,
+  "operatingProfit": 331344805,
+  "netProfit": 331344805,
+  "totalAssets": 601184596,
+  "totalLiabilities": 598567698,
+  "totalEquity": 2616898,
+  "auditOpinion": "Qualified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "Property, plant and equipment not reconciled with the fixed asset register. Building capitalized during the year (Birr 71,233,256) without provisional acceptance certificate. Physical existence of PPE at Birr 195,098,924 could not be fully ascertained.",
+      "amount": 195098924
+    },
+    {
+      "number": 2,
+      "summary": "Long outstanding debtors balance of Birr 20,648,227 with provision of only Birr 9,179,260. Further provision of Birr 11,468,967 needed. Lottery ticket count showed unreconciled difference of Birr 6,220,654. Debtors at Birr 36,778,086 unverifiable.",
+      "amount": 36778086
+    },
+    {
+      "number": 3,
+      "summary": "Inadequate internal control over recording of proceeds from ticket sales. Sales analysis and ledger discrepancy of Birr 31,262,980. Ticket sales at Birr 877,995,020 unverifiable.",
+      "amount": 877995020
+    },
+    {
+      "number": 4,
+      "summary": "VAT and Prize tax payable closing balances showed differences of Birr 425,646 and 3,219,080 respectively. VAT withheld difference of Birr 2,038,116. Taxes payable balance of Birr 16,148,378 under creditors unascertainable.",
+      "amount": 16148378
+    },
+    {
+      "number": 5,
+      "summary": "Aggregate unreconciled balance of Birr 57,008,113 on bank reconciliation statements. Cash and bank balances at Birr 316,288,171 unverifiable.",
+      "amount": 316288171
+    },
+    {
+      "number": 6,
+      "summary": "Long outstanding creditors balance of Birr 6,228,251 with no satisfactory explanation for non-settlement. Unable to confirm these represent genuine liabilities.",
+      "amount": 6228251
+    }
+  ],
+  "incomeStatement": {
+    "title": "Profit and Loss Account",
+    "groups": [
+      {
+        "heading": "Sales",
+        "items": [
+          { "label": "Proceeds from ticket sales", "amount": 877995020, "indent": 0 },
+          { "label": "Sales commission", "amount": -142799843, "indent": 0 },
+          { "label": "Net ticket sales", "amount": 735195177, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Prizes",
+        "items": [
+          { "label": "Prizes", "amount": -400219631, "indent": 0 },
+          { "label": "Gross surplus", "amount": 334975546, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Income and Deductions",
+        "items": [
+          { "label": "Value added tax", "amount": -43558448, "indent": 0 },
+          { "label": "Other income", "amount": 255238215, "indent": 0 }
+        ]
+      },
+      {
+        "heading": "Expenses",
+        "items": [
+          { "label": "Operating expenses", "amount": -153895105, "indent": 1 },
+          { "label": "Administrative - Head Office", "amount": -35047446, "indent": 1 },
+          { "label": "Advertising and sales promotion", "amount": -25601487, "indent": 1 },
+          { "label": "Audit fee", "amount": -560000, "indent": 1 },
+          { "label": "Drawing expenses", "amount": -206470, "indent": 1 },
+          { "label": "Total expenses", "amount": -215310508, "indent": 0, "isSubtotal": true },
+          { "label": "Profit for the year", "amount": 331344805, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Balance Sheet",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, plant and equipment", "amount": 195098924, "indent": 1 },
+          { "label": "Total Non-Current Assets", "amount": 195098924, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Stock", "amount": 53019415, "indent": 1 },
+          { "label": "Debtors", "amount": 36778086, "indent": 1 },
+          { "label": "Cash and bank balances", "amount": 316288171, "indent": 1 },
+          { "label": "Total Current Assets", "amount": 406085672, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total Assets", "amount": 601184596, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Capital", "amount": 100000, "indent": 1 },
+          { "label": "Reserve", "amount": 1000000, "indent": 1 },
+          { "label": "Contributions", "amount": 1516898, "indent": 1 },
+          { "label": "Total Equity", "amount": 2616898, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Ministry of Finance and Economic Development", "amount": 267361213, "indent": 1 },
+          { "label": "Total Non-Current Liabilities", "amount": 267361213, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Creditors", "amount": 120982548, "indent": 1 },
+          { "label": "Prizes payable", "amount": 210223937, "indent": 1 },
+          { "label": "Total Current Liabilities", "amount": 331206485, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities", "amount": 598567698, "indent": 0, "isSubtotal": true },
+          { "label": "Total Equity and Liabilities", "amount": 601184596, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit for the year", "amount": 331344805, "indent": 0 },
+      { "label": "Depreciation of non-current assets", "amount": 11925770, "indent": 1 },
+      { "label": "Transfer from store", "amount": 96444508, "indent": 1 },
+      { "label": "(Increase)/decrease in stock", "amount": 15599913, "indent": 1 },
+      { "label": "Decrease in debtors", "amount": 24337801, "indent": 1 },
+      { "label": "(Decrease)/increase in creditors", "amount": 29344475, "indent": 1 },
+      { "label": "(Decrease)/increase in millennium lottery payable", "amount": -4509399, "indent": 1 },
+      { "label": "Increase in prizes payable", "amount": 22105053, "indent": 1 },
+      { "label": "Net cash from operating activities", "amount": 526592927, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Payments for property, plant and equipment", "amount": -161769512, "indent": 1 },
+      { "label": "Net cash used in investing activities", "amount": -161769512, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Payments to Central Treasury", "amount": -180353062, "indent": 1 },
+      { "label": "Accrual to Ministry of Finance", "amount": -90188241, "indent": 1 },
+      { "label": "Net cash used in financing activities", "amount": -270541303, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 94282112,
+    "closingCash": 316288171
+  }
+}
