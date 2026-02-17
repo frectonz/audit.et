@@ -39,21 +39,27 @@ function getOpinionBg(opinion: string): string {
   return "bg-eth-surface border-eth-card-border";
 }
 
-// Prepare chart data
-const chartYears = enterprise.years.map((y) => y.year);
-const revenueData = enterprise.years.map((y) => y.revenue);
-const costData = enterprise.years.map((y) => y.costOfSales);
-const grossProfitData = enterprise.years.map((y) => y.grossProfit);
-const netProfitData = enterprise.years.map((y) => y.netProfit);
-const assetsData = enterprise.years.map((y) => y.totalAssets);
-const liabilitiesData = enterprise.years.map((y) => y.totalLiabilities);
-const equityData = enterprise.years.map((y) => y.totalEquity);
+// Prepare chart data — fill gaps so missing years show as empty slots
+const yearSet = new Map(enterprise.years.map((y) => [y.year, y]));
+const minYear = enterprise.years[0]?.year ?? 0;
+const maxYear = enterprise.years.at(-1)?.year ?? 0;
+const chartYears: number[] = [];
+for (let y = minYear; y <= maxYear; y++) chartYears.push(y);
+
+const pick = (year: number, fn: (y: typeof enterprise.years[0]) => number | null) => {
+  const d = yearSet.get(year);
+  return d ? fn(d) : null;
+};
+
+const revenueData = chartYears.map((y) => pick(y, (d) => d.revenue));
+const netProfitData = chartYears.map((y) => pick(y, (d) => d.netProfit));
+const assetsData = chartYears.map((y) => pick(y, (d) => d.totalAssets));
+const liabilitiesData = chartYears.map((y) => pick(y, (d) => d.totalLiabilities));
+const equityData = chartYears.map((y) => pick(y, (d) => d.totalEquity));
 
 const profitChartData = JSON.stringify({
   labels: chartYears,
   revenue: revenueData,
-  costOfSales: costData,
-  grossProfit: grossProfitData,
   netProfit: netProfitData,
 });
 
