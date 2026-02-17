@@ -7,7 +7,7 @@ import {
   formatCurrency,
 } from "../../../data/enterprises";
 import type { Enterprise } from "../../../data/types";
-import { Home, ChevronRight, AlertTriangle, Circle, ExternalLink, Info } from "@lucide/astro";
+import { Home, ChevronRight, AlertTriangle, ExternalLink, Info } from "@lucide/astro";
 
 export function getStaticPaths() {
   const enterprises = getAllEnterprises();
@@ -94,12 +94,11 @@ const balanceChartData = JSON.stringify({
       class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4"
     >
       <div>
-        <div class="flex items-center gap-3 mb-2">
-          <span class="text-eth-text-muted text-sm font-mono"
+        <div class="flex items-center gap-2 mb-2">
+          <span class="bg-eth-green text-white text-xs font-mono px-2.5 py-1 rounded-full"
             >{enterprise.sector}</span
           >
-          <Circle class="w-1.5 h-1.5 fill-eth-text-muted text-eth-text-muted" />
-          <span class="text-eth-text-muted text-sm"
+          <span class="bg-eth-green text-white text-xs px-2.5 py-1 rounded-full"
             >Fiscal year ends {enterprise.fiscalYearEnd}</span
           >
         </div>
@@ -251,29 +250,34 @@ const balanceChartData = JSON.stringify({
       <h3 class="font-display text-xl text-eth-text mb-4">
         Audit Opinion Timeline
       </h3>
-      <div class="flex items-center gap-2 overflow-x-auto pb-2">
-        {
-          enterprise.years.map((y, i) => (
-            <div class="flex items-center">
-              <a href={`/enterprise/${enterprise.id}/${y.year}`} class="flex flex-col items-center min-w-[80px] hover:opacity-80 transition-opacity">
+      <div class="relative overflow-x-auto pb-2">
+        <!-- Connecting line -->
+        <div class="absolute top-5 left-[40px] right-[40px] h-0.5 bg-eth-card-border"></div>
+        <div class="flex items-start justify-between min-w-fit">
+          {
+            enterprise.years.map((y) => (
+              <a href={`/enterprise/${enterprise.id}/${y.year}`} class="relative flex flex-col items-center min-w-[80px] group">
                 <div
-                  class={`w-10 h-10 rounded-full border-2 flex items-center justify-center text-xs font-mono font-semibold ${getOpinionBg(y.auditOpinion)} ${getOpinionColor(y.auditOpinion)}`}
+                  class={`relative z-10 w-10 h-10 rounded-full flex items-center justify-center text-sm font-mono font-bold shadow-sm transition-shadow ${
+                    y.auditOpinion.toLowerCase().includes("unmodified")
+                      ? "bg-eth-green text-white group-hover:ring-2 group-hover:ring-eth-green/40 group-hover:ring-offset-2 group-hover:ring-offset-eth-card"
+                      : y.auditOpinion.toLowerCase().includes("qualified") || y.auditOpinion.toLowerCase().includes("adverse")
+                        ? "bg-eth-gold text-eth-bg group-hover:ring-2 group-hover:ring-eth-gold/40 group-hover:ring-offset-2 group-hover:ring-offset-eth-card"
+                        : "bg-eth-card-border text-eth-text-muted group-hover:ring-2 group-hover:ring-eth-card-border/40 group-hover:ring-offset-2 group-hover:ring-offset-eth-card"
+                  }`}
                 >
                   {y.auditOpinion.charAt(0)}
                 </div>
-                <span class="text-eth-text-muted text-xs mt-2">{y.year}</span>
+                <span class="text-eth-text font-mono text-xs mt-2 font-medium">{y.year}</span>
                 <span
-                  class={`text-[10px] mt-0.5 ${getOpinionColor(y.auditOpinion)}`}
+                  class={`text-[10px] mt-0.5 ${getOpinionColor(y.auditOpinion)} group-hover:opacity-100 opacity-70 transition-opacity`}
                 >
                   {y.auditOpinion}
                 </span>
               </a>
-              {i < enterprise.years.length - 1 && (
-                <div class="w-8 h-0.5 bg-eth-card-border -mt-4" />
-              )}
-            </div>
-          ))
-        }
+            ))
+          }
+        </div>
       </div>
     </div>
   </section>
