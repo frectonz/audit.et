@@ -1,0 +1,183 @@
+{
+  "revenue": 44190610,
+  "costOfSales": -46652665,
+  "grossProfit": -2462055,
+  "operatingProfit": -94016770,
+  "netProfit": -83871594,
+  "totalAssets": 1258338032,
+  "totalLiabilities": 657278898,
+  "totalEquity": 601059134,
+  "auditOpinion": "Qualified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "Could not verify the existence of inventory balance as of the balance sheet date due to late appointment as auditor and not attending year-end inventory count.",
+      "amount": null
+    },
+    {
+      "number": 2,
+      "summary": "Goods in Transit with a balance of Br. 11,533,771.13 has been long outstanding over years and its existence is unverifiable.",
+      "amount": 11533771
+    },
+    {
+      "number": 3,
+      "summary": "Long outstanding loan balance of Br. 46,020,575 has been outstanding over years and the actual existence could not be verified.",
+      "amount": 46020575
+    },
+    {
+      "number": 4,
+      "summary": "Trade and other payable includes Br. 44,747,538.88 representing receivables with credit balance which has been long outstanding.",
+      "amount": 44747539
+    },
+    {
+      "number": 5,
+      "summary": "Significant variation between paid up capital in the statement of financial position (Br. 462.76 million) and the paid up capital stated in the establishment regulation (Br. 4.175 billion).",
+      "amount": null
+    }
+  ],
+  "incomeStatement": {
+    "title": "Consolidated Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          { "label": "Revenue", "amount": 44190610, "indent": 0 },
+          { "label": "Less: Cost of Goods Sold", "amount": -46652665, "indent": 0 },
+          { "label": "Gross profit", "amount": -2462055, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Income & Expenses",
+        "items": [
+          { "label": "Other income", "amount": 32834629, "indent": 0 },
+          { "label": "(Impairment loss)/Recovery on receivables", "amount": -1111535, "indent": 0 },
+          { "label": "General and Administrative expenses", "amount": -122963695, "indent": 1 },
+          { "label": "Selling and Distribution Expenses", "amount": -314114, "indent": 1 },
+          { "label": "Total Operating Expenses", "amount": -124389344, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Profit",
+        "items": [
+          { "label": "Operating profit/(loss)", "amount": -94016770, "indent": 0, "isSubtotal": true },
+          { "label": "Finance costs", "amount": -217603, "indent": 0 },
+          { "label": "Profit before taxation", "amount": -94234374, "indent": 0, "isSubtotal": true },
+          { "label": "Taxation Income (Expense)", "amount": 10362779, "indent": 0 },
+          { "label": "Profit (Loss) for the year", "amount": -83871594, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Comprehensive Income",
+        "items": [
+          { "label": "Other Comprehensive Income", "amount": null, "indent": 0 },
+          { "label": "Total Comprehensive Income", "amount": -83871594, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Attributable To",
+        "items": [
+          { "label": "Owner - Ethiopian Mineral, Petroleum & Biofuel Corporation (75.43%)", "amount": -79368449, "indent": 1 },
+          { "label": "Non-controlling Interest (24.57%)", "amount": -4503144, "indent": 1 }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Consolidated Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, Plant and Equipment (Net)", "amount": 297399787, "indent": 1 },
+          { "label": "Land Use Right (freehold land)", "amount": 647049731, "indent": 1 },
+          { "label": "Intangible Assets", "amount": 24169, "indent": 1 },
+          { "label": "Investments", "amount": 1180150, "indent": 1 },
+          { "label": "Non-current assets", "amount": 945653838, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Non-current Assets Held for Sale", "amount": 7387302, "indent": 1 },
+          { "label": "Inventories", "amount": 170794921, "indent": 1 },
+          { "label": "Trade and Other Receivables", "amount": 69334894, "indent": 1 },
+          { "label": "Cash and Cash Equivalents", "amount": 65167078, "indent": 1 },
+          { "label": "Current assets", "amount": 312684195, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total assets", "amount": 1258338032, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Paid up capital", "amount": 462767851, "indent": 1 },
+          { "label": "Legal reserve", "amount": 10293099, "indent": 1 },
+          { "label": "IFRS Adoption Remeasurement Reserve", "amount": 645148512, "indent": 1 },
+          { "label": "Non-controlling interest", "amount": 33591659, "indent": 1 },
+          { "label": "Retained Earnings", "amount": -550741988, "indent": 1 },
+          { "label": "Total Stockholders' Equity", "amount": 601059134, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Loan from Ministry of Finance", "amount": 227969923, "indent": 1 },
+          { "label": "Deferred Tax Liabilities", "amount": 214906093, "indent": 1 },
+          { "label": "Employee Benefits payable", "amount": 5633142, "indent": 1 },
+          { "label": "Total Non-current liabilities", "amount": 448509158, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Trade & Other Payables", "amount": 118457705, "indent": 1 },
+          { "label": "Bank Loan", "amount": 46020575, "indent": 1 },
+          { "label": "Employee Benefits payable", "amount": 5166356, "indent": 1 },
+          { "label": "Current Tax Liabilities", "amount": 39125103, "indent": 1 },
+          { "label": "Total Current Liabilities", "amount": 208769740, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities & Equity",
+        "items": [
+          { "label": "Total liabilities", "amount": 657278898, "indent": 0, "isSubtotal": true },
+          { "label": "Total Shareholders' Equity and liabilities", "amount": 1258338032, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit before tax", "amount": -94234374 },
+      { "label": "Depreciation", "amount": 55758445, "indent": 1 },
+      { "label": "Amortization", "amount": 16000, "indent": 1 },
+      { "label": "Gain on disposal", "amount": -7782778, "indent": 1 },
+      { "label": "Foreign exchange gain", "amount": -980714, "indent": 1 },
+      { "label": "Impairment Loss", "amount": 1111534, "indent": 1 },
+      { "label": "Prior year Adjustment", "amount": -3689976, "indent": 1 },
+      { "label": "Profit tax written off", "amount": 384684, "indent": 1 },
+      { "label": "(Increase)/Decrease in inventories", "amount": 4868616, "indent": 1 },
+      { "label": "(Increase)/Decrease in Trade and other receivables", "amount": -7920361, "indent": 1 },
+      { "label": "Increase/(Decrease) in trade & other payables", "amount": 9042311, "indent": 1 },
+      { "label": "Increase/(Decrease) in Employee Benefits payable", "amount": 2448357, "indent": 1 },
+      { "label": "Increase/(Decrease) in current tax liabilities", "amount": -6429236, "indent": 1 },
+      { "label": "2% income tax withheld at source", "amount": -2145048, "indent": 1 },
+      { "label": "Net cash generated from operating activities", "amount": -49552539, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Cash from Disposal of PPE", "amount": 8692805, "indent": 1 },
+      { "label": "Purchase of property, plant and equipment", "amount": -75334, "indent": 1 },
+      { "label": "Net cash utilized by investing activities", "amount": 8617471, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Loan from MOF", "amount": 0, "indent": 1 },
+      { "label": "Net cash out flow from financing activities", "amount": 0, "isSubtotal": true }
+    ],
+    "netChange": -40935069,
+    "closingCash": 65167078
+  }
+}

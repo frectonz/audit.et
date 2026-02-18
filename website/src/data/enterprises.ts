@@ -353,6 +353,22 @@ const enterprises: Enterprise[] = [
       "CBE uses a banking P&L format: revenue is total operating income (interest income + non-interest income + forex gains + associate income), cost of sales is interest expense, and gross profit is net interest income. Consolidated financial statements include CBE and its subsidiary. EC filenames: 2011 EC = FY ended 30 June 2019.",
   },
   {
+    id: "emc",
+    name: "Ethiopian Mineral, Petroleum and Biofuel Corporation",
+    shortName: "EMC",
+    sector: "Mining",
+    sectorIcon: "pickaxe",
+    description:
+      "Re-established in 2020 to explore, develop, and exploit mineral resources, petroleum, and bio-fuel. Also provides consultancy, drilling, laboratory, and training services. Has mineral extraction sites in Oromia Regional State and offices in Dire Dawa and Shakiso.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("emc"),
+    auditFindings: loadFindings("emc"),
+    fiscalYearEnd: "Hamle 30",
+    dataNote:
+      "Consolidated financial statements including subsidiary Afar Salt Production Share Company. The corporation has significant land use rights (freehold land) valued at Br. 647 billion on the balance sheet. EC filenames: 2015 EC = FY ended 7 July 2023.",
+  },
+  {
     id: "etbc",
     name: "Ethiopian Trading Businesses Corporation",
     shortName: "ETBC",
