@@ -337,6 +337,22 @@ const enterprises: Enterprise[] = [
       "DBE uses a banking P&L format: revenue is total operating income (net interest income + fees + other income), cost of sales is interest expense, and gross profit is net interest income. Some years are missing cost of sales and gross profit breakdowns. EC filenames: 2010 EC = FY ended 30 June 2018.",
   },
   {
+    id: "cbe",
+    name: "Commercial Bank of Ethiopia",
+    shortName: "CBE",
+    sector: "Banking",
+    sectorIcon: "landmark",
+    description:
+      "The largest commercial bank in Ethiopia and one of the biggest in Africa, providing a full range of banking services including deposits, loans, foreign exchange, and digital banking (CBE Birr). A cornerstone of Ethiopia's financial system with thousands of branches nationwide.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("cbe"),
+    auditFindings: [],
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "CBE uses a banking P&L format: revenue is total operating income (interest income + non-interest income + forex gains + associate income), cost of sales is interest expense, and gross profit is net interest income. Consolidated financial statements include CBE and its subsidiary. EC filenames: 2011 EC = FY ended 30 June 2019.",
+  },
+  {
     id: "etbc",
     name: "Ethiopian Trading Businesses Corporation",
     shortName: "ETBC",

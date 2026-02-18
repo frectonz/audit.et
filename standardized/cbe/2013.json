@@ -1,0 +1,165 @@
+{
+  "revenue": 81994212104,
+  "costOfSales": -33142991472,
+  "grossProfit": 32169967523,
+  "operatingProfit": 19277687334,
+  "netProfit": 13287405339,
+  "totalAssets": 991319048071,
+  "totalLiabilities": 937492511088,
+  "totalEquity": 53826536984,
+  "auditOpinion": "Unqualified",
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Consolidated Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Interest Income and Expense",
+        "items": [
+          { "label": "Interest Income", "amount": 65312958995, "indent": 1 },
+          { "label": "Interest Expense", "amount": -33142991472, "indent": 1 },
+          { "label": "Net interest income", "amount": 32169967523, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Impairment",
+        "items": [
+          { "label": "Impairment losses on loans and advances", "amount": -2652662625, "indent": 1 },
+          { "label": "Net interest income after provisions", "amount": 29517304898, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Interest Income and Expense",
+        "items": [
+          { "label": "Gain on foreign currency transactions", "amount": -1730792677, "indent": 1 },
+          { "label": "Equity investments in associates", "amount": 39039686, "indent": 1 },
+          { "label": "Non-interest income", "amount": 16642213423, "indent": 1 },
+          { "label": "Non-interest expense", "amount": -25190077995, "indent": 1 }
+        ]
+      },
+      {
+        "heading": "Profit and Tax",
+        "items": [
+          { "label": "Profit before tax", "amount": 19277687334, "indent": 0, "isSubtotal": true },
+          { "label": "Income tax", "amount": -5990281996, "indent": 1 },
+          { "label": "Profit for the year", "amount": 13287405339, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Comprehensive Income",
+        "items": [
+          { "label": "Remeasurements of defined benefit liability", "amount": 1735474643, "indent": 1 },
+          { "label": "Related tax", "amount": -520642393, "indent": 1 },
+          { "label": "Items that will never be reclassified to profit or loss", "amount": 1214832250, "indent": 0, "isSubtotal": true },
+          { "label": "Unrealized (loss)/gain arising from measurement at fair value", "amount": 95796777, "indent": 1 },
+          { "label": "Related tax", "amount": -28739033, "indent": 1 },
+          { "label": "Foreign currency translation differences for foreign operations", "amount": -2038586, "indent": 1 },
+          { "label": "Items that are or may be reclassified to profit or loss", "amount": 65019158, "indent": 0, "isSubtotal": true },
+          { "label": "Other comprehensive income, net of tax", "amount": 1279851408, "indent": 0, "isSubtotal": true },
+          { "label": "Total comprehensive income", "amount": 14567256747, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Consolidated Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Assets",
+        "items": [
+          { "label": "Cash and cash equivalents", "amount": 117165815748, "indent": 1 },
+          { "label": "Debt and equity securities", "amount": 552453627251, "indent": 1 },
+          { "label": "Loans and advances to customers, net", "amount": 279001679067, "indent": 1 },
+          { "label": "Loans to micro-finance institutions, net", "amount": 207442852, "indent": 1 },
+          { "label": "Receivables", "amount": 7799402955, "indent": 1 },
+          { "label": "Investments in associates", "amount": 277125422, "indent": 1 },
+          { "label": "Non-current assets held for sale", "amount": 935486774, "indent": 1 },
+          { "label": "Investment property", "amount": 186977, "indent": 1 },
+          { "label": "Property, plant and equipment, net", "amount": 13182461314, "indent": 1 },
+          { "label": "Intangible assets", "amount": 136458634, "indent": 1 },
+          { "label": "Other assets", "amount": 12197667537, "indent": 1 },
+          { "label": "Right of use asset", "amount": 3895212080, "indent": 1 },
+          { "label": "Deferred tax assets", "amount": 4066481458, "indent": 1 },
+          { "label": "Total Assets", "amount": 991319048071, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Liabilities",
+        "items": [
+          { "label": "Deposits due to other banks", "amount": 364945567, "indent": 1 },
+          { "label": "Customers' deposits", "amount": 735295983493, "indent": 1 },
+          { "label": "Current tax liabilities", "amount": 6337242247, "indent": 1 },
+          { "label": "Provisions", "amount": 1528010488, "indent": 1 },
+          { "label": "Finance lease obligations", "amount": 394843317, "indent": 1 },
+          { "label": "Dividends", "amount": 9571909473, "indent": 1 },
+          { "label": "Employee benefits", "amount": 6459952329, "indent": 1 },
+          { "label": "Other liabilities", "amount": 177539624174, "indent": 1 },
+          { "label": "Total Liabilities", "amount": 937492511088, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Capital", "amount": 40000000000, "indent": 1 },
+          { "label": "Legal reserve", "amount": 15263362142, "indent": 1 },
+          { "label": "Capital reserve", "amount": 218603959, "indent": 1 },
+          { "label": "Statutory reserve", "amount": 236337498, "indent": 1 },
+          { "label": "CBE NOOR reserve", "amount": 6474853, "indent": 1 },
+          { "label": "Fair value reserve", "amount": 217863316, "indent": 1 },
+          { "label": "Foreign currency translation reserve", "amount": -302625994, "indent": 1 },
+          { "label": "Accumulated profit or loss", "amount": -385816812, "indent": 1 },
+          { "label": "Remeasurement of defined benefit liability", "amount": -1427661978, "indent": 1 },
+          { "label": "Total Equity", "amount": 53826536984, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total liabilities and equity", "amount": 991319048071, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit before tax", "amount": 19277687334, "indent": 0 },
+      { "label": "Impairment of loans and advance and debt securities", "amount": 2748459403, "indent": 1 },
+      { "label": "Provision for unutilized OD, LC and guarantee", "amount": 67894171, "indent": 1 },
+      { "label": "Reduction of allowance for placement with other banks", "amount": 84205920, "indent": 1 },
+      { "label": "Provision against non current asset held for sale", "amount": 85917466, "indent": 1 },
+      { "label": "Depreciation and amortization", "amount": 2423157223, "indent": 1 },
+      { "label": "Income from associate recognized in profit or loss", "amount": -39039686, "indent": 1 },
+      { "label": "Loss (Gain) on disposal of property, plant and equipment", "amount": -7187227, "indent": 1 },
+      { "label": "Loss (Gain) on disposal of NCA held for sale", "amount": -13182314, "indent": 1 },
+      { "label": "Finance lease charge", "amount": 25893250, "indent": 1 },
+      { "label": "Operating cash flow before working capital changes", "amount": 24653805540, "indent": 0, "isSubtotal": true },
+      { "label": "Change in debt and equity securities", "amount": -108758997033, "indent": 1 },
+      { "label": "Change in loans and advances", "amount": -47328663527, "indent": 1 },
+      { "label": "Change in receivables", "amount": 1072885500, "indent": 1 },
+      { "label": "Change in other assets", "amount": -518269907, "indent": 1 },
+      { "label": "Change in restricted fund", "amount": -5012027647, "indent": 1 },
+      { "label": "Change in customers' deposits", "amount": 142259606431, "indent": 1 },
+      { "label": "Change in provisions", "amount": 70157162, "indent": 1 },
+      { "label": "Change in employee benefits", "amount": 875378373, "indent": 1 },
+      { "label": "Change in other liabilities", "amount": 23692888815, "indent": 1 },
+      { "label": "Cash generated from operations", "amount": 31082562126, "indent": 0, "isSubtotal": true },
+      { "label": "Income taxes paid", "amount": -5955141745, "indent": 1 },
+      { "label": "Net cash generated by operating activities", "amount": 25051621963, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Payments for property, plant and equipment", "amount": -822003303, "indent": 1 },
+      { "label": "Proceeds from disposal of property, plant and equipment", "amount": 10821069, "indent": 1 },
+      { "label": "Proceeds from disposal of NCA held for sale", "amount": 22296389, "indent": 1 },
+      { "label": "Payments for investments", "amount": -27043861, "indent": 1 },
+      { "label": "Payment for intangibles", "amount": -7862764, "indent": 1 },
+      { "label": "Payment right of use assets", "amount": -960815559, "indent": 1 },
+      { "label": "Net cash used in investing activities", "amount": -1784608029, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Dividend paid", "amount": -7771189064, "indent": 1 },
+      { "label": "Finance lease obligation paid", "amount": -141411959, "indent": 1 },
+      { "label": "Net cash outflow from financing activities", "amount": -7912601022, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 15354412912,
+    "closingCash": 70135378760
+  }
+}
