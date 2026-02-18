@@ -321,6 +321,22 @@ const enterprises: Enterprise[] = [
       "EIC uses an insurance-specific P&L format (IFRS 17): revenue is insurance premium revenue, cost of sales comprises insurance service expenses and net reinsurance expenses. The combined business figures (life + non-life) are used. EC filenames: 2015 EC = FY ended 30 June 2023.",
   },
   {
+    id: "dbe",
+    name: "Development Bank of Ethiopia",
+    shortName: "DBE",
+    sector: "Banking",
+    sectorIcon: "landmark",
+    description:
+      "Ethiopia's sole state-owned development finance institution, providing loans and technical support for priority sectors including agriculture, manufacturing, and agro-processing. One of the largest financial institutions in the country by asset base.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("dbe"),
+    auditFindings: [],
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "DBE uses a banking P&L format: revenue is total operating income (net interest income + fees + other income), cost of sales is interest expense, and gross profit is net interest income. Some years are missing cost of sales and gross profit breakdowns. EC filenames: 2010 EC = FY ended 30 June 2018.",
+  },
+  {
     id: "etbc",
     name: "Ethiopian Trading Businesses Corporation",
     shortName: "ETBC",

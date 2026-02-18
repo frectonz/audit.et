@@ -1,0 +1,153 @@
+{
+  "revenue": 7017496000,
+  "costOfSales": -6838655000,
+  "grossProfit": 5166030000,
+  "operatingProfit": 5279456000,
+  "netProfit": 5295630000,
+  "totalAssets": 182124083000,
+  "totalLiabilities": 142304431000,
+  "totalEquity": 39819652000,
+  "auditOpinion": "Unqualified",
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Interest Income and Expense",
+        "items": [
+          { "label": "Interest income calculated using the effective interest method", "amount": 12004685000, "indent": 1 },
+          { "label": "Interest expense calculated using the effective interest method", "amount": -6838655000, "indent": 1 },
+          { "label": "Net interest income", "amount": 5166030000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Interest Income",
+        "items": [
+          { "label": "Fee and commission income", "amount": 843492000, "indent": 1 },
+          { "label": "Fee and commission expense", "amount": -4551000, "indent": 1 },
+          { "label": "Net fee and commission income", "amount": 838940000, "indent": 0, "isSubtotal": true },
+          { "label": "Other operating income", "amount": 1012526000, "indent": 1 },
+          { "label": "Total operating income", "amount": 7017496000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Impairment Reversals/(Charges)",
+        "items": [
+          { "label": "Loan impairment reversal/(charge)", "amount": 1720903000, "indent": 1 },
+          { "label": "Other assets impairment reversal/(charge)", "amount": 192765000, "indent": 1 },
+          { "label": "Net operating income/(loss)", "amount": 8931163000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Expenses",
+        "items": [
+          { "label": "Personnel expenses", "amount": -2526696000, "indent": 1 },
+          { "label": "Depreciation of investment property", "amount": -3000, "indent": 1 },
+          { "label": "Amortization of intangible assets", "amount": -29212000, "indent": 1 },
+          { "label": "Depreciation and impairment of property, plant and equipment", "amount": -124738000, "indent": 1 },
+          { "label": "Depreciation of right-of-use assets", "amount": -69929000, "indent": 1 },
+          { "label": "Interest expense on lease liability", "amount": -6728000, "indent": 1 },
+          { "label": "Other operating expenses", "amount": -894401000, "indent": 1 }
+        ]
+      },
+      {
+        "heading": "Profit and Tax",
+        "items": [
+          { "label": "Profit/(Loss) before tax", "amount": 5279456000, "indent": 0, "isSubtotal": true },
+          { "label": "Income tax income/(expense)", "amount": 16175000, "indent": 1 },
+          { "label": "Profit/(Loss) after tax", "amount": 5295630000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Comprehensive Income",
+        "items": [
+          { "label": "Remeasurement gain/(loss) on retirement benefits obligations", "amount": -78626000, "indent": 1 },
+          { "label": "Net change in fair value of equity investments measured at FVOCI", "amount": 37895000, "indent": 1 },
+          { "label": "Income tax related to the above", "amount": 12219000, "indent": 1 },
+          { "label": "Total other comprehensive income/(loss) for the year, net of tax", "amount": -28512000, "indent": 0, "isSubtotal": true },
+          { "label": "Total comprehensive income/(loss) for the year", "amount": 5267118000, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Assets",
+        "items": [
+          { "label": "Cash and bank balances", "amount": 33145305000, "indent": 1 },
+          { "label": "Loans and advances to customers", "amount": 88996376000, "indent": 1 },
+          { "label": "Financial assets measured at FVOCI", "amount": 154007000, "indent": 1 },
+          { "label": "Financial assets measured at amortized cost", "amount": 46003057000, "indent": 1 },
+          { "label": "Deferred day one loss on investment securities", "amount": 6892770000, "indent": 1 },
+          { "label": "Investment in subsidiary", "amount": 9999000, "indent": 1 },
+          { "label": "Other assets", "amount": 5589927000, "indent": 1 },
+          { "label": "Rights-of-use-assets", "amount": 190628000, "indent": 1 },
+          { "label": "Investment property", "amount": 142000, "indent": 1 },
+          { "label": "Intangible assets", "amount": 29815000, "indent": 1 },
+          { "label": "Property, plant and equipment", "amount": 1112057000, "indent": 1 },
+          { "label": "Total Assets", "amount": 182124083000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Liabilities",
+        "items": [
+          { "label": "Deposits from customers", "amount": 630690000, "indent": 1 },
+          { "label": "Current tax liabilities", "amount": 35210000, "indent": 1 },
+          { "label": "Other liabilities", "amount": 10872891000, "indent": 1 },
+          { "label": "Lease liabilities", "amount": 84886000, "indent": 1 },
+          { "label": "Debt securities issued", "amount": 53323972000, "indent": 1 },
+          { "label": "Borrowings", "amount": 76799750000, "indent": 1 },
+          { "label": "Retirement benefit obligations", "amount": 432864000, "indent": 1 },
+          { "label": "Deferred tax liabilities", "amount": 124169000, "indent": 1 },
+          { "label": "Total Liabilities", "amount": 142304431000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Capital", "amount": 28520000000, "indent": 1 },
+          { "label": "Legal reserve", "amount": 5207709000, "indent": 1 },
+          { "label": "Accumulated profit/(loss)", "amount": 3267882000, "indent": 1 },
+          { "label": "Regulatory credit risk reserve", "amount": 2875839000, "indent": 1 },
+          { "label": "Other reserves", "amount": -51777000, "indent": 1 },
+          { "label": "Total equity attributable to owner of the Bank", "amount": 39819652000, "indent": 0, "isSubtotal": true },
+          { "label": "Total equity", "amount": 39819652000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total equity and liabilities", "amount": 182124083000, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Cash generated from operations", "amount": -17143453000, "indent": 0 },
+      { "label": "(Realized) gain on foreign exchange dealing and fluctuation on cash & cash equivalents", "amount": 122871000, "indent": 1 },
+      { "label": "Income tax paid", "amount": -522045000, "indent": 1 },
+      { "label": "Net cash (outflow)/inflow from operating activities", "amount": -17542627000, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Purchase of additional Equity Investment", "amount": -12290000, "indent": 1 },
+      { "label": "State Dividend Paid", "amount": -1679071000, "indent": 1 },
+      { "label": "Purchase of intangible assets", "amount": -17732000, "indent": 1 },
+      { "label": "Proceeds from sale of property, plant and equipment", "amount": 22390000, "indent": 1 },
+      { "label": "Purchase of property, plant and equipment", "amount": -283664000, "indent": 1 },
+      { "label": "Net cash (outflow)/inflow from investing activities", "amount": -1970367000, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Proceeds from issue of debt securities", "amount": 16145973000, "indent": 1 },
+      { "label": "Repayment of debt securities", "amount": -1633186000, "indent": 1 },
+      { "label": "Proceeds from borrowings", "amount": 9829286000, "indent": 1 },
+      { "label": "Repayment of principal borrowings", "amount": -4744203000, "indent": 1 },
+      { "label": "Repayment of principal portion of lease payments", "amount": -23747000, "indent": 1 },
+      { "label": "Net cash (outflow)/inflow from financing activities", "amount": 19574123000, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 61128000,
+    "closingCash": 33147208000
+  }
+}
