@@ -305,6 +305,22 @@ const enterprises: Enterprise[] = [
       "The EC 2014 audit report only contained financial statements — the independent auditor's report was not included in the available document. EC filenames: 2014 EC = FY ended June 30, 2022.",
   },
   {
+    id: "eic",
+    name: "Ethiopian Insurance Corporation",
+    shortName: "EIC",
+    sector: "Insurance",
+    sectorIcon: "shield",
+    description:
+      "Ethiopia's sole state-owned insurance company, established in 1976 by taking over thirteen nationalized private insurers. Carries out life and non-life insurance business with over 100 distribution outlets nationwide, headquartered on Ras Mekonnen Street in Addis Ababa.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("eic"),
+    auditFindings: [],
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "EIC uses an insurance-specific P&L format (IFRS 17): revenue is insurance premium revenue, cost of sales comprises insurance service expenses and net reinsurance expenses. The combined business figures (life + non-life) are used. EC filenames: 2015 EC = FY ended 30 June 2023.",
+  },
+  {
     id: "etbc",
     name: "Ethiopian Trading Businesses Corporation",
     shortName: "ETBC",

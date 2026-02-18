@@ -1,0 +1,156 @@
+{
+  "revenue": 6962160344,
+  "costOfSales": -4914658237,
+  "grossProfit": 2047502107,
+  "operatingProfit": 1444768172,
+  "netProfit": 1155658288,
+  "totalAssets": 13060373144,
+  "totalLiabilities": 9882478892,
+  "totalEquity": 3177894251,
+  "auditOpinion": "Unmodified",
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income – Combined Business",
+    "groups": [
+      {
+        "heading": "Insurance Service",
+        "items": [
+          { "label": "Insurance Revenue", "amount": 6962160344, "indent": 1 },
+          { "label": "Insurance Service Expenses", "amount": -2460496294, "indent": 1 },
+          { "label": "Net Expenses from Reinsurance Contracts", "amount": -2454161943, "indent": 1 },
+          { "label": "Insurance Service Result", "amount": 2047502107, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Investment Return",
+        "items": [
+          { "label": "Finance Income", "amount": 463962721, "indent": 1 },
+          { "label": "Investment Income", "amount": 84141504, "indent": 1 },
+          { "label": "Investment Return", "amount": 548104224, "indent": 0, "isSubtotal": true },
+          { "label": "Net Finance Expenses from Insurance Contracts", "amount": -161584883, "indent": 1 },
+          { "label": "Net Finance Income from Reinsurance Contracts", "amount": 58944299, "indent": 1 },
+          { "label": "Net Investment Return", "amount": 445463640, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Items and Tax",
+        "items": [
+          { "label": "Other Income", "amount": 55491397, "indent": 1 },
+          { "label": "Finance Expense", "amount": -3125753, "indent": 1 },
+          { "label": "Other Operating Expenses", "amount": -1170347267, "indent": 1 },
+          { "label": "Share of Profit (Loss) of Equity Accounted Investees", "amount": 69784048, "indent": 1 },
+          { "label": "Profit before Tax", "amount": 1444768172, "indent": 0, "isSubtotal": true },
+          { "label": "Income Tax", "amount": -289109884, "indent": 1 },
+          { "label": "Profit for the Year", "amount": 1155658288, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Comprehensive Income",
+        "items": [
+          { "label": "Fair Value Gains/(Losses) on Financial Assets", "amount": -64123611, "indent": 1 },
+          { "label": "Re-measurement of Defined Benefit Liability", "amount": -28519383, "indent": 1 },
+          { "label": "Related Tax", "amount": 27792898, "indent": 1 },
+          { "label": "Other Comprehensive Income, Net of Tax", "amount": -64850095, "indent": 0, "isSubtotal": true },
+          { "label": "Total Comprehensive Income", "amount": 1090808192, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position – Combined Business",
+    "groups": [
+      {
+        "heading": "Assets",
+        "items": [
+          { "label": "Property and Equipment", "amount": 639163537, "indent": 1 },
+          { "label": "Intangible Assets", "amount": 12525753, "indent": 1 },
+          { "label": "Right of Use Assets", "amount": 83177783, "indent": 1 },
+          { "label": "Investment in Securities", "amount": 1327764590, "indent": 1 },
+          { "label": "Investment in Associates", "amount": 393458692, "indent": 1 },
+          { "label": "Loans", "amount": 143994473, "indent": 1 },
+          { "label": "Statutory Deposits", "amount": 88786680, "indent": 1 },
+          { "label": "Office Supplies", "amount": 23397893, "indent": 1 },
+          { "label": "Receivables", "amount": 808986223, "indent": 1 },
+          { "label": "Prepayments", "amount": 18765645, "indent": 1 },
+          { "label": "Reinsurance Contract Assets", "amount": 3663118700, "indent": 1 },
+          { "label": "Fixed Time Deposits", "amount": 5051643574, "indent": 1 },
+          { "label": "Cash and Cash Equivalents", "amount": 805589601, "indent": 1 },
+          { "label": "Total Assets", "amount": 13060373144, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Liabilities",
+        "items": [
+          { "label": "Deferred Tax Liability", "amount": 81955706, "indent": 1 },
+          { "label": "Lease Liabilities", "amount": 48100904, "indent": 1 },
+          { "label": "Employee Benefits", "amount": 196546411, "indent": 1 },
+          { "label": "Insurance Contract Liabilities", "amount": 7734126423, "indent": 1 },
+          { "label": "Provisions", "amount": 110442245, "indent": 1 },
+          { "label": "Payables", "amount": 134296936, "indent": 1 },
+          { "label": "Creditors Arising Out of Reinsurance Arrangements", "amount": 361208531, "indent": 1 },
+          { "label": "Dividend Payable", "amount": 1040092460, "indent": 1 },
+          { "label": "Current Tax Liability", "amount": 175709275, "indent": 1 },
+          { "label": "Total Liabilities", "amount": 9882478892, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Capital", "amount": 592000000, "indent": 1 },
+          { "label": "Legal Reserve", "amount": 592000000, "indent": 1 },
+          { "label": "Retained Earnings", "amount": 1328881626, "indent": 1 },
+          { "label": "Defined Benefit Reserve", "amount": 7138645, "indent": 1 },
+          { "label": "Fair Value Reserve", "amount": 657873980, "indent": 1 },
+          { "label": "Total Equity", "amount": 3177894251, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities and Equity", "amount": 13060373144, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit before Tax", "amount": 1444768172, "indent": 0 },
+      { "label": "Impairment of Financial Assets", "amount": 2922389, "indent": 1 },
+      { "label": "Depreciation and Amortization", "amount": 77257739, "indent": 1 },
+      { "label": "Adjustments for PPE and Intangible Assets", "amount": 3670490, "indent": 1 },
+      { "label": "Subtotal", "amount": 1528618789, "indent": 0, "isSubtotal": true },
+      { "label": "Increase/(Decrease) in Inventory", "amount": -11526533, "indent": 1 },
+      { "label": "Increase/(Decrease) in Receivables", "amount": 700956524, "indent": 1 },
+      { "label": "Increase/(Decrease) in Interest Receivables", "amount": -31264048, "indent": 1 },
+      { "label": "Prepayments", "amount": 7780878, "indent": 1 },
+      { "label": "Changes in Reinsurance Contract Assets", "amount": 1636218049, "indent": 1 },
+      { "label": "Changes in Finance Lease Obligations", "amount": 9100057, "indent": 1 },
+      { "label": "Increase/(Decrease) in Provisions", "amount": -16198651, "indent": 1 },
+      { "label": "Increase/(Decrease) in Payables", "amount": 8088854, "indent": 1 },
+      { "label": "Creditors Arising Out of Reinsurance Arrangements", "amount": -897564329, "indent": 1 },
+      { "label": "Creditors Arising from Ceding Arrangements", "amount": -29969531, "indent": 1 },
+      { "label": "Changes in Insurance Contract Liabilities", "amount": -1066790094, "indent": 1 },
+      { "label": "Changes in Employee Benefits", "amount": 8715769, "indent": 1 },
+      { "label": "Income Taxes Paid", "amount": -361540236, "indent": 1 },
+      { "label": "Net Cash Provided by Operating Activities", "amount": 1484625497, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Acquisition of Investment Securities", "amount": -354111749, "indent": 1 },
+      { "label": "Additional Investment in Associate", "amount": -69784048, "indent": 1 },
+      { "label": "Purchase of Intangible Assets", "amount": -12647664, "indent": 1 },
+      { "label": "Payment for Fixed Time Deposits", "amount": -395883807, "indent": 1 },
+      { "label": "Acquisition of Property, Plant and Equipment", "amount": -51897713, "indent": 1 },
+      { "label": "Proceeds from Sale of PPE", "amount": 390000, "indent": 1 },
+      { "label": "Collection of Loans", "amount": 228733963, "indent": 1 },
+      { "label": "New Loans Granted", "amount": -56639004, "indent": 1 },
+      { "label": "Purchase of Leases", "amount": -42149298, "indent": 1 },
+      { "label": "Net Cash Used from Investing Activities", "amount": -753989320, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Dividends Paid", "amount": -559119892, "indent": 1 },
+      { "label": "Net Cash Used in Financing Activities", "amount": -559119892, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 171516285,
+    "closingCash": 805589602
+  }
+}
