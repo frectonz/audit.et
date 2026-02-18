@@ -289,6 +289,22 @@ const enterprises: Enterprise[] = [
       "All amounts were originally reported in Birr'000 and have been converted to full ETB. Ethio Telecom uses a non-traditional P&L format — direct costs serve as the cost of sales equivalent, and EBITDA is reported as an intermediate line. Some early years (EC 2010–2012) lack auditor opinion pages in the available reports.",
   },
   {
+    id: "ette",
+    name: "Ethiopian Tourist Trading Enterprise",
+    shortName: "ETTE",
+    sector: "Trading",
+    sectorIcon: "shopping-bag",
+    description:
+      "A state-owned enterprise established in 1964 to operate duty-free and duty-paid merchandise shops, as well as produce and retail handicrafts and souvenirs. Operates under the motto 'We Strive for Excellent Service' promoting tourism and economic growth.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("ette"),
+    auditFindings: loadFindings("ette"),
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "The EC 2014 audit report only contained financial statements — the independent auditor's report was not included in the available document. EC filenames: 2014 EC = FY ended June 30, 2022.",
+  },
+  {
     id: "etbc",
     name: "Ethiopian Trading Businesses Corporation",
     shortName: "ETBC",
