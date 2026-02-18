@@ -136,7 +136,7 @@ const balanceChartData = JSON.stringify({
             color: "text-eth-green",
           },
           {
-            label: "Net Profit/Loss",
+            label: latest?.netProfit != null && latest.netProfit < 0 ? "Net Loss" : "Net Profit",
             value:
               latest?.netProfit != null
                 ? formatETB(latest.netProfit, true)
@@ -546,7 +546,7 @@ const balanceChartData = JSON.stringify({
           },
         },
         {
-          name: "Net Profit/Loss",
+          name: "Net Profit",
           type: "line",
           data: data.netProfit,
           smooth: 0.3,

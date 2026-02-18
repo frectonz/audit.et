@@ -40,7 +40,7 @@ const combinedRevenueChartData = JSON.stringify({
   data: combinedRevenuePerYear,
 });
 
-// --- Profitability Overview: net profit/loss per enterprise (latest year) ---
+// --- Profitability Overview: net profitability per enterprise (latest year) ---
 const profitabilityData = enterprises
   .map((e) => {
     const latest = e.years.filter((y) => y.netProfit != null).at(-1);
@@ -229,7 +229,7 @@ const revVsLiabData = JSON.stringify({
       <!-- Profitability Overview -->
       <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
         <h3 class="font-display text-xl text-eth-text mb-1">Profitability Overview</h3>
-        <p class="text-eth-text-muted text-sm mb-4">Net profit/loss by enterprise (latest available year)</p>
+        <p class="text-eth-text-muted text-sm mb-4">Net profitability by enterprise (latest available year)</p>
         <div id="profitabilityChart" class="h-[200px] lg:h-[280px] w-full" data-chart={profitabilityChartData}></div>
       </div>
 

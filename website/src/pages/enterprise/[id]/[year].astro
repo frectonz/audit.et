@@ -223,7 +223,7 @@ const cashFlowBarJson = JSON.stringify(cashFlowChartData);
           color: "text-eth-green",
         },
         {
-          label: "Net Profit/Loss",
+          label: detail.summary.netProfit != null && detail.summary.netProfit < 0 ? "Net Loss" : "Net Profit",
           value: detail.summary.netProfit != null ? formatETB(detail.summary.netProfit, true) : "N/A",
           color: detail.summary.netProfit != null && detail.summary.netProfit >= 0 ? "text-eth-green" : "text-eth-gold",
         },
