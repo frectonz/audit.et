@@ -1,0 +1,200 @@
+{
+  "revenue": 14625614800,
+  "costOfSales": -12794343860,
+  "grossProfit": 1831270940,
+  "operatingProfit": 1341821870,
+  "netProfit": 1121705220,
+  "totalAssets": 14715345460,
+  "totalLiabilities": 12459269720,
+  "totalEquity": 2256075750,
+  "auditOpinion": "Qualified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "Trade receivables include approximately Birr 10,686,655,000 in 'Suspense' accounts that do not comply with the IFRS definition of an asset.",
+      "amount": 10686655000
+    },
+    {
+      "number": 2,
+      "summary": "Abnormal waste: unable to determine the cost of sales structure and financial performance as required by IAS 2.",
+      "amount": null
+    },
+    {
+      "number": 3,
+      "summary": "Grain & Coffee Business Unit lacks a formal inventory reconciliation procedure.",
+      "amount": null
+    },
+    {
+      "number": 4,
+      "summary": "Stock adjustment misclassified as storage loss amounting to Birr 12,123,888,000.",
+      "amount": 12123888000
+    },
+    {
+      "number": 5,
+      "summary": "Asset register lacks completeness; unable to verify Property, Plant and Equipment at Birr 3,327,986,340.",
+      "amount": 3327986340
+    },
+    {
+      "number": 6,
+      "summary": "Inventory contains slow-moving items worth ETB 8,972,528,000 not accounted for as required by IAS 2.",
+      "amount": 8972528000
+    },
+    {
+      "number": 7,
+      "summary": "Authorized capital disclosure is incorrect.",
+      "amount": null
+    }
+  ],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          { "label": "Sales Revenue", "amount": 14433171470, "indent": 1 },
+          { "label": "Rent and Other Fees Income", "amount": 192443340, "indent": 1 },
+          { "label": "Total Revenue", "amount": 14625614800, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Cost of Sales",
+        "items": [
+          { "label": "Cost of Sales", "amount": -12794343860, "indent": 0 },
+          { "label": "Gross Profit", "amount": 1831270940, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Expenses",
+        "items": [
+          { "label": "Other Income/Expenses", "amount": 53342920, "indent": 0 },
+          { "label": "Selling and distribution cost", "amount": -2589320, "indent": 1 },
+          { "label": "Administrative and General Expenses", "amount": -465927360, "indent": 1 },
+          { "label": "Expected credit loss", "amount": -36615950, "indent": 1 },
+          { "label": "Provision of legal cases", "amount": -37659370, "indent": 1 },
+          { "label": "Total Operating Expenses", "amount": -542792000, "indent": 0, "isSubtotal": true },
+          { "label": "Income from Operation", "amount": 1341821870, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Finance and Tax",
+        "items": [
+          { "label": "Interest and Bank Service Charges", "amount": -83393040, "indent": 1 },
+          { "label": "Gain/Loss on Exchange Rate", "amount": 44612880, "indent": 1 },
+          { "label": "Profit before tax", "amount": 1303041700, "indent": 0, "isSubtotal": true },
+          { "label": "Profit tax for the period", "amount": -181336480, "indent": 0 },
+          { "label": "Profit after tax", "amount": 1121705220, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Comprehensive Income",
+        "items": [
+          { "label": "Actuarial Gain/Loss", "amount": 0, "indent": 1 },
+          { "label": "Deferred Tax Income/Loss", "amount": 6323710, "indent": 1 },
+          { "label": "Total comprehensive income", "amount": 1128028930, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, Plant and Equipment", "amount": 2146907280, "indent": 1 },
+          { "label": "Land Use Right", "amount": 1286954820, "indent": 1 },
+          { "label": "Right-of-use Land", "amount": 2048210, "indent": 1 },
+          { "label": "Intangible Asset", "amount": 1921250, "indent": 1 },
+          { "label": "Time Deposit", "amount": 55202850, "indent": 1 },
+          { "label": "Deferred Tax Asset", "amount": 13662110, "indent": 1 },
+          { "label": "Total Non-Current Assets", "amount": 3506696510, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Stock in Hand and In-Transit", "amount": 3334152700, "indent": 1 },
+          { "label": "Trade and Other Debtors", "amount": 3597816710, "indent": 1 },
+          { "label": "Advance, Prepayment and Deposits", "amount": 50549720, "indent": 1 },
+          { "label": "Cash and Bank Balance", "amount": 4226129820, "indent": 1 },
+          { "label": "Total Current Assets", "amount": 11208648960, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total Assets", "amount": 14715345460, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Paid up Capital", "amount": 959100000, "indent": 1 },
+          { "label": "Non-distributable Reserve", "amount": 1879009470, "indent": 1 },
+          { "label": "Legal Reserve", "amount": 67303910, "indent": 1 },
+          { "label": "Retained Earnings", "amount": -650339640, "indent": 1 },
+          { "label": "Total Equity", "amount": 2256075750, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Long Term Loan", "amount": 795487890, "indent": 1 },
+          { "label": "Long Term Lease Obligation", "amount": 2353910, "indent": 1 },
+          { "label": "Severance Payable", "amount": 7610870, "indent": 1 },
+          { "label": "Deferred Tax Liability", "amount": 425464290, "indent": 1 },
+          { "label": "Total Non-Current Liabilities", "amount": 1230916970, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Trade and Other Payables", "amount": 9106591420, "indent": 1 },
+          { "label": "Provision Obligation", "amount": 183241710, "indent": 1 },
+          { "label": "Dividend Payable", "amount": 752521200, "indent": 1 },
+          { "label": "Bank Overdraft", "amount": 0, "indent": 1 },
+          { "label": "Current Maturity of Long Term Loan", "amount": 1024312550, "indent": 1 },
+          { "label": "Annual Leave Payable", "amount": 4360770, "indent": 1 },
+          { "label": "Provision for Business Income Tax", "amount": 157325100, "indent": 1 },
+          { "label": "Total Current Liabilities", "amount": 11228352750, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities", "amount": 12459269720, "indent": 0, "isSubtotal": true },
+          { "label": "Total Equity and Liabilities", "amount": 14715345460, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit/Loss Before Taxation", "amount": 1128028930, "indent": 0 },
+      { "label": "Depreciation and Amortization", "amount": 101084360, "indent": 1 },
+      { "label": "Severance and Annual Leave Expense", "amount": 1433980, "indent": 1 },
+      { "label": "Deferred Tax Payables", "amount": -6323710, "indent": 1 },
+      { "label": "Adjustment to Tax and Others", "amount": -137741970, "indent": 1 },
+      { "label": "Time Deposit", "amount": -55202850, "indent": 1 },
+      { "label": "Net Operating Cash Flows before Working Capital", "amount": 1031278740, "indent": 0, "isSubtotal": true },
+      { "label": "Net Decrease/(Increase) in Stocks", "amount": 2569996130, "indent": 1 },
+      { "label": "Net Decrease/(Increase) in Trade and Other Receivable", "amount": -2571712290, "indent": 1 },
+      { "label": "Net Increase/(Decrease) in Trade and Other Payables", "amount": 2821190640, "indent": 1 },
+      { "label": "Cash Generated from Operation", "amount": 3850753220, "indent": 0, "isSubtotal": true },
+      { "label": "Dividend Paid", "amount": -129501010, "indent": 1 },
+      { "label": "Net Cash from Operating Activities", "amount": 3721252210, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Purchase of Property, Plant and Equipment", "amount": -118581920, "indent": 1 },
+      { "label": "Proceeds from Disposal", "amount": 0, "indent": 1 },
+      { "label": "Net Cash from Investing Activities", "amount": -118581920, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Addition (Repayment) of Borrowings", "amount": -1291963870, "indent": 1 },
+      { "label": "Lease Obligation Paid", "amount": -12280, "indent": 1 },
+      { "label": "Net Cash from Financing Activities", "amount": -1291976150, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 2310694140,
+    "closingCash": 4226129820
+  }
+}

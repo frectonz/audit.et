@@ -288,6 +288,22 @@ const enterprises: Enterprise[] = [
     dataNote:
       "All amounts were originally reported in Birr'000 and have been converted to full ETB. Ethio Telecom uses a non-traditional P&L format — direct costs serve as the cost of sales equivalent, and EBITDA is reported as an intermediate line. Some early years (EC 2010–2012) lack auditor opinion pages in the available reports.",
   },
+  {
+    id: "etbc",
+    name: "Ethiopian Trading Businesses Corporation",
+    shortName: "ETBC",
+    sector: "Trading",
+    sectorIcon: "warehouse",
+    description:
+      "A public enterprise wholly owned by the Federal Government, established through Council of Ministers Regulation No. 369/2008. Handles the import, export, and domestic distribution of grain, coffee, and other commodities. One of the major subsidiaries of Ethiopian Investment Holdings.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr (originally reported in Birr'000)",
+    years: loadYears("etbc"),
+    auditFindings: loadFindings("etbc"),
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "All amounts were originally reported in Birr'000 and have been converted to full ETB. The EC 2013–2015 audit reports were scanned in landscape orientation and have been digitally rotated for processing.",
+  },
 ];
 
 // ─── Export all enterprises ──────────────────────────────────────────
