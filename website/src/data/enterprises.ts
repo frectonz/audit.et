@@ -353,6 +353,22 @@ const enterprises: Enterprise[] = [
       "CBE uses a banking P&L format: revenue is total operating income (interest income + non-interest income + forex gains + associate income), cost of sales is interest expense, and gross profit is net interest income. Consolidated financial statements include CBE and its subsidiary. EC filenames: 2011 EC = FY ended 30 June 2019.",
   },
   {
+    id: "cic",
+    name: "Chemical Industry Corporation",
+    shortName: "CIC",
+    sector: "Manufacturing",
+    sectorIcon: "flask-conical",
+    description:
+      "A fully state-owned public enterprise operating five manufacturing branches: Mugher Cement Factory, Batu Caustic Soda Factory, Awash Melkassa Chemical Factory, Adami Tulu Pesticides Factory, and a Rubber Tree Plantation and Processing project. One of Ethiopia's largest industrial conglomerates by asset base.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("cic"),
+    auditFindings: loadFindings("cic"),
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "EC filenames: 2015 EC = FY ended 30 June 2023. The Corporation holds land and buildings in Addis Ababa (Gotera area) taken back by the government and demolished — these assets remain on the balance sheet pending compensation determination.",
+  },
+  {
     id: "emc",
     name: "Ethiopian Mineral, Petroleum and Biofuel Corporation",
     shortName: "EMC",

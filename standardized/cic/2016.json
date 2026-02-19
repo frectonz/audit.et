@@ -1,0 +1,189 @@
+{
+  "revenue": 5572310464,
+  "costOfSales": -3341887834,
+  "grossProfit": 2230422629,
+  "operatingProfit": 1642414063,
+  "netProfit": 1048869266,
+  "totalAssets": 17563028689,
+  "totalLiabilities": 5749366087,
+  "totalEquity": 11813662607,
+  "auditOpinion": "Qualified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "The Corporation owned land and building located in Addis Ababa around Gotera, which have been taken back by the government and the buildings were demolished by the Addis Ababa City Administration. The right use of land (Birr 110,868,925.62), the cost of the building (Birr 46,994,807.86), and land improvement costs (Birr 8,879,081.23) with carrying amounts have not been derecognized and still reflected in the financial statements. The auditors are of the opinion that the Corporation has no control over these assets and no expected future benefit from use.",
+      "amount": 166742814.71
+    }
+  ],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          { "label": "Revenue", "amount": 5572310464, "indent": 0, "isSubtotal": false }
+        ]
+      },
+      {
+        "heading": "Cost of Sales",
+        "items": [
+          { "label": "Cost of Sales", "amount": -3341887834, "indent": 0, "isSubtotal": false }
+        ]
+      },
+      {
+        "heading": "Gross Profit",
+        "items": [
+          { "label": "Gross Profit", "amount": 2230422629, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Income",
+        "items": [
+          { "label": "Other Income", "amount": 65351012, "indent": 0, "isSubtotal": false },
+          { "label": "Total income", "amount": 2295773641, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Expenses",
+        "items": [
+          { "label": "Selling and marketing expense", "amount": -141146293, "indent": 1, "isSubtotal": false },
+          { "label": "Administrative expenses", "amount": -512213285, "indent": 1, "isSubtotal": false },
+          { "label": "Total expenses", "amount": -653359578, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Profit",
+        "items": [
+          { "label": "Operating Profit (Loss)", "amount": 1642414063, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Finance",
+        "items": [
+          { "label": "Finance Charges", "amount": -9717521, "indent": 1, "isSubtotal": false },
+          { "label": "Profit before tax", "amount": 1632696542, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Tax",
+        "items": [
+          { "label": "Provision for profit tax", "amount": -456709819, "indent": 1, "isSubtotal": false },
+          { "label": "Subtotal after current tax", "amount": 1175986722, "indent": 0, "isSubtotal": true },
+          { "label": "Deferred tax expense", "amount": -127117456, "indent": 1, "isSubtotal": false },
+          { "label": "Profit for the year (net of tax)", "amount": 1048869266, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, plant and equipment (net)", "amount": 12542709758, "indent": 1, "isSubtotal": false },
+          { "label": "Investment - Government Bond", "amount": 50000, "indent": 1, "isSubtotal": false },
+          { "label": "Construction in progress", "amount": 230446541, "indent": 1, "isSubtotal": false },
+          { "label": "Total non-current assets", "amount": 12773206299, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Non current assets held for sell", "amount": 0, "indent": 1, "isSubtotal": false },
+          { "label": "Inventories", "amount": 3123457075, "indent": 1, "isSubtotal": false },
+          { "label": "Trade and other receivables", "amount": 360512481, "indent": 1, "isSubtotal": false },
+          { "label": "Cash and cash equivalents", "amount": 1088495208, "indent": 1, "isSubtotal": false },
+          { "label": "Prepayments", "amount": 8607993, "indent": 1, "isSubtotal": false },
+          { "label": "Current tax receivable", "amount": 208749632, "indent": 1, "isSubtotal": false },
+          { "label": "Total current assets", "amount": 4789822389, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total assets", "amount": 17563028689, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "State capital", "amount": 6596937329, "indent": 1, "isSubtotal": false },
+          { "label": "Legal reserve", "amount": 16804711, "indent": 1, "isSubtotal": false },
+          { "label": "Retained Earnings", "amount": 5199920567, "indent": 1, "isSubtotal": false },
+          { "label": "Total equity", "amount": 11813662607, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Borrowing", "amount": 35604739, "indent": 1, "isSubtotal": false },
+          { "label": "Loan - IDF", "amount": 593701549, "indent": 1, "isSubtotal": false },
+          { "label": "Deferred tax liabilities", "amount": 3352761125, "indent": 1, "isSubtotal": false },
+          { "label": "Employee Benefit - Severance Pay", "amount": 107129550, "indent": 1, "isSubtotal": false },
+          { "label": "Lease Liabilities", "amount": 25262201, "indent": 1, "isSubtotal": false },
+          { "label": "Total non-current liabilities", "amount": 4114459165, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Current Tax Liabilities", "amount": 109372936, "indent": 1, "isSubtotal": false },
+          { "label": "Accrued Liabilities", "amount": 181464738, "indent": 1, "isSubtotal": false },
+          { "label": "Unearned Revenue", "amount": 438110966, "indent": 1, "isSubtotal": false },
+          { "label": "Trade and other payables", "amount": 300256517, "indent": 1, "isSubtotal": false },
+          { "label": "Employee Benefit - Annual Leave", "amount": 103720125, "indent": 1, "isSubtotal": false },
+          { "label": "Lease Liability", "amount": 1036718, "indent": 1, "isSubtotal": false },
+          { "label": "Bank overdraft", "amount": 44235103, "indent": 1, "isSubtotal": false },
+          { "label": "Profit tax liability", "amount": 456709819, "indent": 1, "isSubtotal": false },
+          { "label": "Total current liabilities", "amount": 1634906923, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total liabilities", "amount": 5749366087, "indent": 0, "isSubtotal": true },
+          { "label": "Total equity and liabilities", "amount": 17563028689, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit Before Tax", "amount": 1632696542, "indent": 0, "isSubtotal": false },
+      { "label": "Depreciation", "amount": 173878898, "indent": 1, "isSubtotal": false },
+      { "label": "Adjustment of Fixed Assets", "amount": 8932291, "indent": 1, "isSubtotal": false },
+      { "label": "Adjustment on deferred tax", "amount": 0, "indent": 1, "isSubtotal": false },
+      { "label": "Prior Year Adjustments", "amount": 104071469, "indent": 1, "isSubtotal": false },
+      { "label": "Subtotal before working capital changes", "amount": 1919579199, "indent": 0, "isSubtotal": true },
+      { "label": "Increase/Decrease in Inventories", "amount": -801172045, "indent": 1, "isSubtotal": false },
+      { "label": "Increase/Decrease in Trade and Other Receivable", "amount": -184836712, "indent": 1, "isSubtotal": false },
+      { "label": "Increase/Decrease in Prepayment & Advance", "amount": 317473295, "indent": 1, "isSubtotal": false },
+      { "label": "Increase/Decrease in Current Tax Receivables", "amount": 15838067, "indent": 1, "isSubtotal": false },
+      { "label": "Increase/Decrease in Assets held for sale", "amount": 509413, "indent": 1, "isSubtotal": false },
+      { "label": "Increase/Decrease in Current Tax Payables", "amount": 2045944, "indent": 1, "isSubtotal": false },
+      { "label": "Increase/Decrease in Unearned Revenue", "amount": -182054671, "indent": 1, "isSubtotal": false },
+      { "label": "Increase/Decrease in Lease Liability", "amount": -1036718, "indent": 1, "isSubtotal": false },
+      { "label": "Increase/Decrease in Accrued liabilities", "amount": -9076091, "indent": 1, "isSubtotal": false },
+      { "label": "Increase/Decrease in Employee Benefit", "amount": 26255489, "indent": 1, "isSubtotal": false },
+      { "label": "Profit tax paid", "amount": -128869369, "indent": 1, "isSubtotal": false },
+      { "label": "Increase/Decrease in Trade & other Payable", "amount": -28297042, "indent": 1, "isSubtotal": false },
+      { "label": "Net working capital changes", "amount": -973220439, "indent": 0, "isSubtotal": true },
+      { "label": "Net Cash (In)/(Out) flow from Operating Activities", "amount": 946358760, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Purchase of Property, Plant and Equipment", "amount": -360047635, "indent": 1, "isSubtotal": false },
+      { "label": "Change in investment", "amount": 0, "indent": 1, "isSubtotal": false },
+      { "label": "Construction in progress", "amount": -34160693, "indent": 1, "isSubtotal": false },
+      { "label": "Net Cash (In)/(Out) flow from Investing Activities", "amount": -394208328, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Increase/Decrease in Overdraft", "amount": 32236772, "indent": 1, "isSubtotal": false },
+      { "label": "Dividend paid", "amount": -156451860, "indent": 1, "isSubtotal": false },
+      { "label": "Bank loan (Net)", "amount": -2066824, "indent": 1, "isSubtotal": false },
+      { "label": "Net Cash (In)/(Out) flow from Financing Activities", "amount": -126281913, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 425868519,
+    "closingCash": 1088495211
+  }
+}
