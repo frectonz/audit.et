@@ -385,6 +385,22 @@ const enterprises: Enterprise[] = [
       "EC filenames: 2014 EC = FY ended 30 June 2022. The EC 2015 report marks the first-time IFRS adoption (transition date: 30 June 2021), which recognized a Right of Use Land asset of ETB 1.3 billion and revalued PP&E. The EC 2014 figures shown here are the IFRS-restated comparatives as presented in the EC 2015 report — they differ materially from the original local GAAP report for that year.",
   },
   {
+    id: "ghion",
+    name: "Ghion Hotels Enterprise",
+    shortName: "Ghion",
+    sector: "Hospitality",
+    sectorIcon: "utensils",
+    description:
+      "One of Ethiopia's iconic state-owned hotel enterprises, operating the historic Ghion Hotel in Addis Ababa. Named after one of the four rivers of Eden referenced in Genesis, the hotel has been a landmark of Ethiopian hospitality since the 1960s. Provides accommodation, food and beverage services, and conference facilities.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("ghion"),
+    auditFindings: loadFindings("ghion"),
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "EC filenames: 2014 EC = FY ended 30 June 2022. The EC 2014 audit report was scanned upside down and has been digitally corrected. Cash flow line items for EC 2014 were not individually readable due to image quality — net change and closing cash are derived from note disclosures.",
+  },
+  {
     id: "emc",
     name: "Ethiopian Mineral, Petroleum and Biofuel Corporation",
     shortName: "EMC",
