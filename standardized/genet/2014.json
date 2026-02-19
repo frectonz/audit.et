@@ -1,0 +1,128 @@
+{
+  "revenue": 23448541,
+  "costOfSales": -9239711,
+  "grossProfit": 14208830,
+  "operatingProfit": -6088544,
+  "netProfit": -3537128,
+  "totalAssets": 1496772236,
+  "totalLiabilities": 46155730,
+  "totalEquity": 1450616507,
+  "auditOpinion": "Unqualified",
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income for the Year Ended June 30, 2022 (IFRS restated comparative)",
+    "groups": [
+      {
+        "heading": "Revenue and Gross Profit",
+        "items": [
+          { "label": "Revenue", "amount": 23448541, "indent": 0, "isSubtotal": false },
+          { "label": "Cost of Sales", "amount": -9239711, "indent": 0, "isSubtotal": false },
+          { "label": "Gross Profit", "amount": 14208830, "indent": 0, "isSubtotal": true },
+          { "label": "Other Income", "amount": 3453937, "indent": 0, "isSubtotal": false },
+          { "label": "Total after Other Income", "amount": 17662767, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Expenses",
+        "items": [
+          { "label": "General and Administrative Expenses", "amount": -23751311, "indent": 1, "isSubtotal": false },
+          { "label": "Finance Income (Cost), net", "amount": 0, "indent": 1, "isSubtotal": false },
+          { "label": "Total Operating Expenses", "amount": -23751311, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Profit and Tax",
+        "items": [
+          { "label": "Profit (Loss) Before Tax", "amount": -6088544, "indent": 0, "isSubtotal": true },
+          { "label": "Income Tax Expense", "amount": 2551415, "indent": 1, "isSubtotal": false },
+          { "label": "Profit (Loss) After Tax for the Year", "amount": -3537128, "indent": 0, "isSubtotal": true },
+          { "label": "Other Comprehensive Income, net of income tax", "amount": 0, "indent": 1, "isSubtotal": false },
+          { "label": "Total Comprehensive Income for the Year", "amount": -3537128, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position as at June 30, 2022 (IFRS restated comparative)",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, Plant and Equipment", "amount": 144091606, "indent": 1, "isSubtotal": false },
+          { "label": "Investment Property", "amount": 5876306, "indent": 1, "isSubtotal": false },
+          { "label": "Right of Use Land", "amount": 1304774673, "indent": 1, "isSubtotal": false },
+          { "label": "Bond - Instrument", "amount": 1000000, "indent": 1, "isSubtotal": false },
+          { "label": "Total Non-Current Assets", "amount": 1455742585, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Inventories", "amount": 1200602, "indent": 1, "isSubtotal": false },
+          { "label": "Trade Receivables", "amount": 995173, "indent": 1, "isSubtotal": false },
+          { "label": "Other Receivables", "amount": 108249, "indent": 1, "isSubtotal": false },
+          { "label": "Cash and Bank Balances", "amount": 38725626, "indent": 1, "isSubtotal": false },
+          { "label": "Total Current Assets", "amount": 41029651, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total Assets", "amount": 1496772236, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Paid Up Capital", "amount": 1177283, "indent": 1, "isSubtotal": false },
+          { "label": "Retained Earnings", "amount": 41544003, "indent": 1, "isSubtotal": false },
+          { "label": "Deemed Cost in Excess of Carrying Value", "amount": 1407895221, "indent": 1, "isSubtotal": false },
+          { "label": "Total Equity", "amount": 1450616507, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Provision for Fence Construction", "amount": 1041164, "indent": 1, "isSubtotal": false },
+          { "label": "Retirement Benefit Obligation", "amount": 2057924, "indent": 1, "isSubtotal": false },
+          { "label": "Deferred Tax Liability", "amount": 40617042, "indent": 1, "isSubtotal": false },
+          { "label": "Total Non-Current Liabilities", "amount": 43716130, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Trade Payables", "amount": 635767, "indent": 1, "isSubtotal": false },
+          { "label": "Other Liabilities", "amount": 1410245, "indent": 1, "isSubtotal": false },
+          { "label": "Current Income Tax Liabilities", "amount": 393588, "indent": 1, "isSubtotal": false },
+          { "label": "Total Current Liabilities", "amount": 2439600, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities", "amount": 46155730, "indent": 0, "isSubtotal": true },
+          { "label": "Total Equity and Liabilities", "amount": 1496772236, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Cash Generated from Operations", "amount": 4679728, "indent": 1, "isSubtotal": false },
+      { "label": "Interest Paid", "amount": 0, "indent": 1, "isSubtotal": false },
+      { "label": "Income Tax Paid", "amount": -10742, "indent": 1, "isSubtotal": false },
+      { "label": "Net Cash Generated from (Used in) Operating Activities", "amount": 4668986, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Acquisition of Property, Plant and Equipment", "amount": -6750399, "indent": 1, "isSubtotal": false },
+      { "label": "Net Cash Generated from (Used in) Investing Activities", "amount": -6750399, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Refunds/Settlements", "amount": 2716566, "indent": 1, "isSubtotal": false },
+      { "label": "Net Cash Generated from (Used in) Financing Activities", "amount": 2716566, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 635153,
+    "closingCash": 38779552
+  }
+}

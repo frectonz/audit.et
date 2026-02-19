@@ -1,0 +1,159 @@
+{
+  "revenue": 62737512,
+  "costOfSales": -35177980,
+  "grossProfit": 27559532,
+  "operatingProfit": 15073743,
+  "netProfit": 12805975,
+  "totalAssets": 1493186928,
+  "totalLiabilities": 45556088,
+  "totalEquity": 1447630839,
+  "auditOpinion": "Unmodified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "The Company made a back-year adjustment of ETB 858,399.65 for the year ended June 30, 2024, deducted from retained earnings as a donation for poor citizens in the sub-city. An amount of ETB 23,922 birr of roll-over adjustment is an audit error of ETB 15,125 committed since 2021 with remaining error, and ETB 891,510 was adjusted due to tax assessment and opening balance adjustment during the reporting year.",
+      "amount": 858400
+    },
+    {
+      "number": 2,
+      "summary": "The Company entered into a land lease arrangement with Ethiopian Airport Enterprise for the use and construction of open space warehouse. Management determined the Company retains the significant risks and rewards of ownership of the land and consequently the land lease has been accounted for as an operating lease rather than a finance lease.",
+      "amount": null
+    }
+  ],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income for the Year Ended June 30, 2025",
+    "groups": [
+      {
+        "heading": "Revenue and Gross Profit",
+        "items": [
+          { "label": "Revenue", "amount": 62737512, "indent": 0, "isSubtotal": false },
+          { "label": "Cost of Sales", "amount": -35177980, "indent": 0, "isSubtotal": false },
+          { "label": "Gross Profit", "amount": 27559532, "indent": 0, "isSubtotal": true },
+          { "label": "Other Income", "amount": 3633161, "indent": 0, "isSubtotal": false },
+          { "label": "Total Income", "amount": 31192694, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Expenses",
+        "items": [
+          { "label": "General and Administrative Expenses", "amount": -16055814, "indent": 1, "isSubtotal": false },
+          { "label": "Finance Cost on Saving Account", "amount": -63137, "indent": 1, "isSubtotal": false },
+          { "label": "Total Operating Expenses", "amount": -16118950, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Profit and Tax",
+        "items": [
+          { "label": "Profit Before Tax", "amount": 15073743, "indent": 0, "isSubtotal": true },
+          { "label": "Income Tax Expense", "amount": -2267768, "indent": 1, "isSubtotal": false },
+          { "label": "Profit After Tax for the Year", "amount": 12805975, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Comprehensive Income",
+        "items": [
+          { "label": "Part of Depreciation on Remeasurement Reserve", "amount": 5718557, "indent": 1, "isSubtotal": false },
+          { "label": "Deferred Tax (Liability)/Asset on Remeasurement Reserve", "amount": -1715567, "indent": 1, "isSubtotal": false },
+          { "label": "Other Comprehensive Income, Net of Income Tax", "amount": 4002990, "indent": 0, "isSubtotal": true },
+          { "label": "Total Comprehensive Income for the Year", "amount": 16808965, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position as at June 30, 2025",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, Plant and Equipment", "amount": 146165745, "indent": 1, "isSubtotal": false },
+          { "label": "Investment Property", "amount": 4919003, "indent": 1, "isSubtotal": false },
+          { "label": "Right of Use Land", "amount": 1304774673, "indent": 1, "isSubtotal": false },
+          { "label": "Bond - Instrument", "amount": 1000000, "indent": 1, "isSubtotal": false },
+          { "label": "Total Non-Current Assets", "amount": 1456859421, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Inventories", "amount": 5956418, "indent": 1, "isSubtotal": false },
+          { "label": "Trade Receivables", "amount": 6187775, "indent": 1, "isSubtotal": false },
+          { "label": "Other Receivables", "amount": 283173, "indent": 1, "isSubtotal": false },
+          { "label": "Cash and Bank Balances", "amount": 23900142, "indent": 1, "isSubtotal": false },
+          { "label": "Total Current Assets", "amount": 36327507, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total Assets", "amount": 1493186928, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Paid Up Capital", "amount": 1177283, "indent": 1, "isSubtotal": false },
+          { "label": "Retained Earnings", "amount": 68978036, "indent": 1, "isSubtotal": false },
+          { "label": "Deemed Cost in Excess of Carrying Value", "amount": 1377475520, "indent": 1, "isSubtotal": false },
+          { "label": "Legal Reserve", "amount": 0, "indent": 1, "isSubtotal": false },
+          { "label": "Total Equity", "amount": 1447630839, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Provision for Fence Construction", "amount": 661803, "indent": 1, "isSubtotal": false },
+          { "label": "Retirement Benefit Obligation", "amount": 3271130, "indent": 1, "isSubtotal": false },
+          { "label": "Deferred Tax Liability", "amount": 29903008, "indent": 1, "isSubtotal": false },
+          { "label": "Total Non-Current Liabilities", "amount": 33835941, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Trade Payables", "amount": 2171707, "indent": 1, "isSubtotal": false },
+          { "label": "Other Liabilities", "amount": 3290363, "indent": 1, "isSubtotal": false },
+          { "label": "Current Income Tax Liabilities", "amount": 6258077, "indent": 1, "isSubtotal": false },
+          { "label": "Total Current Liabilities", "amount": 11720147, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities", "amount": 45556088, "indent": 0, "isSubtotal": true },
+          { "label": "Total Equity and Liabilities", "amount": 1493186928, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit Before Income Tax", "amount": 15073743, "indent": 0, "isSubtotal": false },
+      { "label": "Depreciation of Property, Plant and Equipment", "amount": 8842210, "indent": 1, "isSubtotal": false },
+      { "label": "Cash Flow Before Working Capital Change", "amount": 23915953, "indent": 0, "isSubtotal": true },
+      { "label": "Decrease (Increase) in Inventory", "amount": -4353054, "indent": 1, "isSubtotal": false },
+      { "label": "Decrease (Increase) in Trade Receivables", "amount": -3144480, "indent": 1, "isSubtotal": false },
+      { "label": "Decrease (Increase) in Other Receivables", "amount": 131585, "indent": 1, "isSubtotal": false },
+      { "label": "Increase (Decrease) in Trade Payables", "amount": -1576702, "indent": 1, "isSubtotal": false },
+      { "label": "Increase (Decrease) in Fence Construction Payables", "amount": -188900, "indent": 1, "isSubtotal": false },
+      { "label": "Increase (Decrease) in Severance Payables", "amount": 365008, "indent": 1, "isSubtotal": false },
+      { "label": "Increase (Decrease) in Other Liabilities", "amount": -2278417, "indent": 1, "isSubtotal": false },
+      { "label": "Cash Generated from Operations", "amount": 12870993, "indent": 0, "isSubtotal": true },
+      { "label": "Interest Paid on Saving Account", "amount": -63137, "indent": 1, "isSubtotal": false },
+      { "label": "Prior Period Adjustment", "amount": 718394, "indent": 1, "isSubtotal": false },
+      { "label": "Other Tax Assessment/Taxation Paid", "amount": -2774856, "indent": 1, "isSubtotal": false },
+      { "label": "Income Tax Paid and Other Tax Paid", "amount": -5365046, "indent": 1, "isSubtotal": false },
+      { "label": "Net Cash Generated from (Used in) Operating Activities", "amount": 5386348, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Acquisition of Property, Plant and Equipment", "amount": -8754556, "indent": 1, "isSubtotal": false },
+      { "label": "Net Cash Generated from (Used in) Investing Activities", "amount": -8754556, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Dividend Paid", "amount": -3066690, "indent": 1, "isSubtotal": false },
+      { "label": "Net Cash Generated from (Used in) Financing Activities", "amount": -3066690, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": -6434897,
+    "closingCash": 23900141
+  }
+}

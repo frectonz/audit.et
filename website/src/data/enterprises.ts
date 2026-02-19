@@ -369,6 +369,22 @@ const enterprises: Enterprise[] = [
       "EC filenames: 2015 EC = FY ended 30 June 2023. The Corporation holds land and buildings in Addis Ababa (Gotera area) taken back by the government and demolished — these assets remain on the balance sheet pending compensation determination.",
   },
   {
+    id: "genet",
+    name: "Catering and Tourism Training Institute - Genet Hotel",
+    shortName: "Genet",
+    sector: "Hospitality",
+    sectorIcon: "utensils",
+    description:
+      "A state-owned hospitality enterprise operating under the Catering and Tourism Training Institute. Provides hotel accommodation, food and beverage services, and catering in Addis Ababa. Previously under Ras Hotels Enterprise, it was transferred to the Institute in 1998. Serves as both a commercial hotel and a practical training ground for catering and tourism students.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("genet"),
+    auditFindings: loadFindings("genet"),
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "EC filenames: 2014 EC = FY ended 30 June 2022. The EC 2015 report marks the first-time IFRS adoption (transition date: 30 June 2021), which recognized a Right of Use Land asset of ETB 1.3 billion and revalued PP&E. The EC 2014 figures shown here are the IFRS-restated comparatives as presented in the EC 2015 report — they differ materially from the original local GAAP report for that year.",
+  },
+  {
     id: "emc",
     name: "Ethiopian Mineral, Petroleum and Biofuel Corporation",
     shortName: "EMC",
