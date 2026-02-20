@@ -1,0 +1,179 @@
+{
+  "revenue": 335002255,
+  "costOfSales": -180648903,
+  "grossProfit": 154353352,
+  "operatingProfit": 74030403,
+  "netProfit": 52465128,
+  "totalAssets": 341239836,
+  "totalLiabilities": 162277207,
+  "totalEquity": 179270451,
+  "auditOpinion": "Unqualified",
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income for the Year Ended 30 June 2025",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          { "label": "Room service", "amount": 10797857, "indent": 1 },
+          { "label": "Food, cafeteria and beverages", "amount": 91046026, "indent": 1 },
+          { "label": "Bath and shower", "amount": 127675434, "indent": 1 },
+          { "label": "Therapy and sauna bath", "amount": 105482919, "indent": 1 },
+          { "label": "Revenue", "amount": 335002255, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Cost of Sales",
+        "items": [
+          { "label": "Cost of materials — Food, cafeteria and beverages", "amount": -41933407, "indent": 1 },
+          { "label": "Cost of materials — Bath and shower", "amount": -19914517, "indent": 1 },
+          { "label": "Cost of materials — Therapy and sauna bath", "amount": -1262410, "indent": 1 },
+          { "label": "Cost of materials — Water", "amount": -44840669, "indent": 1 },
+          { "label": "Cost of Materials and Services", "amount": -107951003, "indent": 0, "isSubtotal": true },
+          { "label": "Overhead — Salary and related", "amount": -56394421, "indent": 1 },
+          { "label": "Overhead — Repair and maintenance", "amount": -16558314, "indent": 1 },
+          { "label": "Overhead — Depreciation", "amount": 70836, "indent": 1 },
+          { "label": "Overhead — Cleaning and sanitation", "amount": 183998, "indent": 1 },
+          { "label": "Overhead Cost", "amount": -72697900, "indent": 0, "isSubtotal": true },
+          { "label": "Cost of Sales", "amount": -180648903, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Gross Profit",
+        "items": [
+          { "label": "Gross Profit", "amount": 154353352, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Income",
+        "items": [
+          { "label": "Bakery income", "amount": 1284457, "indent": 1 },
+          { "label": "Laundry income", "amount": 4879, "indent": 1 },
+          { "label": "Parking income", "amount": 8436791, "indent": 1 },
+          { "label": "Shop rent", "amount": 7790207, "indent": 1 },
+          { "label": "Other income", "amount": 3612394, "indent": 1 },
+          { "label": "Total Other Income", "amount": 21128727, "indent": 0, "isSubtotal": true },
+          { "label": "Total Revenue and Other Income", "amount": 175482078, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Expenses",
+        "items": [
+          { "label": "Impairment loss", "amount": -307822, "indent": 1 },
+          { "label": "Administration", "amount": -100485231, "indent": 1 },
+          { "label": "Finance cost", "amount": -658622, "indent": 1 },
+          { "label": "Total Expenses", "amount": -101451675, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Profit",
+        "items": [
+          { "label": "Profit Before Tax", "amount": 74030403, "indent": 0, "isSubtotal": true },
+          { "label": "Income tax expense", "amount": -21565275, "indent": 1 },
+          { "label": "Profit for the Year", "amount": 52465128, "indent": 0, "isSubtotal": true },
+          { "label": "Other Comprehensive Income", "amount": 0, "indent": 1 },
+          { "label": "Total Comprehensive Income", "amount": 52465128, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position at 30 June 2025",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, plant and equipment", "amount": 198757430, "indent": 1 },
+          { "label": "Right of use asset", "amount": 44753996, "indent": 1 },
+          { "label": "Government bond", "amount": 300000, "indent": 1 },
+          { "label": "Investment property", "amount": 1095165, "indent": 1 },
+          { "label": "Intangible asset", "amount": 1298292, "indent": 1 },
+          { "label": "Total Non-Current Assets", "amount": 246204882, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Trade and other receivables", "amount": 41314181, "indent": 1 },
+          { "label": "Inventory", "amount": 35251567, "indent": 1 },
+          { "label": "Cash and bank balances", "amount": 18469206, "indent": 1 },
+          { "label": "Total Current Assets", "amount": 95034953, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total Assets", "amount": 341239836, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Capital and Reserves",
+        "items": [
+          { "label": "Paid up capital", "amount": 4382705, "indent": 1 },
+          { "label": "Legal reserve", "amount": 2961065, "indent": 1 },
+          { "label": "Retained earnings", "amount": 171926681, "indent": 1 },
+          { "label": "Total Equity", "amount": 179270451, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Employee benefit - long term", "amount": 4940775, "indent": 1 },
+          { "label": "Deferred tax liability", "amount": 34740317, "indent": 1 },
+          { "label": "Bank loan", "amount": 30392176, "indent": 1 },
+          { "label": "Total Non-Current Liabilities", "amount": 70073269, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Trade and other payables", "amount": 35856363, "indent": 1 },
+          { "label": "Industrial development fund", "amount": 11898481, "indent": 1 },
+          { "label": "State dividend payable", "amount": 5701426, "indent": 1 },
+          { "label": "Other tax payable", "amount": 7884961, "indent": 1 },
+          { "label": "Profit tax payable", "amount": 25375443, "indent": 1 },
+          { "label": "Employee benefit - short term", "amount": 5507263, "indent": 1 },
+          { "label": "Total Current Liabilities", "amount": 92203938, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities", "amount": 162277207, "indent": 0, "isSubtotal": true },
+          { "label": "Total Equity and Liabilities", "amount": 341547658, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit for the year before taxation", "amount": 74030403, "indent": 1 },
+      { "label": "Depreciation of property, plant and equipment", "amount": 16619157, "indent": 1 },
+      { "label": "Impairment loss", "amount": -307822, "indent": 1 },
+      { "label": "Prior period adjustment", "amount": -32036040, "indent": 1 },
+      { "label": "Subtotal before working capital changes", "amount": 58305698, "indent": 0, "isSubtotal": true },
+      { "label": "(Increase)/decrease in inventory", "amount": -13498400, "indent": 1 },
+      { "label": "(Increase)/decrease in trade and other receivables", "amount": 1169701, "indent": 1 },
+      { "label": "Increase/(decrease) in trade and other payables", "amount": -11120435, "indent": 1 },
+      { "label": "(Decrease)/increase in employee benefit", "amount": 1894284, "indent": 1 },
+      { "label": "(Decrease)/increase in other taxes payable", "amount": 2896368, "indent": 1 },
+      { "label": "Cash generated from operations", "amount": 39647215, "indent": 0, "isSubtotal": true },
+      { "label": "Withholding tax paid", "amount": -641017, "indent": 1 },
+      { "label": "Profit tax paid", "amount": -23992327, "indent": 1 },
+      { "label": "Net cash generated from operating activities", "amount": 15013871, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Property, plant and equipment", "amount": -45025668, "indent": 1 },
+      { "label": "Addition to Right of Use asset", "amount": 0, "indent": 1 },
+      { "label": "Adjustment on Property, plant and equipment", "amount": 14217944, "indent": 1 },
+      { "label": "Net cash used in investing activities", "amount": -30807724, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "State dividend", "amount": -5117949, "indent": 1 },
+      { "label": "Loan proceed/settlement", "amount": 30184712, "indent": 1 },
+      { "label": "Net cash from financing activities", "amount": 25066763, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 9272906,
+    "closingCash": 18469206
+  }
+}

@@ -417,6 +417,22 @@ const enterprises: Enterprise[] = [
       "Consolidated financial statements including subsidiary Afar Salt Production Share Company. The corporation has significant land use rights (freehold land) valued at Br. 647 billion on the balance sheet. EC filenames: 2015 EC = FY ended 7 July 2023.",
   },
   {
+    id: "filwuha",
+    name: "Filwuha Spa Service Enterprise",
+    shortName: "Filwuha",
+    sector: "Hospitality",
+    sectorIcon: "waves",
+    description:
+      "Ethiopia's iconic state-owned spa and wellness complex in Addis Ababa, built on natural hot mineral springs. Re-established under Council of Ministers Regulation 111/1993, 'Filwuha' (ፍልውሃ) means 'hot spring' in Amharic. Operates bath and shower facilities, therapy and sauna baths, food and cafeteria services, and room accommodation.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("filwuha"),
+    auditFindings: loadFindings("filwuha"),
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "EC filenames: 2014 EC = FY ended 30 June 2022. The EC 2016 audit received a Qualified opinion due to a prior year adjustment of Birr 26,957,483 for which the auditors could not obtain sufficient supporting evidence.",
+  },
+  {
     id: "etbc",
     name: "Ethiopian Trading Businesses Corporation",
     shortName: "ETBC",

@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { getAllEnterprises, formatETB } from "../data/enterprises";
-import { Zap, Plug, Wheat, Mail, HardHat, Pickaxe, ChevronRight, Home, ArrowRight } from "@lucide/astro";
+import { Zap, Plug, Wheat, Mail, HardHat, Pickaxe, Waves, ChevronRight, Home, ArrowRight } from "@lucide/astro";
 
 const enterprises = getAllEnterprises();
 
@@ -13,6 +13,7 @@ const sectorIconMap: Record<string, any> = {
   bolt: Zap,
   "hard-hat": HardHat,
   pickaxe: Pickaxe,
+  waves: Waves,
 };
 
 function getOpinionColor(opinion: string): string {
