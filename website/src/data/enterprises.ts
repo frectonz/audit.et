@@ -42,13 +42,11 @@ function loadFindings(enterpriseId: string) {
     .filter((f: string) => f.endsWith(".json"))
     .sort();
 
-  for (const file of files) {
-    const data = JSON.parse(fs.readFileSync(path.join(dir, file), "utf-8"));
-    if (Array.isArray(data.auditFindings) && data.auditFindings.length > 0) {
-      return data.auditFindings;
-    }
-  }
-  return [];
+  if (files.length === 0) return [];
+
+  const latest = files[files.length - 1];
+  const data = JSON.parse(fs.readFileSync(path.join(dir, latest), "utf-8"));
+  return Array.isArray(data.auditFindings) ? data.auditFindings : [];
 }
 
 const enterprises: Enterprise[] = [

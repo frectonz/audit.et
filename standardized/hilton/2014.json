@@ -9,36 +9,12 @@
   "totalEquity": 718934835,
   "auditOpinion": "Unmodified",
   "auditFindings": [
-    {
-      "category": "Property, Plant and Equipment",
-      "finding": "A fixed asset register containing identification numbers, acquisition dates, locations, and serial numbers was not maintained. Physical count of assets was not carried out at year-end.",
-      "recommendation": "A complete and informative fixed asset register should be maintained for each asset and reconciled with the physical counts at year-end."
-    },
-    {
-      "category": "Property, Plant and Equipment",
-      "finding": "Property, plant and equipment includes construction in progress with an aggregate balance of Birr 3,024,503 outstanding since June 2011 that had not been cleared.",
-      "recommendation": "These balances should be investigated and appropriate action taken; they should not be carried forward indefinitely."
-    },
-    {
-      "category": "Property, Plant and Equipment",
-      "finding": "Subsidiary ledger for details of expenditures incurred on imported goods was not maintained. A Cardiff elongated closed toilet seat was purchased through JV No. 010 at a total cost of Birr 1,170,333 for 190 American Standard items, resulting in a difference of Birr 6,877 between book and records.",
-      "recommendation": "Subsidiary ledger for imported goods should be maintained and reconciled with book records."
-    },
-    {
-      "category": "Trade and Other Receivables",
-      "finding": "Trade receivable account includes long outstanding balances totalling Birr 19,779,675 (Associated Enterprises: Birr 17,994,458; Sundry debtors: Birr 10,151; AA Hilton share of profit: Birr 1,775,066). The total provision of Birr 18,004,609 is inadequate for the extent of write-off required.",
-      "recommendation": "Long overdue receivables should be considered for provision and written off if there is no reasonable expectation of recovery, particularly for associated enterprises."
-    },
-    {
-      "category": "Creditors and Accruals",
-      "finding": "There were differences in recording accrued liabilities: (a) the accrual for audit fee was not considered in full; (b) adjustment of Birr 119,000 following rejection of audit fees arrears by the tax office was not treated as the correct charge for the period.",
-      "recommendation": "Accrued liabilities should be maintained correctly irrespective of the tax period."
-    },
-    {
-      "category": "General",
-      "finding": "Lawyers' letters confirming the outcome of outstanding legal cases were not obtained, making it impossible to assess and provide for contingent liabilities.",
-      "recommendation": "Lawyers' letters with detailed assessment of pending legal matters should be obtained as an important source to determine provisions for contingent liabilities."
-    }
+    { "number": 1, "summary": "Property, Plant & Equipment: Fixed asset register containing identification numbers, acquisition dates, locations, and serial numbers was not maintained. Physical count of assets was not carried out at year-end.", "amount": null },
+    { "number": 2, "summary": "Property, Plant & Equipment: Construction in progress includes an aggregate balance of Birr 3,024,503 outstanding since June 2011 that had not been cleared or investigated.", "amount": 3024503 },
+    { "number": 3, "summary": "Property, Plant & Equipment: Subsidiary ledger for imported goods was not maintained, resulting in a reconciliation difference of Birr 6,877 between book and records.", "amount": 6877 },
+    { "number": 4, "summary": "Trade and Other Receivables: Long outstanding balances totalling Birr 19,779,675 are included in trade receivables; the total provision of Birr 18,004,609 is inadequate for the extent of write-off required.", "amount": 19779675 },
+    { "number": 5, "summary": "Creditors and Accruals: Differences in recording accrued liabilities — audit fee accrual was not considered in full, and a Birr 119,000 tax office adjustment was not treated as the correct charge for the period.", "amount": 119000 },
+    { "number": 6, "summary": "General: Lawyers' letters confirming the outcome of outstanding legal cases were not obtained, making it impossible to assess and provide for contingent liabilities.", "amount": null }
   ],
   "incomeStatement": {
     "title": "Statement of Profit or Loss and Other Comprehensive Income for the Year Ended 30 June 2022",
