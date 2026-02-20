@@ -1,0 +1,133 @@
+{
+  "revenue": 256517317,
+  "costOfSales": null,
+  "grossProfit": null,
+  "operatingProfit": 193056260,
+  "netProfit": 138768472,
+  "totalAssets": 1700370589,
+  "totalLiabilities": 977914334,
+  "totalEquity": 722456255,
+  "auditOpinion": "Unmodified",
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income for the Year Ended 30 June 2024",
+    "groups": [
+      {
+        "heading": "Income",
+        "items": [
+          { "label": "Revenue (lease income – 75% share of hotel profit)", "amount": 238641679, "indent": 1 },
+          { "label": "Other income (interest income)", "amount": 17875638, "indent": 1 },
+          { "label": "Total Income", "amount": 256517317, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Expenses",
+        "items": [
+          { "label": "Administration expense", "amount": -62270057, "indent": 1 },
+          { "label": "Board fees", "amount": -313500, "indent": 1 },
+          { "label": "Audit fee", "amount": -877500, "indent": 1 },
+          { "label": "Total Expenses", "amount": -63461057, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Profit Before Tax",
+        "items": [
+          { "label": "Profit Before Tax", "amount": 193056260, "indent": 0, "isSubtotal": true },
+          { "label": "Income tax expense", "amount": -54287788, "indent": 1 },
+          { "label": "Profit after Tax", "amount": 138768472, "indent": 0, "isSubtotal": true },
+          { "label": "Add: Deferred income", "amount": 1724062, "indent": 1 },
+          { "label": "Total Comprehensive Income", "amount": 140492534, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position as at 30 June 2024",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, plant and equipment", "amount": 1161979128, "indent": 1 },
+          { "label": "Trade receivables – long term", "amount": 93610597, "indent": 1 },
+          { "label": "Total Non-Current Assets", "amount": 1255589725, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Trade receivables", "amount": 115588117, "indent": 1 },
+          { "label": "Deposit and prepayments", "amount": 22310, "indent": 1 },
+          { "label": "Fixed time deposit", "amount": 309280574, "indent": 1 },
+          { "label": "Cash and bank balances", "amount": 19889863, "indent": 1 },
+          { "label": "Total Current Assets", "amount": 444780864, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total Assets", "amount": 1700370589, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Capital and Reserves",
+        "items": [
+          { "label": "Capital", "amount": 20228479, "indent": 1 },
+          { "label": "Legal reserve", "amount": 4045696, "indent": 1 },
+          { "label": "General reserve", "amount": 970194, "indent": 1 },
+          { "label": "Revaluation reserve", "amount": 102695040, "indent": 1 },
+          { "label": "Retained earnings", "amount": 594516846, "indent": 1 },
+          { "label": "Total Equity and Reserves", "amount": 722456255, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liability",
+        "items": [
+          { "label": "Deferred tax liability", "amount": 226490401, "indent": 1 },
+          { "label": "Total Non-Current Liability", "amount": 226490401, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Creditors and accruals", "amount": 2752188, "indent": 1 },
+          { "label": "Profit tax payable", "amount": 54287788, "indent": 1 },
+          { "label": "State dividend", "amount": 198096425, "indent": 1 },
+          { "label": "Industrial development fund", "amount": 496287531, "indent": 1 },
+          { "label": "Total Current Liabilities", "amount": 751423932, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities and Equity", "amount": 1700370589, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit before taxation", "amount": 193056260, "indent": 1 },
+      { "label": "Income tax paid", "amount": -44148644, "indent": 1 },
+      { "label": "Investment income", "amount": -17875638, "indent": 1 },
+      { "label": "Depreciation of PP&E", "amount": 47216659, "indent": 1 },
+      { "label": "Subtotal", "amount": 178248637, "indent": 0, "isSubtotal": true },
+      { "label": "Increase in trade receivables", "amount": -1455817, "indent": 1 },
+      { "label": "Increase in trade receivables – long term", "amount": -22486901, "indent": 1 },
+      { "label": "Increase in creditors and accruals", "amount": 1482141, "indent": 1 },
+      { "label": "Cash generated from operations", "amount": -22460577, "indent": 0, "isSubtotal": true },
+      { "label": "Net Cash from Operating Activities", "amount": 155788060, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Interest received", "amount": 17875638, "indent": 1 },
+      { "label": "Purchase of property and equipment", "amount": -64377844, "indent": 1 },
+      { "label": "Proceeds from sale of PP&E", "amount": 326087, "indent": 1 },
+      { "label": "Net Cash used in Investing Activities", "amount": -46176119, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Dividend paid", "amount": -69160673, "indent": 1 },
+      { "label": "Net Cash used in Financing Activities", "amount": -69160673, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 40451268,
+    "closingCash": 329170437
+  }
+}

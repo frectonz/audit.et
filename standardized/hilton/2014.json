@@ -1,0 +1,166 @@
+{
+  "revenue": 103058773,
+  "costOfSales": null,
+  "grossProfit": null,
+  "operatingProfit": 54913470,
+  "netProfit": 36206971,
+  "totalAssets": 1538071554,
+  "totalLiabilities": 819136719,
+  "totalEquity": 718934835,
+  "auditOpinion": "Unmodified",
+  "auditFindings": [
+    {
+      "category": "Property, Plant and Equipment",
+      "finding": "A fixed asset register containing identification numbers, acquisition dates, locations, and serial numbers was not maintained. Physical count of assets was not carried out at year-end.",
+      "recommendation": "A complete and informative fixed asset register should be maintained for each asset and reconciled with the physical counts at year-end."
+    },
+    {
+      "category": "Property, Plant and Equipment",
+      "finding": "Property, plant and equipment includes construction in progress with an aggregate balance of Birr 3,024,503 outstanding since June 2011 that had not been cleared.",
+      "recommendation": "These balances should be investigated and appropriate action taken; they should not be carried forward indefinitely."
+    },
+    {
+      "category": "Property, Plant and Equipment",
+      "finding": "Subsidiary ledger for details of expenditures incurred on imported goods was not maintained. A Cardiff elongated closed toilet seat was purchased through JV No. 010 at a total cost of Birr 1,170,333 for 190 American Standard items, resulting in a difference of Birr 6,877 between book and records.",
+      "recommendation": "Subsidiary ledger for imported goods should be maintained and reconciled with book records."
+    },
+    {
+      "category": "Trade and Other Receivables",
+      "finding": "Trade receivable account includes long outstanding balances totalling Birr 19,779,675 (Associated Enterprises: Birr 17,994,458; Sundry debtors: Birr 10,151; AA Hilton share of profit: Birr 1,775,066). The total provision of Birr 18,004,609 is inadequate for the extent of write-off required.",
+      "recommendation": "Long overdue receivables should be considered for provision and written off if there is no reasonable expectation of recovery, particularly for associated enterprises."
+    },
+    {
+      "category": "Creditors and Accruals",
+      "finding": "There were differences in recording accrued liabilities: (a) the accrual for audit fee was not considered in full; (b) adjustment of Birr 119,000 following rejection of audit fees arrears by the tax office was not treated as the correct charge for the period.",
+      "recommendation": "Accrued liabilities should be maintained correctly irrespective of the tax period."
+    },
+    {
+      "category": "General",
+      "finding": "Lawyers' letters confirming the outcome of outstanding legal cases were not obtained, making it impossible to assess and provide for contingent liabilities.",
+      "recommendation": "Lawyers' letters with detailed assessment of pending legal matters should be obtained as an important source to determine provisions for contingent liabilities."
+    }
+  ],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income for the Year Ended 30 June 2022",
+    "groups": [
+      {
+        "heading": "Income",
+        "items": [
+          { "label": "Revenue (lease income – 75% share of hotel profit)", "amount": 99711350, "indent": 1 },
+          { "label": "Other income", "amount": 3347423, "indent": 1 },
+          { "label": "Total Income", "amount": 103058773, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Expenses",
+        "items": [
+          { "label": "Administration expense", "amount": -48020303, "indent": 1 },
+          { "label": "Board fees", "amount": -75000, "indent": 1 },
+          { "label": "Audit fee", "amount": -50000, "indent": 1 },
+          { "label": "Total Expenses", "amount": -48145303, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Profit Before Tax",
+        "items": [
+          { "label": "Profit Before Tax", "amount": 54913470, "indent": 0, "isSubtotal": true },
+          { "label": "Income tax expense", "amount": -18706499, "indent": 1 },
+          { "label": "Profit after Tax", "amount": 36206971, "indent": 0, "isSubtotal": true },
+          { "label": "Add: Deferred income", "amount": 2310646, "indent": 1 },
+          { "label": "Total Comprehensive Income", "amount": 38517617, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position as at 30 June 2022",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, plant and equipment", "amount": 1048369704, "indent": 1 },
+          { "label": "Trade receivables – long term", "amount": 133902086, "indent": 1 },
+          { "label": "Treasury notes", "amount": 259948000, "indent": 1 },
+          { "label": "Total Non-Current Assets", "amount": 1442219790, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Trade receivables", "amount": 41789475, "indent": 1 },
+          { "label": "Deposit and prepayments", "amount": 22310, "indent": 1 },
+          { "label": "Fixed time deposit", "amount": 45460628, "indent": 1 },
+          { "label": "Cash and bank balances", "amount": 8579351, "indent": 1 },
+          { "label": "Total Current Assets", "amount": 95851764, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total Assets", "amount": 1538071554, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Capital and Reserves",
+        "items": [
+          { "label": "Capital", "amount": 20228479, "indent": 1 },
+          { "label": "Legal reserve", "amount": 4045696, "indent": 1 },
+          { "label": "General reserve", "amount": 970194, "indent": 1 },
+          { "label": "Revaluation reserve", "amount": 102695040, "indent": 1 },
+          { "label": "Retained earnings", "amount": 590995426, "indent": 1 },
+          { "label": "Total Equity and Reserves", "amount": 718934835, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liability",
+        "items": [
+          { "label": "Deferred tax liability", "amount": 230011821, "indent": 1 },
+          { "label": "Total Non-Current Liability", "amount": 230011821, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Creditors and accruals", "amount": 810919, "indent": 1 },
+          { "label": "Profit tax payable", "amount": 18722739, "indent": 1 },
+          { "label": "State dividend", "amount": 154154635, "indent": 1 },
+          { "label": "Industrial development fund", "amount": 415436605, "indent": 1 },
+          { "label": "Total Current Liabilities", "amount": 589124898, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities and Equity", "amount": 1538071554, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit before taxation", "amount": 54913470, "indent": 1 },
+      { "label": "Income tax paid", "amount": -1648982, "indent": 1 },
+      { "label": "Investment income", "amount": -2639641, "indent": 1 },
+      { "label": "Gain on disposal of fixed asset", "amount": -707783, "indent": 1 },
+      { "label": "Depreciation of PP&E", "amount": 40660505, "indent": 1 },
+      { "label": "Subtotal", "amount": 86162733, "indent": 0, "isSubtotal": true },
+      { "label": "Increase in trade receivables", "amount": -21172974, "indent": 1 },
+      { "label": "Increase in trade receivables – long term", "amount": -21738717, "indent": 1 },
+      { "label": "Increase in creditors and accruals", "amount": 173790, "indent": 1 },
+      { "label": "Cash generated from operations", "amount": -42737901, "indent": 0, "isSubtotal": true },
+      { "label": "Net Cash from Operating Activities", "amount": 43424832, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Interest received", "amount": 2639641, "indent": 1 },
+      { "label": "Purchase of property and equipment", "amount": -21289750, "indent": 1 },
+      { "label": "Proceeds from sale of PP&E", "amount": 4310002, "indent": 1 },
+      { "label": "Net Cash used in Investing Activities", "amount": -14340107, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Dividend paid", "amount": -20000000, "indent": 1 },
+      { "label": "Net Cash used in Financing Activities", "amount": -20000000, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 9084725,
+    "closingCash": 54039979
+  }
+}

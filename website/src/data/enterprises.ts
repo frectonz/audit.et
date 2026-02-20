@@ -417,6 +417,22 @@ const enterprises: Enterprise[] = [
       "Consolidated financial statements including subsidiary Afar Salt Production Share Company. The corporation has significant land use rights (freehold land) valued at Br. 647 billion on the balance sheet. EC filenames: 2015 EC = FY ended 7 July 2023.",
   },
   {
+    id: "hilton",
+    name: "Development & Hotel Company (Hilton Addis)",
+    shortName: "DHC",
+    sector: "Hospitality",
+    sectorIcon: "hotel",
+    description:
+      "The fully government-owned owner and lessor of the Hilton Addis Ababa International Hotel. Established in 1961 EC, DHC leases its hotel property to Hilton International USA under a long-term agreement. Revenue consists of DHC's 75% share of the hotel's gross operating profit. A wholly-owned subsidiary of Ethiopian Investment Holdings (EIH).",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("hilton"),
+    auditFindings: loadFindings("hilton"),
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "DHC is a holding/leasing company with no cost of sales — all expenses are administrative. EC filenames: 2014 EC = FY ended 30 June 2022. Revenue represents DHC's 75% share of the hotel's gross operating profit as per the lease agreement.",
+  },
+  {
     id: "filwuha",
     name: "Filwuha Spa Service Enterprise",
     shortName: "Filwuha",
