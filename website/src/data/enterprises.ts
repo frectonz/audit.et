@@ -431,6 +431,22 @@ const enterprises: Enterprise[] = [
       "DHC is a holding/leasing company with no cost of sales — all expenses are administrative. EC filenames: 2014 EC = FY ended 30 June 2022. Revenue represents DHC's 75% share of the hotel's gross operating profit as per the lease agreement.",
   },
   {
+    id: "eslse",
+    name: "Ethiopian Shipping and Logistics Services Enterprise",
+    shortName: "ESLSE",
+    sector: "Logistics",
+    sectorIcon: "ship",
+    description:
+      "An autonomous public enterprise established in November 2011 providing coastal and international marine and inland transport services, freight forwarding, multimodal transport, shipping and air agency services, stevedoring, shore-handling, dry port, warehousing and other logistics services for import and export goods. Headquartered at Legehar Building, Gambia Street, Addis Ababa.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr (originally reported in Birr'000)",
+    years: loadYears("eslse"),
+    auditFindings: loadFindings("eslse"),
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "All amounts were originally reported in Birr'000 and have been converted to full ETB. ESLSE received Qualified audit opinions for both years due to issues with trade receivables/payables, bank reconciliation discrepancies, and other matters. EC filenames: 2015 EC = FY ended 30 June 2023.",
+  },
+  {
     id: "etre",
     name: "Ethiopian Toll Roads Enterprise",
     shortName: "ETRE",

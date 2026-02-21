@@ -1,0 +1,188 @@
+{
+  "revenue": 55907347000,
+  "costOfSales": -43322175000,
+  "grossProfit": 12585172000,
+  "operatingProfit": 9769265000,
+  "netProfit": 6512598000,
+  "totalAssets": 81629546000,
+  "totalLiabilities": 57509554000,
+  "totalEquity": 24119993000,
+  "auditOpinion": "Qualified",
+  "auditFindings": [
+    {
+      "number": 1,
+      "summary": "Trade and other receivable includes abnormal/credit balance; unable to determine adjustments needed",
+      "amount": 400801816
+    },
+    {
+      "number": 2,
+      "summary": "Bank reconciliation includes long outstanding reconciling items: cheques and deposits in transit, balances not recorded as collection/payment, and void transactions recorded in wrong period",
+      "amount": 1610684130
+    },
+    {
+      "number": 3,
+      "summary": "No overdraft facility available but total credit balance understating cash balance",
+      "amount": 310167801
+    },
+    {
+      "number": 4,
+      "summary": "Trade and other payables include long outstanding balances with no explanation and debit balances deducted",
+      "amount": 2345863352
+    },
+    {
+      "number": 5,
+      "summary": "Net balance at foreign operation and inter-sectorial account should have been nil out during combination",
+      "amount": 272872000
+    },
+    {
+      "number": 6,
+      "summary": "Transfer of Ethio-Ferries (Tana Haik Transport Enterprise): net asset per audit differs from recorded amount; no business valuation conducted",
+      "amount": 19052559
+    }
+  ],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income for the Year Ended 30 Sene 2016",
+    "groups": [
+      {
+        "heading": "Revenue & Cost of Sales",
+        "items": [
+          { "label": "Revenue from Contracts with Customers", "amount": 55907347000, "indent": 0, "isSubtotal": false },
+          { "label": "Direct Costs", "amount": -43322175000, "indent": 0, "isSubtotal": false },
+          { "label": "Gross Profit", "amount": 12585172000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Operating Expenses & Income",
+        "items": [
+          { "label": "Administrative Expenses", "amount": -2432793000, "indent": 1, "isSubtotal": false },
+          { "label": "Net Impairment Losses on Financial and Contract Assets", "amount": -1826624000, "indent": 1, "isSubtotal": false },
+          { "label": "Foreign Currency Exchange Rate Gains", "amount": 1136706000, "indent": 1, "isSubtotal": false },
+          { "label": "Other Income", "amount": 306802000, "indent": 1, "isSubtotal": false },
+          { "label": "Operating Profit", "amount": 9769265000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Finance & Tax",
+        "items": [
+          { "label": "Finance Costs", "amount": -27628000, "indent": 1, "isSubtotal": false },
+          { "label": "Profit Before Income Tax", "amount": 9741637000, "indent": 0, "isSubtotal": true },
+          { "label": "Income Tax Expense", "amount": -3229039000, "indent": 1, "isSubtotal": false },
+          { "label": "Profit After Tax", "amount": 6512598000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Comprehensive Income",
+        "items": [
+          { "label": "Remeasurement Gain/(Loss) on Retirement Benefits", "amount": -53414000, "indent": 1, "isSubtotal": false },
+          { "label": "Deferred Tax on Remeasurement", "amount": 16024000, "indent": 1, "isSubtotal": false },
+          { "label": "Net OCI (Will Not Be Reclassified)", "amount": -37390000, "indent": 0, "isSubtotal": true },
+          { "label": "Exchange Differences on Translating Foreign Operations", "amount": 77655000, "indent": 1, "isSubtotal": false },
+          { "label": "Income Tax on Translation", "amount": -23296000, "indent": 1, "isSubtotal": false },
+          { "label": "Net OCI (Will Be Reclassified)", "amount": 54358000, "indent": 0, "isSubtotal": true },
+          { "label": "Total Other Comprehensive Income", "amount": 16969000, "indent": 0, "isSubtotal": true },
+          { "label": "Total Comprehensive Income", "amount": 6529566000, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position as at 30 Sene 2016",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, Plant and Equipment", "amount": 18200076000, "indent": 1, "isSubtotal": false },
+          { "label": "Right of Use Asset", "amount": 5498000, "indent": 1, "isSubtotal": false },
+          { "label": "Investment Property", "amount": 1337000, "indent": 1, "isSubtotal": false },
+          { "label": "Intangible Assets", "amount": 209485000, "indent": 1, "isSubtotal": false },
+          { "label": "Equity Investments", "amount": 28226000, "indent": 1, "isSubtotal": false },
+          { "label": "Total Non-Current Assets", "amount": 18444622000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Inventories", "amount": 2352472000, "indent": 1, "isSubtotal": false },
+          { "label": "Other Assets", "amount": 3327555000, "indent": 1, "isSubtotal": false },
+          { "label": "Trade and Other Receivables", "amount": 19109312000, "indent": 1, "isSubtotal": false },
+          { "label": "Investment in Foreign Branch", "amount": 869539000, "indent": 1, "isSubtotal": false },
+          { "label": "Contract Assets", "amount": 115329000, "indent": 1, "isSubtotal": false },
+          { "label": "Investment Securities Held at Amortized Cost", "amount": 2000000, "indent": 1, "isSubtotal": false },
+          { "label": "Cash and Cash Equivalents", "amount": 38008720000, "indent": 1, "isSubtotal": false },
+          { "label": "Total Current Assets", "amount": 63184924000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total Assets", "amount": 81629546000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Capital", "amount": 20000000000, "indent": 1, "isSubtotal": false },
+          { "label": "Legal Reserve", "amount": 2346792000, "indent": 1, "isSubtotal": false },
+          { "label": "Other Reserves (Remeasurement Difference on Employee Benefit)", "amount": 24508000, "indent": 1, "isSubtotal": false },
+          { "label": "Other Reserves (Foreign Currency Exchange Rate Difference on Translation)", "amount": 623717000, "indent": 1, "isSubtotal": false },
+          { "label": "Revaluation Reserve", "amount": 1124976000, "indent": 1, "isSubtotal": false },
+          { "label": "Retained Earnings", "amount": 0, "indent": 1, "isSubtotal": false },
+          { "label": "Total Equity", "amount": 24119993000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Deferred Tax Liabilities", "amount": 1038662000, "indent": 1, "isSubtotal": false },
+          { "label": "Lease Obligation", "amount": 2858000, "indent": 1, "isSubtotal": false },
+          { "label": "Defined Benefit Obligations", "amount": 198581000, "indent": 1, "isSubtotal": false },
+          { "label": "Total Non-Current Liabilities", "amount": 1240101000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Borrowings", "amount": 3014000, "indent": 1, "isSubtotal": false },
+          { "label": "Trade and Other Payables", "amount": 46987912000, "indent": 1, "isSubtotal": false },
+          { "label": "Contract Liabilities", "amount": 461144000, "indent": 1, "isSubtotal": false },
+          { "label": "Intersectoral Receivables", "amount": 3368000, "indent": 1, "isSubtotal": false },
+          { "label": "Provisions", "amount": 38353000, "indent": 1, "isSubtotal": false },
+          { "label": "Defined Benefit Obligations", "amount": 1581000, "indent": 1, "isSubtotal": false },
+          { "label": "Current Tax Liabilities", "amount": 8774081000, "indent": 1, "isSubtotal": false },
+          { "label": "Total Current Liabilities", "amount": 56269453000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities", "amount": 57509554000, "indent": 0, "isSubtotal": true },
+          { "label": "Total Equity and Liabilities", "amount": 81629546000, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Cash Generated from Operations", "amount": 12652199000, "indent": 0, "isSubtotal": false },
+      { "label": "Interest Paid", "amount": -828000, "indent": 1, "isSubtotal": false },
+      { "label": "Income Tax Paid", "amount": -1788306000, "indent": 1, "isSubtotal": false },
+      { "label": "Net Cash from Operating Activities", "amount": 10863065000, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Equity Investment", "amount": -334000, "indent": 1, "isSubtotal": false },
+      { "label": "Purchase of Property, Plant and Equipment", "amount": -1114637000, "indent": 1, "isSubtotal": false },
+      { "label": "Proceeds from Disposal of PP&E", "amount": 128024000, "indent": 1, "isSubtotal": false },
+      { "label": "Net Cash Used in Investing Activities", "amount": -986947000, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Lease Payment", "amount": -300000, "indent": 1, "isSubtotal": false },
+      { "label": "Dividend Paid", "amount": -1693995000, "indent": 1, "isSubtotal": false },
+      { "label": "Principal Repayments of Borrowings", "amount": -1563000, "indent": 1, "isSubtotal": false },
+      { "label": "Net Cash Used in Financing Activities", "amount": -1695859000, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 8180258000,
+    "openingCash": 29508830000,
+    "exchangeRateEffects": 319633000,
+    "closingCash": 38008720000
+  }
+}
