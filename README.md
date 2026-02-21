@@ -1,6 +1,6 @@
 # audit.et
 
-An independent civic project visualizing audit reports from Ethiopian state-owned enterprises under [Ethiopian Investment Holdings (EIH)](https://eih.et/).
+An independent civic project visualizing audit reports from Ethiopian state-owned enterprises.
 
 ## Development
 
