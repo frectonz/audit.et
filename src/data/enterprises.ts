@@ -10,6 +10,24 @@ const STANDARDIZED_DIR = path.resolve(
   "../../standardized"
 );
 
+const DATA_DIR = path.resolve(
+  // @ts-expect-error - import.meta.dirname available in Node 21+
+  import.meta.dirname,
+  "../../data"
+);
+
+// Enterprises whose data/ subdirectory differs from their ID
+const PDF_DIR_MAP: Record<string, string> = {
+  "ethiopian-electric-utility": "ethiopian-electric-utility/main",
+  "eeu-eleap": "ethiopian-electric-utility/eleap",
+};
+
+function getPdfSourcePath(enterpriseId: string, ecYear: number): string | null {
+  const subdir = PDF_DIR_MAP[enterpriseId] ?? enterpriseId;
+  const filePath = path.join(DATA_DIR, subdir, `${ecYear}.pdf`);
+  return fs.existsSync(filePath) ? filePath : null;
+}
+
 function loadYears(enterpriseId: string): YearData[] {
   const dir = path.join(STANDARDIZED_DIR, enterpriseId);
   const files = fs
@@ -709,6 +727,9 @@ export function getYearDetail(
     unitLabel: enterprise.unitLabel,
     previousYear: idx > 0 ? years[idx - 1] : null,
     nextYear: idx < years.length - 1 ? years[idx + 1] : null,
+    pdfUrl: getPdfSourcePath(enterpriseId, ecYear)
+      ? `/audits/${enterpriseId}/${ecYear}.pdf`
+      : null,
   } satisfies YearDetail;
 }
 
@@ -716,6 +737,21 @@ export function getAllYearPaths(): { id: string; year: string }[] {
   return enterprises.flatMap((e) =>
     e.years.map((y) => ({ id: e.id, year: String(y.year) }))
   );
+}
+
+export function getAvailablePdfs(): {
+  id: string;
+  year: number;
+  sourcePath: string;
+}[] {
+  const results: { id: string; year: number; sourcePath: string }[] = [];
+  for (const e of enterprises) {
+    for (const y of e.years) {
+      const src = getPdfSourcePath(e.id, y.year);
+      if (src) results.push({ id: e.id, year: y.year, sourcePath: src });
+    }
+  }
+  return results;
 }
 
 export function formatCurrency(value: number, compact = false): string {

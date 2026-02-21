@@ -49,6 +49,7 @@ export interface YearDetail {
   unitLabel: string;
   previousYear: number | null;
   nextYear: number | null;
+  pdfUrl: string | null;
 }
 
 export interface Enterprise {

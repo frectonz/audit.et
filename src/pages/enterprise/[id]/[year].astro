@@ -8,7 +8,7 @@ import {
   formatCurrency,
 } from "../../../data/enterprises";
 import type { LineItem, StatementSection, CashFlowStatement } from "../../../data/types";
-import { Home, ChevronRight, ArrowLeft, ArrowRight, List, ChevronDown, AlertTriangle } from "@lucide/astro";
+import { Home, ChevronRight, ArrowLeft, ArrowRight, List, ChevronDown, AlertTriangle, Download } from "@lucide/astro";
 
 export function getStaticPaths() {
   return getAllYearPaths().map((p) => ({
@@ -187,6 +187,16 @@ const cashFlowBarJson = JSON.stringify(cashFlowChartData);
         All Years
       </a>
       <div class="flex items-center gap-4">
+        {detail.pdfUrl && (
+          <a
+            href={detail.pdfUrl}
+            download
+            class="inline-flex items-center gap-1.5 text-sm text-eth-text-muted hover:text-eth-green transition-colors"
+          >
+            <Download class="w-4 h-4" />
+            Download Original Audit Report
+          </a>
+        )}
         {detail.previousYear ? (
           <a
             href={`/enterprise/${enterprise.id}/${detail.previousYear}`}
