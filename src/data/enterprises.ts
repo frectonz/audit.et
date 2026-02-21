@@ -418,7 +418,7 @@ const enterprises: Enterprise[] = [
   },
   {
     id: "emc",
-    name: "Ethiopian Mineral, Petroleum and Biofuel Corporation",
+    name: "Ethiopian Mineral Corporation",
     shortName: "EMC",
     sector: "Mining",
     sectorIcon: "pickaxe",
