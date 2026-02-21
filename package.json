@@ -11,11 +11,11 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.0",
     "@lucide/astro": "^0.564.0",
+    "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.17.1",
-    "astro-og-canvas": "^0.10.1",
-    "canvaskit-wasm": "0.40.0",
     "echarts": "^6.0.0",
+    "satori": "^0.19.2",
     "tailwindcss": "^4.1.18"
   }
 }

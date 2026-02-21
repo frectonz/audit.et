@@ -21,8 +21,6 @@ jobs:
 
       - name: Install Dependencies
         run: nix develop -c pnpm install --frozen-lockfile
-        working-directory: ui
 
       - name: Build
         run: nix develop -c pnpm build
-        working-directory: ui
