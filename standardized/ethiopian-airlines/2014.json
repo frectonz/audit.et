@@ -1,0 +1,147 @@
+{
+  "revenue": 253055649189,
+  "costOfSales": null,
+  "grossProfit": null,
+  "operatingProfit": 57253361253,
+  "netProfit": 47522094542,
+  "totalAssets": 577283871150,
+  "totalLiabilities": 348596925483,
+  "totalEquity": 228686945667,
+  "auditOpinion": "Unmodified",
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income for the Year Ended 30 June 2022",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          { "label": "Revenue", "amount": 253055649189, "indent": 1, "isSubtotal": false },
+          { "label": "Other Income", "amount": 9472330733, "indent": 1, "isSubtotal": false },
+          { "label": "Operating Expense", "amount": -205274618669, "indent": 1, "isSubtotal": false },
+          { "label": "Gross Operating Profit", "amount": 57253361253, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Operating Items",
+        "items": [
+          { "label": "Finance Income", "amount": 189509624, "indent": 1, "isSubtotal": false },
+          { "label": "Finance Costs", "amount": -8023776931, "indent": 1, "isSubtotal": false },
+          { "label": "Gain/(Loss) on Foreign Currency Translation", "amount": -1807352972, "indent": 1, "isSubtotal": false },
+          { "label": "Non-Operating Gain (Loss)", "amount": -9641620280, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Profit",
+        "items": [
+          { "label": "Profit for the Year", "amount": 47611740973, "indent": 0, "isSubtotal": true },
+          { "label": "Profit Tax", "amount": -89646431, "indent": 1, "isSubtotal": false },
+          { "label": "Profit After Tax", "amount": 47522094542, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Comprehensive Income",
+        "items": [
+          { "label": "Gain (Loss) on Translation from Functional to Presentation Currency", "amount": 22334085107, "indent": 1, "isSubtotal": false },
+          { "label": "Gain (Loss) on Employee Benefits", "amount": -154185208, "indent": 1, "isSubtotal": false },
+          { "label": "Total Comprehensive Income for the Year", "amount": 69701994441, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position as at 30 June 2022",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, Plant and Equipment", "amount": 303571372068, "indent": 1, "isSubtotal": false },
+          { "label": "Intangible Assets", "amount": 373936129, "indent": 1, "isSubtotal": false },
+          { "label": "Right of Use Assets", "amount": 129496330749, "indent": 1, "isSubtotal": false },
+          { "label": "Investment in Associates", "amount": 807109587, "indent": 1, "isSubtotal": false },
+          { "label": "Standing Deposits", "amount": 23455712382, "indent": 1, "isSubtotal": false },
+          { "label": "Employee Loan Receivables", "amount": 434445235, "indent": 1, "isSubtotal": false },
+          { "label": "Total Non-Current Assets", "amount": 458138906150, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Stock", "amount": 10366093800, "indent": 1, "isSubtotal": false },
+          { "label": "Trade and Other Receivables", "amount": 33627252086, "indent": 1, "isSubtotal": false },
+          { "label": "Employee Loan Receivables", "amount": 94661024, "indent": 1, "isSubtotal": false },
+          { "label": "Short Term Investments", "amount": 24669249504, "indent": 1, "isSubtotal": false },
+          { "label": "Cash and Cash Equivalents", "amount": 50387708586, "indent": 1, "isSubtotal": false },
+          { "label": "Total Current Assets", "amount": 119144965000, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total Assets", "amount": 577283871150, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Paid Up Capital", "amount": 100000000000, "indent": 1, "isSubtotal": false },
+          { "label": "Retained Earning", "amount": 65065259225, "indent": 1, "isSubtotal": false },
+          { "label": "Other Comprehensive Income", "amount": 63621686442, "indent": 1, "isSubtotal": false },
+          { "label": "Total Equity", "amount": 228686945667, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Long Term Loans", "amount": 111818383491, "indent": 1, "isSubtotal": false },
+          { "label": "Provision for Maintenance", "amount": 2044345656, "indent": 1, "isSubtotal": false },
+          { "label": "Lease Liabilities", "amount": 114682360292, "indent": 1, "isSubtotal": false },
+          { "label": "Employee Benefit", "amount": 985585048, "indent": 1, "isSubtotal": false },
+          { "label": "Deferred Tax Liability", "amount": 20576459, "indent": 1, "isSubtotal": false },
+          { "label": "Deferred Liabilities", "amount": 2254377090, "indent": 1, "isSubtotal": false },
+          { "label": "Total Non-Current Liabilities", "amount": 231805628036, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Trade and Others Payables", "amount": 26663927607, "indent": 1, "isSubtotal": false },
+          { "label": "Contract Liabilities", "amount": 50167440858, "indent": 1, "isSubtotal": false },
+          { "label": "Profit Tax Payable", "amount": 68202619, "indent": 1, "isSubtotal": false },
+          { "label": "Current Maturity of Lease Liabilities", "amount": 19147007022, "indent": 1, "isSubtotal": false },
+          { "label": "Current Maturity of Long Term Loans", "amount": 20744719341, "indent": 1, "isSubtotal": false },
+          { "label": "Total Current Liabilities", "amount": 116791297447, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities", "amount": 348596925483, "indent": 0, "isSubtotal": true },
+          { "label": "Total Equity and Liabilities", "amount": 577283871150, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Net Cash Flows from Operating Activities", "amount": 121085145394, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Interest Received", "amount": 247807953, "indent": 1, "isSubtotal": false },
+      { "label": "Payments for Property, Plant and Equipment", "amount": -19010212202, "indent": 1, "isSubtotal": false },
+      { "label": "Change in Investment in Associates", "amount": -524441991, "indent": 1, "isSubtotal": false },
+      { "label": "Increase in Standing Deposits", "amount": -7369469571, "indent": 1, "isSubtotal": false },
+      { "label": "Payment for Short Term Investment", "amount": -24668104624, "indent": 1, "isSubtotal": false },
+      { "label": "Payment for Intangible Assets", "amount": -148033794, "indent": 1, "isSubtotal": false },
+      { "label": "Net Cash Used in Investing Activities", "amount": -51472454229, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [
+      { "label": "Proceed from Government Subsidy", "amount": 4177552, "indent": 1, "isSubtotal": false },
+      { "label": "Interest Paid on Lease Liabilities", "amount": -4724039909, "indent": 1, "isSubtotal": false },
+      { "label": "Repayment for Lease Liabilities", "amount": -14312880938, "indent": 1, "isSubtotal": false },
+      { "label": "Repayment of Borrowings", "amount": -30962843729, "indent": 1, "isSubtotal": false },
+      { "label": "Net Cash Used in Financing Activities", "amount": -49995587025, "indent": 0, "isSubtotal": true }
+    ],
+    "netChange": 15286396959,
+    "closingCash": 50387708586
+  }
+}
