@@ -12,15 +12,20 @@ const allYears = enterprises.flatMap((e) => e.years.map((y) => y.year));
 const minYear = Math.min(...allYears);
 const maxYear = Math.max(...allYears);
 
-const combinedLatestRevenue = enterprises.reduce((sum, e) => {
-  const latest = e.years.filter((y) => y.revenue != null).at(-1);
-  return sum + (latest?.revenue ?? 0);
+const REFERENCE_YEAR = 2016;
+const combinedReferenceRevenue = enterprises.reduce((sum, e) => {
+  const yd = e.years.find((y) => y.year === REFERENCE_YEAR && y.revenue != null);
+  return sum + (yd?.revenue ?? 0);
 }, 0);
 
-const combinedLatestAssets = enterprises.reduce((sum, e) => {
-  const latest = e.years.filter((y) => y.totalAssets != null).at(-1);
-  return sum + (latest?.totalAssets ?? 0);
+const combinedReferenceAssets = enterprises.reduce((sum, e) => {
+  const yd = e.years.find((y) => y.year === REFERENCE_YEAR && y.totalAssets != null);
+  return sum + (yd?.totalAssets ?? 0);
 }, 0);
+
+const referenceYearEnterpriseCount = enterprises.filter((e) =>
+  e.years.some((y) => y.year === REFERENCE_YEAR && y.revenue != null)
+).length;
 
 // Combined revenue over time chart data
 const allUniqueYears = [...new Set(enterprises.flatMap((e) => e.years.map((y) => y.year)))].sort();
@@ -217,13 +222,13 @@ const revVsLiabData = JSON.stringify({
           },
           {
             label: "Combined Revenue",
-            value: formatETB(combinedLatestRevenue, true),
-            sub: "latest year",
+            value: formatETB(combinedReferenceRevenue, true),
+            sub: `${REFERENCE_YEAR} EC \u00b7 ${referenceYearEnterpriseCount} enterprises`,
           },
           {
             label: "Combined Assets",
-            value: formatETB(combinedLatestAssets, true),
-            sub: "latest year",
+            value: formatETB(combinedReferenceAssets, true),
+            sub: `${REFERENCE_YEAR} EC \u00b7 ${referenceYearEnterpriseCount} enterprises`,
           },
         ].map((stat) => (
           <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm">
