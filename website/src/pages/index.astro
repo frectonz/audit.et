@@ -98,6 +98,23 @@ const lossMakingCount = enterprises.filter((e) => {
   return latest != null && latest.netProfit! < 0;
 }).length;
 
+// --- Revenue Breakdown (stacked bar) ---
+const enterprisesWithRevenue = enterprises.filter((e) =>
+  e.years.some((y) => y.revenue != null)
+);
+const revenueBreakdownSeries = enterprisesWithRevenue.map((e) => {
+  const data = allUniqueYears.map((year) => {
+    const yd = e.years.find((y) => y.year === year);
+    return yd?.revenue ?? 0;
+  });
+  return { name: e.shortName, data, cumulative: data.reduce((a, b) => a + b, 0) };
+});
+revenueBreakdownSeries.sort((a, b) => b.cumulative - a.cumulative);
+const revenueBreakdownData = JSON.stringify({
+  labels: allUniqueYears,
+  series: revenueBreakdownSeries.map(({ name, data }) => ({ name, data })),
+});
+
 // --- Revenue vs Liabilities Trend ---
 const revVsLiabData = JSON.stringify({
   labels: allUniqueYears,
@@ -284,6 +301,15 @@ const revVsLiabData = JSON.stringify({
       <h3 class="font-display text-xl text-eth-text mb-1">Revenue vs Liabilities</h3>
       <p class="text-eth-text-muted text-sm mb-4">Combined revenue and total liabilities over time</p>
       <div id="revVsLiabChart" class="h-[260px] sm:h-[320px] w-full" data-chart={revVsLiabData}></div>
+    </div>
+  </section>
+
+  <!-- Revenue Breakdown by Enterprise -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm">
+      <h3 class="font-display text-xl text-eth-text mb-1">Revenue Breakdown by Enterprise</h3>
+      <p class="text-eth-text-muted text-sm mb-4">Individual enterprise contributions to combined revenue over time</p>
+      <div id="revenueBreakdownChart" class="h-[360px] sm:h-[440px] w-full" data-chart={revenueBreakdownData}></div>
     </div>
   </section>
 </Layout>
@@ -567,6 +593,93 @@ const revVsLiabData = JSON.stringify({
           },
         },
       ],
+    });
+  }
+
+  // --- Revenue Breakdown Stacked Bar ---
+  const breakdownEl = document.getElementById("revenueBreakdownChart");
+  if (breakdownEl) {
+    const data = JSON.parse(breakdownEl.dataset.chart!) as {
+      labels: number[];
+      series: { name: string; data: number[] }[];
+    };
+    const chart = initChart(breakdownEl);
+    ro.observe(breakdownEl);
+
+    // Generate distinct colors for each enterprise
+    const baseColors = [
+      "#1b3b34", "#2d5c52", "#af9e6e", "#5b8c7a", "#8a6e3e",
+      "#3d7a6b", "#c4b27d", "#1a4f44", "#6b9e8a", "#d4c48e",
+      "#2a6b5e", "#9b8a5e", "#4a8e7a", "#bfae6e", "#336b5a",
+      "#7a9e6e", "#5e7a4a", "#8e6e4a", "#4a6e8e", "#6e4a8e",
+      "#8e4a6e", "#4a8e6e", "#6e8e4a", "#8e8e4a", "#4a4a8e",
+      "#6e6e6e", "#8e4a4a", "#4a8e8e", "#8e6e8e",
+    ];
+
+    chart.setOption({
+      tooltip: {
+        trigger: "axis",
+        axisPointer: { type: "shadow" },
+        formatter: (params: any) => {
+          const items = (Array.isArray(params) ? params : [params])
+            .filter((p: any) => p.value > 0)
+            .sort((a: any, b: any) => b.value - a.value);
+          if (items.length === 0) return "";
+          const year = items[0].name;
+          const total = items.reduce((s: number, p: any) => s + p.value, 0);
+          let html = `<span style="font-weight:600;font-size:13px">${year} EC</span>`
+            + `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>`
+            + `<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px"><span style="color:#888">Total</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(total)}</span></div>`
+            + `<div style="margin:4px 0;border-top:1px solid rgba(0,0,0,0.05)"></div>`;
+          for (const p of items.slice(0, 10)) {
+            html += `<div style="display:flex;align-items:center;gap:6px;margin-top:3px">`
+              + `<span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${p.color};flex-shrink:0"></span>`
+              + `<span style="color:#888;flex:1">${p.seriesName}</span>`
+              + `<span style="font-family:JetBrains Mono,monospace;font-weight:500">ETB ${formatCompact(p.value)}</span>`
+              + `</div>`;
+          }
+          if (items.length > 10) {
+            html += `<div style="color:#999;font-size:11px;margin-top:4px">...and ${items.length - 10} more</div>`;
+          }
+          return html;
+        },
+      },
+      legend: {
+        type: "scroll",
+        bottom: 0,
+        textStyle: { fontFamily: "Lora, Georgia, serif", color: palette.text, fontSize: 10 },
+        itemWidth: 12,
+        itemHeight: 10,
+        itemGap: 8,
+      },
+      grid: { left: 0, right: 10, top: 16, bottom: 60, containLabel: true },
+      xAxis: {
+        type: "category",
+        data: data.labels,
+        axisLabel: axisLabelStyle,
+        axisLine: { lineStyle: { color: "#E0DDD5" } },
+        axisTick: { show: false },
+      },
+      yAxis: {
+        type: "value",
+        axisLabel: {
+          ...axisLabelStyle,
+          formatter: (v: number) => formatCompact(v),
+        },
+        splitLine: { lineStyle: { color: palette.grid } },
+      },
+      series: data.series.map((s, i) => ({
+        name: s.name,
+        type: "bar",
+        stack: "revenue",
+        data: s.data,
+        itemStyle: {
+          color: baseColors[i % baseColors.length],
+        },
+        emphasis: {
+          itemStyle: { shadowBlur: 10, shadowColor: "rgba(0,0,0,0.2)" },
+        },
+      })),
     });
   }
 </script>
