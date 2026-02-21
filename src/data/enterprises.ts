@@ -75,7 +75,7 @@ const enterprises: Enterprise[] = [
     sector: "Energy",
     sectorIcon: "zap",
     description:
-      "Responsible for generation, transmission and wholesale of electricity in Ethiopia. Manages major hydroelectric dams including the Grand Ethiopian Renaissance Dam.",
+      "Generates, transmits, and wholesales electricity across Ethiopia.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr (originally reported in Birr'000)",
     years: loadYears("ethiopian-electric-power"),
@@ -89,7 +89,7 @@ const enterprises: Enterprise[] = [
     sector: "Energy",
     sectorIcon: "plug",
     description:
-      "Distributes and sells electricity to end consumers across Ethiopia. The largest utility company in the country with nationwide infrastructure.",
+      "Distributes and sells electricity to end consumers across Ethiopia.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("ethiopian-electric-utility"),
@@ -103,7 +103,7 @@ const enterprises: Enterprise[] = [
     sector: "Agriculture",
     sectorIcon: "wheat",
     description:
-      "Oversees sugar production across multiple factories including Wonji, Metehara, Fincha, and development projects. One of the largest state enterprises by asset base.",
+      "Oversees sugar production across multiple factories including Wonji, Metehara, and Finchaa.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("ethiopian-sugar-corporation"),
@@ -131,7 +131,7 @@ const enterprises: Enterprise[] = [
     sector: "Agriculture",
     sectorIcon: "syringe",
     description:
-      "Produces and distributes vaccines and veterinary drugs for livestock disease prevention across Ethiopia. A key institution for the country's agricultural sector and food security.",
+      "Produces and distributes veterinary vaccines and drugs for livestock disease prevention.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("national-veterinary-institute"),
@@ -159,7 +159,7 @@ const enterprises: Enterprise[] = [
     sector: "Agriculture",
     sectorIcon: "wheat",
     description:
-      "Handles the import, export, and domestic distribution of agricultural products including coffee, oilseeds, pulses, and other commodities on behalf of the Ethiopian government.",
+      "Imports and distributes agricultural inputs including fertilizer, machinery, agrochemicals, and improved seeds.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("ethioagri"),
@@ -173,7 +173,7 @@ const enterprises: Enterprise[] = [
     sector: "Manufacturing",
     sectorIcon: "factory",
     description:
-      "A state-owned enterprise that produces extra neutral alcohol and liquor products for domestic and international markets. Operates distilleries at Mekanissa and Sebeta with over a century of manufacturing history.",
+      "Produces and distributes extra neutral alcohol and liquor products for domestic and export markets.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("nalf"),
@@ -187,7 +187,7 @@ const enterprises: Enterprise[] = [
     sector: "Manufacturing",
     sectorIcon: "factory",
     description:
-      "A leader in quality paper production since 1963, specializing in recycling paper to produce premium products. Implements Quality Management Systems (QMS) and Integrated Pest Management Systems (IPMS), with expanding operations in agriculture and community development.",
+      "Produces kraft paper, corrugated boxes, and tissue paper, primarily from recycled materials.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("eppsc"),
@@ -201,7 +201,7 @@ const enterprises: Enterprise[] = [
     sector: "Publishing",
     sectorIcon: "printer",
     description:
-      "One of the largest and oldest printing enterprises in Ethiopia, founded in 1921. Publishes Amharic-language books, newspapers, and periodicals. Operates branches in Lideta, Awassa, and Merhatibeb with a Printing Technology Academy established in 2016.",
+      "Provides commercial printing services and publishes the Federal Negarit Gazette and other government security prints.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("bspe"),
@@ -217,7 +217,7 @@ const enterprises: Enterprise[] = [
     sector: "Real Estate",
     sectorIcon: "building",
     description:
-      "A Federal Government public enterprise established in 2007 EC to develop and operate industrial parks across Ethiopia. Manages flagship parks including Hawassa, Bole Lemi, and Kilinto, providing infrastructure for manufacturing and export-oriented industries.",
+      "Develops and manages industrial parks across Ethiopia, providing infrastructure for manufacturing and export-oriented industries.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("ipdc"),
@@ -233,7 +233,7 @@ const enterprises: Enterprise[] = [
     sector: "Construction",
     sectorIcon: "hard-hat",
     description:
-      "Formerly Ethiopian Construction Design and Supervision Works Corporation (ECDSWC). One of the largest state-owned construction enterprises, providing design, supervision, and construction services for major infrastructure projects across Ethiopia.",
+      "Provides engineering design and supervision services for water, energy, transport, and building projects.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("eec"),
@@ -249,7 +249,7 @@ const enterprises: Enterprise[] = [
     sector: "Energy",
     sectorIcon: "bolt",
     description:
-      "World Bank-funded Ethiopia Electrification Program managed by EEU. Uses modified cash basis accounting. Financed through IDA credits totaling over $400M USD.",
+      "A World Bank-funded program managed by EEU to expand electricity access through grid connections and mini-grids.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr (modified cash basis)",
     years: loadYears("eeu-eleap"),
@@ -258,12 +258,12 @@ const enterprises: Enterprise[] = [
   },
   {
     id: "enla",
-    name: "National Lottery Administration",
+    name: "Ethiopian National Lottery Administration",
     shortName: "ENLA",
     sector: "Gaming",
     sectorIcon: "ticket",
     description:
-      "A federal agency established over 60 years ago and re-established in 2009 to undertake and supervise lottery activities in Ethiopia. Operates instant lottery tickets, regular draws, Tombola, Bingo, Enkutatash, and other lottery games through branches across the country.",
+      "Manages and supervises lottery activities in Ethiopia, operating lotto, tombola, and scratch card games.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("enla"),
@@ -279,7 +279,7 @@ const enterprises: Enterprise[] = [
     sector: "Trading",
     sectorIcon: "warehouse",
     description:
-      "A state-owned enterprise responsible for importing and distributing essential industrial inputs including chemicals, construction materials, metals, and other raw materials for Ethiopia's manufacturing and construction sectors.",
+      "Imports and distributes industrial inputs including chemicals, construction materials, and metals.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("eide"),
@@ -295,7 +295,7 @@ const enterprises: Enterprise[] = [
     sector: "Telecommunications",
     sectorIcon: "phone",
     description:
-      "Ethiopia's largest telecommunications operator, offering voice, data, internet, and mobile money (telebirr) services. One of the largest state-owned enterprises by revenue, serving tens of millions of subscribers nationwide.",
+      "Provides voice, data, internet, and mobile money (telebirr) services across Ethiopia.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr (originally reported in Birr'000)",
     years: loadYears("ethio-telecom"),
@@ -311,7 +311,7 @@ const enterprises: Enterprise[] = [
     sector: "Trading",
     sectorIcon: "shopping-bag",
     description:
-      "A state-owned enterprise established in 1964 to operate duty-free and duty-paid merchandise shops, as well as produce and retail handicrafts and souvenirs. Operates under the motto 'We Strive for Excellent Service' promoting tourism and economic growth.",
+      "Operates duty-free shops, duty-paid retail outlets, and handicraft and souvenir production and sales.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("ette"),
@@ -327,7 +327,7 @@ const enterprises: Enterprise[] = [
     sector: "Insurance",
     sectorIcon: "shield",
     description:
-      "Ethiopia's sole state-owned insurance company, established in 1976 by taking over thirteen nationalized private insurers. Carries out life and non-life insurance business with over 100 distribution outlets nationwide, headquartered on Ras Mekonnen Street in Addis Ababa.",
+      "Provides life and non-life insurance products through a nationwide distribution network.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("eic"),
@@ -343,7 +343,7 @@ const enterprises: Enterprise[] = [
     sector: "Banking",
     sectorIcon: "landmark",
     description:
-      "Ethiopia's sole state-owned development finance institution, providing loans and technical support for priority sectors including agriculture, manufacturing, and agro-processing. One of the largest financial institutions in the country by asset base.",
+      "Provides medium and long-term development loans for agriculture, manufacturing, and agro-processing.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("dbe"),
@@ -359,7 +359,7 @@ const enterprises: Enterprise[] = [
     sector: "Banking",
     sectorIcon: "landmark",
     description:
-      "The largest commercial bank in Ethiopia and one of the biggest in Africa, providing a full range of banking services including deposits, loans, foreign exchange, and digital banking (CBE Birr). A cornerstone of Ethiopia's financial system with thousands of branches nationwide.",
+      "Provides deposits, loans, foreign exchange, and digital banking services across Ethiopia.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("cbe"),
@@ -375,7 +375,7 @@ const enterprises: Enterprise[] = [
     sector: "Manufacturing",
     sectorIcon: "flask-conical",
     description:
-      "A fully state-owned public enterprise operating five manufacturing branches: Mugher Cement Factory, Batu Caustic Soda Factory, Awash Melkassa Chemical Factory, Adami Tulu Pesticides Factory, and a Rubber Tree Plantation and Processing project. One of Ethiopia's largest industrial conglomerates by asset base.",
+      "Manufactures cement, caustic soda, chemicals, pesticides, and rubber products through five factory branches.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("cic"),
@@ -391,7 +391,7 @@ const enterprises: Enterprise[] = [
     sector: "Hospitality",
     sectorIcon: "utensils",
     description:
-      "A state-owned hospitality enterprise operating under the Catering and Tourism Training Institute. Provides hotel accommodation, food and beverage services, and catering in Addis Ababa. Previously under Ras Hotels Enterprise, it was transferred to the Institute in 1998. Serves as both a commercial hotel and a practical training ground for catering and tourism students.",
+      "A hotel in Addis Ababa operating as both a commercial hotel and a training facility for hospitality students.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("genet"),
@@ -407,7 +407,7 @@ const enterprises: Enterprise[] = [
     sector: "Hospitality",
     sectorIcon: "utensils",
     description:
-      "One of Ethiopia's iconic state-owned hotel enterprises, operating the historic Ghion Hotel in Addis Ababa. Named after one of the four rivers of Eden referenced in Genesis, the hotel has been a landmark of Ethiopian hospitality since the 1960s. Provides accommodation, food and beverage services, and conference facilities.",
+      "Provides accommodation, food and beverage, and conference services at the Ghion Hotel in Addis Ababa.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("ghion"),
@@ -418,12 +418,12 @@ const enterprises: Enterprise[] = [
   },
   {
     id: "emc",
-    name: "Ethiopian Mineral Corporation",
+    name: "Ethiopian Minerals Corporation",
     shortName: "EMC",
     sector: "Mining",
     sectorIcon: "pickaxe",
     description:
-      "Re-established in 2020 to explore, develop, and exploit mineral resources, petroleum, and bio-fuel. Also provides consultancy, drilling, laboratory, and training services. Has mineral extraction sites in Oromia Regional State and offices in Dire Dawa and Shakiso.",
+      "Explores, develops, and processes mineral resources including gold and tantalum.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("emc"),
@@ -439,7 +439,7 @@ const enterprises: Enterprise[] = [
     sector: "Hospitality",
     sectorIcon: "hotel",
     description:
-      "The fully government-owned owner and lessor of the Hilton Addis Ababa International Hotel. Established in 1961 EC, DHC leases its hotel property to Hilton International USA under a long-term agreement. Revenue consists of DHC's 75% share of the hotel's gross operating profit. A wholly-owned subsidiary of Ethiopian Investment Holdings (EIH).",
+      "Owns the Hilton Addis Ababa hotel property and leases it to Hilton International under a management agreement.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("hilton"),
@@ -455,7 +455,7 @@ const enterprises: Enterprise[] = [
     sector: "Logistics",
     sectorIcon: "ship",
     description:
-      "An autonomous public enterprise established in November 2011 providing coastal and international marine and inland transport services, freight forwarding, multimodal transport, shipping and air agency services, stevedoring, shore-handling, dry port, warehousing and other logistics services for import and export goods. Headquartered at Legehar Building, Gambia Street, Addis Ababa.",
+      "Provides shipping, freight forwarding, dry port, and warehousing services for import and export goods.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr (originally reported in Birr'000)",
     years: loadYears("eslse"),
@@ -471,7 +471,7 @@ const enterprises: Enterprise[] = [
     sector: "Transport",
     sectorIcon: "route",
     description:
-      "A state-owned enterprise established in 2006 to provide toll road services to road users, operate and maintain toll roads, and run service stations within toll road boundaries. Accountable to Ethiopian Investment Holdings (EIH), headquartered in Akaki-Kality Sub-city, Addis Ababa.",
+      "Operates and maintains toll expressways including the Addis Ababa-Adama and Dire Dawa-Dawalle highways.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("etre"),
@@ -487,7 +487,7 @@ const enterprises: Enterprise[] = [
     sector: "Hospitality",
     sectorIcon: "waves",
     description:
-      "Ethiopia's iconic state-owned spa and wellness complex in Addis Ababa, built on natural hot mineral springs. Re-established under Council of Ministers Regulation 111/1993, 'Filwuha' (ፍልውሃ) means 'hot spring' in Amharic. Operates bath and shower facilities, therapy and sauna baths, food and cafeteria services, and room accommodation.",
+      "A spa and hotel complex in Addis Ababa built on natural hot mineral springs, offering bath, sauna, and accommodation services.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("filwuha"),
@@ -503,7 +503,7 @@ const enterprises: Enterprise[] = [
     sector: "Aviation",
     sectorIcon: "plane",
     description:
-      "The leading aviation group in Africa and one of the fastest-growing airline brands globally, established in December 1945. A 100% government-owned enterprise providing passenger, cargo, MRO, catering, ground services, hotel, and aviation training services. Serves 145+ international and domestic destinations across five continents with a fleet of 168 modern aircraft. A Star Alliance member.",
+      "Provides passenger, cargo, MRO, catering, and aviation training services across five continents.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: loadYears("ethiopian-airlines"),
@@ -519,7 +519,7 @@ const enterprises: Enterprise[] = [
     sector: "Trading",
     sectorIcon: "warehouse",
     description:
-      "A public enterprise wholly owned by the Federal Government, established through Council of Ministers Regulation No. 369/2008. Handles the import, export, and domestic distribution of grain, coffee, and other commodities. One of the major subsidiaries of Ethiopian Investment Holdings.",
+      "Imports, exports, and distributes grain, coffee, and other commodities.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr (originally reported in Birr'000)",
     years: loadYears("etbc"),
@@ -535,7 +535,7 @@ const enterprises: Enterprise[] = [
     sector: "Real Estate",
     sectorIcon: "building",
     description:
-      "A state-owned enterprise responsible for the construction and provision of affordable housing in Ethiopia.",
+      "Constructs, administers, and maintains federal government-owned housing.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: [],
@@ -549,7 +549,7 @@ const enterprises: Enterprise[] = [
     sector: "Construction",
     sectorIcon: "hard-hat",
     description:
-      "One of Ethiopia's largest state-owned construction enterprises, undertaking major infrastructure and building projects across the country.",
+      "Builds highways, bridges, dams, water supply systems, and buildings across Ethiopia.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: [],
@@ -563,7 +563,7 @@ const enterprises: Enterprise[] = [
     sector: "Energy",
     sectorIcon: "fuel",
     description:
-      "The sole importer and distributor of petroleum products in Ethiopia, responsible for ensuring a reliable supply of fuel across the country.",
+      "Imports and distributes petroleum products across Ethiopia.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: [],
@@ -577,7 +577,7 @@ const enterprises: Enterprise[] = [
     sector: "Construction",
     sectorIcon: "hard-hat",
     description:
-      "A state-owned engineering conglomerate providing construction, metal engineering, and industrial services for major national development projects.",
+      "Manufactures automotive products, agricultural machinery, construction equipment, electronics, and metal products.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: [],
@@ -586,7 +586,7 @@ const enterprises: Enterprise[] = [
   },
   {
     id: "erc",
-    name: "Ethiopian Railway Corporation",
+    name: "Ethiopian Railways Corporation",
     shortName: "ERC",
     sector: "Transport",
     sectorIcon: "route",
@@ -605,7 +605,7 @@ const enterprises: Enterprise[] = [
     sector: "Agriculture",
     sectorIcon: "wheat",
     description:
-      "A sugar factory located in the Amhara Region near Lake Tana, part of Ethiopia's sugar development program.",
+      "Produces sugar in the Amhara Region near Lake Tana.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: [],
@@ -619,7 +619,7 @@ const enterprises: Enterprise[] = [
     sector: "Agriculture",
     sectorIcon: "wheat",
     description:
-      "One of Ethiopia's oldest sugar factories, located in the Rift Valley near Metehara town. Produces sugar and ethanol from sugarcane.",
+      "Produces sugar and ethanol from sugarcane in the Rift Valley.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: [],
@@ -633,7 +633,7 @@ const enterprises: Enterprise[] = [
     sector: "Agriculture",
     sectorIcon: "wheat",
     description:
-      "A sugar factory in the Afar Region along the Kessem River, part of Ethiopia's sugar expansion initiative.",
+      "Produces sugar and ethanol in the Afar Region along the Kessem River.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: [],
@@ -647,7 +647,7 @@ const enterprises: Enterprise[] = [
     sector: "Agriculture",
     sectorIcon: "wheat",
     description:
-      "A sugar factory in Oromia Region near the Finchaa Valley, producing sugar and ethanol. One of Ethiopia's major sugar production facilities.",
+      "Produces sugar and ethanol in Oromia Region near the Finchaa Valley.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: [],
@@ -656,12 +656,12 @@ const enterprises: Enterprise[] = [
   },
   {
     id: "wonji-shewa-sugar",
-    name: "Wonji Shewa Sugar Factory",
+    name: "Wonji Shoa Sugar Factory",
     shortName: "WSSF",
     sector: "Agriculture",
     sectorIcon: "wheat",
     description:
-      "Ethiopia's first sugar factory, established in 1954 in the town of Wonji. A historic pioneer of the Ethiopian sugar industry.",
+      "Produces sugar and ethanol in Oromia Region near Adama, Ethiopia's first sugar factory.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: [],
@@ -675,7 +675,7 @@ const enterprises: Enterprise[] = [
     sector: "Healthcare",
     sectorIcon: "syringe",
     description:
-      "A state-affiliated enterprise involved in vaccine production and pharmaceutical manufacturing to strengthen Ethiopia's healthcare supply chain.",
+      "Manufactures vaccines, pharmaceuticals, and medical devices for human and animal use.",
     unit: "ETB",
     unitLabel: "Ethiopian Birr",
     years: [],
