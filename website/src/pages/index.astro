@@ -7,6 +7,7 @@ const enterprises = getAllEnterprises();
 
 // Compute summary stats
 const totalEnterprises = enterprises.length;
+const enterprisesWithData = enterprises.filter((e) => e.years.length > 0).length;
 const allYears = enterprises.flatMap((e) => e.years.map((y) => y.year));
 const minYear = Math.min(...allYears);
 const maxYear = Math.max(...allYears);
@@ -185,8 +186,8 @@ const revVsLiabData = JSON.stringify({
         [
           {
             label: "Enterprises Tracked",
-            value: String(totalEnterprises),
-            sub: "state-owned",
+            value: `${enterprisesWithData}/${totalEnterprises}`,
+            sub: "with audit data",
           },
           {
             label: "Years of Data",

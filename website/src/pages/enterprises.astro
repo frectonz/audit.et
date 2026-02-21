@@ -58,6 +58,7 @@ function getOpinionBg(opinion: string): string {
     <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
       {
         enterprises.map((enterprise) => {
+          const hasData = enterprise.years.length > 0;
           const latest = enterprise.years.at(-1);
           const prev = enterprise.years.at(-2);
           const revTrend =
@@ -66,7 +67,7 @@ function getOpinionBg(opinion: string): string {
                 100
               : null;
 
-          return (
+          return hasData ? (
             <a
               href={`/enterprise/${enterprise.id}`}
               class="group bg-eth-card border border-eth-card-border rounded-xl p-6 hover:border-eth-green/40 hover:shadow-md transition-all duration-200"
@@ -166,6 +167,51 @@ function getOpinionBg(opinion: string): string {
                 </span>
               </div>
             </a>
+          ) : (
+            <div
+              class="bg-eth-card border border-dashed border-eth-card-border rounded-xl p-6"
+            >
+              {/* Header */}
+              <div class="flex items-start justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-lg bg-eth-surface flex items-center justify-center">
+                    {(() => {
+                      const IconComponent = sectorIconMap[enterprise.sectorIcon] ?? Zap;
+                      return <IconComponent class="w-5 h-5 text-eth-text-muted" />;
+                    })()}
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-eth-text">
+                      {enterprise.shortName}
+                    </h3>
+                    <p class="text-eth-text-muted text-xs">
+                      {enterprise.sector}
+                    </p>
+                  </div>
+                </div>
+                <span class="text-xs px-2 py-0.5 rounded-full border border-eth-card-border bg-eth-surface text-eth-text-muted">
+                  No data
+                </span>
+              </div>
+
+              <p class="text-eth-text-dim text-sm mb-4 line-clamp-2">
+                {enterprise.name}
+              </p>
+
+              {/* No data placeholder */}
+              <div class="flex flex-col items-center justify-center py-6 rounded-lg bg-eth-surface/50">
+                <p class="text-eth-text-muted text-sm">
+                  No audit data available yet
+                </p>
+              </div>
+
+              {/* Footer */}
+              <div class="mt-4 pt-3 border-t border-eth-card-border">
+                <span class="text-eth-text-muted text-xs">
+                  Data coming soon
+                </span>
+              </div>
+            </div>
           );
         })
       }
