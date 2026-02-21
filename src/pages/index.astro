@@ -244,9 +244,9 @@ const revVsLiabData = JSON.stringify({
             class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 relative"
             style="transform: rotateY(-4deg) rotateX(2deg); transform-style: preserve-3d; box-shadow: 8px 12px 28px rgba(0,0,0,0.12), 2px 4px 8px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6);"
           >
-            <h3 class="font-display text-lg text-eth-text mb-0.5">
+            <h2 class="font-display text-lg text-eth-text mb-0.5">
               Combined Revenue Over Time
-            </h3>
+            </h2>
             <p class="text-eth-text-muted text-xs mb-4">
               Revenue from all tracked enterprises (ETB)
             </p>
@@ -314,14 +314,14 @@ const revVsLiabData = JSON.stringify({
     <div class="grid lg:grid-cols-2 gap-6">
       <!-- Profitability Overview -->
       <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
-        <h3 class="font-display text-xl text-eth-text mb-1">Profitability Overview</h3>
+        <h2 class="font-display text-xl text-eth-text mb-1">Profitability Overview</h2>
         <p class="text-eth-text-muted text-sm mb-4">Net profitability by enterprise (latest available year)</p>
         <div id="profitabilityChart" class="h-[200px] lg:h-[280px] w-full" data-chart={profitabilityChartData}></div>
       </div>
 
       <!-- Audit Opinions -->
       <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
-        <h3 class="font-display text-xl text-eth-text mb-1">Audit Opinions</h3>
+        <h2 class="font-display text-xl text-eth-text mb-1">Audit Opinions</h2>
         <p class="text-eth-text-muted text-sm mb-4">Auditor verdicts across {totalAuditYears} enterprise-years</p>
         <div id="auditDonutChart" class="h-[200px] lg:h-[280px] w-full" data-chart={auditHealthData}></div>
         <dl class="mt-4 space-y-2 text-xs border-t border-eth-card-border pt-4">
@@ -340,7 +340,7 @@ const revVsLiabData = JSON.stringify({
 
   <!-- Key Financial Indicators -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-    <h3 class="font-display text-2xl text-eth-text mb-6">Key Financial Indicators <span class="text-eth-text-muted text-sm font-sans font-normal">({REFERENCE_YEAR} EC)</span></h3>
+    <h2 class="font-display text-2xl text-eth-text mb-6">Key Financial Indicators <span class="text-eth-text-muted text-sm font-sans font-normal">({REFERENCE_YEAR} EC)</span></h2>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
       <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help" data-tip="Sum of total liabilities from all enterprises' balance sheets for 2016 EC.">
         <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">Combined Liabilities</p>
@@ -396,7 +396,7 @@ const revVsLiabData = JSON.stringify({
   <!-- Revenue vs Liabilities Trend -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
     <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm">
-      <h3 class="font-display text-xl text-eth-text mb-1">Revenue vs Liabilities</h3>
+      <h2 class="font-display text-xl text-eth-text mb-1">Revenue vs Liabilities</h2>
       <p class="text-eth-text-muted text-sm mb-4">Combined revenue and total liabilities over time</p>
       <div id="revVsLiabChart" class="h-[260px] sm:h-[320px] w-full" data-chart={revVsLiabData}></div>
     </div>
@@ -406,24 +406,24 @@ const revVsLiabData = JSON.stringify({
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
     <div class="grid lg:grid-cols-2 gap-6 mb-6">
       <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
-        <h3 class="font-display text-xl text-eth-text mb-1">Revenue by Sector</h3>
+        <h2 class="font-display text-xl text-eth-text mb-1">Revenue by Sector</h2>
         <p class="text-eth-text-muted text-sm mb-4">Sector share of total revenue (latest year per enterprise)</p>
         <div id="sectorRevenueChart" class="h-[200px] lg:h-[280px] w-full" data-chart={sectorRevenueData}></div>
       </div>
       <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
-        <h3 class="font-display text-xl text-eth-text mb-1">Assets by Sector</h3>
+        <h2 class="font-display text-xl text-eth-text mb-1">Assets by Sector</h2>
         <p class="text-eth-text-muted text-sm mb-4">Sector share of total assets (latest year per enterprise)</p>
         <div id="sectorAssetsChart" class="h-[200px] lg:h-[280px] w-full" data-chart={sectorAssetsData}></div>
       </div>
     </div>
     <div class="grid lg:grid-cols-2 gap-6">
       <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
-        <h3 class="font-display text-xl text-eth-text mb-1">Top Enterprises by Assets</h3>
+        <h2 class="font-display text-xl text-eth-text mb-1">Top Enterprises by Assets</h2>
         <p class="text-eth-text-muted text-sm mb-4">Total asset base by enterprise (latest available year, log scale)</p>
         <div id="topAssetsChart" class="h-[200px] lg:h-[280px] w-full" data-chart={topByAssetsData}></div>
       </div>
       <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
-        <h3 class="font-display text-xl text-eth-text mb-1">Top Enterprises by Liabilities</h3>
+        <h2 class="font-display text-xl text-eth-text mb-1">Top Enterprises by Liabilities</h2>
         <p class="text-eth-text-muted text-sm mb-4">Total liabilities by enterprise (latest available year, log scale)</p>
         <div id="topLiabilitiesChart" class="h-[200px] lg:h-[280px] w-full" data-chart={topByLiabilitiesData}></div>
       </div>
@@ -433,7 +433,7 @@ const revVsLiabData = JSON.stringify({
   <!-- Revenue Breakdown by Enterprise -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
     <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm">
-      <h3 class="font-display text-xl text-eth-text mb-1">Revenue Breakdown by Enterprise</h3>
+      <h2 class="font-display text-xl text-eth-text mb-1">Revenue Breakdown by Enterprise</h2>
       <p class="text-eth-text-muted text-sm mb-4">Individual enterprise contributions to combined revenue over time</p>
       <div id="revenueBreakdownChart" class="h-[360px] sm:h-[440px] w-full" data-chart={revenueBreakdownData}></div>
     </div>

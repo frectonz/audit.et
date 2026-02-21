@@ -134,9 +134,25 @@ const cashFlowChartData = buildCashFlowData(detail as any);
 const waterfallJson = JSON.stringify(waterfallData);
 const balanceJson = JSON.stringify(balanceData);
 const cashFlowBarJson = JSON.stringify(cashFlowChartData);
+
+const revenuePart = detail.summary.revenue != null ? ` Revenue: ETB ${(detail.summary.revenue / 1e9).toFixed(1)}B.` : "";
+const profitPart = detail.summary.netProfit != null ? ` Net ${detail.summary.netProfit >= 0 ? "Profit" : "Loss"}: ETB ${(Math.abs(detail.summary.netProfit) / 1e9).toFixed(1)}B.` : "";
+const pageDescription = `${enterprise.shortName} FY ${detail.year} audit report — ${detail.summary.auditOpinion} opinion.${revenuePart}${profitPart}`;
+
+const breadcrumbLD = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://audit.et/" },
+    { "@type": "ListItem", "position": 2, "name": "Enterprises", "item": "https://audit.et/enterprises/" },
+    { "@type": "ListItem", "position": 3, "name": enterprise.shortName, "item": `https://audit.et/enterprise/${enterprise.id}/` },
+    { "@type": "ListItem", "position": 4, "name": `FY ${detail.year}`, "item": `https://audit.et/enterprise/${enterprise.id}/${detail.year}/` },
+  ],
+});
 ---
 
-<Layout title={`${enterprise.shortName} FY ${detail.year} — audit.et`}>
+<Layout title={`${enterprise.shortName} FY ${detail.year} — audit.et`} description={pageDescription}>
+  <script slot="head" type="application/ld+json" set:html={breadcrumbLD} />
   <!-- Breadcrumbs -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
     <nav class="flex items-center gap-1.5 text-sm">

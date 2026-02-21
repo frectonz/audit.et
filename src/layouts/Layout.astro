@@ -5,13 +5,19 @@ import { Github, Home, Building2, Info } from "@lucide/astro";
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  type?: string;
 }
 
 const {
   title = "Transparency for Ethiopia's State-Owned Enterprises",
   description = "An independent civic project visualizing audit reports from Ethiopian state-owned enterprises under EIH (Ethiopian Investment Holdings).",
+  image = "/icon-512.png",
+  type = "website",
 } = Astro.props;
 
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(image, Astro.site);
 const currentPath = Astro.url.pathname;
 const navLink = (href: string) => {
   const isActive = href === "/" ? currentPath === "/" : currentPath.startsWith(href);
@@ -64,6 +70,38 @@ const glyphs = Array.from({ length: 150 }, () => {
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <link rel="canonical" href={canonicalURL.href} />
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL.href} />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content="audit.et" />
+    <meta property="og:locale" content="en_ET" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL.href} />
+    {currentPath === "/" && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "audit.et",
+        "url": "https://audit.et",
+        "description": "An independent civic project visualizing audit reports from Ethiopian state-owned enterprises under EIH (Ethiopian Investment Holdings).",
+      })} />
+    )}
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "audit.et",
+      "url": "https://audit.et",
+      "logo": "https://audit.et/icon-512.png",
+      "description": "Independent civic project making Ethiopian state-owned enterprise audit data accessible.",
+    })} />
+    <slot name="head" />
   </head>
   <body class="bg-eth-bg font-body min-h-screen flex flex-col antialiased relative">
     <!-- Amharic letter background -->
@@ -96,7 +134,7 @@ const glyphs = Array.from({ length: 150 }, () => {
             <span class="hidden sm:inline">About</span>
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/frectonz/audit.et"
             target="_blank"
             rel="noopener noreferrer"
             class="text-white/70 hover:text-eth-gold transition-colors flex items-center gap-1.5"

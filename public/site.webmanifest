@@ -1,6 +1,8 @@
 {
   "name": "audit.et",
   "short_name": "audit.et",
+  "description": "Transparency for Ethiopia's State-Owned Enterprises — visualizing public audit data from enterprises under Ethiopian Investment Holdings.",
+  "start_url": "/",
   "icons": [
     { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
