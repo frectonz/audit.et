@@ -431,6 +431,22 @@ const enterprises: Enterprise[] = [
       "DHC is a holding/leasing company with no cost of sales — all expenses are administrative. EC filenames: 2014 EC = FY ended 30 June 2022. Revenue represents DHC's 75% share of the hotel's gross operating profit as per the lease agreement.",
   },
   {
+    id: "etre",
+    name: "Ethiopian Toll Roads Enterprise",
+    shortName: "ETRE",
+    sector: "Transport",
+    sectorIcon: "route",
+    description:
+      "A state-owned enterprise established in 2006 to provide toll road services to road users, operate and maintain toll roads, and run service stations within toll road boundaries. Accountable to Ethiopian Investment Holdings (EIH), headquartered in Akaki-Kality Sub-city, Addis Ababa.",
+    unit: "ETB",
+    unitLabel: "Ethiopian Birr",
+    years: loadYears("etre"),
+    auditFindings: [],
+    fiscalYearEnd: "Sene 30",
+    dataNote:
+      "ETRE has no traditional cost of sales — all operating expenses are personnel and administrative costs. Revenue is primarily from toll fee collections. EC filenames: 2015 EC = FY ended 30 June 2023.",
+  },
+  {
     id: "filwuha",
     name: "Filwuha Spa Service Enterprise",
     shortName: "Filwuha",

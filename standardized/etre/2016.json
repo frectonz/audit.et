@@ -1,0 +1,144 @@
+{
+  "revenue": 937087780,
+  "costOfSales": null,
+  "grossProfit": null,
+  "operatingProfit": 469872918,
+  "netProfit": 408402975,
+  "totalAssets": 1647488578,
+  "totalLiabilities": 304913842,
+  "totalEquity": 1342574736,
+  "auditOpinion": "Unmodified",
+  "auditFindings": [],
+  "incomeStatement": {
+    "title": "Statement of Profit or Loss and Other Comprehensive Income for the Year Ended 30 Sene 2016",
+    "groups": [
+      {
+        "heading": "Revenue",
+        "items": [
+          { "label": "Toll Fee", "amount": 909237385, "indent": 1, "isSubtotal": false },
+          { "label": "Other Income", "amount": 27850396, "indent": 1, "isSubtotal": false },
+          { "label": "Total Revenue", "amount": 937087780, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Expenses",
+        "items": [
+          { "label": "Personnel Expense", "amount": -211210247, "indent": 1, "isSubtotal": false },
+          { "label": "Other Operating Expenses", "amount": -256004616, "indent": 1, "isSubtotal": false },
+          { "label": "Total Expense", "amount": -467214863, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Profit",
+        "items": [
+          { "label": "Operating Profit", "amount": 469872918, "indent": 0, "isSubtotal": true },
+          { "label": "Interest Income", "amount": 84383711, "indent": 1, "isSubtotal": false },
+          { "label": "Profit Before Tax", "amount": 554256629, "indent": 0, "isSubtotal": true },
+          { "label": "Income Tax Expense", "amount": -145853654, "indent": 1, "isSubtotal": false },
+          { "label": "Profit for the Year", "amount": 408402975, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Other Comprehensive Income",
+        "items": [
+          { "label": "Remeasurement Gain/(Loss) on Retirement Benefits Obligations", "amount": -2488745, "indent": 1, "isSubtotal": false },
+          { "label": "Deferred Tax (Liability)/Asset on Remeasurement Gain or Loss", "amount": 746624, "indent": 1, "isSubtotal": false },
+          { "label": "Other Comprehensive Income, Net of Tax", "amount": -1742122, "indent": 0, "isSubtotal": true },
+          { "label": "Total Comprehensive Income", "amount": 406660853, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "balanceSheet": {
+    "title": "Statement of Financial Position as at 30 Sene 2016",
+    "groups": [
+      {
+        "heading": "Non-Current Assets",
+        "items": [
+          { "label": "Property, Plant and Equipment", "amount": 264892729, "indent": 1, "isSubtotal": false },
+          { "label": "Intangible Assets", "amount": 2720600, "indent": 1, "isSubtotal": false },
+          { "label": "Deferred Tax Asset", "amount": 14664190, "indent": 1, "isSubtotal": false },
+          { "label": "Total Non-Current Assets", "amount": 282277519, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Assets",
+        "items": [
+          { "label": "Inventories", "amount": 83589375, "indent": 1, "isSubtotal": false },
+          { "label": "Trade and Other Receivables", "amount": 77306082, "indent": 1, "isSubtotal": false },
+          { "label": "Withholding Tax Receivable", "amount": 201312, "indent": 1, "isSubtotal": false },
+          { "label": "Cash Balance at Escrow Bank Account", "amount": 359562382, "indent": 1, "isSubtotal": false },
+          { "label": "Cash and Cash Equivalents", "amount": 844551907, "indent": 1, "isSubtotal": false },
+          { "label": "Total Current Assets", "amount": 1365211058, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Assets",
+        "items": [
+          { "label": "Total Assets", "amount": 1647488578, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Equity",
+        "items": [
+          { "label": "Paid up Capital", "amount": 125836250, "indent": 1, "isSubtotal": false },
+          { "label": "Retained Earnings", "amount": 1194329401, "indent": 1, "isSubtotal": false },
+          { "label": "Legal Reserve", "amount": 25167250, "indent": 1, "isSubtotal": false },
+          { "label": "Other Comprehensive Income", "amount": -2758164, "indent": 1, "isSubtotal": false },
+          { "label": "Total Equity", "amount": 1342574736, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Non-Current Liabilities",
+        "items": [
+          { "label": "Severance and Compensation Pay", "amount": 26989271, "indent": 1, "isSubtotal": false },
+          { "label": "Total Non-Current Liabilities", "amount": 26989271, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Current Liabilities",
+        "items": [
+          { "label": "Trade and Other Payables", "amount": 115568716, "indent": 1, "isSubtotal": false },
+          { "label": "Provision for Annual Leave", "amount": 8574821, "indent": 1, "isSubtotal": false },
+          { "label": "Current Tax Liabilities", "amount": 153781034, "indent": 1, "isSubtotal": false },
+          { "label": "Total Current Liabilities", "amount": 277924571, "indent": 0, "isSubtotal": true }
+        ]
+      },
+      {
+        "heading": "Total Liabilities and Equity",
+        "items": [
+          { "label": "Total Liabilities", "amount": 304913842, "indent": 0, "isSubtotal": true },
+          { "label": "Total Equity and Liabilities", "amount": 1647488578, "indent": 0, "isSubtotal": true }
+        ]
+      }
+    ]
+  },
+  "cashFlow": {
+    "operating": [
+      { "label": "Profit Before Tax", "amount": 554256629, "indent": 0, "isSubtotal": false },
+      { "label": "Depreciation", "amount": 29023584, "indent": 1, "isSubtotal": false },
+      { "label": "Amortization", "amount": 504658, "indent": 1, "isSubtotal": false },
+      { "label": "Current Service Cost", "amount": 1067806, "indent": 1, "isSubtotal": false },
+      { "label": "Interest Expense", "amount": 4912672, "indent": 1, "isSubtotal": false },
+      { "label": "Severance Paid", "amount": -580691, "indent": 1, "isSubtotal": false },
+      { "label": "Interest Income", "amount": -84383711, "indent": 1, "isSubtotal": false },
+      { "label": "Trade and Other Receivables", "amount": -56422196, "indent": 1, "isSubtotal": false },
+      { "label": "Inventories", "amount": 9261966, "indent": 1, "isSubtotal": false },
+      { "label": "Trade and Other Payables", "amount": 25006309, "indent": 1, "isSubtotal": false },
+      { "label": "Provisions", "amount": 1742785, "indent": 1, "isSubtotal": false },
+      { "label": "Cash Receipts from Interest on Bank Deposits", "amount": 84383711, "indent": 1, "isSubtotal": false },
+      { "label": "Profit Tax Paid During the Year", "amount": -104634025, "indent": 1, "isSubtotal": false },
+      { "label": "Prior Period Taxes Paid", "amount": -175411266, "indent": 1, "isSubtotal": false },
+      { "label": "Withholding Tax Paid", "amount": -201312, "indent": 1, "isSubtotal": false },
+      { "label": "Net Cash from Operating Activities", "amount": 288526919, "indent": 0, "isSubtotal": true }
+    ],
+    "investing": [
+      { "label": "Cash Payment (Transfer) to/from Escrow Bank Account", "amount": -23102047, "indent": 1, "isSubtotal": false },
+      { "label": "Additions to Fixed Assets", "amount": -87963625, "indent": 1, "isSubtotal": false },
+      { "label": "Net Cash Used in Investing Activities", "amount": -111065672, "indent": 0, "isSubtotal": true }
+    ],
+    "financing": [],
+    "netChange": 177461247,
+    "closingCash": 844551907
+  }
+}
