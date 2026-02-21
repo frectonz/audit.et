@@ -47,11 +47,17 @@ const glyphs = Array.from({ length: 150 }, () => {
 ---
 
 <!doctype html>
-<html lang="en" class="bg-eth-bg text-eth-text">
+<html lang="en" class="bg-eth-green text-eth-text">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1b3b34" />
+    <meta name="msapplication-TileColor" content="#1b3b34" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
@@ -59,7 +65,7 @@ const glyphs = Array.from({ length: 150 }, () => {
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="font-body min-h-screen flex flex-col antialiased relative">
+  <body class="bg-eth-bg font-body min-h-screen flex flex-col antialiased relative">
     <!-- Amharic letter background -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none select-none z-0 h-full" aria-hidden="true">
       {glyphs.map((g) => (
