@@ -434,12 +434,20 @@ const revVsLiabData = JSON.stringify({
     });
   }
 
-  // --- Profitability Overview Chart (horizontal bar) ---
+  // --- Profitability Overview Chart (horizontal bar, symlog scale) ---
   const profitEl = document.getElementById("profitabilityChart");
   if (profitEl) {
     const data = JSON.parse(profitEl.dataset.chart!) as { name: string; value: number; year: number }[];
     const chart = initChart(profitEl);
     ro.observe(profitEl);
+
+    // Symmetric log: sign(x) * log10(1 + |x|)
+    function symlog(v: number): number {
+      return Math.sign(v) * Math.log10(1 + Math.abs(v));
+    }
+    function symexp(v: number): number {
+      return Math.sign(v) * (Math.pow(10, Math.abs(v)) - 1);
+    }
 
     chart.setOption({
       tooltip: {
@@ -448,7 +456,9 @@ const revVsLiabData = JSON.stringify({
         formatter: (params: any) => {
           const p = params[0];
           const item = data[p.dataIndex];
-          return `${p.name} (${item.year})<br/>Net Profit: ETB ${formatCompact(p.value)}`;
+          return `<span style="font-weight:600;font-size:13px">${p.name}</span> <span style="color:#888">(${item.year} EC)</span>`
+            + `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>`
+            + `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Net Profit</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(item.value)}</span></div>`;
         },
       },
       grid: { left: 0, right: 10, top: 10, bottom: 0, containLabel: true },
@@ -456,7 +466,7 @@ const revVsLiabData = JSON.stringify({
         type: "value",
         axisLabel: {
           ...axisLabelStyle,
-          formatter: (v: number) => formatCompact(v),
+          formatter: (v: number) => formatCompact(symexp(v)),
         },
         splitLine: { lineStyle: { color: palette.grid } },
       },
@@ -471,7 +481,7 @@ const revVsLiabData = JSON.stringify({
         {
           type: "bar",
           data: data.map((d) => ({
-            value: d.value,
+            value: symlog(d.value),
             itemStyle: {
               color: d.value >= 0 ? palette.green : palette.accent,
               borderRadius: d.value >= 0 ? [0, 4, 4, 0] : [4, 0, 0, 4],
