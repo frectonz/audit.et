@@ -26,19 +26,20 @@ const combinedLatestAssets = enterprises.reduce((sum, e) => {
 const allUniqueYears = [...new Set(enterprises.flatMap((e) => e.years.map((y) => y.year)))].sort();
 const combinedRevenuePerYear = allUniqueYears.map((year) => {
   let total = 0;
-  let hasAny = false;
+  let count = 0;
   for (const e of enterprises) {
     const yd = e.years.find((y) => y.year === year);
     if (yd?.revenue != null) {
       total += yd.revenue;
-      hasAny = true;
+      count++;
     }
   }
-  return hasAny ? total : null;
+  return { total: count > 0 ? total : null, count };
 });
 const combinedRevenueChartData = JSON.stringify({
   labels: allUniqueYears,
-  data: combinedRevenuePerYear,
+  data: combinedRevenuePerYear.map((d) => d.total),
+  counts: combinedRevenuePerYear.map((d) => d.count),
 });
 
 // --- Profitability Overview: net profitability per enterprise (latest year) ---
@@ -173,6 +174,9 @@ const revVsLiabData = JSON.stringify({
               class="h-[280px] sm:h-[300px] w-full"
               data-chart={combinedRevenueChartData}
             ></div>
+            <p class="text-eth-text-muted text-[10px] mt-2 italic">
+              Not all years include the same number of enterprises. Hover over a bar for details.
+            </p>
           </div>
         </div>
       </div>
@@ -342,7 +346,17 @@ const revVsLiabData = JSON.stringify({
       tooltip: {
         trigger: "axis",
         axisPointer: { type: "shadow" },
-        valueFormatter: (v: number) => v == null ? "No data" : `ETB ${formatCompact(v)}`,
+        formatter: (params: any) => {
+          const p = Array.isArray(params) ? params[0] : params;
+          const idx = p.dataIndex;
+          const value = p.value;
+          const count = data.counts[idx];
+          if (value == null) return `<span style="font-weight:600">${p.name} EC</span><br/><span style="color:#999">No data</span>`;
+          return `<span style="font-weight:600;font-size:13px">${p.name} EC</span>`
+            + `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>`
+            + `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Revenue</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(value)}</span></div>`
+            + `<div style="display:flex;justify-content:space-between;gap:16px;margin-top:4px"><span style="color:#888">Enterprises</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">${count}</span></div>`;
+        },
       },
       grid: { left: 0, right: 10, top: 16, bottom: 0, containLabel: true },
       xAxis: {
