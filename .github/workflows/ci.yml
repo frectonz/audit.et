@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+
+      - name: Run Flake Check
+        run: nix flake check
+
+      - name: Install Dependencies
+        run: nix develop -c pnpm install --frozen-lockfile
+        working-directory: ui
+
+      - name: Build
+        run: nix develop -c pnpm build
+        working-directory: ui
