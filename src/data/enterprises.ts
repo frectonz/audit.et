@@ -7,7 +7,7 @@ import path from "node:path";
 const STANDARDIZED_DIR = path.resolve(
   // @ts-expect-error - import.meta.dirname available in Node 21+
   import.meta.dirname,
-  "../../../standardized"
+  "../../standardized"
 );
 
 function loadYears(enterpriseId: string): YearData[] {
