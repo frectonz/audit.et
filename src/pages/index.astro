@@ -128,6 +128,20 @@ const sectorRevenueData = JSON.stringify(
     .sort((a, b) => b.value - a.value)
 );
 
+// --- Assets by Sector ---
+const sectorAssets: Record<string, number> = {};
+for (const e of enterprises) {
+  const latest = e.years.filter((y) => y.totalAssets != null).at(-1);
+  if (latest?.totalAssets != null) {
+    sectorAssets[e.sector] = (sectorAssets[e.sector] ?? 0) + latest.totalAssets;
+  }
+}
+const sectorAssetsData = JSON.stringify(
+  Object.entries(sectorAssets)
+    .map(([name, value]) => ({ name, value }))
+    .sort((a, b) => b.value - a.value)
+);
+
 // --- Top Enterprises by Total Assets ---
 const topByAssets = enterprises
   .map((e) => {
@@ -137,6 +151,16 @@ const topByAssets = enterprises
   .filter((d) => d.year > 0 && d.value > 0)
   .sort((a, b) => a.value - b.value);
 const topByAssetsData = JSON.stringify(topByAssets);
+
+// --- Top Enterprises by Total Liabilities ---
+const topByLiabilities = enterprises
+  .map((e) => {
+    const latest = e.years.filter((y) => y.totalLiabilities != null).at(-1);
+    return { name: e.shortName, value: latest?.totalLiabilities ?? 0, year: latest?.year ?? 0 };
+  })
+  .filter((d) => d.year > 0 && d.value > 0)
+  .sort((a, b) => a.value - b.value);
+const topByLiabilitiesData = JSON.stringify(topByLiabilities);
 
 // --- Revenue Breakdown (stacked bar) ---
 const enterprisesWithRevenue = enterprises.filter((e) =>
@@ -380,16 +404,28 @@ const revVsLiabData = JSON.stringify({
 
   <!-- Revenue by Sector + Top by Assets -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-    <div class="grid lg:grid-cols-2 gap-6">
+    <div class="grid lg:grid-cols-2 gap-6 mb-6">
       <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
         <h3 class="font-display text-xl text-eth-text mb-1">Revenue by Sector</h3>
         <p class="text-eth-text-muted text-sm mb-4">Sector share of total revenue (latest year per enterprise)</p>
         <div id="sectorRevenueChart" class="h-[200px] lg:h-[280px] w-full" data-chart={sectorRevenueData}></div>
       </div>
       <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
+        <h3 class="font-display text-xl text-eth-text mb-1">Assets by Sector</h3>
+        <p class="text-eth-text-muted text-sm mb-4">Sector share of total assets (latest year per enterprise)</p>
+        <div id="sectorAssetsChart" class="h-[200px] lg:h-[280px] w-full" data-chart={sectorAssetsData}></div>
+      </div>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-6">
+      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
         <h3 class="font-display text-xl text-eth-text mb-1">Top Enterprises by Assets</h3>
-        <p class="text-eth-text-muted text-sm mb-4">Total asset base by enterprise (latest available year)</p>
+        <p class="text-eth-text-muted text-sm mb-4">Total asset base by enterprise (latest available year, log scale)</p>
         <div id="topAssetsChart" class="h-[200px] lg:h-[280px] w-full" data-chart={topByAssetsData}></div>
+      </div>
+      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
+        <h3 class="font-display text-xl text-eth-text mb-1">Top Enterprises by Liabilities</h3>
+        <p class="text-eth-text-muted text-sm mb-4">Total liabilities by enterprise (latest available year, log scale)</p>
+        <div id="topLiabilitiesChart" class="h-[200px] lg:h-[280px] w-full" data-chart={topByLiabilitiesData}></div>
       </div>
     </div>
   </section>
@@ -696,17 +732,20 @@ const revVsLiabData = JSON.stringify({
     });
   }
 
-  // --- Revenue by Sector Donut ---
-  const sectorEl = document.getElementById("sectorRevenueChart");
-  if (sectorEl) {
-    const data = JSON.parse(sectorEl.dataset.chart!) as { name: string; value: number }[];
-    const chart = initChart(sectorEl);
-    ro.observe(sectorEl);
+  // --- Sector Donut (reusable) ---
+  const sectorColors = [
+    palette.green, palette.gold, palette.greenLight, "#5b8c7a", "#8a6e3e",
+    "#3d7a6b", "#c4b27d", "#1a4f44", "#6b9e8a", "#d4c48e",
+    "#2a6b5e", "#9b8a5e", "#4a8e7a", "#bfae6e", "#336b5a",
+    "#7a9e6e", "#5e7a4a", "#8e6e4a",
+  ];
 
-    const sectorColors = [
-      palette.green, palette.gold, palette.greenLight, "#5b8c7a", "#8a6e3e",
-      "#3d7a6b", "#c4b27d", "#1a4f44", "#6b9e8a", "#d4c48e",
-    ];
+  function initSectorDonut(elId: string, metricLabel: string) {
+    const el = document.getElementById(elId);
+    if (!el) return;
+    const data = JSON.parse(el.dataset.chart!) as { name: string; value: number }[];
+    const chart = initChart(el);
+    ro.observe(el);
 
     chart.setOption({
       tooltip: {
@@ -714,7 +753,7 @@ const revVsLiabData = JSON.stringify({
         formatter: (p: any) =>
           `<span style="font-weight:600">${p.name}</span>`
           + `<div style="margin:4px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>`
-          + `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Revenue</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(p.value)}</span></div>`
+          + `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">${metricLabel}</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(p.value)}</span></div>`
           + `<div style="color:#888;margin-top:2px">${p.percent.toFixed(1)}%</div>`,
       },
       series: [
@@ -746,12 +785,21 @@ const revVsLiabData = JSON.stringify({
     });
   }
 
-  // --- Top Enterprises by Assets (horizontal bar) ---
-  const assetsEl = document.getElementById("topAssetsChart");
-  if (assetsEl) {
-    const data = JSON.parse(assetsEl.dataset.chart!) as { name: string; value: number; year: number }[];
-    const chart = initChart(assetsEl);
-    ro.observe(assetsEl);
+  initSectorDonut("sectorRevenueChart", "Revenue");
+  initSectorDonut("sectorAssetsChart", "Total Assets");
+
+  // --- Horizontal bar chart with log scale (reusable) ---
+  function initHorizontalLogBar(
+    elId: string,
+    metricLabel: string,
+    gradientStart: string,
+    gradientEnd: string,
+  ) {
+    const el = document.getElementById(elId);
+    if (!el) return;
+    const data = JSON.parse(el.dataset.chart!) as { name: string; value: number; year: number }[];
+    const chart = initChart(el);
+    ro.observe(el);
 
     chart.setOption({
       tooltip: {
@@ -762,12 +810,12 @@ const revVsLiabData = JSON.stringify({
           const item = data[p.dataIndex];
           return `<span style="font-weight:600;font-size:13px">${p.name}</span> <span style="color:#888">(${item.year} EC)</span>`
             + `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>`
-            + `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Total Assets</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(item.value)}</span></div>`;
+            + `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">${metricLabel}</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(item.value)}</span></div>`;
         },
       },
       grid: { left: 0, right: 10, top: 10, bottom: 0, containLabel: true },
       xAxis: {
-        type: "value",
+        type: "log",
         axisLabel: {
           ...axisLabelStyle,
           formatter: (v: number) => formatCompact(v),
@@ -787,8 +835,8 @@ const revVsLiabData = JSON.stringify({
           data: data.map((d) => d.value),
           itemStyle: {
             color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
-              { offset: 0, color: palette.greenLight },
-              { offset: 1, color: palette.green },
+              { offset: 0, color: gradientStart },
+              { offset: 1, color: gradientEnd },
             ]),
             borderRadius: [0, 4, 4, 0],
           },
@@ -800,6 +848,9 @@ const revVsLiabData = JSON.stringify({
       ],
     });
   }
+
+  initHorizontalLogBar("topAssetsChart", "Total Assets", "rgba(27, 59, 52, 0.15)", palette.green);
+  initHorizontalLogBar("topLiabilitiesChart", "Total Liabilities", palette.goldLight, palette.gold);
 
   // --- Revenue Breakdown Stacked Bar ---
   const breakdownEl = document.getElementById("revenueBreakdownChart");
