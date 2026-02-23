@@ -179,6 +179,23 @@ const revenueBreakdownData = JSON.stringify({
   series: revenueBreakdownSeries.map(({ name, data }) => ({ name, data })),
 });
 
+// --- Profit to Revenue Ratio (Profit Margin) ---
+const profitToRevenueRatio = enterprises
+  .map((e) => {
+    const latest = e.years.filter((y) => y.revenue != null && y.revenue !== 0 && y.netProfit != null).at(-1);
+    if (!latest) return null;
+    return {
+      name: e.shortName,
+      ratio: (latest.netProfit! / latest.revenue!) * 100,
+      revenue: latest.revenue!,
+      netProfit: latest.netProfit!,
+      year: latest.year,
+    };
+  })
+  .filter((d): d is NonNullable<typeof d> => d != null)
+  .sort((a, b) => a.ratio - b.ratio);
+const profitToRevenueData = JSON.stringify(profitToRevenueRatio);
+
 // --- Revenue vs Liabilities Trend ---
 const revVsLiabData = JSON.stringify({
   labels: allUniqueYears,
@@ -309,7 +326,7 @@ const revVsLiabData = JSON.stringify({
     <div class="h-px bg-eth-card-border"></div>
   </div>
 
-  <!-- Profitability Overview + Audit Health -->
+  <!-- Profitability Overview + Profit Margin -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
     <div class="grid lg:grid-cols-2 gap-6">
       <!-- Profitability Overview -->
@@ -319,21 +336,11 @@ const revVsLiabData = JSON.stringify({
         <div id="profitabilityChart" class="h-[200px] lg:h-[280px] w-full" data-chart={profitabilityChartData}></div>
       </div>
 
-      <!-- Audit Opinions -->
+      <!-- Profit Margin -->
       <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
-        <h2 class="font-display text-xl text-eth-text mb-1">Audit Opinions</h2>
-        <p class="text-eth-text-muted text-sm mb-4">Auditor verdicts across {totalAuditYears} enterprise-years</p>
-        <div id="auditDonutChart" class="h-[200px] lg:h-[280px] w-full" data-chart={auditHealthData}></div>
-        <dl class="mt-4 space-y-2 text-xs border-t border-eth-card-border pt-4">
-          <div>
-            <dt class="font-semibold text-eth-text inline">Unmodified</dt>
-            <dd class="inline text-eth-text-muted"> — Financial statements are fairly presented with no material issues found.</dd>
-          </div>
-          <div>
-            <dt class="font-semibold text-eth-text inline">Qualified</dt>
-            <dd class="inline text-eth-text-muted"> — The auditor found specific issues or couldn't verify certain items.</dd>
-          </div>
-        </dl>
+        <h2 class="font-display text-xl text-eth-text mb-1">Profit Margin by Enterprise</h2>
+        <p class="text-eth-text-muted text-sm mb-4">Net profit as a percentage of revenue (latest available year)</p>
+        <div id="profitMarginChart" class="h-[200px] lg:h-[280px] w-full" data-chart={profitToRevenueData}></div>
       </div>
     </div>
   </section>
@@ -438,6 +445,25 @@ const revVsLiabData = JSON.stringify({
       <div id="revenueBreakdownChart" class="h-[360px] sm:h-[440px] w-full" data-chart={revenueBreakdownData}></div>
     </div>
   </section>
+
+  <!-- Audit Opinions -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm">
+      <h2 class="font-display text-xl text-eth-text mb-1">Audit Opinions</h2>
+      <p class="text-eth-text-muted text-sm mb-4">Auditor verdicts across {totalAuditYears} enterprise-years</p>
+      <div id="auditDonutChart" class="h-[260px] sm:h-[320px] w-full" data-chart={auditHealthData}></div>
+      <dl class="mt-4 space-y-2 text-xs border-t border-eth-card-border pt-4">
+        <div>
+          <dt class="font-semibold text-eth-text inline">Unmodified</dt>
+          <dd class="inline text-eth-text-muted"> — Financial statements are fairly presented with no material issues found.</dd>
+        </div>
+        <div>
+          <dt class="font-semibold text-eth-text inline">Qualified</dt>
+          <dd class="inline text-eth-text-muted"> — The auditor found specific issues or couldn't verify certain items.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
 </Layout>
 
 <script>
@@ -470,6 +496,14 @@ const revVsLiabData = JSON.stringify({
     fontSize: isMobile ? 9 : 11,
     color: palette.text,
   };
+
+  // Symmetric log: sign(x) * log10(1 + |x|)
+  function symlog(v: number): number {
+    return Math.sign(v) * Math.log10(1 + Math.abs(v));
+  }
+  function symexp(v: number): number {
+    return Math.sign(v) * (Math.pow(10, Math.abs(v)) - 1);
+  }
 
   // Track all charts for ResizeObserver
   const charts: { el: HTMLElement; chart: echarts.ECharts }[] = [];
@@ -557,14 +591,6 @@ const revVsLiabData = JSON.stringify({
     const chart = initChart(profitEl);
     ro.observe(profitEl);
 
-    // Symmetric log: sign(x) * log10(1 + |x|)
-    function symlog(v: number): number {
-      return Math.sign(v) * Math.log10(1 + Math.abs(v));
-    }
-    function symexp(v: number): number {
-      return Math.sign(v) * (Math.pow(10, Math.abs(v)) - 1);
-    }
-
     chart.setOption({
       tooltip: {
         trigger: "axis",
@@ -599,7 +625,15 @@ const revVsLiabData = JSON.stringify({
           data: data.map((d) => ({
             value: symlog(d.value),
             itemStyle: {
-              color: d.value >= 0 ? palette.green : palette.accent,
+              color: d.value >= 0
+                ? new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                    { offset: 0, color: "rgba(27, 59, 52, 0.15)" },
+                    { offset: 1, color: palette.green },
+                  ])
+                : new echarts.graphic.LinearGradient(1, 0, 0, 0, [
+                    { offset: 0, color: "rgba(175, 158, 110, 0.15)" },
+                    { offset: 1, color: palette.gold },
+                  ]),
               borderRadius: d.value >= 0 ? [0, 4, 4, 0] : [4, 0, 0, 4],
             },
           })),
@@ -939,6 +973,79 @@ const revVsLiabData = JSON.stringify({
           itemStyle: { shadowBlur: 10, shadowColor: "rgba(0,0,0,0.2)" },
         },
       })),
+    });
+  }
+
+  // --- Profit Margin Chart ---
+  const pmEl = document.getElementById("profitMarginChart");
+  if (pmEl) {
+    const data = JSON.parse(pmEl.dataset.chart!) as {
+      name: string;
+      ratio: number;
+      revenue: number;
+      netProfit: number;
+      year: number;
+    }[];
+    const chart = initChart(pmEl);
+    ro.observe(pmEl);
+
+    chart.setOption({
+      tooltip: {
+        trigger: "axis",
+        axisPointer: { type: "shadow" },
+        formatter: (params: any) => {
+          const p = params[0];
+          const item = data[p.dataIndex];
+          return `<span style="font-weight:600;font-size:13px">${p.name}</span> <span style="color:#888">(${item.year} EC)</span>`
+            + `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>`
+            + `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Profit Margin</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">${item.ratio.toFixed(1)}%</span></div>`
+            + `<div style="display:flex;justify-content:space-between;gap:16px;margin-top:3px"><span style="color:#888">Revenue</span><span style="font-family:JetBrains Mono,monospace;font-weight:500">ETB ${formatCompact(item.revenue)}</span></div>`
+            + `<div style="display:flex;justify-content:space-between;gap:16px;margin-top:3px"><span style="color:#888">Net Profit</span><span style="font-family:JetBrains Mono,monospace;font-weight:500">ETB ${formatCompact(item.netProfit)}</span></div>`;
+        },
+      },
+      grid: { left: 0, right: 10, top: 10, bottom: 0, containLabel: true },
+      xAxis: {
+        type: "value",
+        axisLabel: {
+          ...axisLabelStyle,
+          formatter: (v: number) => {
+            const actual = symexp(v);
+            return `${actual >= 0 ? "" : ""}${actual.toFixed(0)}%`;
+          },
+        },
+        splitLine: { lineStyle: { color: palette.grid } },
+      },
+      yAxis: {
+        type: "category",
+        data: data.map((d) => d.name),
+        axisLabel: { ...axisLabelStyle, fontSize: isMobile ? 10 : 12 },
+        axisLine: { lineStyle: { color: "#E0DDD5" } },
+        axisTick: { show: false },
+      },
+      series: [
+        {
+          type: "bar",
+          data: data.map((d) => ({
+            value: symlog(d.ratio),
+            itemStyle: {
+              color: d.ratio >= 0
+                ? new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                    { offset: 0, color: "rgba(27, 59, 52, 0.15)" },
+                    { offset: 1, color: palette.green },
+                  ])
+                : new echarts.graphic.LinearGradient(1, 0, 0, 0, [
+                    { offset: 0, color: "rgba(175, 158, 110, 0.15)" },
+                    { offset: 1, color: palette.gold },
+                  ]),
+              borderRadius: d.ratio >= 0 ? [0, 4, 4, 0] : [4, 0, 0, 4],
+            },
+          })),
+          barMaxWidth: 28,
+          emphasis: {
+            itemStyle: { shadowBlur: 12, shadowColor: "rgba(0,0,0,0.2)" },
+          },
+        },
+      ],
     });
   }
 
