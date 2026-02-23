@@ -333,14 +333,14 @@ const revVsLiabData = JSON.stringify({
       <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
         <h2 class="font-display text-xl text-eth-text mb-1">Profitability Overview</h2>
         <p class="text-eth-text-muted text-sm mb-4">Net profitability by enterprise (latest available year)</p>
-        <div id="profitabilityChart" class="h-[200px] lg:h-[280px] w-full" data-chart={profitabilityChartData}></div>
+        <div id="profitabilityChart" class="h-[400px] lg:h-[500px] w-full" data-chart={profitabilityChartData}></div>
       </div>
 
       <!-- Profit Margin -->
       <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
         <h2 class="font-display text-xl text-eth-text mb-1">Profit Margin by Enterprise</h2>
         <p class="text-eth-text-muted text-sm mb-4">Net profit as a percentage of revenue (latest available year)</p>
-        <div id="profitMarginChart" class="h-[200px] lg:h-[280px] w-full" data-chart={profitToRevenueData}></div>
+        <div id="profitMarginChart" class="h-[400px] lg:h-[500px] w-full" data-chart={profitToRevenueData}></div>
       </div>
     </div>
   </section>
@@ -427,12 +427,12 @@ const revVsLiabData = JSON.stringify({
       <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
         <h2 class="font-display text-xl text-eth-text mb-1">Top Enterprises by Assets</h2>
         <p class="text-eth-text-muted text-sm mb-4">Total asset base by enterprise (latest available year, log scale)</p>
-        <div id="topAssetsChart" class="h-[200px] lg:h-[280px] w-full" data-chart={topByAssetsData}></div>
+        <div id="topAssetsChart" class="h-[400px] lg:h-[500px] w-full" data-chart={topByAssetsData}></div>
       </div>
       <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
         <h2 class="font-display text-xl text-eth-text mb-1">Top Enterprises by Liabilities</h2>
         <p class="text-eth-text-muted text-sm mb-4">Total liabilities by enterprise (latest available year, log scale)</p>
-        <div id="topLiabilitiesChart" class="h-[200px] lg:h-[280px] w-full" data-chart={topByLiabilitiesData}></div>
+        <div id="topLiabilitiesChart" class="h-[400px] lg:h-[500px] w-full" data-chart={topByLiabilitiesData}></div>
       </div>
     </div>
   </section>
@@ -615,7 +615,7 @@ const revVsLiabData = JSON.stringify({
       yAxis: {
         type: "category",
         data: data.map((d) => d.name),
-        axisLabel: { ...axisLabelStyle, fontSize: isMobile ? 10 : 12 },
+        axisLabel: { ...axisLabelStyle, fontSize: isMobile ? 10 : 12, interval: 0 },
         axisLine: { lineStyle: { color: "#E0DDD5" } },
         axisTick: { show: false },
       },
@@ -859,7 +859,7 @@ const revVsLiabData = JSON.stringify({
       yAxis: {
         type: "category",
         data: data.map((d) => d.name),
-        axisLabel: { ...axisLabelStyle, fontSize: isMobile ? 10 : 12 },
+        axisLabel: { ...axisLabelStyle, fontSize: isMobile ? 10 : 12, interval: 0 },
         axisLine: { lineStyle: { color: "#E0DDD5" } },
         axisTick: { show: false },
       },
@@ -1018,7 +1018,7 @@ const revVsLiabData = JSON.stringify({
       yAxis: {
         type: "category",
         data: data.map((d) => d.name),
-        axisLabel: { ...axisLabelStyle, fontSize: isMobile ? 10 : 12 },
+        axisLabel: { ...axisLabelStyle, fontSize: isMobile ? 10 : 12, interval: 0 },
         axisLine: { lineStyle: { color: "#E0DDD5" } },
         axisTick: { show: false },
       },
