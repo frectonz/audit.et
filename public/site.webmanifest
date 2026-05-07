@@ -1,13 +1,112 @@
 {
-  "name": "audit.et",
+  "id": "/",
+  "name": "audit.et — Transparency for Ethiopia's State-Owned Enterprises",
   "short_name": "audit.et",
   "description": "Transparency for Ethiopia's State-Owned Enterprises — visualizing public audit data from enterprises under Ethiopian Investment Holdings.",
   "start_url": "/",
-  "icons": [
-    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
-  ],
-  "theme_color": "#1b3b34",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#1b3b34",
-  "display": "standalone"
+  "theme_color": "#1b3b34",
+  "lang": "en",
+  "categories": ["finance", "government", "education"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/home-desktop.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Home page — overview of tracked enterprises and combined revenue"
+    },
+    {
+      "src": "/screenshots/enterprises-desktop.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Enterprises catalog — searchable list of all tracked enterprises"
+    },
+    {
+      "src": "/screenshots/enterprise-desktop.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Enterprise detail — multi-year revenue, profitability and balance sheet charts"
+    },
+    {
+      "src": "/screenshots/year-desktop.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Fiscal year detail — profit breakdown and cash flow activities"
+    },
+    {
+      "src": "/screenshots/about-desktop.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "About — what audit.et is and why it exists"
+    },
+    {
+      "src": "/screenshots/home-mobile.png",
+      "sizes": "540x1170",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Home page — overview of tracked enterprises and combined revenue"
+    },
+    {
+      "src": "/screenshots/enterprises-mobile.png",
+      "sizes": "540x1170",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Enterprises catalog — searchable list of all tracked enterprises"
+    },
+    {
+      "src": "/screenshots/enterprise-mobile.png",
+      "sizes": "540x1170",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Enterprise detail — multi-year revenue, profitability and balance sheet charts"
+    },
+    {
+      "src": "/screenshots/year-mobile.png",
+      "sizes": "540x1170",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Fiscal year detail — profit breakdown and cash flow activities"
+    },
+    {
+      "src": "/screenshots/about-mobile.png",
+      "sizes": "540x1170",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "About — what audit.et is and why it exists"
+    }
+  ]
 }

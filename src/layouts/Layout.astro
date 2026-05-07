@@ -66,6 +66,13 @@ const glyphs = Array.from({ length: 150 }, () => {
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="audit.et" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -119,6 +126,14 @@ const glyphs = Array.from({ length: 150 }, () => {
       })}
     />
     <slot name="head" />
+    {
+      import.meta.env.PROD && (
+        <script
+          is:inline
+          set:html={`if("serviceWorker" in navigator){window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js",{scope:"/",updateViaCache:"none"}).catch(()=>{});});}`}
+        />
+      )
+    }
   </head>
   <body
     class="bg-eth-bg font-body min-h-screen flex flex-col antialiased relative"
