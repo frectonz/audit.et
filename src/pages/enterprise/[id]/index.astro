@@ -4,10 +4,14 @@ import {
   getAllEnterprises,
   getEnterprise,
   formatETB,
-  formatCurrency,
 } from "../../../data/enterprises";
-import type { Enterprise } from "../../../data/types";
-import { Home, ChevronRight, AlertTriangle, ExternalLink, Info } from "@lucide/astro";
+import {
+  House,
+  ChevronRight,
+  TriangleAlert,
+  ExternalLink,
+  Info,
+} from "@lucide/astro";
 
 export function getStaticPaths() {
   const enterprises = getAllEnterprises();
@@ -20,7 +24,6 @@ const { id } = Astro.params;
 const enterprise = getEnterprise(id!)!;
 
 const latest = enterprise.years.at(-1);
-const prev = enterprise.years.at(-2);
 
 function getOpinionColor(opinion: string): string {
   if (opinion.toLowerCase().includes("unmodified")) return "text-eth-green";
@@ -46,7 +49,10 @@ const maxYear = enterprise.years.at(-1)?.year ?? 0;
 const chartYears: number[] = [];
 for (let y = minYear; y <= maxYear; y++) chartYears.push(y);
 
-const pick = (year: number, fn: (y: typeof enterprise.years[0]) => number | null) => {
+const pick = (
+  year: number,
+  fn: (y: (typeof enterprise.years)[0]) => number | null,
+) => {
   const d = yearSet.get(year);
   return d ? fn(d) : null;
 };
@@ -54,7 +60,9 @@ const pick = (year: number, fn: (y: typeof enterprise.years[0]) => number | null
 const revenueData = chartYears.map((y) => pick(y, (d) => d.revenue));
 const netProfitData = chartYears.map((y) => pick(y, (d) => d.netProfit));
 const assetsData = chartYears.map((y) => pick(y, (d) => d.totalAssets));
-const liabilitiesData = chartYears.map((y) => pick(y, (d) => d.totalLiabilities));
+const liabilitiesData = chartYears.map((y) =>
+  pick(y, (d) => d.totalLiabilities),
+);
 const equityData = chartYears.map((y) => pick(y, (d) => d.totalEquity));
 
 const profitChartData = JSON.stringify({
@@ -75,25 +83,54 @@ const pageDescription = `Audit data for ${enterprise.name} (${enterprise.sector}
 const breadcrumbLD = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://audit.et/" },
-    { "@type": "ListItem", "position": 2, "name": "Enterprises", "item": "https://audit.et/enterprises/" },
-    { "@type": "ListItem", "position": 3, "name": enterprise.shortName, "item": `https://audit.et/enterprise/${enterprise.id}/` },
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://audit.et/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Enterprises",
+      item: "https://audit.et/enterprises/",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: enterprise.shortName,
+      item: `https://audit.et/enterprise/${enterprise.id}/`,
+    },
   ],
 });
 ---
 
-<Layout title={`${enterprise.shortName} — audit.et`} description={pageDescription}>
-  <script slot="head" type="application/ld+json" set:html={breadcrumbLD} />
+<Layout
+  title={`${enterprise.shortName} — audit.et`}
+  description={pageDescription}
+>
+  <script
+    is:inline
+    slot="head"
+    type="application/ld+json"
+    set:html={breadcrumbLD}
+  />
   <!-- Breadcrumbs -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
     <nav class="flex items-center gap-1.5 text-sm">
-      <a href="/" class="inline-flex items-center gap-1 text-eth-text-muted hover:text-eth-green transition-colors">
-        <Home class="w-3.5 h-3.5" />
+      <a
+        href="/"
+        class="inline-flex items-center gap-1 text-eth-text-muted hover:text-eth-green transition-colors"
+      >
+        <House class="w-3.5 h-3.5" />
         Home
       </a>
       <ChevronRight class="w-3.5 h-3.5 text-eth-text-muted/50" />
-      <a href="/enterprises" class="text-eth-text-muted hover:text-eth-green transition-colors">
+      <a
+        href="/enterprises"
+        class="text-eth-text-muted hover:text-eth-green transition-colors"
+      >
         Enterprises
       </a>
       <ChevronRight class="w-3.5 h-3.5 text-eth-text-muted/50" />
@@ -108,7 +145,8 @@ const breadcrumbLD = JSON.stringify({
     >
       <div>
         <div class="flex items-center gap-2 mb-2">
-          <span class="bg-eth-green text-white text-xs font-mono px-2.5 py-1 rounded-full"
+          <span
+            class="bg-eth-green text-white text-xs font-mono px-2.5 py-1 rounded-full"
             >{enterprise.sector}</span
           >
           <span class="bg-eth-green text-white text-xs px-2.5 py-1 rounded-full"
@@ -142,14 +180,15 @@ const breadcrumbLD = JSON.stringify({
           {
             label: "Revenue",
             value:
-              latest?.revenue != null
-                ? formatETB(latest.revenue, true)
-                : "N/A",
+              latest?.revenue != null ? formatETB(latest.revenue, true) : "N/A",
             sub: latest?.year ? `FY ${latest.year}` : "",
             color: "text-eth-green",
           },
           {
-            label: latest?.netProfit != null && latest.netProfit < 0 ? "Net Loss" : "Net Profit",
+            label:
+              latest?.netProfit != null && latest.netProfit < 0
+                ? "Net Loss"
+                : "Net Profit",
             value:
               latest?.netProfit != null
                 ? formatETB(latest.netProfit, true)
@@ -223,7 +262,8 @@ const breadcrumbLD = JSON.stringify({
           id="profitChart"
           class="h-[300px] w-full"
           data-chart={profitChartData}
-        ></div>
+        >
+        </div>
       </div>
 
       <!-- Balance Sheet Chart -->
@@ -238,7 +278,8 @@ const breadcrumbLD = JSON.stringify({
           id="balanceChart"
           class="h-[300px] w-full"
           data-chart={balanceChartData}
-        ></div>
+        >
+        </div>
       </div>
     </div>
   </section>
@@ -253,23 +294,32 @@ const breadcrumbLD = JSON.stringify({
       </h3>
       <div class="relative overflow-x-auto pb-2">
         <!-- Connecting line -->
-        <div class="absolute top-5 left-[40px] right-[40px] h-0.5 bg-eth-card-border"></div>
+        <div
+          class="absolute top-5 left-[40px] right-[40px] h-0.5 bg-eth-card-border"
+        >
+        </div>
         <div class="flex items-start justify-between min-w-fit">
           {
             enterprise.years.map((y) => (
-              <a href={`/enterprise/${enterprise.id}/${y.year}`} class="relative flex flex-col items-center min-w-[80px] group">
+              <a
+                href={`/enterprise/${enterprise.id}/${y.year}`}
+                class="relative flex flex-col items-center min-w-[80px] group"
+              >
                 <div
                   class={`relative z-10 w-10 h-10 rounded-full flex items-center justify-center text-sm font-mono font-bold shadow-sm group-hover:brightness-110 group-hover:shadow-md transition-all ${
                     y.auditOpinion.toLowerCase().includes("unmodified")
                       ? "bg-eth-green text-white"
-                      : y.auditOpinion.toLowerCase().includes("qualified") || y.auditOpinion.toLowerCase().includes("adverse")
+                      : y.auditOpinion.toLowerCase().includes("qualified") ||
+                          y.auditOpinion.toLowerCase().includes("adverse")
                         ? "bg-eth-gold text-eth-bg"
                         : "bg-eth-card-border text-eth-text-muted"
                   }`}
                 >
                   {y.auditOpinion.charAt(0)}
                 </div>
-                <span class="text-eth-text font-mono text-xs mt-2 font-medium">{y.year}</span>
+                <span class="text-eth-text font-mono text-xs mt-2 font-medium">
+                  {y.year}
+                </span>
                 <span
                   class={`text-[10px] mt-0.5 ${getOpinionColor(y.auditOpinion)} group-hover:opacity-100 opacity-70 transition-opacity`}
                 >
@@ -290,7 +340,7 @@ const breadcrumbLD = JSON.stringify({
         <div class="bg-eth-card border border-eth-gold/30 rounded-xl p-6 shadow-sm">
           <div class="flex items-center gap-3 mb-4">
             <div class="w-8 h-8 rounded-full bg-eth-gold-light border border-eth-gold/20 flex items-center justify-center">
-              <AlertTriangle class="w-4 h-4 text-eth-gold" />
+              <TriangleAlert class="w-4 h-4 text-eth-gold" />
             </div>
             <div>
               <h3 class="font-display text-xl text-eth-gold">
@@ -319,7 +369,9 @@ const breadcrumbLD = JSON.stringify({
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
-                  ><path d="m6 9 6 6 6-6" /></svg>
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
                 </summary>
                 <div class="px-4 pb-4 pt-0">
                   <div class="pl-8">
@@ -392,8 +444,7 @@ const breadcrumbLD = JSON.stringify({
               >
               <th
                 class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
-                ></th
-              >
+              ></th>
             </tr>
           </thead>
           <tbody>
@@ -401,7 +452,10 @@ const breadcrumbLD = JSON.stringify({
               enterprise.years.map((y) => (
                 <tr class="border-t border-eth-card-border/50 hover:bg-eth-surface/30 transition-colors">
                   <td class="px-6 py-3 font-mono text-eth-text font-medium">
-                    <a href={`/enterprise/${enterprise.id}/${y.year}`} class="hover:text-eth-green transition-colors">
+                    <a
+                      href={`/enterprise/${enterprise.id}/${y.year}`}
+                      class="hover:text-eth-green transition-colors"
+                    >
                       {y.year}
                     </a>
                   </td>
@@ -514,7 +568,8 @@ const breadcrumbLD = JSON.stringify({
       tooltip: {
         trigger: "axis",
         axisPointer: { type: "shadow" },
-        valueFormatter: (v: number) => v == null ? "N/A" : `ETB ${formatCompact(v)}`,
+        valueFormatter: (v: number) =>
+          v == null ? "N/A" : `ETB ${formatCompact(v)}`,
       },
       legend: legendStyle,
       grid: {
@@ -590,7 +645,8 @@ const breadcrumbLD = JSON.stringify({
       tooltip: {
         trigger: "axis",
         axisPointer: { type: "shadow" },
-        valueFormatter: (v: number) => v == null ? "N/A" : `ETB ${formatCompact(v)}`,
+        valueFormatter: (v: number) =>
+          v == null ? "N/A" : `ETB ${formatCompact(v)}`,
       },
       legend: legendStyle,
       grid: {

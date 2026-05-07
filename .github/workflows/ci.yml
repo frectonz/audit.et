@@ -22,5 +22,14 @@ jobs:
       - name: Install Dependencies
         run: nix develop -c pnpm install --frozen-lockfile
 
+      - name: Format Check
+        run: nix develop -c pnpm format:check
+
+      - name: Lint
+        run: nix develop -c pnpm lint
+
+      - name: Type Check
+        run: nix develop -c pnpm typecheck
+
       - name: Build
         run: nix develop -c pnpm build

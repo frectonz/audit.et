@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import { Github, Home, Building2, Info } from "@lucide/astro";
+import { House, Building2, Info } from "@lucide/astro";
 
 interface Props {
   title?: string;
@@ -20,7 +20,8 @@ const pathname = currentPath.replace(/\/$/, "") || "index";
 const ogPath = pathname === "index" ? "/og/index.png" : `/og${pathname}.png`;
 const ogImageURL = new URL(ogPath, Astro.site);
 const navLink = (href: string) => {
-  const isActive = href === "/" ? currentPath === "/" : currentPath.startsWith(href);
+  const isActive =
+    href === "/" ? currentPath === "/" : currentPath.startsWith(href);
   return isActive
     ? "text-eth-gold flex items-center gap-1.5"
     : "text-white/70 hover:text-eth-gold transition-colors flex items-center gap-1.5";
@@ -39,9 +40,10 @@ const rand = seededRandom(42);
 const glyphs = Array.from({ length: 150 }, () => {
   const r = rand();
   // ~15% chance of being very large, rest are medium
-  const size = r < 0.15
-    ? (120 + rand() * 180)  // large: 120–300px
-    : (32 + rand() * 48);   // medium: 32–80px
+  const size =
+    r < 0.15
+      ? 120 + rand() * 180 // large: 120–300px
+      : 32 + rand() * 48; // medium: 32–80px
   return {
     char: amharicLetters[Math.floor(rand() * amharicLetters.length)],
     left: (rand() * 100).toFixed(1),
@@ -66,7 +68,10 @@ const glyphs = Array.from({ length: 150 }, () => {
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -84,45 +89,68 @@ const glyphs = Array.from({ length: 150 }, () => {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageURL.href} />
-    {currentPath === "/" && (
-      <script type="application/ld+json" set:html={JSON.stringify({
+    {
+      currentPath === "/" && (
+        <script
+          is:inline
+          type="application/ld+json"
+          set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "audit.et",
+            url: "https://audit.et",
+            description:
+              "An independent civic project visualizing audit reports from Ethiopian state-owned enterprises under EIH (Ethiopian Investment Holdings).",
+          })}
+        />
+      )
+    }
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "audit.et",
-        "url": "https://audit.et",
-        "description": "An independent civic project visualizing audit reports from Ethiopian state-owned enterprises under EIH (Ethiopian Investment Holdings).",
-      })} />
-    )}
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "audit.et",
-      "url": "https://audit.et",
-      "logo": "https://audit.et/icon-512.png",
-      "description": "Independent civic project making Ethiopian state-owned enterprise audit data accessible.",
-    })} />
+        "@type": "Organization",
+        name: "audit.et",
+        url: "https://audit.et",
+        logo: "https://audit.et/icon-512.png",
+        description:
+          "Independent civic project making Ethiopian state-owned enterprise audit data accessible.",
+      })}
+    />
     <slot name="head" />
   </head>
-  <body class="bg-eth-bg font-body min-h-screen flex flex-col antialiased relative">
+  <body
+    class="bg-eth-bg font-body min-h-screen flex flex-col antialiased relative"
+  >
     <!-- Amharic letter background -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none select-none z-0 h-full" aria-hidden="true">
-      {glyphs.map((g) => (
-        <span
-          class="absolute font-display text-eth-green"
-          style={`left:${g.left}%;top:${g.top}%;font-size:${g.size}px;opacity:${g.opacity};`}
-        >{g.char}</span>
-      ))}
+    <div
+      class="absolute inset-0 overflow-hidden pointer-events-none select-none z-0 h-full"
+      aria-hidden="true"
+    >
+      {
+        glyphs.map((g) => (
+          <span
+            class="absolute font-display text-eth-green"
+            style={`left:${g.left}%;top:${g.top}%;font-size:${g.size}px;opacity:${g.opacity};`}
+          >
+            {g.char}
+          </span>
+        ))
+      }
     </div>
 
     <nav class="bg-eth-green text-white sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
+      >
         <a href="/" class="flex flex-col leading-tight">
           <span class="font-display text-2xl tracking-tight">audit.et</span>
           <span class="text-white/70 text-[11px] -mt-1">ኦዲት</span>
         </a>
         <div class="flex items-center gap-3 sm:gap-5 text-sm">
           <a href="/" class={navLink("/")}>
-            <Home class="w-4 h-4" />
+            <House class="w-4 h-4" />
             <span class="hidden sm:inline">Home</span>
           </a>
           <a href="/enterprises" class={navLink("/enterprises")}>
@@ -138,8 +166,18 @@ const glyphs = Array.from({ length: 150 }, () => {
             target="_blank"
             rel="noopener noreferrer"
             class="text-white/70 hover:text-eth-gold transition-colors flex items-center gap-1.5"
+            aria-label="Source code on GitHub"
           >
-            <Github class="w-4 h-4" />
+            <svg
+              class="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.18-.02-2.14-3.2.7-3.87-1.36-3.87-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.35.78 1.04.78 2.1 0 1.52-.01 2.74-.01 3.11 0 .31.21.68.8.56C20.22 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z"
+              ></path>
+            </svg>
             <span class="hidden sm:inline">Source</span>
           </a>
         </div>
@@ -159,20 +197,36 @@ const glyphs = Array.from({ length: 150 }, () => {
               <span class="text-white/60 text-[11px]">ኦዲት</span>
             </div>
             <p class="text-white/70 text-sm max-w-md leading-relaxed">
-              This is an independent, unofficial project. It is not affiliated with or endorsed by the
-              Ethiopian government, <a href="https://eih.et/" target="_blank" rel="noopener noreferrer" class="hover:underline">Ethiopian Investment Holdings (EIH)</a>, or any political party.
+              This is an independent, unofficial project. It is not affiliated
+              with or endorsed by the Ethiopian government, <a
+                href="https://eih.et/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:underline">Ethiopian Investment Holdings (EIH)</a
+              >, or any political party.
             </p>
           </div>
           <div>
-            <h4 class="text-white/90 text-sm font-semibold mb-3 uppercase tracking-wider">Disclaimer</h4>
+            <h4
+              class="text-white/90 text-sm font-semibold mb-3 uppercase tracking-wider"
+            >
+              Disclaimer
+            </h4>
             <p class="text-white/70 text-sm leading-relaxed">
-              This is an open-source civic experiment, not an official government service.
-              The data is provided as-is for informational purposes. While we strive for accuracy,
-              we cannot guarantee that all information is complete or error-free.
+              This is an open-source civic experiment, not an official
+              government service. The data is provided as-is for informational
+              purposes. While we strive for accuracy, we cannot guarantee that
+              all information is complete or error-free.
             </p>
             <p class="text-white/70 text-sm leading-relaxed mt-3">
-              Financial figures are extracted from scanned PDFs using OCR, which may introduce errors.
-              If you spot an inaccuracy, please <a href="https://github.com/frectonz/audit.et/issues" target="_blank" rel="noopener noreferrer" class="text-eth-gold hover:text-eth-gold/80 transition-colors">open an issue on GitHub</a>.
+              Financial figures are extracted from scanned PDFs using OCR, which
+              may introduce errors. If you spot an inaccuracy, please <a
+                href="https://github.com/frectonz/audit.et/issues"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-eth-gold hover:text-eth-gold/80 transition-colors"
+                >open an issue on GitHub</a
+              >.
             </p>
           </div>
         </div>
@@ -181,8 +235,15 @@ const glyphs = Array.from({ length: 150 }, () => {
             Data sourced from publicly available audit reports.
           </p>
           <p class="text-white/50 text-xs">
-            If you find any inaccuracies or want to contact the creators of this site, reach out to
-            <a href="https://t.me/frectonz" target="_blank" rel="noopener noreferrer" class="text-eth-gold hover:text-eth-gold/80 transition-colors">@frectonz</a> on Telegram.
+            If you find any inaccuracies or want to contact the creators of this
+            site, reach out to
+            <a
+              href="https://t.me/frectonz"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-eth-gold hover:text-eth-gold/80 transition-colors"
+              >@frectonz</a
+            > on Telegram.
           </p>
         </div>
       </div>

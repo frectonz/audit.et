@@ -1,13 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Home, ChevronRight, Scale, Eye, Code, Database, FileText, ExternalLink } from "@lucide/astro";
+import {
+  House,
+  ChevronRight,
+  Scale,
+  Eye,
+  Code,
+  Database,
+  FileText,
+  ExternalLink,
+} from "@lucide/astro";
 ---
 
-<Layout title="About — audit.et" description="Learn about audit.et — an independent civic project making public audit data from Ethiopian state-owned enterprises accessible and understandable.">
+<Layout
+  title="About — audit.et"
+  description="Learn about audit.et — an independent civic project making public audit data from Ethiopian state-owned enterprises accessible and understandable."
+>
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-4">
     <nav class="flex items-center gap-1.5 text-sm mb-8">
-      <a href="/" class="inline-flex items-center gap-1 text-eth-text-muted hover:text-eth-green transition-colors">
-        <Home class="w-3.5 h-3.5" />
+      <a
+        href="/"
+        class="inline-flex items-center gap-1 text-eth-text-muted hover:text-eth-green transition-colors"
+      >
+        <House class="w-3.5 h-3.5" />
         Home
       </a>
       <ChevronRight class="w-3.5 h-3.5 text-eth-text-muted/50" />
@@ -18,38 +33,57 @@ import { Home, ChevronRight, Scale, Eye, Code, Database, FileText, ExternalLink 
       About audit.et
     </h1>
     <p class="text-eth-text-muted mb-10 max-w-2xl">
-      An independent civic project making public audit data accessible and understandable.
+      An independent civic project making public audit data accessible and
+      understandable.
     </p>
   </section>
 
   <!-- Mission -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
     <div class="grid sm:grid-cols-3 gap-5">
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
-        <div class="w-10 h-10 rounded-lg bg-eth-green/10 flex items-center justify-center mb-4">
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm"
+      >
+        <div
+          class="w-10 h-10 rounded-lg bg-eth-green/10 flex items-center justify-center mb-4"
+        >
           <Eye class="w-5 h-5 text-eth-green" />
         </div>
         <h3 class="font-display text-lg text-eth-text mb-2">Transparency</h3>
         <p class="text-eth-text-dim text-sm leading-relaxed">
-          Public enterprises manage billions in public resources. Citizens deserve clear, accessible insight into how these funds are used and audited.
+          Public enterprises manage billions in public resources. Citizens
+          deserve clear, accessible insight into how these funds are used and
+          audited.
         </p>
       </div>
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
-        <div class="w-10 h-10 rounded-lg bg-eth-green/10 flex items-center justify-center mb-4">
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm"
+      >
+        <div
+          class="w-10 h-10 rounded-lg bg-eth-green/10 flex items-center justify-center mb-4"
+        >
           <Scale class="w-5 h-5 text-eth-green" />
         </div>
         <h3 class="font-display text-lg text-eth-text mb-2">Accountability</h3>
         <p class="text-eth-text-dim text-sm leading-relaxed">
-          By visualizing audit opinions, financial trends, and key findings, we help highlight where accountability is strong and where questions remain.
+          By visualizing audit opinions, financial trends, and key findings, we
+          help highlight where accountability is strong and where questions
+          remain.
         </p>
       </div>
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
-        <div class="w-10 h-10 rounded-lg bg-eth-green/10 flex items-center justify-center mb-4">
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm"
+      >
+        <div
+          class="w-10 h-10 rounded-lg bg-eth-green/10 flex items-center justify-center mb-4"
+        >
           <Code class="w-5 h-5 text-eth-green" />
         </div>
         <h3 class="font-display text-lg text-eth-text mb-2">Open Source</h3>
         <p class="text-eth-text-dim text-sm leading-relaxed">
-          This entire project is open source. The code, the data extraction, and the visualizations are all publicly available for anyone to inspect, contribute to, or build upon.
+          This entire project is open source. The code, the data extraction, and
+          the visualizations are all publicly available for anyone to inspect,
+          contribute to, or build upon.
         </p>
       </div>
     </div>
@@ -57,17 +91,36 @@ import { Home, ChevronRight, Scale, Eye, Code, Database, FileText, ExternalLink 
 
   <!-- What is this -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-    <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 sm:p-8 shadow-sm">
-      <h2 class="font-display text-2xl text-eth-text mb-4">What is audit.et?</h2>
+    <div
+      class="bg-eth-card border border-eth-card-border rounded-xl p-6 sm:p-8 shadow-sm"
+    >
+      <h2 class="font-display text-2xl text-eth-text mb-4">
+        What is audit.et?
+      </h2>
       <div class="space-y-4 text-eth-text-dim text-sm leading-relaxed">
         <p>
-          <strong class="text-eth-text">audit.et</strong> is an independent civic project that takes publicly available audit reports from Ethiopian state-owned enterprises and transforms them into interactive visualizations and structured data.
+          <strong class="text-eth-text">audit.et</strong> is an independent civic
+          project that takes publicly available audit reports from Ethiopian state-owned
+          enterprises and transforms them into interactive visualizations and structured
+          data.
         </p>
         <p>
-          Ethiopia's state-owned enterprises, under <a href="https://eih.et/" target="_blank" rel="noopener noreferrer" class="text-eth-text font-bold hover:underline">Ethiopian Investment Holdings (EIH)</a>, manage significant national assets across energy, agriculture, logistics, and more. Their audit reports contain critical financial data — but they are often locked in PDF documents that are difficult to analyze.
+          Ethiopia's state-owned enterprises, under <a
+            href="https://eih.et/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-eth-text font-bold hover:underline"
+            >Ethiopian Investment Holdings (EIH)</a
+          >, manage significant national assets across energy, agriculture,
+          logistics, and more. Their audit reports contain critical financial
+          data — but they are often locked in PDF documents that are difficult
+          to analyze.
         </p>
         <p>
-          This project extracts that data into structured JSON, normalizes it across different reporting formats and fiscal years, and presents it through charts, tables, and summary statistics that anyone can understand.
+          This project extracts that data into structured JSON, normalizes it
+          across different reporting formats and fiscal years, and presents it
+          through charts, tables, and summary statistics that anyone can
+          understand.
         </p>
       </div>
     </div>
@@ -77,34 +130,55 @@ import { Home, ChevronRight, Scale, Eye, Code, Database, FileText, ExternalLink 
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
     <h2 class="font-display text-2xl text-eth-text mb-6">How It Works</h2>
     <div class="grid sm:grid-cols-3 gap-5">
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
-        <div class="w-8 h-8 rounded-full bg-eth-green text-white flex items-center justify-center font-mono text-sm font-bold mb-4">1</div>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm"
+      >
+        <div
+          class="w-8 h-8 rounded-full bg-eth-green text-white flex items-center justify-center font-mono text-sm font-bold mb-4"
+        >
+          1
+        </div>
         <div class="flex items-center gap-2 mb-2">
           <FileText class="w-4 h-4 text-eth-gold" />
           <h3 class="font-semibold text-eth-text text-sm">Extract</h3>
         </div>
         <p class="text-eth-text-dim text-sm leading-relaxed">
-          Audit reports (PDFs) are parsed and extracted into structured JSON data files.
+          Audit reports (PDFs) are parsed and extracted into structured JSON
+          data files.
         </p>
       </div>
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
-        <div class="w-8 h-8 rounded-full bg-eth-green text-white flex items-center justify-center font-mono text-sm font-bold mb-4">2</div>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm"
+      >
+        <div
+          class="w-8 h-8 rounded-full bg-eth-green text-white flex items-center justify-center font-mono text-sm font-bold mb-4"
+        >
+          2
+        </div>
         <div class="flex items-center gap-2 mb-2">
           <Database class="w-4 h-4 text-eth-gold" />
           <h3 class="font-semibold text-eth-text text-sm">Normalize</h3>
         </div>
         <p class="text-eth-text-dim text-sm leading-relaxed">
-          Data is normalized across different schemas, reporting formats, and calendar systems (Ethiopian vs Gregorian) into a consistent format.
+          Data is normalized across different schemas, reporting formats, and
+          calendar systems (Ethiopian vs Gregorian) into a consistent format.
         </p>
       </div>
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
-        <div class="w-8 h-8 rounded-full bg-eth-green text-white flex items-center justify-center font-mono text-sm font-bold mb-4">3</div>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm"
+      >
+        <div
+          class="w-8 h-8 rounded-full bg-eth-green text-white flex items-center justify-center font-mono text-sm font-bold mb-4"
+        >
+          3
+        </div>
         <div class="flex items-center gap-2 mb-2">
           <Eye class="w-4 h-4 text-eth-gold" />
           <h3 class="font-semibold text-eth-text text-sm">Visualize</h3>
         </div>
         <p class="text-eth-text-dim text-sm leading-relaxed">
-          The normalized data is rendered as interactive charts, tables, and summary statistics at build time — no server required.
+          The normalized data is rendered as interactive charts, tables, and
+          summary statistics at build time — no server required.
         </p>
       </div>
     </div>
@@ -113,16 +187,28 @@ import { Home, ChevronRight, Scale, Eye, Code, Database, FileText, ExternalLink 
   <!-- Data sources & disclaimer -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
     <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm"
+      >
         <h3 class="font-display text-lg text-eth-text mb-3">Data Sources</h3>
         <ul class="space-y-3 text-sm text-eth-text-dim">
           <li class="flex items-start gap-2">
             <ExternalLink class="w-4 h-4 text-eth-gold shrink-0 mt-0.5" />
-            <a href="https://eih.et/resources/" target="_blank" rel="noopener noreferrer" class="text-eth-gold hover:underline">Publicly available audit reports of Ethiopian state-owned enterprises</a>
+            <a
+              href="https://eih.et/resources/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-eth-gold hover:underline"
+              >Publicly available audit reports of Ethiopian state-owned
+              enterprises</a
+            >
           </li>
           <li class="flex items-start gap-2">
             <ExternalLink class="w-4 h-4 text-eth-gold shrink-0 mt-0.5" />
-            <span>Publicly available financial statements and annual reports from individual enterprise websites</span>
+            <span
+              >Publicly available financial statements and annual reports from
+              individual enterprise websites</span
+            >
           </li>
         </ul>
       </div>
@@ -130,10 +216,22 @@ import { Home, ChevronRight, Scale, Eye, Code, Database, FileText, ExternalLink 
         <h3 class="font-display text-lg text-eth-text mb-3">Disclaimer</h3>
         <div class="space-y-3 text-sm text-eth-text-dim leading-relaxed">
           <p>
-            This is an <strong class="text-eth-text">independent, unofficial project</strong>. It is not affiliated with or endorsed by the Ethiopian government, <a href="https://eih.et/" target="_blank" rel="noopener noreferrer" class="hover:underline">Ethiopian Investment Holdings (EIH)</a>, or any political party.
+            This is an <strong class="text-eth-text"
+              >independent, unofficial project</strong
+            >. It is not affiliated with or endorsed by the Ethiopian
+            government, <a
+              href="https://eih.et/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:underline">Ethiopian Investment Holdings (EIH)</a
+            >, or any political party.
           </p>
           <p>
-            The data is provided as-is for informational purposes. While we strive for accuracy, we cannot guarantee that all information is complete or error-free. Financial figures are extracted from published audit reports and may be subject to OCR or interpretation errors.
+            The data is provided as-is for informational purposes. While we
+            strive for accuracy, we cannot guarantee that all information is
+            complete or error-free. Financial figures are extracted from
+            published audit reports and may be subject to OCR or interpretation
+            errors.
           </p>
         </div>
       </div>

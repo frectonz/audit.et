@@ -1,12 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { getAllEnterprises, formatETB } from "../data/enterprises";
-import { Zap, Plug, Wheat, Mail, HardHat, Pickaxe, Waves, ChevronRight, Home, ArrowRight } from "@lucide/astro";
+import {
+  Zap,
+  Plug,
+  Wheat,
+  Mail,
+  HardHat,
+  Pickaxe,
+  Waves,
+  ChevronRight,
+  House,
+  ArrowRight,
+} from "@lucide/astro";
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 
-const enterprises = getAllEnterprises().sort((a, b) => a.name.localeCompare(b.name));
+const enterprises = getAllEnterprises().sort((a, b) =>
+  a.name.localeCompare(b.name),
+);
 const sectors = [...new Set(enterprises.map((e) => e.sector))].sort();
 
-const sectorIconMap: Record<string, any> = {
+const sectorIconMap: Record<string, AstroComponentFactory> = {
   zap: Zap,
   plug: Plug,
   wheat: Wheat,
@@ -35,11 +49,17 @@ function getOpinionBg(opinion: string): string {
 }
 ---
 
-<Layout title="Enterprises — audit.et" description={`Browse audit reports for ${enterprises.length} Ethiopian state-owned enterprises including financial data, audit opinions, and trend analysis.`}>
+<Layout
+  title="Enterprises — audit.et"
+  description={`Browse audit reports for ${enterprises.length} Ethiopian state-owned enterprises including financial data, audit opinions, and trend analysis.`}
+>
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-4">
     <nav class="flex items-center gap-1.5 text-sm mb-8">
-      <a href="/" class="inline-flex items-center gap-1 text-eth-text-muted hover:text-eth-green transition-colors">
-        <Home class="w-3.5 h-3.5" />
+      <a
+        href="/"
+        class="inline-flex items-center gap-1 text-eth-text-muted hover:text-eth-green transition-colors"
+      >
+        <House class="w-3.5 h-3.5" />
         Home
       </a>
       <ChevronRight class="w-3.5 h-3.5 text-eth-text-muted/50" />
@@ -50,8 +70,8 @@ function getOpinionBg(opinion: string): string {
       Enterprises
     </h1>
     <p class="text-eth-text-muted mb-10 max-w-2xl">
-      Select an enterprise to view detailed financial analysis and audit
-      reports from Ethiopia's state-owned enterprises.
+      Select an enterprise to view detailed financial analysis and audit reports
+      from Ethiopia's state-owned enterprises.
     </p>
   </section>
 
@@ -72,14 +92,16 @@ function getOpinionBg(opinion: string): string {
       >
         All
       </button>
-      {sectors.map((sector) => (
-        <button
-          data-sector={sector}
-          class="sector-btn px-3 py-1.5 rounded-full text-xs font-medium border transition-colors bg-eth-card text-eth-text-muted border-eth-card-border hover:border-eth-green/40 hover:text-eth-text"
-        >
-          {sector}
-        </button>
-      ))}
+      {
+        sectors.map((sector) => (
+          <button
+            data-sector={sector}
+            class="sector-btn px-3 py-1.5 rounded-full text-xs font-medium border transition-colors bg-eth-card text-eth-text-muted border-eth-card-border hover:border-eth-green/40 hover:text-eth-text"
+          >
+            {sector}
+          </button>
+        ))
+      }
     </div>
 
     <div id="enterprises-grid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
@@ -90,8 +112,7 @@ function getOpinionBg(opinion: string): string {
           const prev = enterprise.years.at(-2);
           const revTrend =
             latest?.revenue != null && prev?.revenue != null
-              ? ((latest.revenue - prev.revenue) / Math.abs(prev.revenue)) *
-                100
+              ? ((latest.revenue - prev.revenue) / Math.abs(prev.revenue)) * 100
               : null;
 
           return hasData ? (
@@ -107,7 +128,8 @@ function getOpinionBg(opinion: string): string {
                 <div class="flex items-center gap-3">
                   <div class="w-10 h-10 rounded-lg bg-eth-green/10 flex items-center justify-center">
                     {(() => {
-                      const IconComponent = sectorIconMap[enterprise.sectorIcon] ?? Zap;
+                      const IconComponent =
+                        sectorIconMap[enterprise.sectorIcon] ?? Zap;
                       return <IconComponent class="w-5 h-5 text-eth-green" />;
                     })()}
                   </div>
@@ -156,8 +178,7 @@ function getOpinionBg(opinion: string): string {
               )}
 
               {/* Mini bar chart - revenue over years */}
-              {enterprise.years.filter((y) => y.revenue != null).length >
-                1 && (
+              {enterprise.years.filter((y) => y.revenue != null).length > 1 && (
                 <div class="flex items-end gap-0.5 h-8 mt-2">
                   {(() => {
                     const revenueYears = enterprise.years.filter(
@@ -168,9 +189,7 @@ function getOpinionBg(opinion: string): string {
                     );
                     return revenueYears.map((y) => {
                       const height =
-                        maxRev > 0
-                          ? (Math.abs(y.revenue!) / maxRev) * 100
-                          : 0;
+                        maxRev > 0 ? (Math.abs(y.revenue!) / maxRev) * 100 : 0;
                       const isNeg = y.revenue! < 0;
                       return (
                         <div
@@ -187,9 +206,8 @@ function getOpinionBg(opinion: string): string {
               {/* Footer */}
               <div class="flex items-center justify-between mt-4 pt-3 border-t border-eth-card-border">
                 <span class="text-eth-text-muted text-xs">
-                  {enterprise.years[0]?.year}–
-                  {enterprise.years.at(-1)?.year} &middot;{" "}
-                  {enterprise.years.length} years
+                  {enterprise.years[0]?.year}–{enterprise.years.at(-1)?.year}{" "}
+                  &middot; {enterprise.years.length} years
                 </span>
                 <span class="text-eth-green text-xs group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1">
                   View details
@@ -209,8 +227,11 @@ function getOpinionBg(opinion: string): string {
                 <div class="flex items-center gap-3">
                   <div class="w-10 h-10 rounded-lg bg-eth-surface flex items-center justify-center">
                     {(() => {
-                      const IconComponent = sectorIconMap[enterprise.sectorIcon] ?? Zap;
-                      return <IconComponent class="w-5 h-5 text-eth-text-muted" />;
+                      const IconComponent =
+                        sectorIconMap[enterprise.sectorIcon] ?? Zap;
+                      return (
+                        <IconComponent class="w-5 h-5 text-eth-text-muted" />
+                      );
                     })()}
                   </div>
                   <div>
@@ -255,10 +276,13 @@ function getOpinionBg(opinion: string): string {
 <script>
   const buttons = document.querySelectorAll<HTMLButtonElement>(".sector-btn");
   const cards = document.querySelectorAll<HTMLElement>(".enterprise-card");
-  const searchInput = document.getElementById("search-input") as HTMLInputElement;
+  const searchInput = document.getElementById(
+    "search-input",
+  ) as HTMLInputElement;
 
   const activeClass = "bg-eth-green text-white border-eth-green";
-  const inactiveClass = "bg-eth-card text-eth-text-muted border-eth-card-border hover:border-eth-green/40 hover:text-eth-text";
+  const inactiveClass =
+    "bg-eth-card text-eth-text-muted border-eth-card-border hover:border-eth-green/40 hover:text-eth-text";
 
   let activeSector = "all";
 
@@ -266,11 +290,13 @@ function getOpinionBg(opinion: string): string {
     const query = searchInput.value.toLowerCase().trim();
 
     cards.forEach((card) => {
-      const matchesSector = activeSector === "all" || card.dataset.sector === activeSector;
-      const matchesSearch = !query
-        || card.dataset.name!.includes(query)
-        || card.dataset.short!.includes(query)
-        || card.dataset.sector!.toLowerCase().includes(query);
+      const matchesSector =
+        activeSector === "all" || card.dataset.sector === activeSector;
+      const matchesSearch =
+        !query ||
+        card.dataset.name!.includes(query) ||
+        card.dataset.short!.includes(query) ||
+        card.dataset.sector!.toLowerCase().includes(query);
 
       card.style.display = matchesSector && matchesSearch ? "" : "none";
     });

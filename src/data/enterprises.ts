@@ -1,20 +1,9 @@
 import type { Enterprise, YearData, YearDetail } from "./types";
-// @ts-expect-error - Node built-ins available at build time in Astro
 import fs from "node:fs";
-// @ts-expect-error - Node built-ins available at build time in Astro
 import path from "node:path";
 
-const STANDARDIZED_DIR = path.resolve(
-  // @ts-expect-error - import.meta.dirname available in Node 21+
-  import.meta.dirname,
-  "../../standardized"
-);
-
-const DATA_DIR = path.resolve(
-  // @ts-expect-error - import.meta.dirname available in Node 21+
-  import.meta.dirname,
-  "../../data"
-);
+const STANDARDIZED_DIR = path.resolve(import.meta.dirname, "../../standardized");
+const DATA_DIR = path.resolve(import.meta.dirname, "../../data");
 
 // Enterprises whose data/ subdirectory differs from their ID
 const PDF_DIR_MAP: Record<string, string> = {

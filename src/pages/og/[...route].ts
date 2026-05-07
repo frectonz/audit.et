@@ -85,16 +85,16 @@ async function loadFont(url: string): Promise<ArrayBuffer> {
 const [instrumentSerifRegular, loraRegular, loraBold, notoEthiopic] =
   await Promise.all([
     loadFont(
-      "https://cdn.jsdelivr.net/fontsource/fonts/instrument-serif@latest/latin-400-normal.ttf"
+      "https://cdn.jsdelivr.net/fontsource/fonts/instrument-serif@latest/latin-400-normal.ttf",
     ),
     loadFont(
-      "https://cdn.jsdelivr.net/fontsource/fonts/lora@latest/latin-400-normal.ttf"
+      "https://cdn.jsdelivr.net/fontsource/fonts/lora@latest/latin-400-normal.ttf",
     ),
     loadFont(
-      "https://cdn.jsdelivr.net/fontsource/fonts/lora@latest/latin-700-normal.ttf"
+      "https://cdn.jsdelivr.net/fontsource/fonts/lora@latest/latin-700-normal.ttf",
     ),
     loadFont(
-      "https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-ethiopic@latest/ethiopic-400-normal.ttf"
+      "https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-ethiopic@latest/ethiopic-400-normal.ttf",
     ),
   ]);
 
@@ -370,7 +370,7 @@ function buildMarkup(page: PageInfo) {
 async function renderOgImage(page: PageInfo) {
   const markup = buildMarkup(page);
 
-  const svg = await satori(markup as any, {
+  const svg = await satori(markup as Parameters<typeof satori>[0], {
     width: 1200,
     height: 630,
     fonts: [

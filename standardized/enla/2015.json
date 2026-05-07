@@ -41,16 +41,30 @@
       {
         "heading": "Sales",
         "items": [
-          { "label": "Proceeds from ticket sales", "amount": 1112986373, "indent": 0 },
+          {
+            "label": "Proceeds from ticket sales",
+            "amount": 1112986373,
+            "indent": 0
+          },
           { "label": "Sales commission", "amount": -169850574, "indent": 0 },
-          { "label": "Net ticket sales", "amount": 943135799, "indent": 0, "isSubtotal": true }
+          {
+            "label": "Net ticket sales",
+            "amount": 943135799,
+            "indent": 0,
+            "isSubtotal": true
+          }
         ]
       },
       {
         "heading": "Prizes",
         "items": [
           { "label": "Prizes", "amount": -467965304, "indent": 0 },
-          { "label": "Gross surplus", "amount": 475170495, "indent": 0, "isSubtotal": true }
+          {
+            "label": "Gross surplus",
+            "amount": 475170495,
+            "indent": 0,
+            "isSubtotal": true
+          }
         ]
       },
       {
@@ -64,11 +78,29 @@
         "heading": "Expenses",
         "items": [
           { "label": "Operating expenses", "amount": -202313002, "indent": 1 },
-          { "label": "Administrative - Head Office", "amount": -65166789, "indent": 1 },
-          { "label": "Advertising and sales promotion", "amount": -41551675, "indent": 1 },
+          {
+            "label": "Administrative - Head Office",
+            "amount": -65166789,
+            "indent": 1
+          },
+          {
+            "label": "Advertising and sales promotion",
+            "amount": -41551675,
+            "indent": 1
+          },
           { "label": "Drawing expenses", "amount": -814880, "indent": 1 },
-          { "label": "Total expenses", "amount": -309846346, "indent": 0, "isSubtotal": true },
-          { "label": "Profit for the year", "amount": 564151927, "indent": 0, "isSubtotal": true }
+          {
+            "label": "Total expenses",
+            "amount": -309846346,
+            "indent": 0,
+            "isSubtotal": true
+          },
+          {
+            "label": "Profit for the year",
+            "amount": 564151927,
+            "indent": 0,
+            "isSubtotal": true
+          }
         ]
       }
     ]
@@ -79,8 +111,17 @@
       {
         "heading": "Non-Current Assets",
         "items": [
-          { "label": "Property, plant and equipment", "amount": 227617607, "indent": 1 },
-          { "label": "Total Non-Current Assets", "amount": 227617607, "indent": 0, "isSubtotal": true }
+          {
+            "label": "Property, plant and equipment",
+            "amount": 227617607,
+            "indent": 1
+          },
+          {
+            "label": "Total Non-Current Assets",
+            "amount": 227617607,
+            "indent": 0,
+            "isSubtotal": true
+          }
         ]
       },
       {
@@ -88,14 +129,28 @@
         "items": [
           { "label": "Stock", "amount": 49324103, "indent": 1 },
           { "label": "Debtors", "amount": 72119455, "indent": 1 },
-          { "label": "Cash and bank balances", "amount": 453772420, "indent": 1 },
-          { "label": "Total Current Assets", "amount": 575215978, "indent": 0, "isSubtotal": true }
+          {
+            "label": "Cash and bank balances",
+            "amount": 453772420,
+            "indent": 1
+          },
+          {
+            "label": "Total Current Assets",
+            "amount": 575215978,
+            "indent": 0,
+            "isSubtotal": true
+          }
         ]
       },
       {
         "heading": "Total Assets",
         "items": [
-          { "label": "Total Assets", "amount": 802833584, "indent": 0, "isSubtotal": true }
+          {
+            "label": "Total Assets",
+            "amount": 802833584,
+            "indent": 0,
+            "isSubtotal": true
+          }
         ]
       },
       {
@@ -104,14 +159,28 @@
           { "label": "Capital", "amount": 100000, "indent": 1 },
           { "label": "Reserve", "amount": 1000000, "indent": 1 },
           { "label": "Contributions", "amount": 1516898, "indent": 1 },
-          { "label": "Total Equity", "amount": 2616898, "indent": 0, "isSubtotal": true }
+          {
+            "label": "Total Equity",
+            "amount": 2616898,
+            "indent": 0,
+            "isSubtotal": true
+          }
         ]
       },
       {
         "heading": "Non-Current Liabilities",
         "items": [
-          { "label": "Ministry of Finance and Economic Development", "amount": 522749235, "indent": 1 },
-          { "label": "Total Non-Current Liabilities", "amount": 522749235, "indent": 0, "isSubtotal": true }
+          {
+            "label": "Ministry of Finance and Economic Development",
+            "amount": 522749235,
+            "indent": 1
+          },
+          {
+            "label": "Total Non-Current Liabilities",
+            "amount": 522749235,
+            "indent": 0,
+            "isSubtotal": true
+          }
         ]
       },
       {
@@ -119,14 +188,29 @@
         "items": [
           { "label": "Creditors", "amount": 119137772, "indent": 1 },
           { "label": "Prizes payable", "amount": 158329679, "indent": 1 },
-          { "label": "Total Current Liabilities", "amount": 277467451, "indent": 0, "isSubtotal": true }
+          {
+            "label": "Total Current Liabilities",
+            "amount": 277467451,
+            "indent": 0,
+            "isSubtotal": true
+          }
         ]
       },
       {
         "heading": "Total Liabilities and Equity",
         "items": [
-          { "label": "Total Liabilities", "amount": 800216686, "indent": 0, "isSubtotal": true },
-          { "label": "Total Equity and Liabilities", "amount": 802833584, "indent": 0, "isSubtotal": true }
+          {
+            "label": "Total Liabilities",
+            "amount": 800216686,
+            "indent": 0,
+            "isSubtotal": true
+          },
+          {
+            "label": "Total Equity and Liabilities",
+            "amount": 802833584,
+            "indent": 0,
+            "isSubtotal": true
+          }
         ]
       }
     ]
@@ -134,24 +218,75 @@
   "cashFlow": {
     "operating": [
       { "label": "Profit for the year", "amount": 564151927, "indent": 0 },
-      { "label": "Provision for doubtful debts", "amount": 12504241, "indent": 1 },
-      { "label": "Depreciation of non-current assets", "amount": 18413521, "indent": 1 },
-      { "label": "(Increase)/decrease in stock", "amount": 3695312, "indent": 1 },
+      {
+        "label": "Provision for doubtful debts",
+        "amount": 12504241,
+        "indent": 1
+      },
+      {
+        "label": "Depreciation of non-current assets",
+        "amount": 18413521,
+        "indent": 1
+      },
+      {
+        "label": "(Increase)/decrease in stock",
+        "amount": 3695312,
+        "indent": 1
+      },
       { "label": "Increase in debtors", "amount": -47845610, "indent": 1 },
-      { "label": "(Decrease)/increase in creditors except MOF accrual", "amount": -1844776, "indent": 1 },
-      { "label": "(Decrease)/increase in prizes payable", "amount": -51894258, "indent": 1 },
-      { "label": "Net cash from operating activities", "amount": 497180356, "indent": 0, "isSubtotal": true }
+      {
+        "label": "(Decrease)/increase in creditors except MOF accrual",
+        "amount": -1844776,
+        "indent": 1
+      },
+      {
+        "label": "(Decrease)/increase in prizes payable",
+        "amount": -51894258,
+        "indent": 1
+      },
+      {
+        "label": "Net cash from operating activities",
+        "amount": 497180356,
+        "indent": 0,
+        "isSubtotal": true
+      }
     ],
     "investing": [
-      { "label": "Payments for property, plant and equipment", "amount": -95377235, "indent": 1 },
+      {
+        "label": "Payments for property, plant and equipment",
+        "amount": -95377235,
+        "indent": 1
+      },
       { "label": "Transfer from stock", "amount": 44445031, "indent": 1 },
-      { "label": "Net cash used in investing activities", "amount": -50932203, "indent": 0, "isSubtotal": true }
+      {
+        "label": "Net cash used in investing activities",
+        "amount": -50932203,
+        "indent": 0,
+        "isSubtotal": true
+      }
     ],
     "financing": [
-      { "label": "Payments to Central Treasury", "amount": -363938307, "indent": 1 },
-      { "label": "Transfer to MOF reserve account", "amount": 100000000, "indent": 1 },
-      { "label": "Accrual to Ministry of Finance", "amount": -44825596, "indent": 1 },
-      { "label": "Net cash used in financing activities", "amount": -308763903, "indent": 0, "isSubtotal": true }
+      {
+        "label": "Payments to Central Treasury",
+        "amount": -363938307,
+        "indent": 1
+      },
+      {
+        "label": "Transfer to MOF reserve account",
+        "amount": 100000000,
+        "indent": 1
+      },
+      {
+        "label": "Accrual to Ministry of Finance",
+        "amount": -44825596,
+        "indent": 1
+      },
+      {
+        "label": "Net cash used in financing activities",
+        "amount": -308763903,
+        "indent": 0,
+        "isSubtotal": true
+      }
     ],
     "netChange": 137484250,
     "closingCash": 453772420

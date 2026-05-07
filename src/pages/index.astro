@@ -7,28 +7,36 @@ const enterprises = getAllEnterprises();
 
 // Compute summary stats
 const totalEnterprises = enterprises.length;
-const enterprisesWithData = enterprises.filter((e) => e.years.length > 0).length;
+const enterprisesWithData = enterprises.filter(
+  (e) => e.years.length > 0,
+).length;
 const allYears = enterprises.flatMap((e) => e.years.map((y) => y.year));
 const minYear = Math.min(...allYears);
 const maxYear = Math.max(...allYears);
 
 const REFERENCE_YEAR = 2016;
 const combinedReferenceRevenue = enterprises.reduce((sum, e) => {
-  const yd = e.years.find((y) => y.year === REFERENCE_YEAR && y.revenue != null);
+  const yd = e.years.find(
+    (y) => y.year === REFERENCE_YEAR && y.revenue != null,
+  );
   return sum + (yd?.revenue ?? 0);
 }, 0);
 
 const combinedReferenceAssets = enterprises.reduce((sum, e) => {
-  const yd = e.years.find((y) => y.year === REFERENCE_YEAR && y.totalAssets != null);
+  const yd = e.years.find(
+    (y) => y.year === REFERENCE_YEAR && y.totalAssets != null,
+  );
   return sum + (yd?.totalAssets ?? 0);
 }, 0);
 
 const referenceYearEnterpriseCount = enterprises.filter((e) =>
-  e.years.some((y) => y.year === REFERENCE_YEAR && y.revenue != null)
+  e.years.some((y) => y.year === REFERENCE_YEAR && y.revenue != null),
 ).length;
 
 // Combined revenue over time chart data
-const allUniqueYears = [...new Set(enterprises.flatMap((e) => e.years.map((y) => y.year)))].sort();
+const allUniqueYears = [
+  ...new Set(enterprises.flatMap((e) => e.years.map((y) => y.year))),
+].sort();
 const combinedRevenuePerYear = allUniqueYears.map((year) => {
   let total = 0;
   let count = 0;
@@ -72,22 +80,26 @@ for (const e of enterprises) {
 }
 const totalAuditYears = Object.values(opinionCounts).reduce((a, b) => a + b, 0);
 const auditHealthData = JSON.stringify(
-  Object.entries(opinionCounts).map(([name, value]) => ({ name, value }))
+  Object.entries(opinionCounts).map(([name, value]) => ({ name, value })),
 );
 
 // --- Key Financial Indicators (all based on REFERENCE_YEAR) ---
-const refYear = (e: typeof enterprises[0]) => e.years.find((y) => y.year === REFERENCE_YEAR);
+const refYear = (e: (typeof enterprises)[0]) =>
+  e.years.find((y) => y.year === REFERENCE_YEAR);
 
 const combinedDebt = enterprises.reduce((sum, e) => {
   const yd = refYear(e);
   return sum + (yd?.totalLiabilities ?? 0);
 }, 0);
 
-const largestByRevenue = enterprises.reduce((best, e) => {
-  const yd = refYear(e);
-  const rev = yd?.revenue ?? 0;
-  return rev > (best.rev ?? 0) ? { name: e.shortName, rev } : best;
-}, { name: "", rev: 0 });
+const largestByRevenue = enterprises.reduce(
+  (best, e) => {
+    const yd = refYear(e);
+    const rev = yd?.revenue ?? 0;
+    return rev > (best.rev ?? 0) ? { name: e.shortName, rev } : best;
+  },
+  { name: "", rev: 0 },
+);
 
 const lossMakingCount = enterprises.filter((e) => {
   const yd = refYear(e);
@@ -103,14 +115,23 @@ const combinedNetProfit = enterprises.reduce((sum, e) => {
   const yd = refYear(e);
   return sum + (yd?.netProfit ?? 0);
 }, 0);
-const netMargin = combinedReferenceRevenue !== 0 ? (combinedNetProfit / combinedReferenceRevenue) * 100 : 0;
-const roa = combinedReferenceAssets !== 0 ? (combinedNetProfit / combinedReferenceAssets) * 100 : 0;
+const netMargin =
+  combinedReferenceRevenue !== 0
+    ? (combinedNetProfit / combinedReferenceRevenue) * 100
+    : 0;
+const roa =
+  combinedReferenceAssets !== 0
+    ? (combinedNetProfit / combinedReferenceAssets) * 100
+    : 0;
 
-const largestByAssets = enterprises.reduce((best, e) => {
-  const yd = refYear(e);
-  const val = yd?.totalAssets ?? 0;
-  return val > (best.val ?? 0) ? { name: e.shortName, val } : best;
-}, { name: "", val: 0 });
+const largestByAssets = enterprises.reduce(
+  (best, e) => {
+    const yd = refYear(e);
+    const val = yd?.totalAssets ?? 0;
+    return val > (best.val ?? 0) ? { name: e.shortName, val } : best;
+  },
+  { name: "", val: 0 },
+);
 
 const debtToEquity = combinedEquity !== 0 ? combinedDebt / combinedEquity : 0;
 
@@ -125,7 +146,7 @@ for (const e of enterprises) {
 const sectorRevenueData = JSON.stringify(
   Object.entries(sectorRevenue)
     .map(([name, value]) => ({ name, value }))
-    .sort((a, b) => b.value - a.value)
+    .sort((a, b) => b.value - a.value),
 );
 
 // --- Assets by Sector ---
@@ -139,14 +160,18 @@ for (const e of enterprises) {
 const sectorAssetsData = JSON.stringify(
   Object.entries(sectorAssets)
     .map(([name, value]) => ({ name, value }))
-    .sort((a, b) => b.value - a.value)
+    .sort((a, b) => b.value - a.value),
 );
 
 // --- Top Enterprises by Total Assets ---
 const topByAssets = enterprises
   .map((e) => {
     const latest = e.years.filter((y) => y.totalAssets != null).at(-1);
-    return { name: e.shortName, value: latest?.totalAssets ?? 0, year: latest?.year ?? 0 };
+    return {
+      name: e.shortName,
+      value: latest?.totalAssets ?? 0,
+      year: latest?.year ?? 0,
+    };
   })
   .filter((d) => d.year > 0 && d.value > 0)
   .sort((a, b) => a.value - b.value);
@@ -156,7 +181,11 @@ const topByAssetsData = JSON.stringify(topByAssets);
 const topByLiabilities = enterprises
   .map((e) => {
     const latest = e.years.filter((y) => y.totalLiabilities != null).at(-1);
-    return { name: e.shortName, value: latest?.totalLiabilities ?? 0, year: latest?.year ?? 0 };
+    return {
+      name: e.shortName,
+      value: latest?.totalLiabilities ?? 0,
+      year: latest?.year ?? 0,
+    };
   })
   .filter((d) => d.year > 0 && d.value > 0)
   .sort((a, b) => a.value - b.value);
@@ -164,14 +193,18 @@ const topByLiabilitiesData = JSON.stringify(topByLiabilities);
 
 // --- Revenue Breakdown (stacked bar) ---
 const enterprisesWithRevenue = enterprises.filter((e) =>
-  e.years.some((y) => y.revenue != null)
+  e.years.some((y) => y.revenue != null),
 );
 const revenueBreakdownSeries = enterprisesWithRevenue.map((e) => {
   const data = allUniqueYears.map((year) => {
     const yd = e.years.find((y) => y.year === year);
     return yd?.revenue ?? 0;
   });
-  return { name: e.shortName, data, cumulative: data.reduce((a, b) => a + b, 0) };
+  return {
+    name: e.shortName,
+    data,
+    cumulative: data.reduce((a, b) => a + b, 0),
+  };
 });
 revenueBreakdownSeries.sort((a, b) => b.cumulative - a.cumulative);
 const revenueBreakdownData = JSON.stringify({
@@ -182,7 +215,11 @@ const revenueBreakdownData = JSON.stringify({
 // --- Profit to Revenue Ratio (Profit Margin) ---
 const profitToRevenueRatio = enterprises
   .map((e) => {
-    const latest = e.years.filter((y) => y.revenue != null && y.revenue !== 0 && y.netProfit != null).at(-1);
+    const latest = e.years
+      .filter(
+        (y) => y.revenue != null && y.revenue !== 0 && y.netProfit != null,
+      )
+      .at(-1);
     if (!latest) return null;
     return {
       name: e.shortName,
@@ -204,7 +241,10 @@ const revVsLiabData = JSON.stringify({
     let hasAny = false;
     for (const e of enterprises) {
       const yd = e.years.find((y) => y.year === year);
-      if (yd?.revenue != null) { total += yd.revenue; hasAny = true; }
+      if (yd?.revenue != null) {
+        total += yd.revenue;
+        hasAny = true;
+      }
     }
     return hasAny ? total : null;
   }),
@@ -213,7 +253,10 @@ const revVsLiabData = JSON.stringify({
     let hasAny = false;
     for (const e of enterprises) {
       const yd = e.years.find((y) => y.year === year);
-      if (yd?.totalLiabilities != null) { total += yd.totalLiabilities; hasAny = true; }
+      if (yd?.totalLiabilities != null) {
+        total += yd.totalLiabilities;
+        hasAny = true;
+      }
     }
     return hasAny ? total : null;
   }),
@@ -235,10 +278,13 @@ const revVsLiabData = JSON.stringify({
 
           <p class="text-eth-text-dim text-lg leading-relaxed mb-4">
             Visualizing public audit data from enterprises operating under
-            <a href="https://eih.et/" target="_blank" rel="noopener noreferrer" class="text-eth-gold font-semibold hover:underline"
+            <a
+              href="https://eih.et/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-eth-gold font-semibold hover:underline"
               >Ethiopian Investment Holdings (EIH)</a
-            >.
-            Making financial accountability accessible to every citizen.
+            >. Making financial accountability accessible to every citizen.
           </p>
 
           <p class="text-eth-text-muted text-sm leading-relaxed max-w-xl mb-8">
@@ -271,9 +317,11 @@ const revVsLiabData = JSON.stringify({
               id="combinedRevenueChart"
               class="h-[280px] sm:h-[300px] w-full"
               data-chart={combinedRevenueChartData}
-            ></div>
+            >
+            </div>
             <p class="text-eth-text-muted text-[10px] mt-2 italic">
-              Not all years include the same number of enterprises. Hover over a bar for details.
+              Not all years include the same number of enterprises. Hover over a
+              bar for details.
             </p>
           </div>
         </div>
@@ -330,69 +378,160 @@ const revVsLiabData = JSON.stringify({
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
     <div class="grid lg:grid-cols-2 gap-6">
       <!-- Profitability Overview -->
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
-        <h2 class="font-display text-xl text-eth-text mb-1">Profitability Overview</h2>
-        <p class="text-eth-text-muted text-sm mb-4">Net profitability by enterprise (latest available year)</p>
-        <div id="profitabilityChart" class="h-[400px] lg:h-[500px] w-full" data-chart={profitabilityChartData}></div>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0"
+      >
+        <h2 class="font-display text-xl text-eth-text mb-1">
+          Profitability Overview
+        </h2>
+        <p class="text-eth-text-muted text-sm mb-4">
+          Net profitability by enterprise (latest available year)
+        </p>
+        <div
+          id="profitabilityChart"
+          class="h-[400px] lg:h-[500px] w-full"
+          data-chart={profitabilityChartData}
+        >
+        </div>
       </div>
 
       <!-- Profit Margin -->
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
-        <h2 class="font-display text-xl text-eth-text mb-1">Profit Margin by Enterprise</h2>
-        <p class="text-eth-text-muted text-sm mb-4">Net profit as a percentage of revenue (latest available year)</p>
-        <div id="profitMarginChart" class="h-[400px] lg:h-[500px] w-full" data-chart={profitToRevenueData}></div>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0"
+      >
+        <h2 class="font-display text-xl text-eth-text mb-1">
+          Profit Margin by Enterprise
+        </h2>
+        <p class="text-eth-text-muted text-sm mb-4">
+          Net profit as a percentage of revenue (latest available year)
+        </p>
+        <div
+          id="profitMarginChart"
+          class="h-[400px] lg:h-[500px] w-full"
+          data-chart={profitToRevenueData}
+        >
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Key Financial Indicators -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-    <h2 class="font-display text-2xl text-eth-text mb-6">Key Financial Indicators <span class="text-eth-text-muted text-sm font-sans font-normal">({REFERENCE_YEAR} EC)</span></h2>
+    <h2 class="font-display text-2xl text-eth-text mb-6">
+      Key Financial Indicators <span
+        class="text-eth-text-muted text-sm font-sans font-normal"
+        >({REFERENCE_YEAR} EC)</span
+      >
+    </h2>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help" data-tip="Sum of total liabilities from all enterprises' balance sheets for 2016 EC.">
-        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">Combined Liabilities</p>
-        <p class="text-eth-text font-mono text-xl sm:text-2xl font-semibold">{formatETB(combinedDebt, true)}</p>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help"
+        data-tip="Sum of total liabilities from all enterprises' balance sheets for 2016 EC."
+      >
+        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">
+          Combined Liabilities
+        </p>
+        <p class="text-eth-text font-mono text-xl sm:text-2xl font-semibold">
+          {formatETB(combinedDebt, true)}
+        </p>
         <p class="text-eth-text-muted text-xs mt-1">Total liabilities</p>
       </div>
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help" data-tip="Combined net profit ÷ combined revenue across all enterprises for 2016 EC. Shows how much of each birr of revenue becomes profit.">
-        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">Net Margin</p>
-        <p class={`font-mono text-xl sm:text-2xl font-semibold ${netMargin >= 0 ? "text-eth-green" : "text-eth-gold"}`}>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help"
+        data-tip="Combined net profit ÷ combined revenue across all enterprises for 2016 EC. Shows how much of each birr of revenue becomes profit."
+      >
+        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">
+          Net Margin
+        </p>
+        <p
+          class={`font-mono text-xl sm:text-2xl font-semibold ${netMargin >= 0 ? "text-eth-green" : "text-eth-gold"}`}
+        >
           {netMargin >= 0 ? "+" : ""}{netMargin.toFixed(1)}%
         </p>
         <p class="text-eth-text-muted text-xs mt-1">Across enterprises</p>
       </div>
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help" data-tip="The enterprise with the highest revenue in 2016 EC.">
-        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">Largest by Revenue</p>
-        <p class="text-eth-text font-mono text-xl sm:text-2xl font-semibold">{largestByRevenue.name}</p>
-        <p class="text-eth-text-muted text-xs mt-1">{formatETB(largestByRevenue.rev, true)}</p>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help"
+        data-tip="The enterprise with the highest revenue in 2016 EC."
+      >
+        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">
+          Largest by Revenue
+        </p>
+        <p class="text-eth-text font-mono text-xl sm:text-2xl font-semibold">
+          {largestByRevenue.name}
+        </p>
+        <p class="text-eth-text-muted text-xs mt-1">
+          {formatETB(largestByRevenue.rev, true)}
+        </p>
       </div>
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help" data-tip="Number of enterprises reporting negative net profit in 2016 EC.">
-        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">Loss-Making</p>
-        <p class={`font-mono text-xl sm:text-2xl font-semibold ${lossMakingCount > 0 ? "text-eth-gold" : "text-eth-green"}`}>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help"
+        data-tip="Number of enterprises reporting negative net profit in 2016 EC."
+      >
+        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">
+          Loss-Making
+        </p>
+        <p
+          class={`font-mono text-xl sm:text-2xl font-semibold ${lossMakingCount > 0 ? "text-eth-gold" : "text-eth-green"}`}
+        >
           {lossMakingCount} / {enterprisesWithData}
         </p>
         <p class="text-eth-text-muted text-xs mt-1">Enterprises in loss</p>
       </div>
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help" data-tip="Sum of total shareholders' equity from all enterprises' balance sheets for 2016 EC. Equity = Assets − Liabilities.">
-        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">Combined Equity</p>
-        <p class="text-eth-text font-mono text-xl sm:text-2xl font-semibold">{formatETB(combinedEquity, true)}</p>
-        <p class="text-eth-text-muted text-xs mt-1">Total shareholders' equity</p>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help"
+        data-tip="Sum of total shareholders' equity from all enterprises' balance sheets for 2016 EC. Equity = Assets − Liabilities."
+      >
+        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">
+          Combined Equity
+        </p>
+        <p class="text-eth-text font-mono text-xl sm:text-2xl font-semibold">
+          {formatETB(combinedEquity, true)}
+        </p>
+        <p class="text-eth-text-muted text-xs mt-1">
+          Total shareholders' equity
+        </p>
       </div>
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help" data-tip="Combined net profit ÷ combined total assets for 2016 EC. Measures how efficiently assets generate profit.">
-        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">Return on Assets</p>
-        <p class={`font-mono text-xl sm:text-2xl font-semibold ${roa >= 0 ? "text-eth-green" : "text-eth-gold"}`}>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help"
+        data-tip="Combined net profit ÷ combined total assets for 2016 EC. Measures how efficiently assets generate profit."
+      >
+        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">
+          Return on Assets
+        </p>
+        <p
+          class={`font-mono text-xl sm:text-2xl font-semibold ${roa >= 0 ? "text-eth-green" : "text-eth-gold"}`}
+        >
           {roa >= 0 ? "+" : ""}{roa.toFixed(1)}%
         </p>
-        <p class="text-eth-text-muted text-xs mt-1">Net profit / total assets</p>
+        <p class="text-eth-text-muted text-xs mt-1">
+          Net profit / total assets
+        </p>
       </div>
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help" data-tip="The enterprise with the highest total assets in 2016 EC.">
-        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">Largest by Assets</p>
-        <p class="text-eth-text font-mono text-xl sm:text-2xl font-semibold">{largestByAssets.name}</p>
-        <p class="text-eth-text-muted text-xs mt-1">{formatETB(largestByAssets.val, true)}</p>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help"
+        data-tip="The enterprise with the highest total assets in 2016 EC."
+      >
+        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">
+          Largest by Assets
+        </p>
+        <p class="text-eth-text font-mono text-xl sm:text-2xl font-semibold">
+          {largestByAssets.name}
+        </p>
+        <p class="text-eth-text-muted text-xs mt-1">
+          {formatETB(largestByAssets.val, true)}
+        </p>
       </div>
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help" data-tip="Combined total liabilities ÷ combined total equity for 2016 EC. Shows how much debt is used relative to equity. Higher values indicate more leverage.">
-        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">Debt-to-Equity</p>
-        <p class={`font-mono text-xl sm:text-2xl font-semibold ${debtToEquity > 2 ? "text-eth-gold" : "text-eth-text"}`}>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm cursor-help"
+        data-tip="Combined total liabilities ÷ combined total equity for 2016 EC. Shows how much debt is used relative to equity. Higher values indicate more leverage."
+      >
+        <p class="text-eth-text-muted text-xs uppercase tracking-wider mb-1">
+          Debt-to-Equity
+        </p>
+        <p
+          class={`font-mono text-xl sm:text-2xl font-semibold ${debtToEquity > 2 ? "text-eth-gold" : "text-eth-text"}`}
+        >
           {debtToEquity.toFixed(1)}x
         </p>
         <p class="text-eth-text-muted text-xs mt-1">Liabilities / equity</p>
@@ -402,64 +541,145 @@ const revVsLiabData = JSON.stringify({
 
   <!-- Revenue vs Liabilities Trend -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-    <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm">
-      <h2 class="font-display text-xl text-eth-text mb-1">Revenue vs Liabilities</h2>
-      <p class="text-eth-text-muted text-sm mb-4">Combined revenue and total liabilities over time</p>
-      <div id="revVsLiabChart" class="h-[260px] sm:h-[320px] w-full" data-chart={revVsLiabData}></div>
+    <div
+      class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm"
+    >
+      <h2 class="font-display text-xl text-eth-text mb-1">
+        Revenue vs Liabilities
+      </h2>
+      <p class="text-eth-text-muted text-sm mb-4">
+        Combined revenue and total liabilities over time
+      </p>
+      <div
+        id="revVsLiabChart"
+        class="h-[260px] sm:h-[320px] w-full"
+        data-chart={revVsLiabData}
+      >
+      </div>
     </div>
   </section>
 
   <!-- Revenue by Sector + Top by Assets -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
     <div class="grid lg:grid-cols-2 gap-6 mb-6">
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
-        <h2 class="font-display text-xl text-eth-text mb-1">Revenue by Sector</h2>
-        <p class="text-eth-text-muted text-sm mb-4">Sector share of total revenue (latest year per enterprise)</p>
-        <div id="sectorRevenueChart" class="h-[200px] lg:h-[280px] w-full" data-chart={sectorRevenueData}></div>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0"
+      >
+        <h2 class="font-display text-xl text-eth-text mb-1">
+          Revenue by Sector
+        </h2>
+        <p class="text-eth-text-muted text-sm mb-4">
+          Sector share of total revenue (latest year per enterprise)
+        </p>
+        <div
+          id="sectorRevenueChart"
+          class="h-[200px] lg:h-[280px] w-full"
+          data-chart={sectorRevenueData}
+        >
+        </div>
       </div>
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
-        <h2 class="font-display text-xl text-eth-text mb-1">Assets by Sector</h2>
-        <p class="text-eth-text-muted text-sm mb-4">Sector share of total assets (latest year per enterprise)</p>
-        <div id="sectorAssetsChart" class="h-[200px] lg:h-[280px] w-full" data-chart={sectorAssetsData}></div>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0"
+      >
+        <h2 class="font-display text-xl text-eth-text mb-1">
+          Assets by Sector
+        </h2>
+        <p class="text-eth-text-muted text-sm mb-4">
+          Sector share of total assets (latest year per enterprise)
+        </p>
+        <div
+          id="sectorAssetsChart"
+          class="h-[200px] lg:h-[280px] w-full"
+          data-chart={sectorAssetsData}
+        >
+        </div>
       </div>
     </div>
     <div class="grid lg:grid-cols-2 gap-6">
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
-        <h2 class="font-display text-xl text-eth-text mb-1">Top Enterprises by Assets</h2>
-        <p class="text-eth-text-muted text-sm mb-4">Total asset base by enterprise (latest available year, log scale)</p>
-        <div id="topAssetsChart" class="h-[400px] lg:h-[500px] w-full" data-chart={topByAssetsData}></div>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0"
+      >
+        <h2 class="font-display text-xl text-eth-text mb-1">
+          Top Enterprises by Assets
+        </h2>
+        <p class="text-eth-text-muted text-sm mb-4">
+          Total asset base by enterprise (latest available year, log scale)
+        </p>
+        <div
+          id="topAssetsChart"
+          class="h-[400px] lg:h-[500px] w-full"
+          data-chart={topByAssetsData}
+        >
+        </div>
       </div>
-      <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0">
-        <h2 class="font-display text-xl text-eth-text mb-1">Top Enterprises by Liabilities</h2>
-        <p class="text-eth-text-muted text-sm mb-4">Total liabilities by enterprise (latest available year, log scale)</p>
-        <div id="topLiabilitiesChart" class="h-[400px] lg:h-[500px] w-full" data-chart={topByLiabilitiesData}></div>
+      <div
+        class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm min-w-0"
+      >
+        <h2 class="font-display text-xl text-eth-text mb-1">
+          Top Enterprises by Liabilities
+        </h2>
+        <p class="text-eth-text-muted text-sm mb-4">
+          Total liabilities by enterprise (latest available year, log scale)
+        </p>
+        <div
+          id="topLiabilitiesChart"
+          class="h-[400px] lg:h-[500px] w-full"
+          data-chart={topByLiabilitiesData}
+        >
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Revenue Breakdown by Enterprise -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-    <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm">
-      <h2 class="font-display text-xl text-eth-text mb-1">Revenue Breakdown by Enterprise</h2>
-      <p class="text-eth-text-muted text-sm mb-4">Individual enterprise contributions to combined revenue over time</p>
-      <div id="revenueBreakdownChart" class="h-[360px] sm:h-[440px] w-full" data-chart={revenueBreakdownData}></div>
+    <div
+      class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm"
+    >
+      <h2 class="font-display text-xl text-eth-text mb-1">
+        Revenue Breakdown by Enterprise
+      </h2>
+      <p class="text-eth-text-muted text-sm mb-4">
+        Individual enterprise contributions to combined revenue over time
+      </p>
+      <div
+        id="revenueBreakdownChart"
+        class="h-[360px] sm:h-[440px] w-full"
+        data-chart={revenueBreakdownData}
+      >
+      </div>
     </div>
   </section>
 
   <!-- Audit Opinions -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-    <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm">
+    <div
+      class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-6 shadow-sm"
+    >
       <h2 class="font-display text-xl text-eth-text mb-1">Audit Opinions</h2>
-      <p class="text-eth-text-muted text-sm mb-4">Auditor verdicts across {totalAuditYears} enterprise-years</p>
-      <div id="auditDonutChart" class="h-[260px] sm:h-[320px] w-full" data-chart={auditHealthData}></div>
+      <p class="text-eth-text-muted text-sm mb-4">
+        Auditor verdicts across {totalAuditYears} enterprise-years
+      </p>
+      <div
+        id="auditDonutChart"
+        class="h-[260px] sm:h-[320px] w-full"
+        data-chart={auditHealthData}
+      >
+      </div>
       <dl class="mt-4 space-y-2 text-xs border-t border-eth-card-border pt-4">
         <div>
           <dt class="font-semibold text-eth-text inline">Unmodified</dt>
-          <dd class="inline text-eth-text-muted"> — Financial statements are fairly presented with no material issues found.</dd>
+          <dd class="inline text-eth-text-muted">
+            — Financial statements are fairly presented with no material issues
+            found.
+          </dd>
         </div>
         <div>
           <dt class="font-semibold text-eth-text inline">Qualified</dt>
-          <dd class="inline text-eth-text-muted"> — The auditor found specific issues or couldn't verify certain items.</dd>
+          <dd class="inline text-eth-text-muted">
+            — The auditor found specific issues or couldn't verify certain
+            items.
+          </dd>
         </div>
       </dl>
     </div>
@@ -468,6 +688,15 @@ const revVsLiabData = JSON.stringify({
 
 <script>
   import * as echarts from "echarts";
+
+  type ChartParam = {
+    name: string;
+    value: number;
+    dataIndex: number;
+    seriesName?: string;
+    color?: string;
+    percent?: number;
+  };
 
   const palette = {
     green: "#1b3b34",
@@ -532,16 +761,19 @@ const revVsLiabData = JSON.stringify({
       tooltip: {
         trigger: "axis",
         axisPointer: { type: "shadow" },
-        formatter: (params: any) => {
-          const p = Array.isArray(params) ? params[0] : params;
+        formatter: (params: ChartParam[]) => {
+          const p = params[0];
           const idx = p.dataIndex;
           const value = p.value;
           const count = data.counts[idx];
-          if (value == null) return `<span style="font-weight:600">${p.name} EC</span><br/><span style="color:#999">No data</span>`;
-          return `<span style="font-weight:600;font-size:13px">${p.name} EC</span>`
-            + `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>`
-            + `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Revenue</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(value)}</span></div>`
-            + `<div style="display:flex;justify-content:space-between;gap:16px;margin-top:4px"><span style="color:#888">Enterprises</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">${count}</span></div>`;
+          if (value == null)
+            return `<span style="font-weight:600">${p.name} EC</span><br/><span style="color:#999">No data</span>`;
+          return (
+            `<span style="font-weight:600;font-size:13px">${p.name} EC</span>` +
+            `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>` +
+            `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Revenue</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(value)}</span></div>` +
+            `<div style="display:flex;justify-content:space-between;gap:16px;margin-top:4px"><span style="color:#888">Enterprises</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">${count}</span></div>`
+          );
         },
       },
       grid: { left: 0, right: 10, top: 16, bottom: 0, containLabel: true },
@@ -587,7 +819,11 @@ const revVsLiabData = JSON.stringify({
   // --- Profitability Overview Chart (horizontal bar, symlog scale) ---
   const profitEl = document.getElementById("profitabilityChart");
   if (profitEl) {
-    const data = JSON.parse(profitEl.dataset.chart!) as { name: string; value: number; year: number }[];
+    const data = JSON.parse(profitEl.dataset.chart!) as {
+      name: string;
+      value: number;
+      year: number;
+    }[];
     const chart = initChart(profitEl);
     ro.observe(profitEl);
 
@@ -595,12 +831,14 @@ const revVsLiabData = JSON.stringify({
       tooltip: {
         trigger: "axis",
         axisPointer: { type: "shadow" },
-        formatter: (params: any) => {
+        formatter: (params: ChartParam[]) => {
           const p = params[0];
           const item = data[p.dataIndex];
-          return `<span style="font-weight:600;font-size:13px">${p.name}</span> <span style="color:#888">(${item.year} EC)</span>`
-            + `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>`
-            + `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Net Profit</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(item.value)}</span></div>`;
+          return (
+            `<span style="font-weight:600;font-size:13px">${p.name}</span> <span style="color:#888">(${item.year} EC)</span>` +
+            `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>` +
+            `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Net Profit</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(item.value)}</span></div>`
+          );
         },
       },
       grid: { left: 0, right: 10, top: 10, bottom: 0, containLabel: true },
@@ -615,7 +853,11 @@ const revVsLiabData = JSON.stringify({
       yAxis: {
         type: "category",
         data: data.map((d) => d.name),
-        axisLabel: { ...axisLabelStyle, fontSize: isMobile ? 10 : 12, interval: 0 },
+        axisLabel: {
+          ...axisLabelStyle,
+          fontSize: isMobile ? 10 : 12,
+          interval: 0,
+        },
         axisLine: { lineStyle: { color: "#E0DDD5" } },
         axisTick: { show: false },
       },
@@ -625,15 +867,16 @@ const revVsLiabData = JSON.stringify({
           data: data.map((d) => ({
             value: symlog(d.value),
             itemStyle: {
-              color: d.value >= 0
-                ? new echarts.graphic.LinearGradient(0, 0, 1, 0, [
-                    { offset: 0, color: "rgba(27, 59, 52, 0.15)" },
-                    { offset: 1, color: palette.green },
-                  ])
-                : new echarts.graphic.LinearGradient(1, 0, 0, 0, [
-                    { offset: 0, color: "rgba(175, 158, 110, 0.15)" },
-                    { offset: 1, color: palette.gold },
-                  ]),
+              color:
+                d.value >= 0
+                  ? new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                      { offset: 0, color: "rgba(27, 59, 52, 0.15)" },
+                      { offset: 1, color: palette.green },
+                    ])
+                  : new echarts.graphic.LinearGradient(1, 0, 0, 0, [
+                      { offset: 0, color: "rgba(175, 158, 110, 0.15)" },
+                      { offset: 1, color: palette.gold },
+                    ]),
               borderRadius: d.value >= 0 ? [0, 4, 4, 0] : [4, 0, 0, 4],
             },
           })),
@@ -649,14 +892,17 @@ const revVsLiabData = JSON.stringify({
   // --- Audit Opinions Donut Chart ---
   const donutEl = document.getElementById("auditDonutChart");
   if (donutEl) {
-    const data = JSON.parse(donutEl.dataset.chart!) as { name: string; value: number }[];
+    const data = JSON.parse(donutEl.dataset.chart!) as {
+      name: string;
+      value: number;
+    }[];
     const chart = initChart(donutEl);
     ro.observe(donutEl);
 
     const opinionColors: Record<string, string> = {
-      "Unmodified": palette.green,
-      "Qualified": palette.gold,
-      "Adverse": palette.accent,
+      Unmodified: palette.green,
+      Qualified: palette.gold,
+      Adverse: palette.accent,
     };
 
     chart.setOption({
@@ -706,10 +952,15 @@ const revVsLiabData = JSON.stringify({
     chart.setOption({
       tooltip: {
         trigger: "axis",
-        valueFormatter: (v: number) => v == null ? "No data" : `ETB ${formatCompact(v)}`,
+        valueFormatter: (v: number) =>
+          v == null ? "No data" : `ETB ${formatCompact(v)}`,
       },
       legend: {
-        textStyle: { fontFamily: "Lora, Georgia, serif", color: palette.text, fontSize: isMobile ? 10 : 11 },
+        textStyle: {
+          fontFamily: "Lora, Georgia, serif",
+          color: palette.text,
+          fontSize: isMobile ? 10 : 11,
+        },
         bottom: 0,
         itemGap: isMobile ? 8 : 14,
       },
@@ -768,27 +1019,44 @@ const revVsLiabData = JSON.stringify({
 
   // --- Sector Donut (reusable) ---
   const sectorColors = [
-    palette.green, palette.gold, palette.greenLight, "#5b8c7a", "#8a6e3e",
-    "#3d7a6b", "#c4b27d", "#1a4f44", "#6b9e8a", "#d4c48e",
-    "#2a6b5e", "#9b8a5e", "#4a8e7a", "#bfae6e", "#336b5a",
-    "#7a9e6e", "#5e7a4a", "#8e6e4a",
+    palette.green,
+    palette.gold,
+    palette.greenLight,
+    "#5b8c7a",
+    "#8a6e3e",
+    "#3d7a6b",
+    "#c4b27d",
+    "#1a4f44",
+    "#6b9e8a",
+    "#d4c48e",
+    "#2a6b5e",
+    "#9b8a5e",
+    "#4a8e7a",
+    "#bfae6e",
+    "#336b5a",
+    "#7a9e6e",
+    "#5e7a4a",
+    "#8e6e4a",
   ];
 
   function initSectorDonut(elId: string, metricLabel: string) {
     const el = document.getElementById(elId);
     if (!el) return;
-    const data = JSON.parse(el.dataset.chart!) as { name: string; value: number }[];
+    const data = JSON.parse(el.dataset.chart!) as {
+      name: string;
+      value: number;
+    }[];
     const chart = initChart(el);
     ro.observe(el);
 
     chart.setOption({
       tooltip: {
         trigger: "item",
-        formatter: (p: any) =>
-          `<span style="font-weight:600">${p.name}</span>`
-          + `<div style="margin:4px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>`
-          + `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">${metricLabel}</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(p.value)}</span></div>`
-          + `<div style="color:#888;margin-top:2px">${p.percent.toFixed(1)}%</div>`,
+        formatter: (p: ChartParam) =>
+          `<span style="font-weight:600">${p.name}</span>` +
+          `<div style="margin:4px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>` +
+          `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">${metricLabel}</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(p.value)}</span></div>` +
+          `<div style="color:#888;margin-top:2px">${(p.percent ?? 0).toFixed(1)}%</div>`,
       },
       series: [
         {
@@ -831,7 +1099,11 @@ const revVsLiabData = JSON.stringify({
   ) {
     const el = document.getElementById(elId);
     if (!el) return;
-    const data = JSON.parse(el.dataset.chart!) as { name: string; value: number; year: number }[];
+    const data = JSON.parse(el.dataset.chart!) as {
+      name: string;
+      value: number;
+      year: number;
+    }[];
     const chart = initChart(el);
     ro.observe(el);
 
@@ -839,12 +1111,14 @@ const revVsLiabData = JSON.stringify({
       tooltip: {
         trigger: "axis",
         axisPointer: { type: "shadow" },
-        formatter: (params: any) => {
+        formatter: (params: ChartParam[]) => {
           const p = params[0];
           const item = data[p.dataIndex];
-          return `<span style="font-weight:600;font-size:13px">${p.name}</span> <span style="color:#888">(${item.year} EC)</span>`
-            + `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>`
-            + `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">${metricLabel}</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(item.value)}</span></div>`;
+          return (
+            `<span style="font-weight:600;font-size:13px">${p.name}</span> <span style="color:#888">(${item.year} EC)</span>` +
+            `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>` +
+            `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">${metricLabel}</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(item.value)}</span></div>`
+          );
         },
       },
       grid: { left: 0, right: 10, top: 10, bottom: 0, containLabel: true },
@@ -859,7 +1133,11 @@ const revVsLiabData = JSON.stringify({
       yAxis: {
         type: "category",
         data: data.map((d) => d.name),
-        axisLabel: { ...axisLabelStyle, fontSize: isMobile ? 10 : 12, interval: 0 },
+        axisLabel: {
+          ...axisLabelStyle,
+          fontSize: isMobile ? 10 : 12,
+          interval: 0,
+        },
         axisLine: { lineStyle: { color: "#E0DDD5" } },
         axisTick: { show: false },
       },
@@ -883,8 +1161,18 @@ const revVsLiabData = JSON.stringify({
     });
   }
 
-  initHorizontalLogBar("topAssetsChart", "Total Assets", "rgba(27, 59, 52, 0.15)", palette.green);
-  initHorizontalLogBar("topLiabilitiesChart", "Total Liabilities", palette.goldLight, palette.gold);
+  initHorizontalLogBar(
+    "topAssetsChart",
+    "Total Assets",
+    "rgba(27, 59, 52, 0.15)",
+    palette.green,
+  );
+  initHorizontalLogBar(
+    "topLiabilitiesChart",
+    "Total Liabilities",
+    palette.goldLight,
+    palette.gold,
+  );
 
   // --- Revenue Breakdown Stacked Bar ---
   const breakdownEl = document.getElementById("revenueBreakdownChart");
@@ -898,35 +1186,60 @@ const revVsLiabData = JSON.stringify({
 
     // Generate distinct colors for each enterprise
     const baseColors = [
-      "#1b3b34", "#2d5c52", "#af9e6e", "#5b8c7a", "#8a6e3e",
-      "#3d7a6b", "#c4b27d", "#1a4f44", "#6b9e8a", "#d4c48e",
-      "#2a6b5e", "#9b8a5e", "#4a8e7a", "#bfae6e", "#336b5a",
-      "#7a9e6e", "#5e7a4a", "#8e6e4a", "#4a6e8e", "#6e4a8e",
-      "#8e4a6e", "#4a8e6e", "#6e8e4a", "#8e8e4a", "#4a4a8e",
-      "#6e6e6e", "#8e4a4a", "#4a8e8e", "#8e6e8e",
+      "#1b3b34",
+      "#2d5c52",
+      "#af9e6e",
+      "#5b8c7a",
+      "#8a6e3e",
+      "#3d7a6b",
+      "#c4b27d",
+      "#1a4f44",
+      "#6b9e8a",
+      "#d4c48e",
+      "#2a6b5e",
+      "#9b8a5e",
+      "#4a8e7a",
+      "#bfae6e",
+      "#336b5a",
+      "#7a9e6e",
+      "#5e7a4a",
+      "#8e6e4a",
+      "#4a6e8e",
+      "#6e4a8e",
+      "#8e4a6e",
+      "#4a8e6e",
+      "#6e8e4a",
+      "#8e8e4a",
+      "#4a4a8e",
+      "#6e6e6e",
+      "#8e4a4a",
+      "#4a8e8e",
+      "#8e6e8e",
     ];
 
     chart.setOption({
       tooltip: {
         trigger: "axis",
         axisPointer: { type: "shadow" },
-        formatter: (params: any) => {
+        formatter: (params: ChartParam | ChartParam[]) => {
           const items = (Array.isArray(params) ? params : [params])
-            .filter((p: any) => p.value > 0)
-            .sort((a: any, b: any) => b.value - a.value);
+            .filter((p) => p.value > 0)
+            .sort((a, b) => b.value - a.value);
           if (items.length === 0) return "";
           const year = items[0].name;
-          const total = items.reduce((s: number, p: any) => s + p.value, 0);
-          let html = `<span style="font-weight:600;font-size:13px">${year} EC</span>`
-            + `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>`
-            + `<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px"><span style="color:#888">Total</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(total)}</span></div>`
-            + `<div style="margin:4px 0;border-top:1px solid rgba(0,0,0,0.05)"></div>`;
+          const total = items.reduce((s, p) => s + p.value, 0);
+          let html =
+            `<span style="font-weight:600;font-size:13px">${year} EC</span>` +
+            `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>` +
+            `<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px"><span style="color:#888">Total</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(total)}</span></div>` +
+            `<div style="margin:4px 0;border-top:1px solid rgba(0,0,0,0.05)"></div>`;
           for (const p of items.slice(0, 10)) {
-            html += `<div style="display:flex;align-items:center;gap:6px;margin-top:3px">`
-              + `<span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${p.color};flex-shrink:0"></span>`
-              + `<span style="color:#888;flex:1">${p.seriesName}</span>`
-              + `<span style="font-family:JetBrains Mono,monospace;font-weight:500">ETB ${formatCompact(p.value)}</span>`
-              + `</div>`;
+            html +=
+              `<div style="display:flex;align-items:center;gap:6px;margin-top:3px">` +
+              `<span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${p.color};flex-shrink:0"></span>` +
+              `<span style="color:#888;flex:1">${p.seriesName}</span>` +
+              `<span style="font-family:JetBrains Mono,monospace;font-weight:500">ETB ${formatCompact(p.value)}</span>` +
+              `</div>`;
           }
           if (items.length > 10) {
             html += `<div style="color:#999;font-size:11px;margin-top:4px">...and ${items.length - 10} more</div>`;
@@ -937,7 +1250,11 @@ const revVsLiabData = JSON.stringify({
       legend: {
         type: "scroll",
         bottom: 0,
-        textStyle: { fontFamily: "Lora, Georgia, serif", color: palette.text, fontSize: 10 },
+        textStyle: {
+          fontFamily: "Lora, Georgia, serif",
+          color: palette.text,
+          fontSize: 10,
+        },
         pageIconColor: palette.green,
         pageIconInactiveColor: "#ccc",
         pageTextStyle: { color: palette.text },
@@ -993,14 +1310,16 @@ const revVsLiabData = JSON.stringify({
       tooltip: {
         trigger: "axis",
         axisPointer: { type: "shadow" },
-        formatter: (params: any) => {
+        formatter: (params: ChartParam[]) => {
           const p = params[0];
           const item = data[p.dataIndex];
-          return `<span style="font-weight:600;font-size:13px">${p.name}</span> <span style="color:#888">(${item.year} EC)</span>`
-            + `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>`
-            + `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Profit Margin</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">${item.ratio.toFixed(1)}%</span></div>`
-            + `<div style="display:flex;justify-content:space-between;gap:16px;margin-top:3px"><span style="color:#888">Revenue</span><span style="font-family:JetBrains Mono,monospace;font-weight:500">ETB ${formatCompact(item.revenue)}</span></div>`
-            + `<div style="display:flex;justify-content:space-between;gap:16px;margin-top:3px"><span style="color:#888">Net Profit</span><span style="font-family:JetBrains Mono,monospace;font-weight:500">ETB ${formatCompact(item.netProfit)}</span></div>`;
+          return (
+            `<span style="font-weight:600;font-size:13px">${p.name}</span> <span style="color:#888">(${item.year} EC)</span>` +
+            `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>` +
+            `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Profit Margin</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">${item.ratio.toFixed(1)}%</span></div>` +
+            `<div style="display:flex;justify-content:space-between;gap:16px;margin-top:3px"><span style="color:#888">Revenue</span><span style="font-family:JetBrains Mono,monospace;font-weight:500">ETB ${formatCompact(item.revenue)}</span></div>` +
+            `<div style="display:flex;justify-content:space-between;gap:16px;margin-top:3px"><span style="color:#888">Net Profit</span><span style="font-family:JetBrains Mono,monospace;font-weight:500">ETB ${formatCompact(item.netProfit)}</span></div>`
+          );
         },
       },
       grid: { left: 0, right: 10, top: 10, bottom: 0, containLabel: true },
@@ -1018,7 +1337,11 @@ const revVsLiabData = JSON.stringify({
       yAxis: {
         type: "category",
         data: data.map((d) => d.name),
-        axisLabel: { ...axisLabelStyle, fontSize: isMobile ? 10 : 12, interval: 0 },
+        axisLabel: {
+          ...axisLabelStyle,
+          fontSize: isMobile ? 10 : 12,
+          interval: 0,
+        },
         axisLine: { lineStyle: { color: "#E0DDD5" } },
         axisTick: { show: false },
       },
@@ -1028,15 +1351,16 @@ const revVsLiabData = JSON.stringify({
           data: data.map((d) => ({
             value: symlog(d.ratio),
             itemStyle: {
-              color: d.ratio >= 0
-                ? new echarts.graphic.LinearGradient(0, 0, 1, 0, [
-                    { offset: 0, color: "rgba(27, 59, 52, 0.15)" },
-                    { offset: 1, color: palette.green },
-                  ])
-                : new echarts.graphic.LinearGradient(1, 0, 0, 0, [
-                    { offset: 0, color: "rgba(175, 158, 110, 0.15)" },
-                    { offset: 1, color: palette.gold },
-                  ]),
+              color:
+                d.ratio >= 0
+                  ? new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                      { offset: 0, color: "rgba(27, 59, 52, 0.15)" },
+                      { offset: 1, color: palette.green },
+                    ])
+                  : new echarts.graphic.LinearGradient(1, 0, 0, 0, [
+                      { offset: 0, color: "rgba(175, 158, 110, 0.15)" },
+                      { offset: 1, color: palette.gold },
+                    ]),
               borderRadius: d.ratio >= 0 ? [0, 4, 4, 0] : [4, 0, 0, 4],
             },
           })),
@@ -1051,11 +1375,12 @@ const revVsLiabData = JSON.stringify({
 
   // --- Tooltips for [data-tip] elements ---
   const tip = document.createElement("div");
-  tip.style.cssText = "position:fixed;z-index:50;max-width:280px;padding:8px 12px;border-radius:8px;font-size:13px;line-height:1.4;color:#4A4A4A;background:#fff;border:1px solid #e5e2da;box-shadow:0 4px 16px rgba(0,0,0,0.12);pointer-events:none;opacity:0;transition:opacity 0.15s";
+  tip.style.cssText =
+    "position:fixed;z-index:50;max-width:280px;padding:8px 12px;border-radius:8px;font-size:13px;line-height:1.4;color:#4A4A4A;background:#fff;border:1px solid #e5e2da;box-shadow:0 4px 16px rgba(0,0,0,0.12);pointer-events:none;opacity:0;transition:opacity 0.15s";
   document.body.appendChild(tip);
 
   for (const el of document.querySelectorAll<HTMLElement>("[data-tip]")) {
-    el.addEventListener("mouseenter", (e) => {
+    el.addEventListener("mouseenter", () => {
       tip.textContent = el.dataset.tip!;
       tip.style.opacity = "1";
       const rect = el.getBoundingClientRect();

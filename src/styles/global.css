@@ -7,16 +7,16 @@
   --color-eth-gold: #af9e6e;
   --color-eth-gold-light: #f5f2ea;
 
-  --color-eth-bg: #FAFAF7;
-  --color-eth-card: #FFFFFF;
-  --color-eth-card-border: #E0DDD5;
-  --color-eth-surface: #F3F1EB;
-  --color-eth-text: #1C1C1C;
-  --color-eth-text-dim: #4A4A4A;
-  --color-eth-text-muted: #8A8A85;
+  --color-eth-bg: #fafaf7;
+  --color-eth-card: #ffffff;
+  --color-eth-card-border: #e0ddd5;
+  --color-eth-surface: #f3f1eb;
+  --color-eth-text: #1c1c1c;
+  --color-eth-text-dim: #4a4a4a;
+  --color-eth-text-muted: #8a8a85;
 
-  --color-eth-red: #C0392B;
-  --color-eth-blue: #2962A0;
+  --color-eth-red: #c0392b;
+  --color-eth-blue: #2962a0;
 
   --font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
   --font-body: "Lora", Georgia, "Times New Roman", serif;
@@ -25,7 +25,8 @@
 
 @font-face {
   font-family: "Instrument Serif";
-  src: url("https://fonts.gstatic.com/s/instrumentserif/v4/jizBRFtNs2ka5fCjSL3y5aMRkkTfKOlC.woff2") format("woff2");
+  src: url("https://fonts.gstatic.com/s/instrumentserif/v4/jizBRFtNs2ka5fCjSL3y5aMRkkTfKOlC.woff2")
+    format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -33,7 +34,8 @@
 
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("https://fonts.gstatic.com/s/jetbrainsmono/v20/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOTk6OThhvA.woff2") format("woff2");
+  src: url("https://fonts.gstatic.com/s/jetbrainsmono/v20/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOTk6OThhvA.woff2")
+    format("woff2");
   font-weight: 100 800;
   font-style: normal;
   font-display: swap;
