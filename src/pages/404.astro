@@ -1,0 +1,51 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { House, Building2, Info, Compass } from "@lucide/astro";
+
+const links = [
+  { href: "/enterprises", label: "Enterprises", Icon: Building2 },
+  { href: "/about", label: "About", Icon: Info },
+  { href: "/", label: "Home", Icon: House },
+];
+---
+
+<Layout
+  title="Page not found · audit.et"
+  description="Page not found."
+  centerContent
+>
+  <meta slot="head" name="robots" content="noindex" />
+
+  <section
+    class="w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex-1 text-center flex flex-col items-center justify-center"
+  >
+    <div
+      class="w-14 h-14 rounded-xl bg-eth-green/10 flex items-center justify-center mb-6"
+    >
+      <Compass class="w-7 h-7 text-eth-green" />
+    </div>
+    <h1 class="font-display text-4xl sm:text-5xl text-eth-text mb-3">
+      Page not found
+    </h1>
+    <p class="text-eth-text-dim text-lg max-w-md mb-8">
+      That page doesn&rsquo;t exist, or it may have moved. Try one of these
+      instead.
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-3">
+      {
+        links.map(({ href, label, Icon }, i) => (
+          <a
+            href={href}
+            class={
+              i === 0
+                ? "inline-flex items-center gap-1.5 bg-eth-green text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-eth-green/90 transition-colors"
+                : "inline-flex items-center gap-1.5 border border-eth-card-border text-eth-text px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-eth-card transition-colors"
+            }
+          >
+            <Icon class="w-4 h-4" /> {label}
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

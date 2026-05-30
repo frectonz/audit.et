@@ -1,0 +1,166 @@
+import { defineConfig } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
+import sitemap from "@astrojs/sitemap";
+import AstroPWA from "@vite-pwa/astro";
+
+function pwa() {
+  return AstroPWA({
+    registerType: "autoUpdate",
+    injectRegister: "script",
+    workbox: {
+      globPatterns: ["offline/index.html", "manifest.webmanifest"],
+      navigateFallback: undefined,
+      runtimeCaching: [
+        {
+          urlPattern: ({ request }) => request.mode === "navigate",
+          handler: "StaleWhileRevalidate",
+          options: {
+            cacheName: "audit-et-pages",
+            precacheFallback: { fallbackURL: "/offline" },
+          },
+        },
+        {
+          urlPattern: ({ sameOrigin }) => sameOrigin,
+          handler: "StaleWhileRevalidate",
+          options: { cacheName: "audit-et-assets" },
+        },
+      ],
+    },
+    manifest: {
+      id: "/",
+      name: "audit.et — Transparency for Ethiopia's State-Owned Enterprises",
+      short_name: "audit.et",
+      description:
+        "Transparency for Ethiopia's State-Owned Enterprises — visualizing public audit data from enterprises under Ethiopian Investment Holdings.",
+      start_url: "/",
+      scope: "/",
+      display: "standalone",
+      orientation: "portrait",
+      background_color: "#1b3b34",
+      theme_color: "#1b3b34",
+      lang: "en",
+      categories: ["finance", "government", "education"],
+      icons: [
+        {
+          src: "/favicon.svg",
+          type: "image/svg+xml",
+          sizes: "512x512",
+          purpose: "any",
+        },
+        {
+          src: "/icon-192.png",
+          type: "image/png",
+          sizes: "192x192",
+          purpose: "any",
+        },
+        {
+          src: "/icon-512.png",
+          type: "image/png",
+          sizes: "512x512",
+          purpose: "any",
+        },
+        {
+          src: "/icon-maskable-512.png",
+          type: "image/png",
+          sizes: "512x512",
+          purpose: "maskable",
+        },
+      ],
+      screenshots: [
+        {
+          src: "/screenshots/home-desktop.png",
+          sizes: "1280x800",
+          type: "image/png",
+          form_factor: "wide",
+          label:
+            "Home page — overview of tracked enterprises and combined revenue",
+        },
+        {
+          src: "/screenshots/enterprises-desktop.png",
+          sizes: "1280x800",
+          type: "image/png",
+          form_factor: "wide",
+          label:
+            "Enterprises catalog — searchable list of all tracked enterprises",
+        },
+        {
+          src: "/screenshots/enterprise-desktop.png",
+          sizes: "1280x800",
+          type: "image/png",
+          form_factor: "wide",
+          label:
+            "Enterprise detail — multi-year revenue, profitability and balance sheet charts",
+        },
+        {
+          src: "/screenshots/year-desktop.png",
+          sizes: "1280x800",
+          type: "image/png",
+          form_factor: "wide",
+          label:
+            "Fiscal year detail — profit breakdown and cash flow activities",
+        },
+        {
+          src: "/screenshots/about-desktop.png",
+          sizes: "1280x800",
+          type: "image/png",
+          form_factor: "wide",
+          label: "About — what audit.et is and why it exists",
+        },
+        {
+          src: "/screenshots/home-mobile.png",
+          sizes: "540x1170",
+          type: "image/png",
+          form_factor: "narrow",
+          label:
+            "Home page — overview of tracked enterprises and combined revenue",
+        },
+        {
+          src: "/screenshots/enterprises-mobile.png",
+          sizes: "540x1170",
+          type: "image/png",
+          form_factor: "narrow",
+          label:
+            "Enterprises catalog — searchable list of all tracked enterprises",
+        },
+        {
+          src: "/screenshots/enterprise-mobile.png",
+          sizes: "540x1170",
+          type: "image/png",
+          form_factor: "narrow",
+          label:
+            "Enterprise detail — multi-year revenue, profitability and balance sheet charts",
+        },
+        {
+          src: "/screenshots/year-mobile.png",
+          sizes: "540x1170",
+          type: "image/png",
+          form_factor: "narrow",
+          label:
+            "Fiscal year detail — profit breakdown and cash flow activities",
+        },
+        {
+          src: "/screenshots/about-mobile.png",
+          sizes: "540x1170",
+          type: "image/png",
+          form_factor: "narrow",
+          label: "About — what audit.et is and why it exists",
+        },
+      ],
+    },
+    devOptions: {
+      enabled: false,
+    },
+  });
+}
+
+// https://astro.build/config
+export default defineConfig({
+  site: "https://audit.et",
+  integrations: [
+    sitemap({ filter: (page) => !/\/(offline|404)\/?$/.test(page) }),
+    pwa(),
+  ],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+});

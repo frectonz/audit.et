@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import { createRequire } from "node:module";
 import type { APIRoute, GetStaticPaths } from "astro";
 import satori from "satori";
 import { Resvg } from "@resvg/resvg-js";
@@ -42,6 +44,20 @@ const pages: Record<string, PageInfo> = Object.fromEntries([
       description: `Browse audit reports for ${enterprises.length} Ethiopian state-owned enterprises.`,
     },
   ],
+  [
+    "offline",
+    {
+      title: "Offline",
+      description: "You are offline.",
+    },
+  ],
+  [
+    "404",
+    {
+      title: "Page not found",
+      description: "That page doesn't exist, or it may have moved.",
+    },
+  ],
 
   ...enterprises.map((e) => {
     const minYear = e.years[0]?.year;
@@ -75,28 +91,23 @@ const pages: Record<string, PageInfo> = Object.fromEntries([
   }),
 ]);
 
-// --- Fonts: fetched once at build time ---
+// --- Fonts: read from the @fontsource packages at build time ---
 
-async function loadFont(url: string): Promise<ArrayBuffer> {
-  const res = await fetch(url);
-  return res.arrayBuffer();
+const require = createRequire(import.meta.url);
+function loadFont(pkgPath: string): Buffer {
+  return readFileSync(require.resolve(pkgPath));
 }
 
-const [instrumentSerifRegular, loraRegular, loraBold, notoEthiopic] =
-  await Promise.all([
-    loadFont(
-      "https://cdn.jsdelivr.net/fontsource/fonts/instrument-serif@latest/latin-400-normal.ttf",
-    ),
-    loadFont(
-      "https://cdn.jsdelivr.net/fontsource/fonts/lora@latest/latin-400-normal.ttf",
-    ),
-    loadFont(
-      "https://cdn.jsdelivr.net/fontsource/fonts/lora@latest/latin-700-normal.ttf",
-    ),
-    loadFont(
-      "https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-ethiopic@latest/ethiopic-400-normal.ttf",
-    ),
-  ]);
+const gelasioRegular = loadFont(
+  "@fontsource/gelasio/files/gelasio-latin-400-normal.woff",
+);
+const loraRegular = loadFont(
+  "@fontsource/lora/files/lora-latin-400-normal.woff",
+);
+const loraBold = loadFont("@fontsource/lora/files/lora-latin-700-normal.woff");
+const notoEthiopic = loadFont(
+  "@fontsource/noto-sans-ethiopic/files/noto-sans-ethiopic-ethiopic-400-normal.woff",
+);
 
 // --- Markup builder ---
 
@@ -262,7 +273,7 @@ function buildMarkup(page: PageInfo) {
                         style: {
                           fontSize: "28px",
                           color: "#af9e6e",
-                          fontFamily: "Instrument Serif",
+                          fontFamily: "Gelasio",
                           letterSpacing: "0.02em",
                         },
                         children: "audit.et",
@@ -290,7 +301,7 @@ function buildMarkup(page: PageInfo) {
                         style: {
                           fontSize: page.title.length > 30 ? "52px" : "64px",
                           color: "#af9e6e",
-                          fontFamily: "Instrument Serif",
+                          fontFamily: "Gelasio",
                           lineHeight: "1.15",
                         },
                         children: page.title,
@@ -375,8 +386,8 @@ async function renderOgImage(page: PageInfo) {
     height: 630,
     fonts: [
       {
-        name: "Instrument Serif",
-        data: instrumentSerifRegular,
+        name: "Gelasio",
+        data: gelasioRegular,
         weight: 400,
         style: "normal",
       },
