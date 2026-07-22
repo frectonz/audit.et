@@ -1,7 +1,4 @@
 @import "tailwindcss";
-@import "@fontsource-variable/lora/index.css";
-@import "@fontsource-variable/lora/wght-italic.css";
-@import "@fontsource-variable/jetbrains-mono/index.css";
 
 @theme {
   --color-eth-green: #1b3b34;
@@ -23,6 +20,6 @@
   --color-eth-blue: #2962a0;
 
   --font-display: Georgia, "Times New Roman", serif;
-  --font-body: "Lora Variable", Georgia, "Times New Roman", serif;
-  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+  --font-body: Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }

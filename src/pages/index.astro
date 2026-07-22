@@ -740,7 +740,7 @@ const revVsLiabData = JSON.stringify({
   const isMobile = window.innerWidth < 640;
 
   const axisLabelStyle = {
-    fontFamily: "JetBrains Mono, monospace",
+    fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
     fontSize: isMobile ? 9 : 11,
     color: palette.text,
   };
@@ -829,8 +829,8 @@ const revVsLiabData = JSON.stringify({
           return (
             `<span style="font-weight:600;font-size:13px">${p.name} EC</span>` +
             `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>` +
-            `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Revenue</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(value)}</span></div>` +
-            `<div style="display:flex;justify-content:space-between;gap:16px;margin-top:4px"><span style="color:#888">Enterprises</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">${count}</span></div>`
+            `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Revenue</span><span style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:600">ETB ${formatCompact(value)}</span></div>` +
+            `<div style="display:flex;justify-content:space-between;gap:16px;margin-top:4px"><span style="color:#888">Enterprises</span><span style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:600">${count}</span></div>`
           );
         },
       },
@@ -895,7 +895,7 @@ const revVsLiabData = JSON.stringify({
           return (
             `<span style="font-weight:600;font-size:13px">${p.name}</span> <span style="color:#888">(${item.year} EC)</span>` +
             `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>` +
-            `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Net Profit</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(item.value)}</span></div>`
+            `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Net Profit</span><span style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:600">ETB ${formatCompact(item.value)}</span></div>`
           );
         },
       },
@@ -983,7 +983,7 @@ const revVsLiabData = JSON.stringify({
             show: true,
             position: "outside",
             formatter: "{b} {d}%",
-            fontFamily: "Lora, Georgia, serif",
+            fontFamily: "Georgia, serif",
             fontSize: isMobile ? 10 : 11,
             color: palette.text,
           },
@@ -1015,7 +1015,7 @@ const revVsLiabData = JSON.stringify({
       },
       legend: {
         textStyle: {
-          fontFamily: "Lora, Georgia, serif",
+          fontFamily: "Georgia, serif",
           color: palette.text,
           fontSize: isMobile ? 10 : 11,
         },
@@ -1113,7 +1113,7 @@ const revVsLiabData = JSON.stringify({
         formatter: (p: ChartParam) =>
           `<span style="font-weight:600">${p.name}</span>` +
           `<div style="margin:4px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>` +
-          `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">${metricLabel}</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(p.value)}</span></div>` +
+          `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">${metricLabel}</span><span style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:600">ETB ${formatCompact(p.value)}</span></div>` +
           `<div style="color:#888;margin-top:2px">${(p.percent ?? 0).toFixed(1)}%</div>`,
       },
       series: [
@@ -1131,7 +1131,7 @@ const revVsLiabData = JSON.stringify({
             show: true,
             position: "outside",
             formatter: "{b} {d}%",
-            fontFamily: "Lora, Georgia, serif",
+            fontFamily: "Georgia, serif",
             fontSize: isMobile ? 9 : 11,
             color: palette.text,
           },
@@ -1175,7 +1175,7 @@ const revVsLiabData = JSON.stringify({
           return (
             `<span style="font-weight:600;font-size:13px">${p.name}</span> <span style="color:#888">(${item.year} EC)</span>` +
             `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>` +
-            `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">${metricLabel}</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(item.value)}</span></div>`
+            `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">${metricLabel}</span><span style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:600">ETB ${formatCompact(item.value)}</span></div>`
           );
         },
       },
@@ -1289,14 +1289,14 @@ const revVsLiabData = JSON.stringify({
           let html =
             `<span style="font-weight:600;font-size:13px">${year} EC</span>` +
             `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>` +
-            `<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px"><span style="color:#888">Total</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">ETB ${formatCompact(total)}</span></div>` +
+            `<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px"><span style="color:#888">Total</span><span style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:600">ETB ${formatCompact(total)}</span></div>` +
             `<div style="margin:4px 0;border-top:1px solid rgba(0,0,0,0.05)"></div>`;
           for (const p of items.slice(0, 10)) {
             html +=
               `<div style="display:flex;align-items:center;gap:6px;margin-top:3px">` +
               `<span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${p.color};flex-shrink:0"></span>` +
               `<span style="color:#888;flex:1">${p.seriesName}</span>` +
-              `<span style="font-family:JetBrains Mono,monospace;font-weight:500">ETB ${formatCompact(p.value)}</span>` +
+              `<span style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:500">ETB ${formatCompact(p.value)}</span>` +
               `</div>`;
           }
           if (items.length > 10) {
@@ -1309,7 +1309,7 @@ const revVsLiabData = JSON.stringify({
         type: "scroll",
         bottom: 0,
         textStyle: {
-          fontFamily: "Lora, Georgia, serif",
+          fontFamily: "Georgia, serif",
           color: palette.text,
           fontSize: 10,
         },
@@ -1374,9 +1374,9 @@ const revVsLiabData = JSON.stringify({
           return (
             `<span style="font-weight:600;font-size:13px">${p.name}</span> <span style="color:#888">(${item.year} EC)</span>` +
             `<div style="margin:6px 0;border-top:1px solid rgba(0,0,0,0.08)"></div>` +
-            `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Profit Margin</span><span style="font-family:JetBrains Mono,monospace;font-weight:600">${item.ratio.toFixed(1)}%</span></div>` +
-            `<div style="display:flex;justify-content:space-between;gap:16px;margin-top:3px"><span style="color:#888">Revenue</span><span style="font-family:JetBrains Mono,monospace;font-weight:500">ETB ${formatCompact(item.revenue)}</span></div>` +
-            `<div style="display:flex;justify-content:space-between;gap:16px;margin-top:3px"><span style="color:#888">Net Profit</span><span style="font-family:JetBrains Mono,monospace;font-weight:500">ETB ${formatCompact(item.netProfit)}</span></div>`
+            `<div style="display:flex;justify-content:space-between;gap:16px"><span style="color:#888">Profit Margin</span><span style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:600">${item.ratio.toFixed(1)}%</span></div>` +
+            `<div style="display:flex;justify-content:space-between;gap:16px;margin-top:3px"><span style="color:#888">Revenue</span><span style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:500">ETB ${formatCompact(item.revenue)}</span></div>` +
+            `<div style="display:flex;justify-content:space-between;gap:16px;margin-top:3px"><span style="color:#888">Net Profit</span><span style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:500">ETB ${formatCompact(item.netProfit)}</span></div>`
           );
         },
       },

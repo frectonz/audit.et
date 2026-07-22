@@ -39,16 +39,7 @@ importers:
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.3.0(jiti@2.6.1))
-      '@fontsource-variable/jetbrains-mono':
-        specifier: ^5.2.8
-        version: 5.2.8
-      '@fontsource-variable/lora':
-        specifier: ^5.2.8
-        version: 5.2.8
       '@fontsource/gelasio':
-        specifier: ^5.2.8
-        version: 5.2.8
-      '@fontsource/lora':
         specifier: ^5.2.8
         version: 5.2.8
       '@fontsource/noto-sans-ethiopic':
@@ -1031,17 +1022,8 @@ packages:
     resolution: {integrity: sha512-rZAP3aVgB9ds9KOeUSL+zZ21hPmo8dh6fnIFwRQj5EAZl9gzR7wxYbYXYysAM8CTqGmUGyp2S4kUdV17MnGuWQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@fontsource-variable/jetbrains-mono@5.2.8':
-    resolution: {integrity: sha512-WBA9elru6Jdp5df2mES55wuOO0WIrn3kpXnI4+W2ek5u3ZgLS9XS4gmIlcQhiZOWEKl95meYdvK7xI+ETLCq/Q==}
-
-  '@fontsource-variable/lora@5.2.8':
-    resolution: {integrity: sha512-cxjTJ9BbOWIzusewR4UMBLVePvTSWV6dtNaNsCkF/oKoyA68fJGWfaYCILOOP1BObE4dmjfZ3xo6m9hdHhtYhg==}
-
   '@fontsource/gelasio@5.2.8':
     resolution: {integrity: sha512-2IzFnu2+bGPDXtO8KOy9b7BGIBIO/2BD8j8LoopeXhO6jDYXTE8FVG8pGlW5k+gHrmczBV4wukH4R2HB+VLhog==}
-
-  '@fontsource/lora@5.2.8':
-    resolution: {integrity: sha512-AQlfsHw4TP1x/eb2IZ6VjQ70ctKa39m9JN9A4zlvDOeKYLrCs+GaYIEQ86Y6YfSPGHn01bErXkRcyktOW0LOPQ==}
 
   '@fontsource/noto-sans-ethiopic@5.2.7':
     resolution: {integrity: sha512-Co2bpNTpQ7hBZb00z8/FQOwQZjhu1KM8cucwgLPgyRaK91pmnPC25Q+RGghXP2SZlUuPOIj1UjY8NXCaJFgGLQ==}
@@ -5179,13 +5161,7 @@ snapshots:
       '@eslint/core': 1.2.1
       levn: 0.4.1
 
-  '@fontsource-variable/jetbrains-mono@5.2.8': {}
-
-  '@fontsource-variable/lora@5.2.8': {}
-
   '@fontsource/gelasio@5.2.8': {}
-
-  '@fontsource/lora@5.2.8': {}
 
   '@fontsource/noto-sans-ethiopic@5.2.7': {}
 

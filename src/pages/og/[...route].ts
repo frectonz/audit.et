@@ -101,12 +101,11 @@ function loadFont(pkgPath: string): Buffer {
 const gelasioRegular = loadFont(
   "@fontsource/gelasio/files/gelasio-latin-400-normal.woff",
 );
-const loraRegular = loadFont(
-  "@fontsource/lora/files/lora-latin-400-normal.woff",
-);
-const loraBold = loadFont("@fontsource/lora/files/lora-latin-700-normal.woff");
 const notoEthiopic = loadFont(
   "@fontsource/noto-sans-ethiopic/files/noto-sans-ethiopic-ethiopic-400-normal.woff",
+);
+const notoEthiopicBold = loadFont(
+  "@fontsource/noto-sans-ethiopic/files/noto-sans-ethiopic-ethiopic-700-normal.woff",
 );
 
 // --- Markup builder ---
@@ -316,7 +315,7 @@ function buildMarkup(page: PageInfo) {
                               style: {
                                 fontSize: "26px",
                                 color: "#e6e1d7",
-                                fontFamily: "Lora",
+                                fontFamily: "Gelasio",
                                 lineHeight: "1.5",
                                 opacity: 0.85,
                               },
@@ -391,8 +390,12 @@ async function renderOgImage(page: PageInfo) {
         weight: 400,
         style: "normal",
       },
-      { name: "Lora", data: loraRegular, weight: 400, style: "normal" },
-      { name: "Lora", data: loraBold, weight: 700, style: "normal" },
+      {
+        name: "Noto Sans Ethiopic",
+        data: notoEthiopicBold,
+        weight: 700,
+        style: "normal",
+      },
       {
         name: "Noto Sans Ethiopic",
         data: notoEthiopic,
