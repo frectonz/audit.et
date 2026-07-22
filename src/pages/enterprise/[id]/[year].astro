@@ -31,8 +31,8 @@ const enterprise = getEnterprise(id!)!;
 
 function getOpinionColor(opinion: string): string {
   if (opinion.toLowerCase().includes("unmodified")) return "text-eth-green";
-  if (opinion.toLowerCase().includes("qualified")) return "text-eth-gold";
-  if (opinion.toLowerCase().includes("adverse")) return "text-eth-gold";
+  if (opinion.toLowerCase().includes("qualified")) return "text-eth-gold-deep";
+  if (opinion.toLowerCase().includes("adverse")) return "text-eth-gold-deep";
   return "text-eth-text-muted";
 }
 
@@ -359,7 +359,7 @@ const breadcrumbLD = JSON.stringify({
             color:
               detail.summary.netProfit != null && detail.summary.netProfit >= 0
                 ? "text-eth-green"
-                : "text-eth-gold",
+                : "text-eth-gold-deep",
           },
           {
             label: "Total Assets",
@@ -378,8 +378,8 @@ const breadcrumbLD = JSON.stringify({
             color:
               detail.summary.totalEquity != null &&
               detail.summary.totalEquity >= 0
-                ? "text-eth-gold"
-                : "text-eth-gold",
+                ? "text-eth-gold-deep"
+                : "text-eth-gold-deep",
           },
         ].map((metric) => (
           <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm">
@@ -403,9 +403,9 @@ const breadcrumbLD = JSON.stringify({
       {
         waterfallData && (
           <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
-            <h3 class="font-display text-xl text-eth-text mb-1">
+            <h2 class="font-display text-xl text-eth-text mb-1">
               Profit Breakdown
-            </h3>
+            </h2>
             <p class="text-eth-text-muted text-sm mb-4">
               Key income statement items
             </p>
@@ -421,9 +421,9 @@ const breadcrumbLD = JSON.stringify({
       {
         cashFlowChartData && (
           <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
-            <h3 class="font-display text-xl text-eth-text mb-1">
+            <h2 class="font-display text-xl text-eth-text mb-1">
               Cash Flow Activities
-            </h3>
+            </h2>
             <p class="text-eth-text-muted text-sm mb-4">
               Net cash from each activity
             </p>
@@ -439,9 +439,9 @@ const breadcrumbLD = JSON.stringify({
       {
         balanceData && (
           <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm lg:col-span-2">
-            <h3 class="font-display text-xl text-eth-text mb-1">
+            <h2 class="font-display text-xl text-eth-text mb-1">
               Asset Composition
-            </h3>
+            </h2>
             <p class="text-eth-text-muted text-sm mb-4">
               Breakdown of total assets
             </p>
@@ -462,19 +462,25 @@ const breadcrumbLD = JSON.stringify({
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div class="bg-eth-card border border-eth-card-border rounded-xl overflow-hidden shadow-sm">
           <div class="p-6 pb-3">
-            <h3 class="font-display text-xl text-eth-text mb-1">
+            <h2 class="font-display text-xl text-eth-text mb-1">
               {detail.incomeStatement.title}
-            </h3>
+            </h2>
             <p class="text-eth-text-muted text-sm">FY {detail.year} EC</p>
           </div>
           <div class="overflow-x-auto">
             <table class="w-full text-sm">
               <thead>
                 <tr class="border-t border-eth-card-border bg-eth-surface/50">
-                  <th class="text-left px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider">
+                  <th
+                    scope="col"
+                    class="text-left px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
+                  >
                     Item
                   </th>
-                  <th class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider">
+                  <th
+                    scope="col"
+                    class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
+                  >
                     Amount (ETB)
                   </th>
                 </tr>
@@ -500,7 +506,7 @@ const breadcrumbLD = JSON.stringify({
                           {item.label}
                         </td>
                         <td
-                          class={`px-6 py-2.5 font-mono text-right ${item.amount != null && item.amount < 0 ? "text-eth-gold" : "text-eth-text-dim"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}
+                          class={`px-6 py-2.5 font-mono text-right ${item.amount != null && item.amount < 0 ? "text-eth-gold-deep" : "text-eth-text-dim"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}
                         >
                           {item.amount != null
                             ? formatCurrency(item.amount)
@@ -518,9 +524,9 @@ const breadcrumbLD = JSON.stringify({
     ) : (
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
-          <h3 class="font-display text-xl text-eth-text mb-2">
+          <h2 class="font-display text-xl text-eth-text mb-2">
             Income Statement
-          </h3>
+          </h2>
           <p class="text-eth-text-muted text-sm">
             Not available for this year.
           </p>
@@ -535,9 +541,9 @@ const breadcrumbLD = JSON.stringify({
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div class="bg-eth-card border border-eth-card-border rounded-xl overflow-hidden shadow-sm">
           <div class="p-6 pb-3">
-            <h3 class="font-display text-xl text-eth-text mb-1">
+            <h2 class="font-display text-xl text-eth-text mb-1">
               {detail.balanceSheet.title}
-            </h3>
+            </h2>
             <p class="text-eth-text-muted text-sm">
               As at end of FY {detail.year} EC
             </p>
@@ -546,10 +552,16 @@ const breadcrumbLD = JSON.stringify({
             <table class="w-full text-sm">
               <thead>
                 <tr class="border-t border-eth-card-border bg-eth-surface/50">
-                  <th class="text-left px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider">
+                  <th
+                    scope="col"
+                    class="text-left px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
+                  >
                     Item
                   </th>
-                  <th class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider">
+                  <th
+                    scope="col"
+                    class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
+                  >
                     Amount (ETB)
                   </th>
                 </tr>
@@ -575,7 +587,7 @@ const breadcrumbLD = JSON.stringify({
                           {item.label}
                         </td>
                         <td
-                          class={`px-6 py-2.5 font-mono text-right ${item.amount != null && item.amount < 0 ? "text-eth-gold" : "text-eth-text-dim"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}
+                          class={`px-6 py-2.5 font-mono text-right ${item.amount != null && item.amount < 0 ? "text-eth-gold-deep" : "text-eth-text-dim"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}
                         >
                           {item.amount != null
                             ? formatCurrency(item.amount)
@@ -593,7 +605,7 @@ const breadcrumbLD = JSON.stringify({
     ) : (
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
-          <h3 class="font-display text-xl text-eth-text mb-2">Balance Sheet</h3>
+          <h2 class="font-display text-xl text-eth-text mb-2">Balance Sheet</h2>
           <p class="text-eth-text-muted text-sm">
             Not available for this year.
           </p>
@@ -608,19 +620,25 @@ const breadcrumbLD = JSON.stringify({
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div class="bg-eth-card border border-eth-card-border rounded-xl overflow-hidden shadow-sm">
           <div class="p-6 pb-3">
-            <h3 class="font-display text-xl text-eth-text mb-1">
+            <h2 class="font-display text-xl text-eth-text mb-1">
               Cash Flow Statement
-            </h3>
+            </h2>
             <p class="text-eth-text-muted text-sm">FY {detail.year} EC</p>
           </div>
           <div class="overflow-x-auto">
             <table class="w-full text-sm">
               <thead>
                 <tr class="border-t border-eth-card-border bg-eth-surface/50">
-                  <th class="text-left px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider">
+                  <th
+                    scope="col"
+                    class="text-left px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
+                  >
                     Item
                   </th>
-                  <th class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider">
+                  <th
+                    scope="col"
+                    class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
+                  >
                     Amount (ETB)
                   </th>
                 </tr>
@@ -646,7 +664,7 @@ const breadcrumbLD = JSON.stringify({
                           {item.label}
                         </td>
                         <td
-                          class={`px-6 py-2.5 font-mono text-right ${item.amount != null && item.amount < 0 ? "text-eth-gold" : "text-eth-text-dim"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}
+                          class={`px-6 py-2.5 font-mono text-right ${item.amount != null && item.amount < 0 ? "text-eth-gold-deep" : "text-eth-text-dim"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}
                         >
                           {item.amount != null
                             ? formatCurrency(item.amount)
@@ -676,7 +694,7 @@ const breadcrumbLD = JSON.stringify({
                           {item.label}
                         </td>
                         <td
-                          class={`px-6 py-2.5 font-mono text-right ${item.amount != null && item.amount < 0 ? "text-eth-gold" : "text-eth-text-dim"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}
+                          class={`px-6 py-2.5 font-mono text-right ${item.amount != null && item.amount < 0 ? "text-eth-gold-deep" : "text-eth-text-dim"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}
                         >
                           {item.amount != null
                             ? formatCurrency(item.amount)
@@ -706,7 +724,7 @@ const breadcrumbLD = JSON.stringify({
                           {item.label}
                         </td>
                         <td
-                          class={`px-6 py-2.5 font-mono text-right ${item.amount != null && item.amount < 0 ? "text-eth-gold" : "text-eth-text-dim"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}
+                          class={`px-6 py-2.5 font-mono text-right ${item.amount != null && item.amount < 0 ? "text-eth-gold-deep" : "text-eth-text-dim"} ${item.isSubtotal ? "font-semibold text-eth-text" : ""}`}
                         >
                           {item.amount != null
                             ? formatCurrency(item.amount)
@@ -724,7 +742,7 @@ const breadcrumbLD = JSON.stringify({
                         Net Change in Cash
                       </td>
                       <td
-                        class={`px-6 py-2.5 font-mono text-right font-semibold ${detail.cashFlow.netChange != null && detail.cashFlow.netChange < 0 ? "text-eth-gold" : "text-eth-text"}`}
+                        class={`px-6 py-2.5 font-mono text-right font-semibold ${detail.cashFlow.netChange != null && detail.cashFlow.netChange < 0 ? "text-eth-gold-deep" : "text-eth-text"}`}
                       >
                         {detail.cashFlow.netChange != null
                           ? formatCurrency(detail.cashFlow.netChange)
@@ -751,9 +769,9 @@ const breadcrumbLD = JSON.stringify({
     ) : (
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm">
-          <h3 class="font-display text-xl text-eth-text mb-2">
+          <h2 class="font-display text-xl text-eth-text mb-2">
             Cash Flow Statement
-          </h3>
+          </h2>
           <p class="text-eth-text-muted text-sm">
             Not available for this year.
           </p>
@@ -769,15 +787,17 @@ const breadcrumbLD = JSON.stringify({
         <div class="bg-eth-card border border-eth-gold/30 rounded-xl p-6 shadow-sm">
           <div class="flex items-center gap-3 mb-4">
             <div class="w-8 h-8 rounded-full bg-eth-gold-light border border-eth-gold/20 flex items-center justify-center">
-              <TriangleAlert class="w-4 h-4 text-eth-gold" />
+              <TriangleAlert class="w-4 h-4 text-eth-gold-deep" />
             </div>
-            <h3 class="font-display text-xl text-eth-gold">Audit Findings</h3>
+            <h2 class="font-display text-xl text-eth-gold-deep">
+              Audit Findings
+            </h2>
           </div>
           <div class="space-y-3">
             {detail.auditFindings.map((finding) => (
               <details class="border border-eth-card-border rounded-lg bg-eth-surface/50 group">
                 <summary class="p-4 cursor-pointer select-none list-none flex items-start gap-3 [&::-webkit-details-marker]:hidden">
-                  <span class="text-eth-gold font-mono text-sm font-semibold shrink-0">
+                  <span class="text-eth-gold-deep font-mono text-sm font-semibold shrink-0">
                     #{finding.number}
                   </span>
                   <div class="flex-1 min-w-0">
@@ -793,7 +813,7 @@ const breadcrumbLD = JSON.stringify({
                       {finding.summary}
                     </p>
                     {finding.amount != null && (
-                      <p class="text-eth-gold font-mono text-sm mt-2">
+                      <p class="text-eth-gold-deep font-mono text-sm mt-2">
                         Amount: {formatETB(finding.amount, true)}
                       </p>
                     )}
@@ -818,7 +838,75 @@ const breadcrumbLD = JSON.stringify({
 </Layout>
 
 <script>
-  import * as echarts from "echarts";
+  import * as echarts from "echarts/core";
+  import { BarChart, LineChart, PieChart } from "echarts/charts";
+  import {
+    GridComponent,
+    LegendComponent,
+    TooltipComponent,
+  } from "echarts/components";
+  import { CanvasRenderer } from "echarts/renderers";
+  import { LegacyGridContainLabel } from "echarts/features";
+
+  echarts.use([
+    BarChart,
+    LineChart,
+    PieChart,
+    GridComponent,
+    LegendComponent,
+    TooltipComponent,
+    CanvasRenderer,
+    LegacyGridContainLabel,
+  ]);
+
+  type ChartOption = Parameters<echarts.ECharts["setOption"]>[0];
+
+  const mounted: echarts.ECharts[] = [];
+  window.addEventListener("resize", () => {
+    for (const c of mounted) c.resize();
+  });
+
+  const pendingMounts = new Map<Element, () => void>();
+  const io =
+    typeof IntersectionObserver === "undefined"
+      ? null
+      : new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (!entry.isIntersecting) continue;
+              io!.unobserve(entry.target);
+              pendingMounts.get(entry.target)?.();
+              pendingMounts.delete(entry.target);
+            }
+          },
+          { rootMargin: "200px" },
+        );
+
+  function initChart(el: HTMLElement): { setOption(o: ChartOption): void } {
+    let chart: echarts.ECharts | null = null;
+    let pending: ChartOption | null = null;
+
+    const mount = () => {
+      if (chart) return;
+      chart = echarts.init(el);
+      mounted.push(chart);
+      if (pending) chart.setOption(pending);
+    };
+
+    if (io) {
+      pendingMounts.set(el, mount);
+      io.observe(el);
+    } else {
+      mount();
+    }
+
+    return {
+      setOption(option) {
+        if (chart) chart.setOption(option);
+        else pending = option;
+      },
+    };
+  }
 
   type ChartParam = {
     name: string;
@@ -857,7 +945,7 @@ const breadcrumbLD = JSON.stringify({
     const items: { label: string; value: number }[] = JSON.parse(
       profitEl.dataset.chart!,
     );
-    const chart = echarts.init(profitEl);
+    const chart = initChart(profitEl);
     const labels = items.map((i) => i.label);
     const values = items.map((i) => i.value);
 
@@ -905,14 +993,13 @@ const breadcrumbLD = JSON.stringify({
         },
       ],
     });
-    window.addEventListener("resize", () => chart.resize());
   }
 
   // --- Asset Donut Chart ---
   const assetEl = document.getElementById("assetDonut");
   if (assetEl) {
     const data = JSON.parse(assetEl.dataset.chart!);
-    const chart = echarts.init(assetEl);
+    const chart = initChart(assetEl);
 
     const donutColors = [
       colors.green,
@@ -964,14 +1051,13 @@ const breadcrumbLD = JSON.stringify({
         },
       ],
     });
-    window.addEventListener("resize", () => chart.resize());
   }
 
   // --- Cash Flow Bar Chart ---
   const cashFlowEl = document.getElementById("cashFlowBar");
   if (cashFlowEl) {
     const data = JSON.parse(cashFlowEl.dataset.chart!);
-    const chart = echarts.init(cashFlowEl);
+    const chart = initChart(cashFlowEl);
     const categories = ["Operating", "Investing", "Financing", "Net Change"];
     const vals = [
       data.operating,
@@ -1024,6 +1110,5 @@ const breadcrumbLD = JSON.stringify({
         },
       ],
     });
-    window.addEventListener("resize", () => chart.resize());
   }
 </script>

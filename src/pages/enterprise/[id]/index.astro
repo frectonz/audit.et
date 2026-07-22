@@ -27,8 +27,8 @@ const latest = enterprise.years.at(-1);
 
 function getOpinionColor(opinion: string): string {
   if (opinion.toLowerCase().includes("unmodified")) return "text-eth-green";
-  if (opinion.toLowerCase().includes("qualified")) return "text-eth-gold";
-  if (opinion.toLowerCase().includes("adverse")) return "text-eth-gold";
+  if (opinion.toLowerCase().includes("qualified")) return "text-eth-gold-deep";
+  if (opinion.toLowerCase().includes("adverse")) return "text-eth-gold-deep";
   return "text-eth-text-muted";
 }
 
@@ -200,7 +200,7 @@ const breadcrumbLD = JSON.stringify({
             color:
               latest?.netProfit != null && latest.netProfit >= 0
                 ? "text-eth-green"
-                : "text-eth-gold",
+                : "text-eth-gold-deep",
           },
           {
             label: "Total Assets",
@@ -223,8 +223,8 @@ const breadcrumbLD = JSON.stringify({
                 : "",
             color:
               latest?.totalEquity != null && latest.totalEquity >= 0
-                ? "text-eth-gold"
-                : "text-eth-gold",
+                ? "text-eth-gold-deep"
+                : "text-eth-gold-deep",
           },
         ].map((metric) => (
           <div class="bg-eth-card border border-eth-card-border rounded-xl p-4 sm:p-5 shadow-sm">
@@ -252,9 +252,9 @@ const breadcrumbLD = JSON.stringify({
       <div
         class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm"
       >
-        <h3 class="font-display text-xl text-eth-text mb-1">
+        <h2 class="font-display text-xl text-eth-text mb-1">
           Revenue & Profitability
-        </h3>
+        </h2>
         <p class="text-eth-text-muted text-sm mb-4">
           Revenue, cost of sales, and net profit over time
         </p>
@@ -270,7 +270,7 @@ const breadcrumbLD = JSON.stringify({
       <div
         class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm"
       >
-        <h3 class="font-display text-xl text-eth-text mb-1">Balance Sheet</h3>
+        <h2 class="font-display text-xl text-eth-text mb-1">Balance Sheet</h2>
         <p class="text-eth-text-muted text-sm mb-4">
           Total assets, liabilities, and equity over time
         </p>
@@ -289,9 +289,9 @@ const breadcrumbLD = JSON.stringify({
     <div
       class="bg-eth-card border border-eth-card-border rounded-xl p-6 shadow-sm"
     >
-      <h3 class="font-display text-xl text-eth-text mb-4">
+      <h2 class="font-display text-xl text-eth-text mb-4">
         Audit Opinion Timeline
-      </h3>
+      </h2>
       <div class="relative overflow-x-auto pb-2">
         <!-- Connecting line -->
         <div
@@ -311,8 +311,8 @@ const breadcrumbLD = JSON.stringify({
                       ? "bg-eth-green text-white"
                       : y.auditOpinion.toLowerCase().includes("qualified") ||
                           y.auditOpinion.toLowerCase().includes("adverse")
-                        ? "bg-eth-gold text-eth-bg"
-                        : "bg-eth-card-border text-eth-text-muted"
+                        ? "bg-eth-gold-deep text-white"
+                        : "bg-eth-card-border text-eth-text-dim"
                   }`}
                 >
                   {y.auditOpinion.charAt(0)}
@@ -340,12 +340,12 @@ const breadcrumbLD = JSON.stringify({
         <div class="bg-eth-card border border-eth-gold/30 rounded-xl p-6 shadow-sm">
           <div class="flex items-center gap-3 mb-4">
             <div class="w-8 h-8 rounded-full bg-eth-gold-light border border-eth-gold/20 flex items-center justify-center">
-              <TriangleAlert class="w-4 h-4 text-eth-gold" />
+              <TriangleAlert class="w-4 h-4 text-eth-gold-deep" />
             </div>
             <div>
-              <h3 class="font-display text-xl text-eth-gold">
+              <h2 class="font-display text-xl text-eth-gold-deep">
                 Key Audit Findings
-              </h3>
+              </h2>
               <p class="text-eth-text-muted text-sm">
                 Basis for qualified opinion from the latest audit report
               </p>
@@ -355,7 +355,7 @@ const breadcrumbLD = JSON.stringify({
             {enterprise.auditFindings.slice(0, 8).map((finding) => (
               <details class="border border-eth-card-border rounded-lg bg-eth-surface/50 group">
                 <summary class="p-4 cursor-pointer select-none list-none flex items-start gap-3 [&::-webkit-details-marker]:hidden">
-                  <span class="text-eth-gold font-mono text-sm font-semibold shrink-0">
+                  <span class="text-eth-gold-deep font-mono text-sm font-semibold shrink-0">
                     #{finding.number}
                   </span>
                   <div class="flex-1 min-w-0">
@@ -379,7 +379,7 @@ const breadcrumbLD = JSON.stringify({
                       {finding.summary}
                     </p>
                     {finding.amount != null && (
-                      <p class="text-eth-gold font-mono text-sm mt-2">
+                      <p class="text-eth-gold-deep font-mono text-sm mt-2">
                         Amount: {formatETB(finding.amount, true)}
                       </p>
                     )}
@@ -399,9 +399,9 @@ const breadcrumbLD = JSON.stringify({
       class="bg-eth-card border border-eth-card-border rounded-xl overflow-hidden shadow-sm"
     >
       <div class="p-6 pb-3">
-        <h3 class="font-display text-xl text-eth-text mb-1">
+        <h2 class="font-display text-xl text-eth-text mb-1">
           Financial Summary
-        </h3>
+        </h2>
         <p class="text-eth-text-muted text-sm">
           All figures in Ethiopian Birr (ETB). {
             enterprise.id === "ethiopian-electric-power"
@@ -415,36 +415,45 @@ const breadcrumbLD = JSON.stringify({
           <thead>
             <tr class="border-t border-eth-card-border bg-eth-surface/50">
               <th
+                scope="col"
                 class="text-left px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
                 >Year</th
               >
               <th
+                scope="col"
                 class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
                 >Revenue</th
               >
               <th
+                scope="col"
                 class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
                 >Net Profit</th
               >
               <th
+                scope="col"
                 class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
                 >Total Assets</th
               >
               <th
+                scope="col"
                 class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
                 >Total Liabilities</th
               >
               <th
+                scope="col"
                 class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
                 >Equity</th
               >
               <th
+                scope="col"
                 class="text-center px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
                 >Opinion</th
               >
               <th
+                scope="col"
                 class="text-right px-6 py-3 text-eth-text-muted font-medium text-xs uppercase tracking-wider"
-              ></th>
+                ><span class="sr-only">Details</span></th
+              >
             </tr>
           </thead>
           <tbody>
@@ -463,7 +472,7 @@ const breadcrumbLD = JSON.stringify({
                     {y.revenue != null ? formatETB(y.revenue, true) : "—"}
                   </td>
                   <td
-                    class={`px-6 py-3 font-mono text-right ${y.netProfit != null && y.netProfit < 0 ? "text-eth-gold" : "text-eth-green"}`}
+                    class={`px-6 py-3 font-mono text-right ${y.netProfit != null && y.netProfit < 0 ? "text-eth-gold-deep" : "text-eth-green"}`}
                   >
                     {y.netProfit != null ? formatETB(y.netProfit, true) : "—"}
                   </td>
@@ -478,7 +487,7 @@ const breadcrumbLD = JSON.stringify({
                       : "—"}
                   </td>
                   <td
-                    class={`px-6 py-3 font-mono text-right ${y.totalEquity != null && y.totalEquity < 0 ? "text-eth-gold" : "text-eth-text-dim"}`}
+                    class={`px-6 py-3 font-mono text-right ${y.totalEquity != null && y.totalEquity < 0 ? "text-eth-gold-deep" : "text-eth-text-dim"}`}
                   >
                     {y.totalEquity != null
                       ? formatETB(y.totalEquity, true)
@@ -521,7 +530,75 @@ const breadcrumbLD = JSON.stringify({
 </Layout>
 
 <script>
-  import * as echarts from "echarts";
+  import * as echarts from "echarts/core";
+  import { BarChart, LineChart, PieChart } from "echarts/charts";
+  import {
+    GridComponent,
+    LegendComponent,
+    TooltipComponent,
+  } from "echarts/components";
+  import { CanvasRenderer } from "echarts/renderers";
+  import { LegacyGridContainLabel } from "echarts/features";
+
+  echarts.use([
+    BarChart,
+    LineChart,
+    PieChart,
+    GridComponent,
+    LegendComponent,
+    TooltipComponent,
+    CanvasRenderer,
+    LegacyGridContainLabel,
+  ]);
+
+  type ChartOption = Parameters<echarts.ECharts["setOption"]>[0];
+
+  const mounted: echarts.ECharts[] = [];
+  window.addEventListener("resize", () => {
+    for (const c of mounted) c.resize();
+  });
+
+  const pendingMounts = new Map<Element, () => void>();
+  const io =
+    typeof IntersectionObserver === "undefined"
+      ? null
+      : new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (!entry.isIntersecting) continue;
+              io!.unobserve(entry.target);
+              pendingMounts.get(entry.target)?.();
+              pendingMounts.delete(entry.target);
+            }
+          },
+          { rootMargin: "200px" },
+        );
+
+  function initChart(el: HTMLElement): { setOption(o: ChartOption): void } {
+    let chart: echarts.ECharts | null = null;
+    let pending: ChartOption | null = null;
+
+    const mount = () => {
+      if (chart) return;
+      chart = echarts.init(el);
+      mounted.push(chart);
+      if (pending) chart.setOption(pending);
+    };
+
+    if (io) {
+      pendingMounts.set(el, mount);
+      io.observe(el);
+    } else {
+      mount();
+    }
+
+    return {
+      setOption(option) {
+        if (chart) chart.setOption(option);
+        else pending = option;
+      },
+    };
+  }
 
   const colors = {
     green: "#1b3b34",
@@ -562,7 +639,7 @@ const breadcrumbLD = JSON.stringify({
   const profitEl = document.getElementById("profitChart");
   if (profitEl) {
     const data = JSON.parse(profitEl.dataset.chart!);
-    const chart = echarts.init(profitEl);
+    const chart = initChart(profitEl);
 
     chart.setOption({
       tooltip: {
@@ -631,15 +708,13 @@ const breadcrumbLD = JSON.stringify({
         },
       ],
     });
-
-    window.addEventListener("resize", () => chart.resize());
   }
 
   // Balance Sheet Chart
   const balanceEl = document.getElementById("balanceChart");
   if (balanceEl) {
     const data = JSON.parse(balanceEl.dataset.chart!);
-    const chart = echarts.init(balanceEl);
+    const chart = initChart(balanceEl);
 
     chart.setOption({
       tooltip: {
@@ -720,7 +795,5 @@ const breadcrumbLD = JSON.stringify({
         },
       ],
     });
-
-    window.addEventListener("resize", () => chart.resize());
   }
 </script>

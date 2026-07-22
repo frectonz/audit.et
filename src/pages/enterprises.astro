@@ -33,7 +33,7 @@ const sectorIconMap: Record<string, AstroComponentFactory> = {
 
 function getOpinionColor(opinion: string): string {
   if (opinion.toLowerCase().includes("unmodified")) return "text-eth-green";
-  if (opinion.toLowerCase().includes("qualified")) return "text-eth-gold";
+  if (opinion.toLowerCase().includes("qualified")) return "text-eth-gold-deep";
   if (opinion.toLowerCase().includes("adverse")) return "text-eth-red";
   return "text-eth-text-muted";
 }
@@ -134,9 +134,9 @@ function getOpinionBg(opinion: string): string {
                     })()}
                   </div>
                   <div>
-                    <h3 class="font-semibold text-eth-text group-hover:text-eth-green transition-colors">
+                    <h2 class="font-semibold text-eth-text group-hover:text-eth-green transition-colors">
                       {enterprise.shortName}
-                    </h3>
+                    </h2>
                     <p class="text-eth-text-muted text-xs">
                       {enterprise.sector}
                     </p>
@@ -235,9 +235,9 @@ function getOpinionBg(opinion: string): string {
                     })()}
                   </div>
                   <div>
-                    <h3 class="font-semibold text-eth-text">
+                    <h2 class="font-semibold text-eth-text">
                       {enterprise.shortName}
-                    </h3>
+                    </h2>
                     <p class="text-eth-text-muted text-xs">
                       {enterprise.sector}
                     </p>

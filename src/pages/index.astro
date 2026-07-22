@@ -282,7 +282,7 @@ const revVsLiabData = JSON.stringify({
               href="https://eih.et/"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-eth-gold font-semibold hover:underline"
+              class="text-eth-gold-deep font-semibold hover:underline"
               >Ethiopian Investment Holdings (EIH)</a
             >. Making financial accountability accessible to every citizen.
           </p>
@@ -444,7 +444,7 @@ const revVsLiabData = JSON.stringify({
           Net Margin
         </p>
         <p
-          class={`font-mono text-xl sm:text-2xl font-semibold ${netMargin >= 0 ? "text-eth-green" : "text-eth-gold"}`}
+          class={`font-mono text-xl sm:text-2xl font-semibold ${netMargin >= 0 ? "text-eth-green" : "text-eth-gold-deep"}`}
         >
           {netMargin >= 0 ? "+" : ""}{netMargin.toFixed(1)}%
         </p>
@@ -472,7 +472,7 @@ const revVsLiabData = JSON.stringify({
           Loss-Making
         </p>
         <p
-          class={`font-mono text-xl sm:text-2xl font-semibold ${lossMakingCount > 0 ? "text-eth-gold" : "text-eth-green"}`}
+          class={`font-mono text-xl sm:text-2xl font-semibold ${lossMakingCount > 0 ? "text-eth-gold-deep" : "text-eth-green"}`}
         >
           {lossMakingCount} / {enterprisesWithData}
         </p>
@@ -500,7 +500,7 @@ const revVsLiabData = JSON.stringify({
           Return on Assets
         </p>
         <p
-          class={`font-mono text-xl sm:text-2xl font-semibold ${roa >= 0 ? "text-eth-green" : "text-eth-gold"}`}
+          class={`font-mono text-xl sm:text-2xl font-semibold ${roa >= 0 ? "text-eth-green" : "text-eth-gold-deep"}`}
         >
           {roa >= 0 ? "+" : ""}{roa.toFixed(1)}%
         </p>
@@ -530,7 +530,7 @@ const revVsLiabData = JSON.stringify({
           Debt-to-Equity
         </p>
         <p
-          class={`font-mono text-xl sm:text-2xl font-semibold ${debtToEquity > 2 ? "text-eth-gold" : "text-eth-text"}`}
+          class={`font-mono text-xl sm:text-2xl font-semibold ${debtToEquity > 2 ? "text-eth-gold-deep" : "text-eth-text"}`}
         >
           {debtToEquity.toFixed(1)}x
         </p>
@@ -687,7 +687,26 @@ const revVsLiabData = JSON.stringify({
 </Layout>
 
 <script>
-  import * as echarts from "echarts";
+  import * as echarts from "echarts/core";
+  import { BarChart, LineChart, PieChart } from "echarts/charts";
+  import {
+    GridComponent,
+    LegendComponent,
+    TooltipComponent,
+  } from "echarts/components";
+  import { CanvasRenderer } from "echarts/renderers";
+  import { LegacyGridContainLabel } from "echarts/features";
+
+  echarts.use([
+    BarChart,
+    LineChart,
+    PieChart,
+    GridComponent,
+    LegendComponent,
+    TooltipComponent,
+    CanvasRenderer,
+    LegacyGridContainLabel,
+  ]);
 
   type ChartParam = {
     name: string;
@@ -737,18 +756,57 @@ const revVsLiabData = JSON.stringify({
   // Track all charts for ResizeObserver
   const charts: { el: HTMLElement; chart: echarts.ECharts }[] = [];
 
-  function initChart(el: HTMLElement): echarts.ECharts {
-    const chart = echarts.init(el);
-    charts.push({ el, chart });
-    return chart;
-  }
-
   // Use ResizeObserver so charts resize when their container changes
   const ro = new ResizeObserver(() => {
     for (const { chart } of charts) {
       chart.resize();
     }
   });
+
+  type ChartOption = Parameters<echarts.ECharts["setOption"]>[0];
+
+  const pendingMounts = new Map<Element, () => void>();
+  const io =
+    typeof IntersectionObserver === "undefined"
+      ? null
+      : new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (!entry.isIntersecting) continue;
+              io!.unobserve(entry.target);
+              pendingMounts.get(entry.target)?.();
+              pendingMounts.delete(entry.target);
+            }
+          },
+          { rootMargin: "200px" },
+        );
+
+  function initChart(el: HTMLElement): { setOption(o: ChartOption): void } {
+    let chart: echarts.ECharts | null = null;
+    let pending: ChartOption | null = null;
+
+    const mount = () => {
+      if (chart) return;
+      chart = echarts.init(el);
+      charts.push({ el, chart });
+      ro.observe(el);
+      if (pending) chart.setOption(pending);
+    };
+
+    if (io) {
+      pendingMounts.set(el, mount);
+      io.observe(el);
+    } else {
+      mount();
+    }
+
+    return {
+      setOption(option) {
+        if (chart) chart.setOption(option);
+        else pending = option;
+      },
+    };
+  }
 
   // --- Combined Revenue Chart ---
   const el = document.getElementById("combinedRevenueChart");
